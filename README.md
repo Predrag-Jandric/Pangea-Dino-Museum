@@ -36,6 +36,4 @@ coding!
 
 - Promise Akabudu #1: [GitHub](https://github.com/pakabudu) / [LinkedIn](https://linkedin.com/in/promise-akabudu)
 - Estelle Couture #2: [GitHub](https://github.com/Escargotte)) / [LinkedIn](https://www.linkedin.com/in/estelle-couture-41422b47/)
-
-   ...
-- Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Afrah Ali #3: [GitHub](https://github.com/afbaf) / [LinkedIn](https://www.linkedin.com/in/afrah-ali-251264269/)
