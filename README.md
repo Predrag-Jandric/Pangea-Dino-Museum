@@ -37,3 +37,4 @@ coding!
 - Promise Akabudu #1: [GitHub](https://github.com/pakabudu) / [LinkedIn](https://linkedin.com/in/promise-akabudu)
 - Estelle Couture #2: [GitHub](https://github.com/Escargotte)) / [LinkedIn](https://www.linkedin.com/in/estelle-couture-41422b47/)
 - Afrah Ali #3: [GitHub](https://github.com/afbaf) / [LinkedIn](https://www.linkedin.com/in/afrah-ali-251264269/)
+- Greg Minezzi #4: [GitHub](https://github.com/minezzig) / [LinkedIn](https://www.linkedin.com/in/gregminezzi)
