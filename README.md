@@ -1,40 +1,27 @@
-# voyage-tasks
+# ... Readme incomplete currently, will be completed in the future
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+## 8. Team
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+- Evaristo Caraballo -Product Owner: [GitHub](https://github.com/evaristoc) / [LinkedIn](https://www.linkedin.com/in/evaristocaraballo/)
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+- Estelle Wraight - Product Owner: [GitHub](https://github.com/Escargotte) / [LinkedIn](https://www.linkedin.com/in/estelle-couture-41422b47/)
 
-> Own it & Make it your Own!
+- Promise Akabudu - Product Owner: [GitHub](https://github.com/Pakabudu) / [LinkedIn](https://www.linkedin.com/in/promise-akabudu/)
 
-## Team Documents
+- Afrah Ali - Scrum Master: [GitHub](https://github.com/afbaf) / [LinkedIn](https://www.linkedin.com/in/afrah-ali-251264269/)
 
-You may find these helpful as you work together to organize your project.
+- Dayo Abdul - Developer: [GitHub](https://github.com/Dayo1900)
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
+- Predrag Jandric - Developer: [GitHub](https://github.com/Predrag-Jandric) / [LinkedIn](https://www.linkedin.com/in/predrag-jandric/)
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
+- Greg Minezzi - Developer: [GitHub](https://github.com/minezzig) / [LinkedIn](https://www.linkedin.com/in/gregminezzi)
 
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+- Ziad Shaarawy - Developer: [GitHub](https://github.com/redshaaro) / [LinkedIn](https://www.linkedin.com/in/ziad-shaarawy-629a5721b/)
 
-## Our Team
+---
 
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team *before* you start
-coding!
+## 9. Special Thanks
 
-- Promise Akabudu #1: [GitHub](https://github.com/pakabudu) / [LinkedIn](https://linkedin.com/in/promise-akabudu)
-- Estelle Couture #2: [GitHub](https://github.com/Escargotte)) / [LinkedIn](https://www.linkedin.com/in/estelle-couture-41422b47/)
-- Afrah Ali #3: [GitHub](https://github.com/afbaf) / [LinkedIn](https://www.linkedin.com/in/afrah-ali-251264269/)
-- Greg Minezzi #4: [GitHub](https://github.com/minezzig) / [LinkedIn](https://www.linkedin.com/in/gregminezzi)
+We as a whole team would like to thank the [Chingu platform](https://www.chingu.io/) for providing us this opportunity to practice our communication and coding skills, in this simulated work environment.
+
+---
