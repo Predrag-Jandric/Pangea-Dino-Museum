@@ -65,7 +65,7 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 640) {
+      if (window.innerWidth > 768) {
         setIsOpen(false);
       }
     };
@@ -93,20 +93,22 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
 
   return (
     <div ref={scope}>
-      <nav className="fixed h-full top-0 left-0 w-full bg-gray-800 pt-20 z-40  translate-x-full transition-colors">
+      <nav className="fixed h-full text-white top-0 left-0 w-full bg-slate-700 pt-10 z-40  translate-x-full transition-colors">
         <ul className="flex flex-col gap-y-6 px-8 relative">
-          <motion.div
-            className="absolute right-[5%] -top-[16%] cursor-pointer"
-            onClick={handleToggle}
-            initial={{ scale: 1, opacity: 1 }}
-            animate={
-              isOpen
-                ? { scale: 1, opacity: 1, rotate: 0 }
-                : { scale: 0.7, opacity: 0, rotate: 90 }
-            }
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-          >
-            <IoCloseOutline className="size-12 hover:text-primary transition-colors" />
+          <motion.div className="flex mb-4 px-5 justify-between items-center w-full">
+            <p className="text-2xl">Cart</p>
+            <motion.div
+              onClick={handleToggle}
+              initial={{ scale: 1, opacity: 1 }}
+              animate={
+                isOpen
+                  ? { scale: 1, opacity: 1, rotate: 0 }
+                  : { scale: 0.7, opacity: 0, rotate: 90 }
+              }
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <IoCloseOutline className="size-12 cursor-pointer hover:text-primary transition-colors" />
+            </motion.div>
           </motion.div>
           {navLinks.map((link, index) => (
             <li key={index} className="relative flex w-full z-10 group">
@@ -118,11 +120,11 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
                   scrollToSection(link.href);
                   setIsOpen(false);
                 }}
-                className="text-white text-3xl w-full py-2 px-5 cursor-pointer transition ease-in-out duration-200 relative group-hover:before:scale-100 hover:text-primary "
+                className="text-3xl w-full py-2 px-5 cursor-pointer transition ease-in-out duration-200 relative group-hover:before:scale-100 hover:text-primary "
               >
                 {link.label}
               </a>
-              <span className="absolute top-full right-[8.3rem] w-[80%] h-[7%] bg-primary scale-0 z-[-1] transition ease-in-out duration-300 group-hover:scale-50"></span>
+              <span className="absolute top-full left-5 w-32 h-[3px] bg-primary scale-x-0 origin-left z-[-1] transition-transform ease-in-out duration-300 group-hover:scale-x-100"></span>
             </li>
           ))}
         </ul>

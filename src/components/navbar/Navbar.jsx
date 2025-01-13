@@ -10,8 +10,10 @@ function Navbar() {
 
   return (
     <>
-      <nav className="flex items-center justify-center h-[10vh] px-32 w-full absolute top-0 left-0 right-0 md:px-12">
-        <ul className="relative hidden sm:flex items-center justify-center gap-0 transition ease-in-out duration-200">
+      <nav className="flex items-center justify-between h-[10vh] w-full absolute top-0 left-0 z-30 right-0 px-12 text-white bg-transparent">
+        <p className="text-2xl">Logo</p>
+
+        <ul className="relative hidden md:flex items-center justify-center gap-0 transition ease-in-out duration-200">
           {navLinks.map((link, index) => (
             <li key={index} className="relative flex w-full z-10 group">
               <a
@@ -21,7 +23,7 @@ function Navbar() {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-white text-xl py-2 px-5 cursor-pointer transition ease-in-out duration-200 relative group-hover:before:scale-100"
+                className="text-xl py-2 px-5 cursor-pointer transition ease-in-out duration-200 relative group-hover:before:scale-100"
               >
                 {link.label}
               </a>
@@ -29,8 +31,10 @@ function Navbar() {
             </li>
           ))}
         </ul>
+
+        <p className="text-2xl hidden md:flex">Cart</p>
         <CgMenu
-          className="absolute sm:hidden size-10 top-[30%] right-[7%] cursor-pointer hover:text-primary transition-colors"
+          className="absolute md:hidden size-10 top-[30%] right-[7%] cursor-pointer hover:text-primary transition-colors"
           onClick={() => setIsOpen(true)}
         />
       </nav>
