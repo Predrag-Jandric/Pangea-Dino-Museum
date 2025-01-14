@@ -114,9 +114,17 @@ const Footer = () => {
           </a>
 
           <p className="text-gray-400 mt-4">
-            This project was built as part of the Chingu Voyage 53. Chingu is a
-            global collaboration platform and coding community.
+            This project was built by Team 33 as part of the Chingu Voyage 53.
+            Chingu is a global collaboration platform and coding community.
           </p>
+
+          <a
+            className="text-gray-400 mt-4"
+            href="https://github.com/chingu-voyages/V53-tier3-team-33"
+          >
+            {" "}
+            GitHub Repo
+          </a>
         </article>
       </section>
 
