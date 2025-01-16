@@ -12,7 +12,7 @@ export const landingPageBGimageSlider = [
   "https://img.freepik.com/premium-photo/two-friendly-triceratops-enjoying-day_107062-22168.jpg",
 ];
 
-export const data = [
+export const quizQuestions = [
   {
     question: "Which dinosaur's name means 'tyrant lizard king'?",
     options: [

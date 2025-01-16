@@ -1,7 +1,7 @@
 import { useReducer } from "react";
-import data from "./quizQuestions.json";
+import { quizQuestions } from "../utils/data";
 
-const shuffledQuestions = data.sort(() => Math.random() - 0.5);
+const shuffledQuestions = quizQuestions.sort(() => Math.random() - 0.5);
 
 const initialState = {
   questions: shuffledQuestions,
@@ -14,7 +14,7 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    case "newAnswer":
+    case "newAnswer": {
       const question = state.questions.at(state.index);
 
       return {
@@ -25,6 +25,7 @@ function reducer(state, action) {
             ? state.points + question.points
             : state.points,
       };
+    }
 
     case "nextQuestion":
       return { ...state, index: state.index + 1, answer: null };
@@ -73,18 +74,18 @@ function App() {
   if (percentage === 0) emoji = "😭";
 
   return (
-    <div >
-      <div >
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+      <div className="w-full max-w-2xl h-fit bg-white p-8 rounded-xl shadow-lg">
         {status === "active" && (
           <section>
             {/* progress bar */}
             <div className="mb-6">
               <progress
-                
+                className="progress-bar w-full h-3 rounded-lg bg-grayOne"
                 max={numQuestions}
                 value={index + Number(answer !== null)}
               />
-              <div >
+              <div className="mt-2 flex justify-between text-lg font-medium">
                 <p>
                   Question <span>{index + 1}</span> / {numQuestions}
                 </p>
@@ -96,7 +97,7 @@ function App() {
 
             {/* current question */}
             <div className="mb-6">
-              <h4 >
+              <h4 className="text-2xl font-semibold text-gray-800">
                 {currentQuestion.question}
               </h4>
             </div>
@@ -144,7 +145,7 @@ function App() {
                     type: index < numQuestions - 1 ? "nextQuestion" : "finish",
                   })
                 }
-                
+                className="mt-6 w-full py-3 bg-greenOne text-white rounded-lg hover:bg-greenOneHover"
               >
                 {index < numQuestions - 1 ? "Next" : "Finish"}
               </button>
@@ -154,17 +155,17 @@ function App() {
 
         {/* finished State */}
         {status === "finished" && (
-          <div >
-            <p >
+          <div className="text-center">
+            <p className="text-3xl font-bold mb-4">
               <span>{emoji}</span> You scored <span>{points}</span> out of{" "}
               {maxPossiblePoints} ({Math.ceil(percentage)}%)
             </p>
 
-            <p >Highscore: {highscore} points</p>
+            <p className="text-lg mb-6">Highscore: {highscore} points</p>
 
             <button
               onClick={() => dispatch({ type: "restart" })}
-              
+              className="py-3 px-6 transition-all bg-greenOne text-white rounded-lg hover:bg-greenOneHover"
             >
               Restart Quiz
             </button>

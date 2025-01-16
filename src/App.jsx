@@ -1,11 +1,13 @@
-import LandingPage from "./components/LandingPage";
-import Test from "./components/Test";
+// import LandingPage from "./components/LandingPage";
+// import Test from "./components/Test";
+import Quiz from "./components/Quiz";
 
 function App() {
   return (
     <div className="">
-      <LandingPage />
-      <Test />
+      {/* <LandingPage /> */}
+      {/* <Test /> */}
+      <Quiz />
     </div>
   );
 }
