@@ -74,7 +74,103 @@ function App() {
 
   return (
     <div >
-      test
+      <div >
+        {status === "active" && (
+          <section>
+            {/* progress bar */}
+            <div className="mb-6">
+              <progress
+                
+                max={numQuestions}
+                value={index + Number(answer !== null)}
+              />
+              <div >
+                <p>
+                  Question <span>{index + 1}</span> / {numQuestions}
+                </p>
+                <p>
+                  Points: <span>{points}</span> / {maxPossiblePoints}
+                </p>
+              </div>
+            </div>
+
+            {/* current question */}
+            <div className="mb-6">
+              <h4 >
+                {currentQuestion.question}
+              </h4>
+            </div>
+
+            {/* answer options */}
+            <div className="space-y-4">
+              {currentQuestion.options.map((option, optionIndex) => (
+                <button
+                  key={option}
+                  onClick={() =>
+                    dispatch({ type: "newAnswer", payload: optionIndex })
+                  }
+                  className={`w-full py-3 px-4 rounded-lg text-left border-2 font-medium ${
+                    // Highlight selected answer
+                    optionIndex === answer
+                      ? optionIndex === currentQuestion.correctOption
+                        ? "bg-green-200 border-greenOne" // Correct selected answer
+                        : "bg-red-200 border-red-500" // Incorrect selected answer
+                      : "bg-gray-50 border-grayOne"
+                  } ${
+                    // Highlight correct answer when an incorrect answer is selected
+                    answer !== null &&
+                    optionIndex === currentQuestion.correctOption &&
+                    optionIndex !== answer
+                      ? "bg-green-200 border-greenOne"
+                      : ""
+                  } ${
+                    // Dim non-selected options after answering
+                    answer !== null && optionIndex !== answer
+                      ? "opacity-60"
+                      : ""
+                  }`}
+                  disabled={answer !== null} // Disable buttons after answering
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+
+            {/* next/finish button */}
+            {answer !== null && (
+              <button
+                onClick={() =>
+                  dispatch({
+                    type: index < numQuestions - 1 ? "nextQuestion" : "finish",
+                  })
+                }
+                
+              >
+                {index < numQuestions - 1 ? "Next" : "Finish"}
+              </button>
+            )}
+          </section>
+        )}
+
+        {/* finished State */}
+        {status === "finished" && (
+          <div >
+            <p >
+              <span>{emoji}</span> You scored <span>{points}</span> out of{" "}
+              {maxPossiblePoints} ({Math.ceil(percentage)}%)
+            </p>
+
+            <p >Highscore: {highscore} points</p>
+
+            <button
+              onClick={() => dispatch({ type: "restart" })}
+              
+            >
+              Restart Quiz
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
