@@ -1,4 +1,4 @@
-const Footer = () => {
+function Footer() {
   return (
     <footer className="bg-gray-800 text-white">
       <section className="container mx-auto flex flex-col md:flex-row justify-between gap-12 p-8 py-20">
@@ -6,6 +6,7 @@ const Footer = () => {
         <article className="flex-1">
           <h3 className="text-lg font-semibold mb-7">Navigation</h3>
           <div className="flex flex-col gap-2 list-none">
+            {/* needs to be mapped over in the future with data from data.js */}
             <li>
               <a href="#" className="hover:underline">
                 Link1
@@ -133,6 +134,6 @@ const Footer = () => {
       </p>
     </footer>
   );
-};
+}
 
 export default Footer;
