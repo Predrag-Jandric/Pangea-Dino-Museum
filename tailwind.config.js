@@ -11,6 +11,10 @@ export default {
         // primary colors
         primary: "#4489C5",
         primaryHover: "#639DCF",
+
+        grayOne: "#d4d4d8",
+        greenOne: "#22c55e",
+        greenOneHover: "#19b352",
       },
 
       // "Comic Sans MS" for testing
