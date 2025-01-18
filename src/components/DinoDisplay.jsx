@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import DinoCard from "./dinoCard";
-import DinoInfoCard from "./dinoInfoCard";
+import DinoPreview from "./DinoPreview";
+import DinoCard from "./DinoCard";
 
 export default function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
@@ -16,13 +16,14 @@ export default function DinoDisplay() {
   }, []);
 
   return (
-    <div className="flex gap-5 bg-gray-500">
+    <div className="flex gap-5 bg-gray-100 items-center justify-center h-dvh">
+      {selectedDino.name && <div className="absolute inset-0 bg-black/70"></div>}
       <div
-        className={` ${selectedDino.name ? "flex flex-col" : "grid grid-cols-3"}`}
+        className="flex flex-wrap"
       >
-        {!dinos ? "Loading..." : dinos.map((dino) => <DinoCard dino={dino} setSelectedDino={setSelectedDino} key={dino.id}/>)}
+        {!dinos ? "Loading..." : dinos.map((dino) => <DinoPreview dino={dino} setSelectedDino={setSelectedDino} key={dino.id}/>)}
       </div>
-      {selectedDino.name && <DinoInfoCard dino={selectedDino}/>}
+      {selectedDino.name && <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino}/>}
     </div>
   );
 }
