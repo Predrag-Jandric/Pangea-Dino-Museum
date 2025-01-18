@@ -133,26 +133,30 @@ const fakeData = [
 
 function Ecommerce() {
   return (
-    <div>
-      <div>
-        <h1>Dino online shop</h1>
+    <div className="flex flex-col gap-6 items-center m-10">
+      <div className="text-center md:max-w-[50rem] w-full p-4 ">
+        <h1 className="text-4xl mb-3">Dino online shop</h1>
         <p>
           Buy your favorite dinosaur toys, figures, and merchandise for yourself
           and your children from our wide selection of products.
         </p>
       </div>
 
-      <section>
+      <section className="p-4 bg-gray-100 rounded-lg bg-bgColor gap-6 flex flex-col items-center">
         {/* search and filters */}
-        <div>
-          <input type="text" placeholder="Search..." />
+        <div className="flex justify-between items-center p-4 bg-white rounded-lg shadow-md w-full">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="p-2 border border-gray-300 rounded-lg w-1/3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
           <div className="flex gap-6">
-            <select>
+            <select className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="">Filter 1</option>
               <option value="option1">Option 1</option>
               <option value="option2">Option 2</option>
             </select>
-            <select>
+            <select className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="">Filter 2</option>
               <option value="option1">Option 1</option>
               <option value="option2">Option 2</option>
@@ -161,21 +165,34 @@ function Ecommerce() {
         </div>
 
         {/* responsive grid */}
-        <div>
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6  mx-auto">
           {fakeData.map((item) => (
-            <div key={item.id}>
-              <img src={item.imageSrc} alt={item.name} />
+            <div
+              key={item.id}
+              className="flex mx-auto w-[17rem] flex-col p-4 border border-gray-200 rounded-lg shadow-md bg-white"
+            >
+              <img
+                src={item.imageSrc}
+                alt={item.name}
+                className="w-full h-48 object-contain mb-4"
+              />
 
               {/* product info */}
-              <h2>{item.name}</h2>
-              <p>
-                Price: <span>${item.price}</span>
+              <h2 className="text-lg font-semibold mb-2">{item.name}</h2>
+              <p className="text-gray-600 mb-1">
+                Price:{" "}
+                <span className="font-bold text-green-600">${item.price}</span>
               </p>
-              <p>
+              <p className="text-gray-600 mb-3">
                 Quantity: <span className="font-bold">{item.quantity}</span>
               </p>
 
-              <button>Buy</button>
+              <button
+                className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200"
+                onClick={() => alert(`You bought ${item.name}!`)} //
+              >
+                Buy
+              </button>
             </div>
           ))}
         </div>
