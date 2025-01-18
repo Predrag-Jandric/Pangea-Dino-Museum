@@ -2,7 +2,7 @@ import React from "react";
 
 export default function DinoCard({ dino, setSelectedDino }) {
   return (
-    <div className="p-5 absolute">
+    <div className="p-5 absolute left-1/2 -translate-x-1/2">
       <div className="bg-[url('/dino-card-bg.jpg')] bg-contain p-5 rounded-lg shadow-xl max-w-[500px] flex flex-col gap-3">
         <div
           className="cursor-pointer text-xl absolute right-8 top-8"
@@ -68,7 +68,7 @@ export default function DinoCard({ dino, setSelectedDino }) {
         </div>
 
         <div className="bg-green-200 p-2 rounded-md">
-          <div className="mb-3 max-h-56 overflow-y-auto">📓 {dino.description}</div>
+          <div className="mb-3 max-h-48 overflow-y-auto">📓 {dino.description}</div>
           <div className="text-xs">Named by: {dino.namedBy}</div>
         </div>
 

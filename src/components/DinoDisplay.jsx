@@ -31,11 +31,23 @@ export default function DinoDisplay() {
   };
 
   return (
-    <div className="flex gap-5 bg-gray-100 items-center justify-center h-dvh relative overflow-x-hidden">
+    <div className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 pt-10">
       {selectedDino.name && (
         <div className="absolute inset-0 bg-black/70"></div>
       )}
-      <div className="flex items-center gap-5 h-full flex-1 overflow-x-scroll scroll-smooth scrollbar-hidden">
+      <div className="mb-10 pl-10">
+        <h2 className="mb-3 text-4xl">DinoDex</h2>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          officiis cum odio dolorum error ullam fuga eos. Mollitia, aspernatur?
+          Quam corrupti officia fugiat modi doloribus alias, aut quasi maxime
+          voluptatum iste. Autem non quisquam unde, quos minus maiores, officia
+          ducimus accusamus repellendus, exercitationem totam neque alias
+          quaerat commodi dolorem facere?
+        </div>
+        <div className="mt-5">Refresh page for more random dinos!</div>
+      </div>
+      <div className="scrollbar-hidden flex h-full gap-5 overflow-x-scroll scroll-smooth pt-10">
         {!dinos
           ? "Loading..."
           : filtered.map((dino) => (
