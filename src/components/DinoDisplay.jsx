@@ -4,26 +4,51 @@ import DinoCard from "./DinoCard";
 
 export default function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
+  const [filtered, setFiltered] = useState([]);
   const [selectedDino, setSelectedDino] = useState({});
 
   useEffect(() => {
     async function getDinos() {
-      const res = await fetch("https://chinguapi.onrender.com/dinosaurs");
-      const data = await res.json();
-      setDinos(data.slice(0, 10));
+      try {
+        const res = await fetch("https://chinguapi.onrender.com/dinosaurs");
+        const data = await res.json();
+        setDinos(data);
+        setFiltered(getRandomDinos(data, 10));
+      } catch (error) {
+        console.error("Error fetching dinos", error);
+      }
     }
     getDinos();
   }, []);
 
+  // will get a randomly generated array of {COUNT} dinos, no repeats
+  const getRandomDinos = (dinos, count) => {
+    const randomIndexes = new Set();
+    while (randomIndexes.size < count) {
+      randomIndexes.add(Math.floor(Math.random() * dinos.length));
+    }
+    return [...randomIndexes].map((ind) => dinos[ind]);
+  };
+
   return (
     <div className="flex gap-5 bg-gray-100 items-center justify-center h-dvh relative">
-      {selectedDino.name && <div className="absolute inset-0 bg-black/70"></div>}
-      <div
-        className="flex flex-wrap"
-      >
-        {!dinos ? "Loading..." : dinos.map((dino) => <DinoPreview dino={dino} setSelectedDino={setSelectedDino} key={dino.id}/>)}
+      {selectedDino.name && (
+        <div className="absolute inset-0 bg-black/70"></div>
+      )}
+      <div className="flex flex-wrap">
+        {!dinos
+          ? "Loading..."
+          : filtered.map((dino) => (
+              <DinoPreview
+                dino={dino}
+                setSelectedDino={setSelectedDino}
+                key={dino.id}
+              />
+            ))}
       </div>
-      {selectedDino.name && <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino}/>}
+      {selectedDino.name && (
+        <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
+      )}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import React from "react";
 export default function DinoCard({ dino, setSelectedDino }) {
   return (
     <div className="p-5 absolute">
-      <div className="bg-[url('/dino-card-bg.jpg')] bg-cover p-5 rounded-lg shadow-xl max-w-[500px] flex flex-col gap-3">
+      <div className="bg-[url('/dino-card-bg.jpg')] bg-contain p-5 rounded-lg shadow-xl max-w-[500px] flex flex-col gap-3">
         <div
           className="cursor-pointer text-xl absolute right-8 top-8"
           onClick={() => setSelectedDino({})}
@@ -29,7 +29,7 @@ export default function DinoCard({ dino, setSelectedDino }) {
 
           <div className="flex flex-col">
             <h2 className="text-3xl text-gray-200">{dino.name}</h2>
-            <div className="text-xs text-right bg-gray-200 px-2 rounded-lg">
+            <div className="text-xs text-right bg-gray-200 px-2 rounded-lg ">
               {dino.typeOfDinosaur} | {dino.typeSpecies}
             </div>
           </div>
