@@ -1,7 +1,11 @@
-import React from 'react'
-
-export default function DinoCard() {
+export default function DinoCard({dino}) {
   return (
-    <div>DinoCard</div>
-  )
+    <li
+      key={dino.id}
+      className="cursor-pointer list-none border border-blue-400 rounded-xl m-3 p-2"
+      onClick={() => setSelected(dino)}
+    >
+      {dino.name}
+    </li>
+  );
 }
