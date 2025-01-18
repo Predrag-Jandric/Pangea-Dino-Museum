@@ -31,11 +31,11 @@ export default function DinoDisplay() {
   };
 
   return (
-    <div className="flex gap-5 bg-gray-100 items-center justify-center h-dvh relative">
+    <div className="flex gap-5 bg-gray-100 items-center justify-center h-dvh relative overflow-x-hidden">
       {selectedDino.name && (
         <div className="absolute inset-0 bg-black/70"></div>
       )}
-      <div className="flex flex-wrap">
+      <div className="flex items-center gap-5 h-full flex-1 overflow-x-scroll scroll-smooth scrollbar-hidden">
         {!dinos
           ? "Loading..."
           : filtered.map((dino) => (

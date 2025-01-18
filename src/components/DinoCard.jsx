@@ -68,7 +68,7 @@ export default function DinoCard({ dino, setSelectedDino }) {
         </div>
 
         <div className="bg-green-200 p-2 rounded-md">
-          <div className="mb-3">📓 {dino.description}</div>
+          <div className="mb-3 max-h-56 overflow-y-auto">📓 {dino.description}</div>
           <div className="text-xs">Named by: {dino.namedBy}</div>
         </div>
 
