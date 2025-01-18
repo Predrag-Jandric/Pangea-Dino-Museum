@@ -95,3 +95,30 @@ export const quizQuestions = [
     points: 10,
   },
 ];
+
+export const timelineEvents = [
+  {
+    title: "Age of Dinosaurs",
+    description:
+      "The Age of Dinosaurs, spanning from approximately 230 to 66 million years ago, was a remarkable period in Earth's history when dinosaurs dominated the planet. During this time, dinosaurs evolved into a variety of species, from the massive long-necked sauropods to the fearsome theropods like Tyrannosaurus rex. This era saw dinosaurs adapting to diverse environments, from lush forests to arid deserts, and their presence spread across every continent. It was a time of great evolutionary significance, with the development of complex ecosystems and the rise of other ancient life forms alongside the dinosaurs.",
+    time: "Around 230 million years ago",
+  },
+  {
+    title: "Triassic Period",
+    description:
+      "The Triassic Period, which occurred from about 252 to 201 million years ago, marked the beginning of the Mesozoic Era and the dawn of the dinosaurs. Following the largest mass extinction event in Earth's history at the end of the Permian Period, life began to slowly recover, and the first true dinosaurs began to emerge. The Triassic saw the development of early dinosaur species such as Coelophysis and Herrerasaurus. The climate during this time was hot and arid, with vast deserts, but by the end of the period, the world was on the cusp of the more familiar dinosaur-dominated ecosystems of the Jurassic.",
+    time: "Around 252 to 201 million years ago",
+  },
+  {
+    title: "Jurassic Period",
+    description:
+      "The Jurassic Period, lasting from about 201 to 145 million years ago, was a golden age for dinosaurs. It saw the rise of some of the largest and most iconic dinosaur species, including the long-necked Brachiosaurus and the predatory Allosaurus. During this time, the supercontinent Pangaea began to break apart, leading to the formation of distinct landmasses and the spread of different dinosaur species across the globe. The climate was warm and humid, promoting the growth of lush vegetation, which supported both herbivorous and carnivorous dinosaurs. This period also saw the emergence of the first birds, evolving from small theropod dinosaurs.",
+    time: "Around 201 to 145 million years ago",
+  },
+  {
+    title: "Cretaceous Period",
+    description:
+      "The Cretaceous Period, which lasted from around 145 to 66 million years ago, was the final chapter in the era of dinosaurs. It was a time of great diversity, with iconic species such as the massive Tyrannosaurus rex and the armored Triceratops roaming the Earth. Flowering plants began to evolve, changing ecosystems and providing new food sources for herbivorous dinosaurs. The period also saw the appearance of new dinosaur groups, including the first hadrosaurids (duck-billed dinosaurs) and the large carnivorous theropods like Spinosaurus. However, the Cretaceous Period came to a dramatic and catastrophic end, with the famous mass extinction event that wiped out approximately 75% of all life on Earth, including the dinosaurs.",
+    time: "Around 145 to 66 million years ago",
+  },
+];

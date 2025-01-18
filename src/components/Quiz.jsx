@@ -52,7 +52,7 @@ function reducer(state, action) {
   }
 }
 
-function App() {
+function Quiz() {
   const [{ questions, status, index, answer, points, highscore }, dispatch] =
     useReducer(reducer, initialState);
 
@@ -111,26 +111,26 @@ function App() {
                     dispatch({ type: "newAnswer", payload: optionIndex })
                   }
                   className={`w-full py-3 px-4 rounded-lg text-left border-2 font-medium ${
-                    // Highlight selected answer
+                    // highlight selected answer
                     optionIndex === answer
                       ? optionIndex === currentQuestion.correctOption
-                        ? "bg-green-200 border-greenOne" // Correct selected answer
-                        : "bg-red-200 border-red-500" // Incorrect selected answer
+                        ? "bg-green-200 border-greenOne" // correct selected answer
+                        : "bg-red-200 border-red-500" // incorrect selected answer
                       : "bg-gray-50 border-grayOne"
                   } ${
-                    // Highlight correct answer when an incorrect answer is selected
+                    // highlight correct answer when an incorrect answer is selected
                     answer !== null &&
                     optionIndex === currentQuestion.correctOption &&
                     optionIndex !== answer
                       ? "bg-green-200 border-greenOne"
                       : ""
                   } ${
-                    // Dim non-selected options after answering
+                    // dim non-selected options after answering
                     answer !== null && optionIndex !== answer
                       ? "opacity-60"
                       : ""
                   }`}
-                  disabled={answer !== null} // Disable buttons after answering
+                  disabled={answer !== null} // disable buttons after answering
                 >
                   {option}
                 </button>
@@ -176,4 +176,4 @@ function App() {
   );
 }
 
-export default App;
+export default Quiz;
