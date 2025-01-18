@@ -3,6 +3,7 @@ import Test from "./components/Test";
 import Quiz from "./components/Quiz";
 import Timeline from "./components/Timeline";
 import DinoMap from "./components/DinoMap";
+import Ecommerce from "./components/Ecommerce";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <Test /> */}
       {/* <Quiz /> */}
       {/* <Timeline /> */}
-      <DinoMap />
+      {/* <DinoMap /> */}
+      <Ecommerce />
     </div>
   );
 }
