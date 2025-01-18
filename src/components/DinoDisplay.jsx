@@ -16,7 +16,7 @@ export default function DinoDisplay() {
   }, []);
 
   return (
-    <div className="flex gap-5 bg-gray-100 items-center justify-center h-dvh">
+    <div className="flex gap-5 bg-gray-100 items-center justify-center h-dvh relative">
       {selectedDino.name && <div className="absolute inset-0 bg-black/70"></div>}
       <div
         className="flex flex-wrap"

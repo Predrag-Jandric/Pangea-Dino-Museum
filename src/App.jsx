@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="">
-      {/* <LandingPage /> */}
+      <LandingPage />
       <DinoDisplay />
       <Quiz />
       <Timeline />
