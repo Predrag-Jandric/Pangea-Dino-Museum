@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import DinoPreview from "./DinoPreview";
 import DinoCard from "./DinoCard";
 // static data currently being used prior to creation of API
-import data from "../data.json"
+import data from "../data.json";
+import DinoSearch from "./navbar/DinoSearch";
 
 export default function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
@@ -34,11 +35,11 @@ export default function DinoDisplay() {
   };
 
   return (
-    <div className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 pt-10">
+    <div className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 py-10">
       {selectedDino.name && (
         <div className="absolute inset-0 bg-black/70"></div>
       )}
-      <div className="mb-10 pl-10">
+      <div className="m-auto mb-10 max-w-[1000px] pl-10">
         <h2 className="mb-3 text-4xl">DinoDex</h2>
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
@@ -49,10 +50,12 @@ export default function DinoDisplay() {
           quaerat commodi dolorem facere?
         </div>
         <div className="mt-5">Refresh page for more random dinos!</div>
+        <DinoSearch dinos={dinos} setFiltered={setFiltered} />
       </div>
+
       <div className="scrollbar-hidden flex h-full gap-5 overflow-x-scroll scroll-smooth pt-10">
         {!filtered.length
-          ? "Loading..."
+          ? "No Dinosaurs :("
           : filtered.map((dino) => (
               <DinoPreview
                 dino={dino}
