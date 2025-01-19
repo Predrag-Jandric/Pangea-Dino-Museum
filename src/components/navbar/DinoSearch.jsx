@@ -18,7 +18,7 @@ export default function DinoSearch({ dinos, setFiltered }) {
   };
 
   // handle serach depding on criteria
-  // ! refactor to search via category and query
+  // ! refactor to search via category and query as object (switch statement)
   const handleSearch = (e) => {
     let filteredDinos;
     if (search === "name") {
