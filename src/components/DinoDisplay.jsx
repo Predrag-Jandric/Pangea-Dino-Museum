@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import DinoPreview from "./DinoPreview";
 import DinoCard from "./DinoCard";
+// static data currently being used prior to creation of API
+import data from "../data.json"
 
 export default function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
@@ -10,8 +12,9 @@ export default function DinoDisplay() {
   useEffect(() => {
     async function getDinos() {
       try {
-        const res = await fetch("https://chinguapi.onrender.com/dinosaurs");
-        const data = await res.json();
+        //! static data currently being used prior to creation of API, revert when completed
+        // const res = await fetch("https://chinguapi.onrender.com/dinosaurs");
+        // const data = await res.json();
         setDinos(data);
         setFiltered(getRandomDinos(data, 10));
       } catch (error) {
@@ -48,13 +51,14 @@ export default function DinoDisplay() {
         <div className="mt-5">Refresh page for more random dinos!</div>
       </div>
       <div className="scrollbar-hidden flex h-full gap-5 overflow-x-scroll scroll-smooth pt-10">
-        {!dinos
+        {!filtered.length
           ? "Loading..."
           : filtered.map((dino) => (
               <DinoPreview
                 dino={dino}
                 setSelectedDino={setSelectedDino}
-                key={dino.id}
+                // revert to dino.id when new API is integreated
+                key={dino.name}
               />
             ))}
       </div>
