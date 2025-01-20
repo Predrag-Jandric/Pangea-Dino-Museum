@@ -75,6 +75,9 @@ export default function DinoSearch({ dinos, setFiltered }) {
           <option name="herbivorous" value="herbivorous" id="herbivorous">
             Herbivorous
           </option>
+          <option name="omnivorous" value="omnivorous" id="omnivorous">
+            Omnivorous
+          </option>
         </select>
       )}
 
