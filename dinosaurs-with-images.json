@@ -165,21 +165,6 @@
 },
 {
 "id":12,
-"name":"Ampelosaurus",
-"imageSrc":"NA",
-"typeOfDinosaur":"sauropod",
-"length":15,
-"weight":"NA",
-"diet":"herbivorous",
-"whenLived":"Late Cretaceous, 71-66 million years ago",
-"foundIn":"France",
-"taxonomy":"Dinosauria, Saurischia, Sauropodomorpha, Sauropoda, Eusauropoda, Neosauropoda, Macronaria, Camarasauromorpha, Titanosauriformes, Titanosauria, Lithostrotia",
-"namedBy":"Le Loeuff (1995)",
-"typeSpecies":"atacis",
-"description":"Ampelosaurus is known from fossil teeth, postcranial bones and osteoderms ('armour plating')."
-},
-{
-"id":13,
 "name":"Amygdalodon",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Amygdalodon.jpg",
 "typeOfDinosaur":"sauropod",
@@ -194,7 +179,7 @@
 "description":"Amygdalodon is known from a single partial skeleton."
 },
 {
-"id":14,
+"id":13,
 "name":"Anchiceratops",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/anchi2.jpg",
 "typeOfDinosaur":"ceratopsian",
@@ -209,7 +194,7 @@
 "description":"N/A"
 },
 {
-"id":15,
+"id":14,
 "name":"Anchisaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/anchi.jpg",
 "typeOfDinosaur":"prosauropod",
@@ -224,7 +209,7 @@
 "description":"N/A"
 },
 {
-"id":16,
+"id":15,
 "name":"Ankylosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/ankylosaurus.jpg",
 "typeOfDinosaur":"armoured dinosaur",
@@ -239,7 +224,7 @@
 "description":"Ankylosaurus lived during the Late Cretaceous Period in what is now North America. This armoured dinosaur had bony plates covering its body and a heavy club at the end of its tail.Though it's the most famous member of the ankylosaur group, it's not the best understood. Scientists still haven't found an entire Ankylosaurus skeleton. Some other types of ankylosaurs, such as Zuul, are known from many more bones.But we do have enough Ankylosaurus remains to see that it may have been one of the biggest ankylosaurs.The first Ankylosaurus bones were found in 1906 at the Hell Creek Formation in Montana, USA. Barnum Brown led the fossil hunting trip - the same scientist who led the discovery of Tyrannosaurus rex a few years earlier.These Ankylosaurus fossils weren't very complete. The distinctive tail club wasn't discovered until much later.Barnum and his team found several pieces of armour, but they had separated from the main skeleton. Even today, nobody knows exactly how Ankylosaurus' back armour should be arranged.We can't say for sure how any dinosaur behaved when it was alive. Scientists can only go on fossils and comparisons with living animals.We know that as a plant eater, Ankylosaurus wouldn't have used its tail club to attack prey. It probably used the club to defend itself against big predators.Being herbivorous doesn't mean Ankylosaurus was harmless. Many modern plant-eating animals, such as elephants and hippos, can be very aggressive and dangerous. We may never know whether Ankylosaurus was gentle in nature!This hefty dinosaur probably moved very slowly most of the time, although it might have been able to move faster when needed.Ankylosaurus probably couldn't move its tail club up and down much, but could swing it powerfully from side to side - delivering devastating swipes to any would-be predators.Experts think Ankylosaurus grazed on low-growing plants. It probably wasn't picky - eating many kinds of ferns, shrubs and fruit.Ankylosaurus would've needed to eat around 60 kilogrammes of plant matter a day. That's about the same as a modern elephant.Some scientists think Ankylosaurus might have been able to use its front limbs for digging. If so, perhaps it also ate roots and any other kinds of plant and animal matter it could dig up.Several members of the ankylosaur group lacked the bony tail clubs seen in Ankylosaurus and others such as Tarchia, but were otherwise still covered in armour.These clubless ankylosaurs include Nodosaurus, Panoplosaurus and the British dinosaur Polacanthus."
 },
 {
-"id":17,
+"id":16,
 "name":"Anserimimus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/anseri.jpg",
 "typeOfDinosaur":"large theropod",
@@ -254,7 +239,7 @@
 "description":"N/A"
 },
 {
-"id":18,
+"id":17,
 "name":"Antarctosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/antarcto.jpg",
 "typeOfDinosaur":"sauropod",
@@ -269,7 +254,7 @@
 "description":"N/A"
 },
 {
-"id":19,
+"id":18,
 "name":"Apatosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/apatosaurus-art.jpg",
 "typeOfDinosaur":"sauropod",
@@ -284,7 +269,7 @@
 "description":"Apatosaurus was a large sauropod dinosaur. It lived around 150 million years ago in the Late Jurassic Period, in an area that is now North America.Like all sauropods, Apatosaurus ate plants.Young Apatosaurus individuals grew up quickly. They took around 10 years to reach full adult size.Apatosaurus lived alongside Stegosaurus, Diplodocus and Allosaurus.Their fossils were found in the Morrison Formation, a sequence of rocks that covers a huge area spanning several US states, including Wyoming, Colorado and Montana. Many dinosaurs have been discovered there.During the Late Jurassic the environment was semi-arid, with forests, rivers and floodplains. There were distinct wet and dry seasons.Apatosaurus had a long, narrow tail that it might have used as a whip.The animal's huge size would also have helped to protect it from smaller predators, which may have found Apatosaurus too big to take on. Living in herds gave extra protection.The name Apatosaurus comes from Greek words meaning 'deceptive lizard'. The scientist who named this dinosaur, Othniel Charles Marsh, felt that some of the fossil bones were confusing to identify. They seemed to resemble the bones of a sea reptile.For more than 100 years, most scientists stopped using the well-known dinosaur name Brontosaurus. They thought that Brontosaurus and Apatosaurus fossils were the same thing.But based on a study done in 2015, experts now think that the two dinosaurs are separate after all, although they are closely related.Apatosaurus went extinct 145 million years ago, at the end of the Jurassic Period."
 },
 {
-"id":20,
+"id":19,
 "name":"Aralosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Aralosaurus.jpg",
 "typeOfDinosaur":"large ornithopod",
@@ -299,7 +284,7 @@
 "description":"N/A"
 },
 {
-"id":21,
+"id":20,
 "name":"Archaeopteryx",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/archaeopteryx.jpg",
 "typeOfDinosaur":"small theropod",
@@ -314,7 +299,7 @@
 "description":"Archaeopteryx was a small, bird-like dinosaur. It lived during the Late Jurassic Period in what is now Europe.The discovery of the first Archaeopteryx fossil in Germany in 1861 caused a lot of confusion. No birds were known from so far back. Some people even thought it might be an angel.Since then, multiple fossils of Archaeopteryx have been discovered. Many show clear evidence of long feathers. But we don't know whether Archaeopteryx was fully able to fly or if it could only glide.Archaeopteryx also has a common name - Urvogel, a German name meaning 'primeval bird'.Strictly speaking, all birds are dinosaurs. But not all dinosaurs are birds. Scientists sometimes use the term 'non-avian dinosaurs' when talking about prehistoric dinosaurs that aren't birds.The line between bird and non-avian dinosaur can be vague, and many experts have discussed which way to class Archaeopteryx. For many years, scientists spoke about it as an ancient bird. These days, many people believe it should be called a dinosaur.Ultimately, categories like bird and non-avian dinosaur are invented by humans. The natural world doesn't always fit neatly into them. Animals such as Archaeopteryx that could sit across two or more categories are sometimes called transitional fossils.While Archaeopteryx is sometimes called the first bird or the earliest bird, scientists now think that there could be even older bird ancestors. Dinosaurs such as Anchiornis and Aurornis might sit even further back on the bird branch of the dinosaur family tree. If so, they're even earlier relatives of true birds. It's very difficult to say for sure.Archaeopteryx had some features in common with the birds of today. It had broad feathered wings and a small body, roughly the size of a magpie.After comparing its eyes to those of modern birds and reptiles, experts concluded that Archaeopteryx was probably diurnal. This means that it would have been active during the day and slept at night, like many of today's birds.We don't know whether Archaeopteryx mostly lived on the ground or in trees. Some scientists think it might have been equally comfortable with either, like a crow.Unlike modern birds, however, Archaeopteryx had sharp teeth and a long, bony tail.Many specimens of Archaeopteryx have been recovered over the years. All are from the limestone quarries near Solnhofen in Germany.In the Jurassic Period, this area was a lagoon surrounded by sub-tropical islands. Other small creatures such as insects and lizards - which Archaeopteryx may have preyed on - have been unearthed there too. So have some pterosaurs - flying reptiles - and the small dinosaur Compsognathus.The first Archaeopteryx fossil ever found was a single feather.Later, full skeletons were discovered showing feather impressions. We bought the first of these in 1862. It is now known as 'the London specimen' and is on display in our Cadogan gallery.There has since been debate over whether the first feather discovered really belongs to Archaeopteryx.Two years before the discovery of Archaeopteryx, Charles Darwin had just written On the Origin of Species. The book was the first to lay out the theory of evolution.Many people back then - scientists included - strongly disagreed with Darwin's concept and claimed that it wasn't possible for animals to evolve over time. But the discovery of the Archaeopteryx fossils, clearly showing a feathered and bird-like dinosaur, seemed to prove that dinosaurs had evolved into birds.Even 100 years later, there were still those who didn't accept it. Some people published articles claiming that the feathers must be fake. The controversy didn't last long, however, as our scientists were able to show that the fossils were real.The discovery of Archaeopteryx was a landmark moment for dinosaur scientists, and it is still considered to be one of the most important finds in history.It's usually almost impossible for scientists to know what colour a dinosaur would have been in life.But thanks to modern scanning technology, experts have been able to find out the colour of one Archaeopteryx wing feather - which seems to have been jet-black.We don't know whether Archaeopteryx was black all over or only on its wings."
 },
 {
-"id":22,
+"id":21,
 "name":"Archaeornithomimus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/archaeorn.jpg",
 "typeOfDinosaur":"small theropod",
@@ -329,7 +314,7 @@
 "description":"N/A"
 },
 {
-"id":23,
+"id":22,
 "name":"Argentinosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/argent.jpg",
 "typeOfDinosaur":"sauropod",
@@ -344,7 +329,7 @@
 "description":"The exact size of Argentinosaurus is hard to estimate due to the incompleteness of its fossilised remains. But it is one of the largest land animals ever found. It carried on growing throughout most of its lifetime. Other similarly massive dinosaurs include Patagotitan and Puertasaurus. They were all titanosaurs, a type of sauropod.Argentinosaurus probably used its long neck to sweep the ground or to reach high up in search of vegetation. The hatchlings of Argentinosaurus would have taken 15 years to grow to adulthood and in that time they would have been very vulnerable to predators, such as Giganotosaurus."
 },
 {
-"id":24,
+"id":23,
 "name":"Arrhinoceratops",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Arrhinoceratops.jpg",
 "typeOfDinosaur":"ceratopsian",
@@ -359,7 +344,7 @@
 "description":"The only undisputed specimen of Arrhinoceratops is a skull."
 },
 {
-"id":25,
+"id":24,
 "name":"Atlascopcosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Atlascopcosaurus.jpg",
 "typeOfDinosaur":"small ornithopod",
@@ -374,7 +359,7 @@
 "description":"N/A"
 },
 {
-"id":26,
+"id":25,
 "name":"Austrosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Austrosaurus.jpg",
 "typeOfDinosaur":"sauropod",
@@ -389,7 +374,7 @@
 "description":"Dorsal vertebrae (part of the backbone) and limb remains of Austrosaurus have been found."
 },
 {
-"id":27,
+"id":26,
 "name":"Avaceratops",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Avaceratops.jpg",
 "typeOfDinosaur":"ceratopsian",
@@ -404,7 +389,7 @@
 "description":"N/A"
 },
 {
-"id":28,
+"id":27,
 "name":"Avimimus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/avim.jpg",
 "typeOfDinosaur":"small theropod",
@@ -419,7 +404,7 @@
 "description":"N/A"
 },
 {
-"id":29,
+"id":28,
 "name":"Bagaceratops",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Bagaceratops.jpg",
 "typeOfDinosaur":"ceratopsian",
@@ -434,7 +419,7 @@
 "description":"N/A"
 },
 {
-"id":30,
+"id":29,
 "name":"Barapasaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/barapa.jpg",
 "typeOfDinosaur":"sauropod",
@@ -449,7 +434,7 @@
 "description":"Barapasaurus was a primitive but very large sauropod."
 },
 {
-"id":31,
+"id":30,
 "name":"Barosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/baro.jpg",
 "typeOfDinosaur":"sauropod",
@@ -464,7 +449,7 @@
 "description":"N/A"
 },
 {
-"id":32,
+"id":31,
 "name":"Becklespinax",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Becklespinax.jpg",
 "typeOfDinosaur":"large theropod",
@@ -479,7 +464,7 @@
 "description":"N/A"
 },
 {
-"id":33,
+"id":32,
 "name":"Borogovia",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Borogovia.jpg",
 "typeOfDinosaur":"small theropod",
@@ -494,7 +479,7 @@
 "description":"Only partial hindlimbs of this dinosaur have been found, so reconstructions are speculative. It was named after Lewis Carroll's borogoves from the poem Jabberwocky, published in 1871."
 },
 {
-"id":34,
+"id":33,
 "name":"Brachiosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/brach.jpg",
 "typeOfDinosaur":"sauropod",
@@ -509,7 +494,7 @@
 "description":"Brachiosaurus held its head very high. It is likely to have eaten the leaves on tall tree-like plants."
 },
 {
-"id":35,
+"id":34,
 "name":"Brachylophosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Brachylophosaurus.jpg",
 "typeOfDinosaur":"large ornithopod",
@@ -523,10 +508,8 @@
 "typeSpecies":"canadensis",
 "description":"N/A"
 },
-
-
 {
-"id":36,
+"id":35,
 "name":"Camarasaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/camara.jpg",
 "typeOfDinosaur":"sauropod",
@@ -541,7 +524,7 @@
 "description":"Camarasaurus used rows of close-set teeth to strip the leaves from trees and shrubs. Food was ground by stones in the stomach."
 },
 {
-"id":37,
+"id":36,
 "name":"Camptosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/campto.jpg",
 "typeOfDinosaur":"large ornithopod",
@@ -556,7 +539,7 @@
 "description":"N/A"
 },
 {
-"id":38,
+"id":37,
 "name":"Carcharodontosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/carcharodontosaurus.jpg",
 "typeOfDinosaur":"large theropod",
@@ -571,7 +554,7 @@
 "description":"Carcharodontosaurus was a very large meat-eating dinosaur.It is named after Carcharodon, the scientific name for several types of shark - of which the great white shark is the only living example.Carcharodontosaurus teeth look a lot like shark teeth. Like Tyrannosaurus, it had about 60 of them.Carcharodontosaurus fossils have been found across North Africa in Algeria, Egypt and Morocco.In the Late Cretaceous, this region was warm and humid with rainforests, rivers and lakes.Carcharodontosaurus lived alongside many other dinosaurs, including sauropods such as Paralititan and Rebbachisaurus and the theropods Spinosaurus and Deltadromeus.Scientists aren't sure what Carcharodontosaurus ate. It most likely fed on large prey such as plant-eating dinosaurs.Carcharodontosaurus had a much less powerful bite than Tyrannosaurus and more fragile teeth. But while it probably didn't crush bones, its teeth were suited to ripping flesh.Carcharodontosaurus is one of the largest carnivorous dinosaurs known. At one point, scientists thought its skull might be the longest ever found. It was around 1.6 metres in length.The full animal could reach lengths of at least 12.5 metres - a size comparable to Tyrannosaurus.Giganotosaurus may have been even larger than both dinosaurs. A lack of complete remains makes it hard to be sure.Carcharodontosaurus was a close relative of Giganotosaurus.Both dinosaurs are carcharodontosaurs - a group that also contains several other interesting dinosaurs, such as the peculiar-looking Concavenator and the British theropod Neovenator.Yet Carcharodontosaurus and Giganotosaurus didn't live in the same place. Giganotosaurus is found in South America.The close relation of these two dinosaurs may be because Africa and South America were once connected. They broke apart during the Cretaceous Period. Scientists are still debating exactly when the separation occurred."
 },
 {
-"id":39,
+"id":38,
 "name":"Carnotaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/carnotaurus.jpg",
 "typeOfDinosaur":"large theropod",
@@ -586,7 +569,7 @@
 "description":"Carnotaurus was a meat-eating dinosaur with two horns on the top of its head and very small arms.It had an unusually short snout and its head was very narrow when viewed from the front.Scientists have found lots of skin impressions for this dinosaur, so we know that it had scales over much of its body. It's unlikely that Carnotaurus or its relatives had feathers - no evidence of them has ever been found.We also don't have a complete skeleton. So far, nobody has ever found the tail or lower legs of Carnotaurus. This means we must use some guesswork based on the remains of this dinosaur's close relatives to do a full-body reconstruction.Nobody is quite sure what Carnotaurus' horns were for. Some experts think the dinosaur might have used them to fight rivals or attack prey.Another idea is that the horns might have helped to attract a mate or identify other Carnotaurus.Experts believe that Carnotaurus' ancestors would have had longer arms. Over time the arms got smaller and less useful.Carnotaurus probably didn't use its arms for much. They were a leftover trait from the dinosaur's earlier ancestors.Scientists call this a vestigial feature. It comes from the word 'vestige', meaning 'a small trace of something that existed a long time ago'.Many animals have vestigial features, including humans. For example, you still have a tailbone in your skeleton, even though you don't have a tail!In his novel The Lost World - the sequel to Jurassic Park - Michael Crichton described Carnotaurus as able to disguise itself with changing skin colours, like a chameleon.We don't have evidence that any dinosaur ever had this ability. If they did, we wouldn't be able to tell from fossil remains.It's always possible that any given dinosaur might have had an unusual or surprising feature that isn't shown in fossils. Fiction is a great place to explore interesting ideas.Although Carnotaurus looked unusual with its tiny arms and short snout, it wasn't the only dinosaur like this.Carnotaurus was part of the abelisaur group. These closely related dinosaurs shared similar characteristics. But Carnotaurus is the only one known to have two horns on its head.Other abelisaurs include Abelisaurus itself, Majungasaurus and the Indian predator Rajasaurus.Carnotaurus and Tyrannosaurus weren't very closely related.The two dinosaurs do share some similarities - both are meat-eating dinosaurs that walked on two legs. But they are also quite different.Tyrannosaurs had more powerful jaws and teeth than abelisaurs, as well as longer arms with two-fingered hands. Abelisaurs had four fingers on each hand. Tyrannosaurs could also grow much larger.Carnotaurus and Tyrannosaurus belong to two different dinosaur groups - ceratosaurs and coelurosaurs. These groups might have been evolving apart for more than 100 million years, since the Late Triassic Period.Carnotaurus fossils have only been found in Argentina. They occur in Late Cretaceous rocks that may have formed from the deposits of estuaries or tidal flats.We know Carnotaurus shared its environment with other dinosaurs. Researchers have found partial remains of as-yet unnamed ankylosaurs and hadrosaurs in the same area, but we don't know exactly what these dinosaurs were like.Although it was clearly a meat-eater, nobody knows for sure what types of animals Carnotaurus hunted.Many experts think it probably preyed on large sauropod dinosaurs. Teeth belonging to related abelisaurs have been found with sauropod remains, so it seems likely.Carnotaurus had a more flexible lower jaw than most other carnivorous dinosaurs. It may have been able to open its jaw wide, like a snake, to swallow big chunks of meat.Originally, researchers thought that the flexible jaw meant Carnotaurus didn't have a very strong bite. But more recent studies contradict this. Some experts think Carnotaurus may even have had a stronger bite force than an American alligator, the most powerful biting creature alive today.When you're talking about more than one dinosaur of a particular kind, you don't need to put an 's' on the end.You can think of it the same way as you would say 'two sheep'.This applies to all dinosaur names - so you can say 'two Carnotaurus' or 'five Velociraptor'."
 },
 {
-"id":40,
+"id":39,
 "name":"Centrosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/centro.jpg",
 "typeOfDinosaur":"ceratopsian",
@@ -601,7 +584,7 @@
 "description":"Centrosaurus had one horn on its snout and spines around the back of its neck frill."
 },
 {
-"id":41,
+"id":40,
 "name":"Ceratosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/cerato.jpg",
 "typeOfDinosaur":"large theropod",
@@ -616,7 +599,7 @@
 "description":"Ceratosaurus means 'horned lizard'. The dinosaur was given this name because it had a row of sharp horns on its head and a row of small, bony pieces of armour running along its back. It is not known what this body armour was for, but it could have been for protection from attack by other Ceratosaurus or larger theropods such as Allosaurus and Torvosaurus.Scientists have estimated that Ceratosaurus was about six to seven metres long. It seems to have been quite a rare animal - remains of it are much rarer than those of the Allosaurus that lived alongside it.Ceratosaurus was one of the biggest hunters in the Jurassic Period. Its prey probably included plant-eating dinosaurs, but some scientists have suggested that it may have fed upon aquatic animals such as fish, turtles and crocodiles.Ceratosaurus is remarkable for the very long, slender teeth in its upper jaw. These teeth could be over nine centimetres long, nearly as long as the lower jaw was deep, so they would almost stick out beyond it when the mouth was closed. Nobody really knows why the teeth were so long, but they may have helped it inflict deep, slashing wounds in prey."
 },
 {
-"id":42,
+"id":41,
 "name":"Cetiosauriscus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/cetios.jpg",
 "typeOfDinosaur":"sauropod",
@@ -631,7 +614,7 @@
 "description":"N/A"
 },
 {
-"id":43,
+"id":42,
 "name":"Cetiosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/cetio.jpg",
 "typeOfDinosaur":"sauropod",
@@ -646,7 +629,7 @@
 "description":"N/A"
 },
 {
-"id":44,
+"id":43,
 "name":"Chasmosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/chasmo.jpg",
 "typeOfDinosaur":"ceratopsian",
@@ -661,7 +644,7 @@
 "description":"Chasmosaurus had a small nose horn, blunt brow horns and a long neck frill with holes."
 },
 {
-"id":45,
+"id":44,
 "name":"Chindesaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Chindesaurus.jpg",
 "typeOfDinosaur":"early dinosaur",
@@ -676,7 +659,7 @@
 "description":"Chindesaurus had a long whip-like tail and long legs. No skull has been found, so its reconstruction is guesswork based on similar dinosaurs."
 },
 {
-"id":46,
+"id":45,
 "name":"Chinshakiangosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Chinshakiangosaurus.jpg",
 "typeOfDinosaur":"sauropod",
@@ -691,7 +674,7 @@
 "description":"Chinshakiangosaurus is only known from a fragmentary skeleton."
 },
 {
-"id":47,
+"id":46,
 "name":"Citipati",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Citipati.jpg",
 "typeOfDinosaur":"small theropod",
@@ -706,7 +689,7 @@
 "description":"N/A"
 },
 {
-"id":48,
+"id":47,
 "name":"Coelophysis",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/coelo.jpg",
 "typeOfDinosaur":"small theropod",
@@ -721,7 +704,7 @@
 "description":"In the Late Triassic Period dinosaurs were not at the top of the food chain. Instead, early large reptiles called phytosaurs and rauisuchids domintated.Early meat-eating dinosaurs like Coelophysis relied on their speed and agility to catch a variety of animals like insects and small reptiles. The sharp teeth and grasping claws of Coelophysis would have helped them to hold and kill their food.A fossil find of an adult skeleton with what appeared to be young Coelophysis bones inside its rib cage led scientists to speculate that Coelophysis ate each other when the opportunity arose.Recent analysis has disproved this, however, by showing that the bones inside the ribcage are not a baby Coelophysis after all, but belong to a small crocodile.Coelophysis means 'hollow form' and this comes from the hollow limb bones. This feature was shared by many other dinosaurs, and would have given Coelophysis a lightly-built body, helping it to be a swift, agile hunter."
 },
 {
-"id":49,
+"id":48,
 "name":"Coelurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/coelurus.jpg",
 "typeOfDinosaur":"small theropod",
@@ -736,7 +719,7 @@
 "description":"N/A"
 },
 {
-"id":50,
+"id":49,
 "name":"Coloradisaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Coloradisaurus.jpg",
 "typeOfDinosaur":"prosauropod",
@@ -751,7 +734,7 @@
 "description":"N/A"
 },
 {
-"id":51,
+"id":50,
 "name":"Conchoraptor",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Conchoraptor.jpg",
 "typeOfDinosaur":"small theropod",
@@ -766,7 +749,7 @@
 "description":"Remains of this dinosaur have been found with feathers preserved. Sexual differences can be seen in the plumage."
 },
 {
-"id":52,
+"id":51,
 "name":"Confuciusornis",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Confuciusornis.jpg",
 "typeOfDinosaur":"small theropod",
@@ -781,7 +764,7 @@
 "description":"N/A"
 },
 {
-"id":53,
+"id":52,
 "name":"Corythosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/coryth.jpg",
 "typeOfDinosaur":"large ornithopod",
@@ -796,7 +779,7 @@
 "description":"N/A"
 },
 {
-"id":54,
+"id":53,
 "name":"Cryolophosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/cryolopho.jpg",
 "typeOfDinosaur":"large theropod",
@@ -811,7 +794,7 @@
 "description":"Cryolophosaurus is one of the earliest meat-eating dinosaurs found so far. It lived in what is now Antarctica and had a small curved crest on the top of its head."
 },
 {
-"id":55,
+"id":54,
 "name":"Dacentrurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/dacentr.jpg",
 "typeOfDinosaur":"armoured dinosaur",
@@ -826,7 +809,7 @@
 "description":"Dacentrurus was the first stegosaur ever discovered."
 },
 {
-"id":56,
+"id":55,
 "name":"Daspletosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/daspelet.jpg",
 "typeOfDinosaur":"large theropod",
@@ -840,7 +823,7 @@
 "typeSpecies":"torosus","description":"N/A"
 },
 {
-"id":57,
+"id":56,
 "name":"Datousaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/datou.jpg",
 "typeOfDinosaur":"sauropod",
@@ -855,7 +838,7 @@
 "description":"N/A"
 },
 {
-"id":58,
+"id":57,
 "name":"Deinocheirus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/deinoc.jpg",
 "typeOfDinosaur":"large theropod",
@@ -870,7 +853,7 @@
 "description":"Originally, scientists only had a pair of arm bones with big, long claws to learn about Deinocheirus. But in 2014, new material revealed that it had a unique, large hump on its back, supported by its back bones. Now we know that it was a truly bizarre-looking creature, with huge, clawed hands, a beaked head like a duck and a hump like a camel."
 },
 {
-"id":59,
+"id":58,
 "name":"Deinonychus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/deinonychus.jpg",
 "typeOfDinosaur":"small theropod",
@@ -885,7 +868,7 @@
 "description":"Deinonychus was a small meat-eating dinosaur. It lived in what is now North America during the Early Cretaceous Period.This dinosaur had a large, sickle-shaped talon on the second toe of each foot. When not in use the claw was held off the ground to keep it sharp.The species name - antirrhopus - means 'counterbalancing'. This is because Deinonychus' tail was long and stiff, helping to balance the animal's weight.When we talk about raptors, we are really talking about dromaeosaurs. 'Raptor' isn't a proper scientific term. Dromaeosaurs were all small- to medium-sized hunters with large toe claws.Some dromaeosaurs have the word 'raptor' in their names, such as Velociraptor, Bambiraptor and Utahraptor. But there are many others that don't, including Deinonychus and Achillobator. That's why it's misleading to call them all raptors.Deinonychus was a close relative of Velociraptor. When the latter featured in the novel Jurassic Park, the author based the dinosaur's details on the bigger Deinonychus. The film and sequels did the same.Nobody has found evidence to prove that Deinonychus had feathers. But scientists think it's very likely that it did.Some very closely related dinosaurs - including Velociraptor - definitely had them.The first Deinonychus fossils were found in southern Montana by John Ostrom and Grant Meyer in 1964. Ostrom published the findings and named the dinosaur five years later.His work caused a widespread change of opinion among palaeontologists. Before, people tended to think of dinosaurs as being slow, lumbering, cold-blooded beasts. Ostrom's studies helped scientists realise that they could be athletic, warm-blooded animals.This change of thought is sometimes called 'the dinosaur renaissance'. It brought a lot of new interest to the world of dinosaur science.Although Deinonychus is often portrayed as a fast-moving hunter, it may not have been as agile as we first imagined.Many researchers now think that Deinonychus wasn't especially quick on its feet compared to other dinosaurs, although it wouldn't have been slow as such.Deinonychus had relatively short lower leg bones. Some experts think that these may have evolved to help Deinonychus attack with its toe claws. They suggest that the shorter bones helped to absorb the impact of its slashing strikes.Other scientists aren't convinced that Deinonychus' toe claws were very effective as slashing weapons. They think the claws helped Deinonychus to climb or to pin smaller prey animals to the ground.Tenontosaurus and Zephyrosaurus may have been among the dinosaurs hunted by Deinonychus."
 },
 {
-"id":60,
+"id":59,
 "name":"Dilophosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/dilopho.jpg",
 "typeOfDinosaur":"large theropod",
@@ -900,7 +883,7 @@
 "description":"Dilophosaurus was a fast-moving meat-eating dinosaur. A kink in its upper jaw may mean that it ate a certain kind of food, or attacked by gripping and holding on to prey - modern crocodiles have a similar kink.The pair of thin bony crests on its head may have been for display."
 },
 {
-"id":61,
+"id":60,
 "name":"Diplodocus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/diplodocus.jpg",
 "typeOfDinosaur":"sauropod",
@@ -915,7 +898,7 @@
 "description":"Diplodocus had a long neck that it would have used to reach high and low vegetation, and to drink water. There has been some debate over how such a long neck would have been held.Scientists now think that ligaments running from the hip to the back of the neck would have allowed Diplodocus to hold its neck in a horizontal position without using muscles. The vertebrae (back bones) are split down the middle and this space could have held ligaments like these.Diplodocus may have had narrow, pointed bony spines lining its back.In 1905 a cast of a Diplodocus skeleton was donated to the Museum by the wealthy businessman Andrew Carnegie, based on the original specimen in the Carnegie Museum in the USA.King Edward VII had requested a copy of the newly discovered dinosaur after seeing a picture of it in Carnegie's Scottish castle. From 1979 to early 2017 the cast - known affectionately as Dippy - was on display in the Museum's Hintze Hall.In 1993, Dippy's tail was lifted from the ground after research revealed that Diplodocus tails would have been raised high to balance the neck.Every two years or so, our experts used specialist equipment to clean the 292 bones that make up Dippy. It took two staff two days to clean and maintain the cast for future generations to enjoy.In January 2017, Dippy left the Museum to prepare for a natural history adventure across the UK. After returning in 2022, the famous cast is now on display at the Herbert Art Gallery & Museum in Coventry, on long-term loan from the Museum."
 },
 {
-"id":62,
+"id":61,
 "name":"Dreadnoughtus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/dreadnoughtus-c.jpg",
 "typeOfDinosaur":"sauropod",
@@ -930,7 +913,7 @@
 "description":"Dreadnoughtus was a giant sauropod, a member of the group called titanosaurs. It lived in South America during the Cretaceous Period.Many titanosaurs are known from only a few bones, but scientists have found around half of the skeleton of Dreadnoughtus. This means it is better understood than some of the other giant sauropods of the time. The skull has never been found though. Thanks to having a good amount of fossil material to study, experts have been able to estimate the weight of this enormous dinosaur. A calculation published in 2020 puts the animal's weight at around 48 metric tons. That's about the same as eight African elephants! However, depending on the method used, estimates have ranged from 22 tonnes to 59 tonnes. The remains of only two Dreadnoughtus specimens have ever been uncovered. Scientists found that the largest one wasn't even fully grown. This means that nobody knows for sure how big this dinosaur could really get. The name Dreadnoughtus means 'fears nothing', because its enormous size would have made it difficult for predators to attack. It is also a reference to the dreadnoughts - huge battleships that fought in wars of the early twentieth century.Dreadnoughtus was so huge that it would have had to eat nearly constantly and spend as little energy as possible in order to survive. The dinosaur's long neck meant that it would have been able to reach a large variety of plant food sources without moving its body too much. This way, it would have been able to eat vast amounts without burning too many calories.The biggest Dreadnoughtus specimen ever found was not fully grown when it died, so scientists can't say for sure how large this dinosaur could grow in adulthood.As far as anyone can tell, some other huge titanosaurs, such as Patagotitan and Argentinosaurus, may have been bigger than Dreadnoughtus.Dreadnoughtus features in the Apple TV+ documentary, Prehistoric Planet. In this show, the dinosaur can be seen with inflatable air sacs on its neck. While there is no fossil evidence to show that Dreadnoughtus really had visible air sacs, all sauropod dinosaurs had internal air sacs. These made the enormous animals lighter than they would otherwise have been. There is no doubt that many dinosaurs would have had surprising external soft tissue features. These features rarely get preserved as fossils - so for now, we can only guess at the unusual features that Dreadnoughtus might have had."
 },
 {
-"id":63,
+"id":62,
 "name":"Dromaeosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/droma.jpg",
 "typeOfDinosaur":"small theropod",
@@ -945,7 +928,7 @@
 "description":"The back foot of this dinosaur had a large claw for kicking."
 },
 {
-"id":64,
+"id":63,
 "name":"Dromiceiomimus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/dromic.jpg",
 "typeOfDinosaur":"large theropod",
@@ -960,7 +943,7 @@
 "description":"Dromiceiomimus looked very like a modern ostrich, but without the thick layer of feathers (it may have had some feathers).Dromiceiomimus is now a nomen dubium (dubious name), because the fossils are no longer thought to represent a distinct dinosaur type."
 },
 {
-"id":65,
+"id":64,
 "name":"Dryosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/dryo.jpg",
 "typeOfDinosaur":"small ornithopod",
@@ -975,7 +958,7 @@
 "description":"N/A"
 },
 {
-"id":66,
+"id":65,
 "name":"Dryptosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/drypto.jpg",
 "typeOfDinosaur":"large theropod",
@@ -990,7 +973,7 @@
 "description":"This dinosaur was originally named Laelaps by Edward Drinker Cope. His rival Othniel Charles Marsh realised that this name was already being used for a mite and renamed the dinosaur Dryptosaurus in 1877."
 },
 {
-"id":67,
+"id":66,
 "name":"Edmontonia",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Edmontonia.jpg",
 "typeOfDinosaur":"armoured dinosaur",
@@ -1005,7 +988,7 @@
 "description":"N/A"
 },
 {
-"id":68,
+"id":67,
 "name":"Elaphrosaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Elaphrosaurus.jpg",
 "typeOfDinosaur":"large theropod",
@@ -1020,7 +1003,7 @@
 "description":"N/A"
 },
 {
-"id":69,
+"id":68,
 "name":"Emausaurus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Emausaurus.jpg",
 "typeOfDinosaur":"armoured dinosaur",
@@ -1035,7 +1018,7 @@
 "description":"N/A"
 },
 {
-"id":70,
+"id":69,
 "name":"Eolambia",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Eolambia.jpg",
 "typeOfDinosaur":"large ornithopod",
@@ -1050,7 +1033,7 @@
 "description":"Eolambia is known from the skulls and postcrania of several individuals, both juveniles and adults."
 },
 {
-"id":71,
+"id":70,
 "name":"Eoraptor",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/eor.jpg",
 "typeOfDinosaur":"small theropod",
@@ -1065,7 +1048,7 @@
 "description":"N/A"
 },
 {
-"id":72,
+"id":71,
 "name":"Euhelopus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Euhelopus.jpg",
 "typeOfDinosaur":"sauropod",
@@ -1080,7 +1063,7 @@
 "description":"Euhelopus is known from a skull and partial postcranial skeletons."
 },
 {
-"id":73,
+"id":72,
 "name":"Euoplocephalus",
 "imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/euoplo.jpg",
 "typeOfDinosaur":"armoured dinosaur",
@@ -1093,4 +1076,19 @@
 "namedBy":"N/A",
 "typeSpecies":"tutus",
 "description":"Euoplocephalus had bony spikes and armour plating on its back, and a bony tail club used for defence."
+},
+{
+"id":73,
+"name":"Eustreptospondylus",
+"imageSrc":"https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Eustreptospondylus.jpg",
+"typeOfDinosaur":"large theropod",
+"length":7,
+"weight":"N/A",
+"diet":"carnivorous",
+"whenLived":"Mid Jurassic, 165 million years ago",
+"foundIn":"England, United Kingdom",
+"taxonomy":"Dinosauria, Saurischia, Theropoda, Megalosauridae, Eustreptospondylinae",
+"namedBy":"Walker (1964)",
+"typeSpecies":"oxoniensis",
+"description":"N/A"
 }]
