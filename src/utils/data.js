@@ -1,9 +1,9 @@
 export const navLinks = [
-  { href: "/", label: "link_1" },
-  { href: "/", label: "link_2" },
-  { href: "/", label: "link_3" },
-  { href: "/", label: "link_4" },
-  { href: "/", label: "link_5" },
+  { href: "dinodex", label: "DinoDex" },
+  { href: "map", label: "Map" },
+  { href: "timeline", label: "Timeline" },
+  { href: "quiz", label: "Quiz" },
+  { href: "shop", label: "Shop" },
 ];
 
 export const landingPageBGimageSlider = [

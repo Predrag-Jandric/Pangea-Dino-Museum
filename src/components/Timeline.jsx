@@ -17,7 +17,7 @@ function Timeline() {
     );
   };
   return (
-    <div className="flex flex-col items-center py-32 p-8 bg-[#F7F7F7]">
+    <div id="timeline" className="flex flex-col items-center py-32 p-8 bg-[#F7F7F7]">
       <div className="flex items-center justify-between w-full max-w-4xl">
         <button
           onClick={handlePrev}

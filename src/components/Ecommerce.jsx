@@ -133,7 +133,7 @@ const fakeData = [
 
 function Ecommerce() {
   return (
-    <div className="flex flex-col gap-6 items-center m-10">
+    <div id="shop" className="flex flex-col gap-6 items-center m-10">
       <div className="text-center md:max-w-[50rem] w-full p-4 ">
         <h1 className="text-4xl mb-3">Dino online shop</h1>
         <p>

@@ -3,7 +3,7 @@ import DinoPreview from "./DinoPreview";
 import DinoCard from "./DinoCard";
 // static data currently being used prior to creation of API
 import data from "../../data.json";
-import DinoSearch from "../navbar/DinoSearch";
+import DinoSearch from "./DinoSearch";
 
 export default function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
@@ -35,7 +35,7 @@ export default function DinoDisplay() {
   };
 
   return (
-    <div className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 py-10">
+    <div id="dinodex" className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 py-10">
       {selectedDino.name && (
         <div className="absolute inset-0 bg-black/70"></div>
       )}

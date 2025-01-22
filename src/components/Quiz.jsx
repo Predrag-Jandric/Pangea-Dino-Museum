@@ -74,7 +74,7 @@ function Quiz() {
   if (percentage === 0) emoji = "😭";
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+    <div id="quiz" className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
       <div className="w-full max-w-2xl h-fit bg-white p-8 rounded-xl shadow-lg">
         {status === "active" && (
           <section>

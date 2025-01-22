@@ -1,11 +1,11 @@
 import MobileNavbar from "./MobileNavbar";
 import useScrollTo from "../../utils/useScrollTo";
 import { useState } from "react";
-import { CgMenu } from "react-icons/cg";
+import { CgMenu, CgShoppingCart } from "react-icons/cg";
 import { navLinks } from "../../utils/data";
 
 function Navbar() {
-  const scrollToSection = useScrollTo(170);
+  const scrollToSection = useScrollTo();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -32,7 +32,7 @@ function Navbar() {
           ))}
         </ul>
 
-        <p className="text-2xl hidden md:flex">Cart</p>
+        <p className="text-2xl hidden md:flex"><CgShoppingCart /></p>
         <CgMenu
           className="absolute md:hidden size-10 top-[30%] right-[7%] cursor-pointer hover:text-primary transition-colors"
           onClick={() => setIsOpen(true)}

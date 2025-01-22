@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useAnimate, stagger } from "framer-motion";
 import useScrollTo from "../../utils/useScrollTo";
 import { IoCloseOutline } from "react-icons/io5";
+import {CgShoppingCart } from "react-icons/cg";
 import { motion } from "framer-motion";
 import { navLinks } from "../../utils/data";
 
@@ -96,7 +97,7 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
       <nav className="fixed h-full text-white top-0 left-0 w-full bg-slate-700 pt-10 z-40  translate-x-full transition-colors">
         <ul className="flex flex-col gap-y-6 px-8 relative">
           <motion.div className="flex mb-4 px-5 justify-between items-center w-full">
-            <p className="text-2xl">Cart</p>
+            <p className="text-2xl hover:text-primary cursor-pointer"><CgShoppingCart /></p>
             <motion.div
               onClick={handleToggle}
               initial={{ scale: 1, opacity: 1 }}
