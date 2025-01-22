@@ -37,18 +37,18 @@ export default function DinoDisplay() {
   return (
     <div
       id="dinodex"
-      className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 py-10"
+      className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 px-20 py-10"
     >
       {selectedDino.name && (
-        <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
-                  {selectedDino.name && (
-          <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
-        )}
+        <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+          {selectedDino.name && (
+            <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
+          )}
         </div>
       )}
       <div className="mx-auto max-w-[1000px]">
         <h2 className="mb-3 text-4xl">DinoDex</h2>
-        <div>
+        <div className="">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
           officiis cum odio dolorum error ullam fuga eos. Mollitia, aspernatur?
           Quam corrupti officia fugiat modi doloribus alias, aut quasi maxime
@@ -59,7 +59,7 @@ export default function DinoDisplay() {
         <div className="mt-5">Refresh page for more random dinos!</div>
         <DinoSearch dinos={dinos} setFiltered={setFiltered} />
 
-        <div className="scrollbar-hidden flex gap-5 overflow-x-scroll scroll-smooth pt-10">
+        <div className="scrollbar-hidden absolute left-0 mt-10 flex w-full gap-5 overflow-x-scroll scroll-smooth p-20">
           {!filtered.length
             ? "No Dinosaurs :("
             : filtered.map((dino) => (
