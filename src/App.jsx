@@ -16,7 +16,7 @@ function App() {
       <Timeline />
       <Quiz /> */}
       <Ecommerce />
-      <ShoppingCartPage />
+      {/* <ShoppingCartPage /> */}
       {/* <Footer /> */}
     </div>
   );
