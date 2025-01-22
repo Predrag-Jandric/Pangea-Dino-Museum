@@ -34,17 +34,24 @@ export default function DinoDisplay() {
     return [...randomIndexes].map((ind) => dinos[ind]);
   };
 
+  const handleClose = () => {
+    setSelectedDino({})
+  }
+
   return (
     <div
       id="dinodex"
       className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 px-20 py-10"
     >
       {selectedDino.name && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/70">
+        <>
+          <div className="absolute inset-0 flex items-center justify-center bg-black/70 z-[1000]" onClick={handleClose}>
+          
+          </div>
           {selectedDino.name && (
-            <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
-          )}
-        </div>
+              <DinoCard dino={selectedDino} handleClose={handleClose} />
+            )}
+        </>
       )}
       <div className="mx-auto max-w-[1000px]">
         <h2 className="mb-3 text-4xl">DinoDex</h2>
