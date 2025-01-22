@@ -7,7 +7,21 @@ const initialState = {
       name: "Triceratops",
       price: 20.56,
       inStock: 5,
-      quantity: 2,
+      quantity: 0,
+    },
+    {
+      id: 4,
+      name: "T-rex",
+      price: 20.56,
+      inStock: 4,
+      quantity: 0,
+    },
+    {
+      id: 2,
+      name: "Velociraptor",
+      price: 20.56,
+      inStock: 2,
+      quantity: 0,
     },
   ],
 };
@@ -65,7 +79,7 @@ const shoppingSlice = createSlice({
       );
 
       if (item) {
-        if (item.quantity > 1) {
+        if (item.quantity >= 1) {
           item.quantity -= 1;
         } else {
           console.warn("Cannot reduce quantity below 1");

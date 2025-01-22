@@ -5,17 +5,19 @@ import Timeline from "./components/Timeline";
 import Footer from "./components/Footer";
 import DinoMap from "./components/DinoMap";
 import Ecommerce from "./components/Ecommerce";
+import ShoppingCartPage from "./components/ShoppingCartPage";
 
 function App() {
   return (
     <div className="">
-      <LandingPage />
+      {/* <LandingPage />
       <DinoDisplay />
       <DinoMap />
       <Timeline />
-      <Quiz />
+      <Quiz /> */}
       <Ecommerce />
-      <Footer />
+      <ShoppingCartPage />
+      {/* <Footer /> */}
     </div>
   );
 }

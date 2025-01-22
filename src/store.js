@@ -1,8 +1,9 @@
 import {configureStore} from '@reduxjs/toolkit';
+import shoppingReducer from "./utils/shoppingSlice"
 
 const store = configureStore({
     reducer: {
-        // Add reducers here
+        shopping: shoppingReducer,
     }
 })
 
