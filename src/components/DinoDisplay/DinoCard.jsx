@@ -1,4 +1,5 @@
 import React from "react";
+import { CgClose } from "react-icons/cg";
 
 export default function DinoCard({ dino, setSelectedDino }) {
   return (
@@ -8,8 +9,8 @@ export default function DinoCard({ dino, setSelectedDino }) {
           className="absolute right-8 top-8 cursor-pointer text-xl"
           onClick={() => setSelectedDino({})}
         >
-          <div className="flex h-6 w-6 justify-center rounded-full bg-green-200 leading-none transition hover:bg-green-300">
-            x
+          <div className="flex h-6 w-6 justify-center items-center rounded-full bg-green-200 leading-none transition hover:bg-green-300">
+            <CgClose />
           </div>
         </div>
         <div className="mb-5 flex items-center justify-around gap-3">

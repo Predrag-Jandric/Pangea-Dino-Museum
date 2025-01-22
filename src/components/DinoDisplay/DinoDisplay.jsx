@@ -35,11 +35,18 @@ export default function DinoDisplay() {
   };
 
   return (
-    <div id="dinodex" className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 py-10">
+    <div
+      id="dinodex"
+      className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 py-10"
+    >
       {selectedDino.name && (
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
+                  {selectedDino.name && (
+          <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
+        )}
+        </div>
       )}
-      <div className="m-auto mb-10 max-w-[1000px] pl-10">
+      <div className="mx-auto max-w-[1000px]">
         <h2 className="mb-3 text-4xl">DinoDex</h2>
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
@@ -51,23 +58,20 @@ export default function DinoDisplay() {
         </div>
         <div className="mt-5">Refresh page for more random dinos!</div>
         <DinoSearch dinos={dinos} setFiltered={setFiltered} />
-      </div>
 
-      <div className="scrollbar-hidden flex h-full gap-5 overflow-x-scroll scroll-smooth pt-10">
-        {!filtered.length
-          ? "No Dinosaurs :("
-          : filtered.map((dino) => (
-              <DinoPreview
-                dino={dino}
-                setSelectedDino={setSelectedDino}
-                // revert to dino.id when new API is integreated
-                key={dino.name}
-              />
-            ))}
+        <div className="scrollbar-hidden flex gap-5 overflow-x-scroll scroll-smooth pt-10">
+          {!filtered.length
+            ? "No Dinosaurs :("
+            : filtered.map((dino) => (
+                <DinoPreview
+                  dino={dino}
+                  setSelectedDino={setSelectedDino}
+                  // revert to dino.id when new API is integreated
+                  key={dino.name}
+                />
+              ))}
+        </div>
       </div>
-      {selectedDino.name && (
-        <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
-      )}
     </div>
   );
 }
