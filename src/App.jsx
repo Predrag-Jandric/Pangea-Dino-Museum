@@ -10,13 +10,13 @@ import ShoppingCartPage from "./components/ShoppingCartPage";
 function App() {
   return (
     <div className="">
-      {/* <LandingPage />
-      <DinoDisplay />
-      <DinoMap />
-      <Timeline />
-      <Quiz /> */}
+      {/* <LandingPage /> */}
+      {/* <DinoDisplay /> */}
+      {/* <DinoMap /> */}
+      {/* <Timeline /> */}
+      {/* <Quiz /> */}
       <Ecommerce />
-      {/* <ShoppingCartPage /> */}
+      <ShoppingCartPage />
       {/* <Footer /> */}
     </div>
   );

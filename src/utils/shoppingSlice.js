@@ -9,20 +9,6 @@ const initialState = {
       inStock: 5,
       quantity: 0,
     },
-    {
-      id: 4,
-      name: "T-rex",
-      price: 20.56,
-      inStock: 4,
-      quantity: 0,
-    },
-    {
-      id: 2,
-      name: "Velociraptor",
-      price: 20.56,
-      inStock: 2,
-      quantity: 0,
-    },
   ],
 };
 
@@ -65,12 +51,9 @@ const shoppingSlice = createSlice({
         (product) => product.id === action.payload,
       );
 
-      if (item) {
-        if (item.quantity < item.inStock) {
-          item.quantity += 1;
-        } else {
-          console.warn("Stock limit reached");
-        }
+      if (item.quantity >= 0 && item.inStock > 0) {
+        item.quantity += 1;
+        item.inStock -= 1;
       }
     },
     decreaseQuantity(state, action) {
@@ -78,12 +61,9 @@ const shoppingSlice = createSlice({
         (product) => product.id === action.payload,
       );
 
-      if (item) {
-        if (item.quantity >= 1) {
-          item.quantity -= 1;
-        } else {
-          console.warn("Cannot reduce quantity below 1");
-        }
+      if (item.quantity > 0 && item.inStock >= 0) {
+        item.quantity -= 1;
+        item.inStock += 1;
       }
     },
     clearCart(state) {
