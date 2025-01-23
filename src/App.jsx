@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="">
       {/* <LandingPage /> */}
-      {/* <DinoDisplay /> */}
+      <DinoDisplay />
       {/* <DinoMap /> */}
       {/* <Timeline /> */}
       {/* <Quiz /> */}

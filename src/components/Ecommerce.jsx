@@ -49,11 +49,17 @@ const fakeData = [
   },
 ];
 
+import { useState } from "react";
 import { addToCart } from "../utils/shoppingSlice";
 import { useDispatch } from "react-redux";
 
 function Ecommerce() {
   const dispatch = useDispatch();
+  const [filters, setFilters] = useState({
+    diet: "",
+    foundIn: "",
+    sortBy: "",
+  });
 
   const handleAddToCart = (item) => {
     if (item.inStock === 0) {
@@ -72,6 +78,41 @@ function Ecommerce() {
     );
   };
 
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
+    setFilters((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const applyFilters = () => {
+    let filteredData = [...fakeData];
+
+    if (filters.diet) {
+      filteredData = filteredData.filter((item) =>
+        item.diet.toLowerCase().includes(filters.diet.toLowerCase()),
+      );
+    }
+
+    if (filters.foundIn) {
+      filteredData = filteredData.filter((item) =>
+        item.foundIn.toLowerCase().includes(filters.foundIn.toLowerCase()),
+      );
+    }
+
+    if (filters.sortBy === "priceAsc") {
+      filteredData.sort((a, b) => a.price - b.price);
+    } else if (filters.sortBy === "priceDesc") {
+      filteredData.sort((a, b) => b.price - a.price);
+    } else if (filters.sortBy === "stockAsc") {
+      filteredData.sort((a, b) => a.inStock - b.inStock);
+    } else if (filters.sortBy === "stockDesc") {
+      filteredData.sort((a, b) => b.inStock - a.inStock);
+    }
+
+    return filteredData;
+  };
+
+  const filteredData = applyFilters();
+
   return (
     <div className="m-10 flex flex-col items-center gap-6">
       <div className="w-full p-4 text-center md:max-w-[50rem]">
@@ -87,22 +128,37 @@ function Ecommerce() {
         <div className="flex w-full items-center justify-between rounded-lg bg-white p-4 shadow-md">
           <input
             type="text"
-            placeholder="Search..."
+            placeholder="Filter by diet..."
+            name="diet"
+            value={filters.diet}
+            onChange={handleFilterChange}
             className="w-1/3 rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          <div className="flex gap-6 items-center">
-            <select className="rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="">Filter 1</option>
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-            </select>
-            <p>X</p>
-          </div>
+          <input
+            type="text"
+            placeholder="Filter by country..."
+            name="foundIn"
+            value={filters.foundIn}
+            onChange={handleFilterChange}
+            className="w-1/3 rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <select
+            name="sortBy"
+            value={filters.sortBy}
+            onChange={handleFilterChange}
+            className="rounded-lg border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="">Sort By</option>
+            <option value="priceAsc">Price: Low to High</option>
+            <option value="priceDesc">Price: High to Low</option>
+            <option value="stockAsc">Stock: Low to High</option>
+            <option value="stockDesc">Stock: High to Low</option>
+          </select>
         </div>
 
         {/* responsive grid */}
         <div className="mx-auto grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {fakeData.map((item) => (
+          {filteredData.map((item) => (
             <div
               key={item.id}
               className="mx-auto flex w-[17rem] flex-col rounded-lg border border-gray-200 bg-white p-4 shadow-md"
