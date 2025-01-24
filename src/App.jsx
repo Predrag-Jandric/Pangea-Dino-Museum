@@ -19,7 +19,7 @@ function App() {
       {/* <Quiz /> */}
       <Ecommerce />
       {/* <ShoppingCartPage /> */}
-      {/* <Footer /> */}
+      <Footer />
 
       <ToastContainer />
     </div>

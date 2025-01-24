@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import DinoPreview from "./DinoPreview";
 import DinoCard from "./DinoCard";
 // static data currently being used prior to creation of API
-import dinosaurs from "../../data.json";
+import { dinosaurs } from "../../utils/data.js";
 import DinoSearch from "./DinoSearch";
 
 export default function DinoDisplay() {

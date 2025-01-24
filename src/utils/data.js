@@ -302,3 +302,46 @@ export const dinosaurs = [
     inStock: 3,
   },
 ];
+
+export const teamMembers = [
+  {
+    name: "Evaristo Caraballo",
+    role: "Product Owner",
+    link: "https://www.linkedin.com/in/evaristocaraballo/",
+  },
+  {
+    name: "Estelle Wraight",
+    role: "Product Owner",
+    link: "https://www.linkedin.com/in/estelle-couture-41422b47/",
+  },
+  {
+    name: "Promise Akabudu",
+    role: "Product Owner",
+    link: "https://www.linkedin.com/in/promise-akabudu/",
+  },
+  {
+    name: "Afrah Ali",
+    role: "Scrum Master",
+    link: "https://www.linkedin.com/in/afrah-ali-251264269/",
+  },
+  {
+    name: "Dayo Abdul",
+    role: "Developer",
+    link: "https://github.com/Dayo1900",
+  },
+  {
+    name: "Predrag Jandric",
+    role: "Developer",
+    link: "https://www.linkedin.com/in/predrag-jandric/",
+  },
+  {
+    name: "Greg Minezzi",
+    role: "Developer",
+    link: "https://www.linkedin.com/in/gregminezzi",
+  },
+  {
+    name: "Ziad Shaarawy",
+    role: "Developer",
+    link: "https://www.linkedin.com/in/ziad-shaarawy-629a5721b/",
+  },
+];

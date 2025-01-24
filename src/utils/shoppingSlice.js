@@ -54,6 +54,10 @@ const shoppingSlice = createSlice({
       if (item.quantity >= 0 && item.inStock > 0) {
         item.quantity += 1;
         item.inStock -= 1;
+      } else if(item.inStock === 0) {
+        toast.error("Item out of stock", {
+          autoClose: 2000,
+        });
       }
     },
     decreaseQuantity(state, action) {
@@ -61,7 +65,7 @@ const shoppingSlice = createSlice({
         (product) => product.id === action.payload,
       );
 
-      if (item.quantity > 0 && item.inStock >= 0) {
+      if (item.quantity > 1 && item.inStock >= 0) {
         item.quantity -= 1;
         item.inStock += 1;
       }

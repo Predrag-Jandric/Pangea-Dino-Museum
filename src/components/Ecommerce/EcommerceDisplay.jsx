@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { addToCart } from "../../utils/shoppingSlice";
 import { useDispatch } from "react-redux";
 import EcommerceSearch from "./EcommerceSearch";
-import dinosaurs from "../../data.json";
+import { dinosaurs } from "../../utils/data.js";
 import EcommerceCard from "./EcommerceCard";
 
 function Ecommerce() {

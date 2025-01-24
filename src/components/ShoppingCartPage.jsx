@@ -11,6 +11,10 @@ function ShoppingCartPage() {
   const cart = useSelector((state) => state.shopping.inCart);
   const dispatch = useDispatch();
 
+  const totalPrice = cart.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
+
   return (
     <div className="p-4">
       <h1 className="mb-4 text-2xl font-bold">Shopping Cart</h1>
@@ -52,16 +56,27 @@ function ShoppingCartPage() {
               </div>
             </div>
           ))}
+          <div className="mt-4 text-right">
+            <h2 className="text-xl font-bold">
+              Total: ${totalPrice.toFixed(2)}
+            </h2>
+          </div>
+          <div className="mt-4 flex justify-between">
+            <button
+              onClick={() => dispatch(clearCart())}
+              className="rounded bg-blue-500 px-4 py-2 text-white"
+            >
+              Clear Cart
+            </button>
+            <button
+              onClick={() => alert("Checkout feature not present !")}
+              className="rounded bg-blue-500 px-4 py-2 text-white"
+            >
+              Checkout
+            </button>
+          </div>
         </div>
       )}
-      <div className="mt-4">
-        <button
-          onClick={() => dispatch(clearCart())}
-          className="rounded bg-blue-500 px-4 py-2 text-white"
-        >
-          Clear Cart
-        </button>
-      </div>
     </div>
   );
 }
