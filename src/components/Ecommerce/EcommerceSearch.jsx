@@ -18,7 +18,8 @@ function EcommerceSearch({ dinos, setFiltered }) {
       e.target.value !== "diet" &&
       e.target.value !== "stock" &&
       e.target.value !== "price" &&
-      e.target.value !== "country"
+      e.target.value !== "country" &&
+      e.target.value !== "name"
     ) {
       handleSearch(e.target.value, ""); // Reset the search results when changing category
     }
@@ -76,25 +77,7 @@ function EcommerceSearch({ dinos, setFiltered }) {
   };
 
   return (
-    <div className="mt-10 flex items-center gap-3">
-      {isFilterApplied && (
-        <button
-          className="rounded bg-primary px-4 py-2 text-white hover:bg-primaryHover"
-          onClick={handleResetFilters}
-        >
-          Reset filters
-        </button>
-      )}
-
-      <Link to="/shoppingCartPage" className="text-2xl">
-        <TfiShoppingCart className="text-primary hover:text-primaryHover" />
-        {cart.length > 0 && (
-          <span className="text-primary hover:text-primaryHover">
-            {cart.length}
-          </span>
-        )}
-      </Link>
-
+    <div className="mt-10 flex w-full gap-3">
       {/* Category selection dropdown */}
       <select
         className="rounded border border-gray-800 p-1"
@@ -188,6 +171,23 @@ function EcommerceSearch({ dinos, setFiltered }) {
             onChange={(e) => handleSearch(search, e.target.value)}
           />
         )}
+
+      {isFilterApplied && (
+        <button
+          className="rounded bg-primary px-4 py-2 text-white hover:bg-primaryHover"
+          onClick={handleResetFilters}
+        >
+          Reset filters
+        </button>
+      )}
+      <Link to="/shoppingCartPage" className="relative ml-auto text-4xl">
+        <TfiShoppingCart className="text-primary transition hover:text-primaryHover" />
+        {cart.length > 0 && (
+          <span className="absolute -top-1 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-red-500 text-base text-white">
+            {cart.length}
+          </span>
+        )}
+      </Link>
     </div>
   );
 }

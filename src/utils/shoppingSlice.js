@@ -28,6 +28,7 @@ const shoppingSlice = createSlice({
             price: action.payload.price,
             inStock: action.payload.inStock - 1,
             quantity: 1, // start with quantity 1
+            imageSrc: action.payload.imageSrc,
           });
         }
       }

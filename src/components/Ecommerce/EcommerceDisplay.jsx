@@ -41,6 +41,7 @@ function Ecommerce() {
         price: item.price,
         inStock: item.inStock,
         quantity: 1,
+        imageSrc: item.imageSrc,
       }),
     );
   };

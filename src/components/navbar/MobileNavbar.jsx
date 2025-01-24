@@ -4,6 +4,9 @@ import useScrollTo from "../../utils/useScrollTo";
 import { IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { navLinks } from "../../utils/data";
+import { Link } from "react-router-dom";
+import { TfiShoppingCart } from "react-icons/tfi";
+import { useSelector } from "react-redux";
 
 function useMenuAnimation(isOpen) {
   const [scope, animate] = useAnimate();
@@ -14,12 +17,17 @@ function useMenuAnimation(isOpen) {
           [
             "nav",
             { transform: "translateX(0)" },
-            { ease: [0.08, 0.65, 0.53, 0.96], duration: 0.4 },
+            { ease: [0.08, 0.65, 0.53, 0.96], duration: 0.3 },
           ],
           [
             "li",
             { transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
             { delay: stagger(0.05), at: "-0.1" },
+          ],
+          [
+            ".cart-icon",
+            { transform: "scale(1)", opacity: 1, filter: "blur(0px)" },
+            { delay: 0, duration: 0.2, at: "-0.3" },
           ],
         ]
       : [
@@ -29,6 +37,11 @@ function useMenuAnimation(isOpen) {
             { delay: stagger(0.05, { from: "last" }), at: "<" },
           ],
           ["nav", { transform: "translateX(100%)" }, { at: "-0.1" }],
+          [
+            ".cart-icon",
+            { transform: "scale(0.5)", opacity: 0, filter: "blur(10px)" },
+            { duration: 0.2, at: "<" },
+          ],
         ];
 
     // Button animations are independent
@@ -62,6 +75,7 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
   const scrollToSection = useScrollTo(170);
   const [clickable, setClickable] = useState(true);
   const scope = useMenuAnimation(isOpen);
+  const cart = useSelector((state) => state.shopping.inCart);
 
   useEffect(() => {
     const handleResize = () => {
@@ -73,10 +87,8 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
 
     if (isOpen) {
       document.body.style.overflow = "hidden";
-      // document.body.classList.add("blur-background");
     } else {
       document.body.style.overflow = "auto";
-      // document.body.classList.remove("blur-background");
     }
 
     return () => {
@@ -93,10 +105,21 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
 
   return (
     <div ref={scope}>
-      <nav className="fixed h-full text-white top-0 left-0 w-full bg-slate-700 pt-10 z-40  translate-x-full transition-colors">
-        <ul className="flex flex-col gap-y-6 px-8 relative">
-          <motion.div className="flex mb-4 px-5 justify-between items-center w-full">
-            <p className="text-2xl">Cart</p>
+      <nav className="fixed left-0 top-0 z-40 h-full w-full translate-x-full bg-slate-700 pt-10 text-white transition-colors">
+        <ul className="relative flex flex-col gap-y-6 px-8">
+          <motion.div className="mb-4 flex w-full items-center justify-between px-5">
+            <Link
+              to="/shoppingCartPage"
+              className="cart-icon relative mr-auto text-4xl"
+            >
+              <TfiShoppingCart className="text-white transition hover:text-primaryHover" />
+              {cart.length > 0 && (
+                <span className="absolute -top-1 right-2.5 flex h-5 w-5 animate-bounce items-center justify-center rounded-full bg-red-500 text-xs text-white">
+                  {cart.length}
+                </span>
+              )}
+            </Link>
+
             <motion.div
               onClick={handleToggle}
               initial={{ scale: 1, opacity: 1 }}
@@ -107,11 +130,11 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
               }
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <IoCloseOutline className="size-12 cursor-pointer hover:text-primary transition-colors" />
+              <IoCloseOutline className="size-12 cursor-pointer transition-colors hover:text-primary" />
             </motion.div>
           </motion.div>
           {navLinks.map((link, index) => (
-            <li key={index} className="relative flex w-full z-10 group">
+            <li key={index} className="group relative z-10 flex w-full">
               <a
                 rel="noopener noreferrer"
                 href={`#${link.href}`}
@@ -120,11 +143,11 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
                   scrollToSection(link.href);
                   setIsOpen(false);
                 }}
-                className="text-3xl w-full py-2 px-5 cursor-pointer transition ease-in-out duration-200 relative group-hover:before:scale-100 hover:text-primary "
+                className="relative w-full cursor-pointer px-5 py-2 text-3xl transition duration-200 ease-in-out hover:text-primary group-hover:before:scale-100"
               >
                 {link.label}
               </a>
-              <span className="absolute top-full left-5 w-32 h-[3px] bg-primary scale-x-0 origin-left z-[-1] transition-transform ease-in-out duration-300 group-hover:scale-x-100"></span>
+              <span className="absolute left-5 top-full z-[-1] h-[3px] w-32 origin-left scale-x-0 bg-primary transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
             </li>
           ))}
         </ul>
