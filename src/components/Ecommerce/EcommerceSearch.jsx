@@ -1,17 +1,24 @@
 import { useState } from "react";
 import { TfiShoppingCart } from "react-icons/tfi";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function EcommerceSearch({ dinos, setFiltered }) {
+  // needed for the shopping cart number display
+  const cart = useSelector((state) => state.shopping.inCart);
+
   const [search, setSearch] = useState("name");
+  const [isFilterApplied, setIsFilterApplied] = useState(false);
 
   // place selected search category in state
   const handleSelect = (e) => {
     setSearch(e.target.value);
+    setIsFilterApplied(false); // Reset filter applied state when changing category
     if (
       e.target.value !== "diet" &&
       e.target.value !== "stock" &&
-      e.target.value !== "price"
+      e.target.value !== "price" &&
+      e.target.value !== "country"
     ) {
       handleSearch(e.target.value, ""); // Reset the search results when changing category
     }
@@ -59,19 +66,33 @@ function EcommerceSearch({ dinos, setFiltered }) {
     }
 
     setFiltered(filteredDinos); // Update the filtered state
+    setIsFilterApplied(true); // Set filter applied state to true
+  };
+
+  const handleResetFilters = () => {
+    setSearch("name");
+    setFiltered(dinos);
+    setIsFilterApplied(false); // Reset filter applied state
   };
 
   return (
-    <div className="mt-10 flex gap-3 items-center">
-      <button
-        className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-        onClick={(e) => handleSearch(e.target.value, "")}
-      >
-        Reset filters
-      </button>
+    <div className="mt-10 flex items-center gap-3">
+      {isFilterApplied && (
+        <button
+          className="rounded bg-primary px-4 py-2 text-white hover:bg-primaryHover"
+          onClick={handleResetFilters}
+        >
+          Reset filters
+        </button>
+      )}
 
       <Link to="/shoppingCartPage" className="text-2xl">
-        <TfiShoppingCart className="text-blue-500 hover:text-blue-600" />
+        <TfiShoppingCart className="text-primary hover:text-primaryHover" />
+        {cart.length > 0 && (
+          <span className="text-primary hover:text-primaryHover">
+            {cart.length}
+          </span>
+        )}
       </Link>
 
       {/* Category selection dropdown */}
@@ -80,6 +101,7 @@ function EcommerceSearch({ dinos, setFiltered }) {
         onChange={(e) => handleSelect(e)}
         name="category"
         id="category"
+        value={search}
       >
         <option value="name">Name</option>
         <option value="country">Country</option>

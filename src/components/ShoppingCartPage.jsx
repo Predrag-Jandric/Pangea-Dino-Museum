@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
 import {
-  //   addToCart,
   removeFromCart,
   increaseQuantity,
   decreaseQuantity,
