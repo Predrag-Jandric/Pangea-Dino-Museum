@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import DinoMap from "./components/DinoMap";
 import Ecommerce from "./components/Ecommerce/EcommerceDisplay";
 import ShoppingCartPage from "./components/ShoppingCartPage";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
       <Ecommerce />
       {/* <ShoppingCartPage /> */}
       {/* <Footer /> */}
+
+      <ToastContainer />
     </div>
   );
 }

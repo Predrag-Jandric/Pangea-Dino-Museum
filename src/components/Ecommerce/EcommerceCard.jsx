@@ -1,4 +1,8 @@
+import { useSelector } from "react-redux";
+
 function EcommerceCard({ item, handleAddToCart }) {
+  const cart = useSelector((state) => state.shopping.inCart);
+  const isInCart = cart.some((cartItem) => cartItem.id === item.id);
   return (
     <div
       key={item.id}
@@ -13,8 +17,7 @@ function EcommerceCard({ item, handleAddToCart }) {
       {/* product info */}
       <h2 className="mb-2 text-lg font-semibold">{item.name}</h2>
       <p className="mb-1 text-gray-600">
-        Price:{" "}
-        <span className="font-bold text-green-600">${item.price}</span>
+        Price: <span className="font-bold text-green-600">${item.price}</span>
       </p>
       <p className="mb-3 text-gray-600">
         In Stock:{" "}
@@ -29,14 +32,18 @@ function EcommerceCard({ item, handleAddToCart }) {
 
       <button
         onClick={() => handleAddToCart(item)}
-        disabled={item.inStock === 0}
+        disabled={item.inStock === 0 || isInCart}
         className={`w-full rounded-lg px-4 py-2 text-white transition duration-200 ${
-          item.inStock === 0
+          item.inStock === 0 || isInCart
             ? "cursor-not-allowed bg-gray-400"
             : "bg-primary hover:bg-primaryHover"
         }`}
       >
-        {item.inStock === 0 ? "Out of Stock" : "Add to Cart"}
+        {item.inStock === 0
+          ? "Out of Stock"
+          : isInCart
+            ? "Item is in the Cart"
+            : "Add to Cart"}
       </button>
     </div>
   );

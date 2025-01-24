@@ -1,15 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 const initialState = {
-  inCart: [
-    {
-      id: 1,
-      name: "Triceratops",
-      price: 20.56,
-      inStock: 5,
-      quantity: 0,
-    },
-  ],
+  inCart: [],
 };
 
 const shoppingSlice = createSlice({
@@ -25,8 +18,6 @@ const shoppingSlice = createSlice({
         // if the item is already in the cart
         if (item.quantity < item.inStock) {
           item.quantity += 1; // increase quantity
-        } else {
-          console.warn("Stock limit reached");
         }
       } else {
         // add a new item to the cart
@@ -38,13 +29,22 @@ const shoppingSlice = createSlice({
             inStock: action.payload.inStock - 1,
             quantity: 1, // start with quantity 1
           });
-        } else {
-          console.warn("Out of stock");
         }
       }
+      toast.success(`${action.payload.name} added to cart`, {
+        autoClose: 2000,
+      });
     },
     removeFromCart(state, action) {
+      const itemToRemove = state.inCart.find(
+        (item) => item.id === action.payload,
+      );
       state.inCart = state.inCart.filter((item) => item.id !== action.payload);
+      if (itemToRemove) {
+        toast.success(`${itemToRemove.name} removed from cart`, {
+          autoClose: 2000,
+        });
+      }
     },
     increaseQuantity(state, action) {
       const item = state.inCart.find(
@@ -68,6 +68,9 @@ const shoppingSlice = createSlice({
     },
     clearCart(state) {
       state.inCart = [];
+      toast.success("Cart cleared", {
+        autoClose: 2000,
+      });
     },
   },
 });

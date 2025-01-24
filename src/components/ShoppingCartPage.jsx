@@ -5,6 +5,7 @@ import {
   decreaseQuantity,
   clearCart,
 } from "../utils/shoppingSlice";
+import { ToastContainer } from "react-toastify";
 
 function ShoppingCartPage() {
   const cart = useSelector((state) => state.shopping.inCart);
@@ -13,6 +14,7 @@ function ShoppingCartPage() {
   return (
     <div className="p-4">
       <h1 className="mb-4 text-2xl font-bold">Shopping Cart</h1>
+      <ToastContainer />
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
@@ -24,7 +26,7 @@ function ShoppingCartPage() {
             >
               <div>
                 <h2 className="text-lg font-semibold">{item.name}</h2>
-                <p>Price: ${item.price.toFixed(2)}</p>
+                <p>Price: ${(item.price * item.quantity).toFixed(2)}</p>
                 <p>Quantity: {item.quantity}</p>
                 <p>In Stock: {item.inStock}</p>
               </div>

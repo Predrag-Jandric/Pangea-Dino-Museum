@@ -34,11 +34,6 @@ function Ecommerce() {
   }, []);
 
   const handleAddToCart = (item) => {
-    if (item.inStock === 0) {
-      console.warn("Item is out of stock!");
-      return;
-    }
-
     dispatch(
       addToCart({
         id: item.id,
