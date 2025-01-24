@@ -7,10 +7,14 @@ import {
 } from "../utils/shoppingSlice";
 import { ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
+import Modal from "../utils/Modal.jsx";
+import useModal from "../utils/useModal.jsx";
 
 function ShoppingCartPage() {
   const cart = useSelector((state) => state.shopping.inCart);
   const dispatch = useDispatch();
+
+  const { isOpen, openModal, closeModal, handleClickOutside } = useModal();
 
   const totalPrice = cart.reduce((total, item) => {
     return total + item.price * item.quantity;
@@ -96,13 +100,30 @@ function ShoppingCartPage() {
               Clear Cart
             </button>
             <button
-              onClick={() => alert("Checkout feature not present!")}
-              className="rounded bg-blue-500 px-4 py-2 text-white transition duration-200 hover:bg-blue-600"
+              className="rounded bg-blue-500 px-4 py-2 text-white"
+              onClick={openModal}
             >
               Checkout
             </button>
           </div>
         </div>
+      )}
+      {isOpen && (
+        <Modal
+          content={
+            <div className="flex flex-col gap-10 text-center">
+              <h1 className="text-xl">You cannot really buy these items.</h1>
+              <button
+                onClick={closeModal}
+                className="mt-4 rounded bg-primary px-4 py-2 text-white transition duration-200 hover:bg-primaryHover"
+              >
+                Close
+              </button>
+            </div>
+          }
+          onClose={closeModal}
+          handleClickOutside={handleClickOutside}
+        />
       )}
     </section>
   );

@@ -42,7 +42,7 @@ function EcommerceCard({ item, handleAddToCart }) {
         {item.inStock === 0
           ? "Out of Stock"
           : isInCart
-            ? "Item is in the Cart"
+            ? "In the Cart"
             : "Add to Cart"}
       </button>
     </div>

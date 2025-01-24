@@ -9,6 +9,7 @@ function EcommerceSearch({ dinos, setFiltered }) {
 
   const [search, setSearch] = useState("name");
   const [isFilterApplied, setIsFilterApplied] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
   // place selected search category in state
   const handleSelect = (e) => {
@@ -74,10 +75,11 @@ function EcommerceSearch({ dinos, setFiltered }) {
     setSearch("name");
     setFiltered(dinos);
     setIsFilterApplied(false); // Reset filter applied state
+    setInputValue("");
   };
 
   return (
-    <div className="mt-10 flex w-full gap-3">
+    <section className="mt-10 flex w-full gap-3">
       {/* Category selection dropdown */}
       <select
         className="rounded border border-gray-800 p-1"
@@ -160,17 +162,18 @@ function EcommerceSearch({ dinos, setFiltered }) {
         </select>
       )}
       {/* display search input field */}
-      {search !== "diet" &&
-        search !== "country" &&
-        search !== "stock" &&
-        search !== "price" && (
-          <input
-            type="text"
-            placeholder="search..."
-            className="rounded border border-gray-800 p-1"
-            onChange={(e) => handleSearch(search, e.target.value)}
-          />
-        )}
+      {search === "name" && (
+        <input
+          type="text"
+          value={inputValue}
+          placeholder="search..."
+          className="rounded border border-gray-800 p-1"
+          onChange={(e) => {
+            setInputValue(e.target.value);
+            handleSearch(search, e.target.value);
+          }}
+        />
+      )}
 
       {isFilterApplied && (
         <button
@@ -188,7 +191,7 @@ function EcommerceSearch({ dinos, setFiltered }) {
           </span>
         )}
       </Link>
-    </div>
+    </section>
   );
 }
 

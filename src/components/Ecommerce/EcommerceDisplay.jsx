@@ -58,18 +58,28 @@ function Ecommerce() {
 
       <section className="bg-bgColor flex flex-col items-center gap-6 rounded-lg bg-gray-100 p-4">
         {/* search and filters */}
-        <EcommerceSearch dinos={dinos} setFiltered={setFiltered} />
+        <EcommerceSearch
+          dinos={dinos}
+          filtered={filtered}
+          setFiltered={setFiltered}
+        />
 
         {/* responsive grid */}
-        <div className="mx-auto grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filtered.map((dino) => (
-            <EcommerceCard
-              key={dino.id}
-              item={dino}
-              handleAddToCart={handleAddToCart}
-            />
-          ))}
-        </div>
+        {filtered.length === 0 ? (
+          <div className="flex h-96 w-[40rem] items-center justify-center text-2xl">
+            No dinosaurs found.
+          </div>
+        ) : (
+          <div className="mx-auto grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {filtered.map((dino) => (
+              <EcommerceCard
+                key={dino.id}
+                item={dino}
+                handleAddToCart={handleAddToCart}
+              />
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );
