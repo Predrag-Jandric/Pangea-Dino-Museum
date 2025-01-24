@@ -1,24 +1,15 @@
-import LandingPage from "./components/LandingPage"
-import DinoDisplay from "./components/DinoDisplay/DinoDisplay";
-import Quiz from "./components/Quiz";
-import Timeline from "./components/Timeline";
-import Footer from "./components/Footer";
-import DinoMap from "./components/DinoMap";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Ecommerce from "./components/Ecommerce/EcommerceDisplay";
 import ShoppingCartPage from "./components/ShoppingCartPage";
 
 function App() {
   return (
-    <div className="">
-      {/* <LandingPage /> */}
-      {/* <DinoDisplay /> */}
-      {/* <DinoMap /> */}
-      {/* <Timeline /> */}
-      {/* <Quiz /> */}
-      <Ecommerce />
-      <ShoppingCartPage />
-      {/* <Footer /> */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Ecommerce />} />
+        <Route path="/shoppingCartPage" element={<ShoppingCartPage />} />
+      </Routes>
+    </Router>
   );
 }
 
