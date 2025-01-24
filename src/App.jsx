@@ -4,14 +4,14 @@ import Quiz from "./components/Quiz";
 import Timeline from "./components/Timeline";
 import Footer from "./components/Footer";
 import DinoMap from "./components/DinoMap";
-import Ecommerce from "./components/Ecommerce";
+import Ecommerce from "./components/Ecommerce/EcommerceDisplay";
 import ShoppingCartPage from "./components/ShoppingCartPage";
 
 function App() {
   return (
     <div className="">
       {/* <LandingPage /> */}
-      <DinoDisplay />
+      {/* <DinoDisplay /> */}
       {/* <DinoMap /> */}
       {/* <Timeline /> */}
       {/* <Quiz /> */}

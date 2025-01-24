@@ -35,7 +35,7 @@ const shoppingSlice = createSlice({
             id: action.payload.id,
             name: action.payload.name,
             price: action.payload.price,
-            inStock: action.payload.inStock,
+            inStock: action.payload.inStock - 1,
             quantity: 1, // start with quantity 1
           });
         } else {
