@@ -3,7 +3,7 @@ import DinoPreview from "./DinoPreview";
 import DinoCard from "./DinoCard";
 // static data currently being used prior to creation of API
 import data from "../../data.json";
-import DinoSearch from "../navbar/DinoSearch";
+import DinoSearch from "./DinoSearch";
 
 export default function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
