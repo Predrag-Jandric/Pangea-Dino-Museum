@@ -32,7 +32,7 @@ function Navbar() {
           ))}
         </ul>
 
-        <p className="text-2xl hidden md:flex"><CgShoppingCart /></p>
+        <p className="text-2xl hidden md:flex hover:text-primaryHover transition"><CgShoppingCart /></p>
         <CgMenu
           className="absolute md:hidden size-10 right-[7%] cursor-pointer hover:text-primary transition-colors"
           onClick={() => setIsOpen(true)}

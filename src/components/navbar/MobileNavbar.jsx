@@ -108,7 +108,7 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
               }
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <IoCloseOutline className="size-12 cursor-pointer hover:text-primary transition-colors" />
+              <IoCloseOutline className="size-12 cursor-pointer hover:text-primaryHover transition-colors" />
             </motion.div>
           </motion.div>
           {navLinks.map((link, index) => (

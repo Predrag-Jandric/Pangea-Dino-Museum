@@ -8,7 +8,7 @@ import Ecommerce from "./components/Ecommerce";
 
 function App() {
   return (
-    <div className="">
+    <div className="font-body">
       <LandingPage />
       <DinoDisplay />
       <DinoMap />
