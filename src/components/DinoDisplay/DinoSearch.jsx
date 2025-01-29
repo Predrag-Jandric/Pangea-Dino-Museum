@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function DinoSearch({ dinos, setFiltered }) {
   const [search, setSearch] = useState("name");
 
-  // place selected serach category in state
+  // place selected search category in state
   const handleSelect = (e) => {
     setSearch(e.target.value);
   };
