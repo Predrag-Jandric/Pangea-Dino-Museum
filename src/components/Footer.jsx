@@ -1,5 +1,6 @@
 import { navLinks } from "../utils/data";
 import useScrollTo from "../utils/useScrollTo";
+import { teamMembers } from "../utils/data.js";
 
 function Footer() {
   const scrollToSection = useScrollTo();
@@ -31,55 +32,16 @@ function Footer() {
         <article className="flex-1">
           <h3 className="mb-7 text-lg font-semibold">Team</h3>
           <div className="flex flex-col gap-2">
-            <a
-              className="hover:underline"
-              target="_blank"
-              href="https://www.linkedin.com/in/estelle-couture-41422b47/"
-            >
-              Estelle Wraight - Product Owner
-            </a>
-            <a
-              className="hover:underline"
-              target="_blank"
-              href="https://www.linkedin.com/in/promise-akabudu/"
-            >
-              Promise Akabudu - Product Owner
-            </a>
-            <a
-              className="hover:underline"
-              target="_blank"
-              href="https://www.linkedin.com/in/afrah-ali-251264269/"
-            >
-              Afrah Ali - Scrum Master
-            </a>
-            <a
-              className="hover:underline"
-              target="_blank"
-              href="https://github.com/Dayo1900"
-            >
-              Dayo Abdul - Developer
-            </a>
-            <a
-              className="hover:underline"
-              target="_blank"
-              href="https://www.linkedin.com/in/predrag-jandric/"
-            >
-              Predrag Jandric - Developer
-            </a>
-            <a
-              className="hover:underline"
-              target="_blank"
-              href="https://www.linkedin.com/in/gregminezzi"
-            >
-              Greg Minezzi - Developer
-            </a>
-            <a
-              className="hover:underline"
-              target="_blank"
-              href="https://www.linkedin.com/in/ziad-shaarawy-629a5721b/"
-            >
-              Ziad Shaarawy - Developer
-            </a>
+            {teamMembers.map((member, index) => (
+              <a
+                key={index}
+                className="hover:underline"
+                target="_blank"
+                href={member.link}
+              >
+                {member.name} - {member.role}
+              </a>
+            ))}
           </div>
         </article>
 

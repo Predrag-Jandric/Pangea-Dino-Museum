@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import DinoPreview from "./DinoPreview";
 import DinoCard from "./DinoCard";
 // static data currently being used prior to creation of API
-import data from "../../data.json";
+import { dinosaurs } from "../../utils/data.js";
 import DinoSearch from "./DinoSearch";
 
 export default function DinoDisplay() {
@@ -16,8 +16,8 @@ export default function DinoDisplay() {
         //! static data currently being used prior to creation of API, revert when completed
         // const res = await fetch("https://chinguapi.onrender.com/dinosaurs");
         // const data = await res.json();
-        setDinos(data);
-        setFiltered(getRandomDinos(data, 10));
+        setDinos(dinosaurs);
+        setFiltered(getRandomDinos(dinosaurs, 10));
       } catch (error) {
         console.error("Error fetching dinos", error);
       }
