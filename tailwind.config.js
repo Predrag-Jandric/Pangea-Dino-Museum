@@ -15,13 +15,19 @@ export default {
         grayOne: "#d4d4d8",
         greenOne: "#22c55e",
         greenOneHover: "#19b352",
+
+        pink: "rgb(255, 24, 166)",
+        purple: "rgb(140, 51, 217)",
+        teal: "rgb(52, 239, 200)",
+        cream: "rgb(246, 254, 223)"
       },
 
       // "Comic Sans MS" for testing
       // Work Sans and Nunito not integrated into the app at this time!
       fontFamily: {
-        headings: ["Work Sans", "sans-serif"],
+        // headings: ["Work Sans", "sans-serif"],
         body: ["Nunito", "sans-serif"],
+        pressStart: ['"Press Start 2P"', "serif"]
       },
       fontSize: {
         headings: "1.5rem",

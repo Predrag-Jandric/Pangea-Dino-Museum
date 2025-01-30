@@ -305,11 +305,6 @@ export const dinosaurs = [
 
 export const teamMembers = [
   {
-    name: "Evaristo Caraballo",
-    role: "Product Owner",
-    link: "https://www.linkedin.com/in/evaristocaraballo/",
-  },
-  {
     name: "Estelle Wraight",
     role: "Product Owner",
     link: "https://www.linkedin.com/in/estelle-couture-41422b47/",
@@ -338,10 +333,5 @@ export const teamMembers = [
     name: "Greg Minezzi",
     role: "Developer",
     link: "https://www.linkedin.com/in/gregminezzi",
-  },
-  {
-    name: "Ziad Shaarawy",
-    role: "Developer",
-    link: "https://www.linkedin.com/in/ziad-shaarawy-629a5721b/",
-  },
+  }
 ];
