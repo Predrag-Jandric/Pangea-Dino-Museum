@@ -56,7 +56,7 @@ function Ecommerce() {
         </p>
       </div>
 
-      <section className="flex flex-col items-center gap-6 rounded-lg border-[5px] border-secondary p-4">
+      <section className="flex flex-col items-center gap-6 rounded-lg p-4">
         {/* search and filters */}
         <EcommerceSearch
           dinos={dinos}

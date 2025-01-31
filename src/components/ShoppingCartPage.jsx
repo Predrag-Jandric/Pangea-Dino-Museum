@@ -23,7 +23,7 @@ function ShoppingCartPage() {
   console.log(cart);
   return (
     <section className="bg-dark min-h-screen p-4">
-      <div>
+      <div className="mb-5">
         <Link
           to="/"
           className="border border-gray-800 p-2 text-primary hover:underline"
@@ -48,42 +48,44 @@ function ShoppingCartPage() {
           {cart.map((item) => (
             <div
               key={item.id}
-              className="mx-auto flex items-center justify-between rounded-lg border bg-white p-4 shadow-md"
+              className="mx-auto flex items-center justify-between rounded-lg border border-secondary/30 bg-secondary/30 p-4 shadow-md"
             >
               <img
                 src={item.imageSrc}
                 alt="dino"
                 className="size-32 object-contain"
               />
-              <div className="mr-auto pl-5">
-                <h2 className="text-lg font-semibold text-gray-800">
-                  {item.name}
-                </h2>
-                <p className="text-gray-600">
-                  Price: ${(item.price * item.quantity).toFixed(2)}
-                </p>
-                <p className="text-gray-600">Quantity: {item.quantity}</p>
-                <p className="text-gray-600">In Stock: {item.inStock}</p>
-              </div>
-              <div className="flex space-x-2">
-                <button
-                  onClick={() => dispatch(increaseQuantity(item.id))}
-                  className="flex size-8 items-center justify-center rounded bg-secondary text-light transition hover:bg-highlight"
-                >
-                  +
-                </button>
-                <button
-                  onClick={() => dispatch(decreaseQuantity(item.id))}
-                  className="flex size-8 items-center justify-center rounded bg-secondary text-light transition hover:bg-highlight"
-                >
-                  -
-                </button>
-                <button
-                  onClick={() => dispatch(removeFromCart(item.id))}
-                  className="w-fit rounded bg-primary px-2 text-light transition hover:bg-highlight"
-                >
-                  Remove
-                </button>
+              <div className="mr-auto pl-5 flex flex-col md:flex-row md:items-center justify-between w-full">
+                <div>
+                  <h2 className="text-lg font-semibold text-highlight">
+                    {item.name}
+                  </h2>
+                  <p className="text-light">
+                    Price: <span className="text-highlight">${(item.price * item.quantity).toFixed(2)}</span>
+                  </p>
+                  <p className="text-light">Quantity: <span className="text-highlight">{item.quantity}</span></p>
+                  <p className="text-light">In Stock: <span className="text-highlight">{item.inStock}</span></p>
+                </div>
+                <div className="flex space-x-2">
+                  <button
+                    onClick={() => dispatch(increaseQuantity(item.id))}
+                    className="flex size-8 items-center justify-center rounded bg-secondary text-light transition hover:bg-highlight"
+                  >
+                    +
+                  </button>
+                  <button
+                    onClick={() => dispatch(decreaseQuantity(item.id))}
+                    className="flex size-8 items-center justify-center rounded bg-secondary text-light transition hover:bg-highlight"
+                  >
+                    -
+                  </button>
+                  <button
+                    onClick={() => dispatch(removeFromCart(item.id))}
+                    className="w-fit rounded bg-primary px-2 text-light transition hover:bg-highlight"
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
             </div>
           ))}
