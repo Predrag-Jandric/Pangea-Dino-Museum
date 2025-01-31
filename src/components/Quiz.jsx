@@ -76,15 +76,19 @@ function Quiz() {
   return (
     <div
       id="quiz"
-      className="bg-dark flex min-h-screen items-center justify-center p-6"
+      className="bg-dark flex-colh-dvh flex min-h-screen flex-col items-center justify-center gap-7 p-6 text-center"
     >
+      <h2 className="font-pressStart text-4xl text-primary">Dino Quiz</h2>
+      <p className="text-light max-w-2xl">
+        Enter your mind palace and see if you still remember all those dino facts you learned!
+      </p>
       <div className="border-secondary h-fit w-full max-w-2xl rounded-xl border-[5px] p-8 shadow-lg">
         {status === "active" && (
           <section>
             {/* progress bar */}
             <div className="mb-6">
               <progress
-                className="[&::-webkit-progress-value]:bg-highlight w-full [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-dark [&::-webkit-progress-bar]:outline [&::-webkit-progress-bar]:outline-secondary [&::-webkit-progress-value]:rounded-lg"
+                className="[&::-webkit-progress-value]:bg-highlight [&::-webkit-progress-bar]:bg-dark [&::-webkit-progress-bar]:outline-secondary w-full [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:outline [&::-webkit-progress-value]:rounded-lg"
                 max={numQuestions}
                 value={index + Number(answer !== null)}
               />
@@ -118,7 +122,7 @@ function Quiz() {
                     optionIndex === answer
                       ? optionIndex === currentQuestion.correctOption
                         ? "bg-highlight border-highlight" // correct selected answer
-                        : "bg-primary border-primary" // incorrect selected answer
+                        : "bg-secondary border-secondary" // incorrect selected answer
                       : "bg-dark border-secondary text-light hover:border-light"
                   } ${
                     // highlight correct answer when an incorrect answer is selected
