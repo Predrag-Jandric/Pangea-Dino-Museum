@@ -111,7 +111,6 @@ export default function DinoSearch({ dinos, setFiltered }) {
         <input
           type="text"
           placeholder="search..."
-          className="rounded border border-gray-800 p-1"
           onChange={handleSearch}
         />
       )}

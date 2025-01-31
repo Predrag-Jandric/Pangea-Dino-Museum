@@ -5,8 +5,8 @@ export default {
     extend: {
       colors: {
         // pure colors
-        pureWhite: "#ffffff",
-        pureBlack: "#000000",
+        // pureWhite: "#ffffff",
+        // pureBlack: "#000000",
 
         // primary colors
         // primary: "#4489C5",
@@ -16,8 +16,6 @@ export default {
         // greenOne: "#22c55e",
         // greenOneHover: "#19b352",
 
-        
-        
         primary: "rgb(255, 24, 166)",
         secondary: "rgb(140, 51, 217)",
         highlight: "rgb(52, 239, 200)",

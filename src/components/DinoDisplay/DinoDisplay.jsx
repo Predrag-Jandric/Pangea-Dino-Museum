@@ -67,7 +67,7 @@ export default function DinoDisplay() {
         
         <DinoSearch dinos={dinos} setFiltered={setFiltered} />
 
-        <div className="scrollbar-hidden absolute left-0 mt-10 flex w-full gap-5 overflow-x-scroll scroll-smooth p-20">
+        <div className="scrollbar-hidden absolute left-0 mt-10 flex w-full gap-5 overflow-x-scroll scroll-smooth p-20 text-highlight">
           {!filtered.length
             ? "No Dinosaurs :("
             : filtered.map((dino) => (
