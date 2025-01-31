@@ -26,10 +26,9 @@ function ShoppingCartPage() {
       <div className="mb-5">
         <Link
           to="/"
-          className="border border-gray-800 p-2 text-primary hover:underline"
+          className="border border-gray-800 p-2 text-primary hover:text-highlight"
         >
-          {" "}
-          👈 Go back
+          👈 <span className="ml-2">Go back</span>
         </Link>
       </div>
       <h1 className="mb-4 text-center text-3xl font-bold text-highlight font-pressStart">
@@ -39,7 +38,7 @@ function ShoppingCartPage() {
       {cart.length === 0 ? (
         <div className="text-center">
           <p className="mb-4 text-lg text-gray-600">Your cart is empty.</p>
-          <Link to="/" className="text-lg text-primary hover:underline">
+          <Link to="/" className="text-lg text-primary hover:text-highlight">
             Go back to Dino Shop
           </Link>
         </div>

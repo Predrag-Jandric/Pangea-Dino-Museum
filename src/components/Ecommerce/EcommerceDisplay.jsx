@@ -47,7 +47,7 @@ function Ecommerce() {
   };
 
   return (
-    <div id="shop" className="bg-dark flex flex-col items-center gap-6">
+    <div id="shop" className="bg-dark flex flex-col items-center gap-6 pb-10">
       <div className="w-full p-4 text-center md:max-w-[50rem]">
         <h1 className="mb-3 text-4xl text-primary font-pressStart">Dino online shop</h1>
         <p className="max-w-2xl text-light">
