@@ -8,37 +8,42 @@ import { TfiShoppingCart } from "react-icons/tfi";
 import { useSelector } from "react-redux";
 
 function Navbar() {
-  const scrollToSection = useScrollTo();
+  const scrollToSection = useScrollTo(0);
   const [isOpen, setIsOpen] = useState(false);
   const cart = useSelector((state) => state.shopping.inCart);
 
   return (
     <>
-      <nav className="flex items-center justify-between h-[10vh] w-full absolute top-0 left-0 z-30 right-0 px-12 mt-3 text-white bg-transparent">
-        <div className="text-xl h-20 w-20 flex items-center text-pink font-pressStart"><img src="/logo.png"/>DiNostalgia</div>
-<div className="flex">
-  
+      <nav className="absolute left-0 right-0 top-0 z-30 mt-3 flex h-[10vh] w-full items-center justify-between bg-transparent text-white px-5 md:px-12">
+        <div className="flex h-20 w-20 items-center font-pressStart text-xl text-primary">
+          <img src="/logo.png" />
+          <p className="hidden md:block">DiNostalgia</p>
+        </div>
+        <div className="flex">
           <ul className="relative hidden items-center justify-center gap-0 transition duration-200 ease-in-out md:flex">
             {navLinks.map((link, index) => (
               <li key={index} className="group relative z-10 flex w-full">
                 <a
                   rel="noopener noreferrer"
                   href={`#${link.href}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(link.href);
-                  }}
-                  className="text-lg py-2 px-5 cursor-pointer transition ease-in-out duration-200 relative group-hover:before:scale-100 text-purple"
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   scrollToSection(link.href);
+                  // }}
+                  className="text-secondary relative cursor-pointer px-5 py-2 text-lg transition duration-200 ease-in-out group-hover:before:scale-100"
                 >
                   {link.label}
                 </a>
-                <span className="absolute left-[10%] top-full z-[-1] h-[5%] w-[80%] scale-0 bg-teal transition duration-300 ease-in-out group-hover:scale-100"></span>
+                <span className="bg-highlight absolute left-[10%] top-full z-[-1] h-[5%] w-[80%] scale-0 transition duration-300 ease-in-out group-hover:scale-100"></span>
               </li>
             ))}
           </ul>
-  
-          <Link to="/shoppingCartPage" className="relative text-4xl hidden md:flex">
-            <TfiShoppingCart className="text-teal transition hover:text-purple ml-3" />
+
+          <Link
+            to="/shoppingCartPage"
+            className="relative hidden text-4xl md:flex"
+          >
+            <TfiShoppingCart className="text-secondary hover:text-highlight ml-3 transition" />
             {cart.length > 0 && (
               <span className="absolute -top-1 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-red-500 text-base text-white">
                 {cart.length}
@@ -46,10 +51,10 @@ function Navbar() {
             )}
           </Link>
           <CgMenu
-            className="absolute right-[7%] top-[30%] size-10 cursor-pointer transition-colors hover:text-primary md:hidden"
+            className="hover:text-highlight size-10 cursor-pointer transition-colors md:hidden"
             onClick={() => setIsOpen(true)}
           />
-</div>
+        </div>
       </nav>
 
       <MobileNavbar isOpen={isOpen} setIsOpen={setIsOpen} />

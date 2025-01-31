@@ -9,17 +9,20 @@ export default {
         pureBlack: "#000000",
 
         // primary colors
-        primary: "#4489C5",
-        primaryHover: "#639DCF",
+        // primary: "#4489C5",
+        // primaryHover: "#639DCF",
 
-        grayOne: "#d4d4d8",
-        greenOne: "#22c55e",
-        greenOneHover: "#19b352",
+        // grayOne: "#d4d4d8",
+        // greenOne: "#22c55e",
+        // greenOneHover: "#19b352",
 
-        pink: "rgb(255, 24, 166)",
-        purple: "rgb(140, 51, 217)",
-        teal: "rgb(52, 239, 200)",
-        cream: "rgb(246, 254, 223)"
+        
+        
+        primary: "rgb(255, 24, 166)",
+        secondary: "rgb(140, 51, 217)",
+        highlight: "rgb(52, 239, 200)",
+        dark: "rgb(21, 1, 79)",
+        light: "rgb(246, 254, 223)",
       },
 
       // "Comic Sans MS" for testing

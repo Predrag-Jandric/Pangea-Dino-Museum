@@ -35,35 +35,36 @@ export default function DinoDisplay() {
   };
 
   const handleClose = () => {
-    setSelectedDino({})
-  }
+    setSelectedDino({});
+  };
 
   return (
     <div
       id="dinodex"
-      className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 px-20 py-10"
+      className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-dark items-center text-center p-6"
     >
       {selectedDino.name && (
         <>
-          <div className="absolute inset-0 flex items-center justify-center bg-black/70 z-[1000]" onClick={handleClose}>
-          
-          </div>
+          <div
+            className="absolute inset-0 z-[1000] flex items-center justify-center bg-black/70"
+            onClick={handleClose}
+          ></div>
           {selectedDino.name && (
-              <DinoCard dino={selectedDino} handleClose={handleClose} />
-            )}
+            <DinoCard dino={selectedDino} handleClose={handleClose} />
+          )}
         </>
       )}
       <div className="mx-auto max-w-[1000px]">
-        <h2 className="mb-3 text-4xl">DinoDex</h2>
-        <div className="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          officiis cum odio dolorum error ullam fuga eos. Mollitia, aspernatur?
-          Quam corrupti officia fugiat modi doloribus alias, aut quasi maxime
-          voluptatum iste. Autem non quisquam unde, quos minus maiores, officia
-          ducimus accusamus repellendus, exercitationem totam neque alias
-          quaerat commodi dolorem facere?
+        <div className="mb-20 flex flex-col items-center justify-center gap-7 bg-dark p-6 text-center">
+          <h2 className="font-pressStart text-4xl text-primary">DinoDex</h2>
+          <p className="max-w-2xl text-light">
+            The Ultimate Dinosaur Database Because your inner 6-year-old still
+            remembers their favorites.
+            <br />
+            Refresh page for more random dinos!
+          </p>
         </div>
-        <div className="mt-5">Refresh page for more random dinos!</div>
+        
         <DinoSearch dinos={dinos} setFiltered={setFiltered} />
 
         <div className="scrollbar-hidden absolute left-0 mt-10 flex w-full gap-5 overflow-x-scroll scroll-smooth p-20">
