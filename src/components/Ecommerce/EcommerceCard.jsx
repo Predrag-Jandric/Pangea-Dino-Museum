@@ -33,10 +33,10 @@ function EcommerceCard({ item, handleAddToCart }) {
       <button
         onClick={() => handleAddToCart(item)}
         disabled={item.inStock === 0 || isInCart}
-        className={`w-full rounded-lg px-4 py-2 text-white transition duration-200 ${
+        className={`w-full rounded-lg px-4 py-2 text-light transition duration-200 ${
           item.inStock === 0 || isInCart
             ? "cursor-not-allowed bg-gray-400"
-            : "bg-primary hover:bg-primaryHover"
+            : "bg-primary hover:bg-highlight"
         }`}
       >
         {item.inStock === 0

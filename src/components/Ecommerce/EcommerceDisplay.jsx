@@ -47,16 +47,16 @@ function Ecommerce() {
   };
 
   return (
-    <div className="m-10 flex flex-col items-center gap-6">
+    <div id="shop" className="bg-dark flex flex-col items-center gap-6">
       <div className="w-full p-4 text-center md:max-w-[50rem]">
-        <h1 className="mb-3 text-4xl">Dino online shop</h1>
-        <p>
+        <h1 className="mb-3 text-4xl text-primary font-pressStart">Dino online shop</h1>
+        <p className="max-w-2xl text-light">
           Buy your favorite dinosaur toys, figures, and merchandise for yourself
           and your children from our wide selection of products.
         </p>
       </div>
 
-      <section className="bg-bgColor flex flex-col items-center gap-6 rounded-lg bg-gray-100 p-4">
+      <section className="flex flex-col items-center gap-6 rounded-lg border-[5px] border-secondary p-4">
         {/* search and filters */}
         <EcommerceSearch
           dinos={dinos}

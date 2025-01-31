@@ -22,7 +22,7 @@ function ShoppingCartPage() {
 
   console.log(cart);
   return (
-    <section className="min-h-screen bg-gray-100 p-4">
+    <section className="bg-dark min-h-screen p-4">
       <div>
         <Link
           to="/"
@@ -32,7 +32,7 @@ function ShoppingCartPage() {
           👈 Go back
         </Link>
       </div>
-      <h1 className="mb-4 text-center text-3xl font-bold text-gray-800">
+      <h1 className="mb-4 text-center text-3xl font-bold text-highlight font-pressStart">
         Shopping Cart
       </h1>
       <ToastContainer />
@@ -68,19 +68,19 @@ function ShoppingCartPage() {
               <div className="flex space-x-2">
                 <button
                   onClick={() => dispatch(increaseQuantity(item.id))}
-                  className="flex size-8 items-center justify-center rounded bg-primary text-white transition hover:bg-primaryHover"
+                  className="flex size-8 items-center justify-center rounded bg-secondary text-light transition hover:bg-highlight"
                 >
                   +
                 </button>
                 <button
                   onClick={() => dispatch(decreaseQuantity(item.id))}
-                  className="flex size-8 items-center justify-center rounded bg-primary text-white transition hover:bg-primaryHover"
+                  className="flex size-8 items-center justify-center rounded bg-secondary text-light transition hover:bg-highlight"
                 >
                   -
                 </button>
                 <button
                   onClick={() => dispatch(removeFromCart(item.id))}
-                  className="w-fit rounded bg-red-500 px-2 text-white transition hover:bg-red-400"
+                  className="w-fit rounded bg-primary px-2 text-light transition hover:bg-highlight"
                 >
                   Remove
                 </button>
@@ -88,19 +88,19 @@ function ShoppingCartPage() {
             </div>
           ))}
           <div className="mt-4 text-right">
-            <h2 className="text-xl font-bold text-gray-800">
+            <h2 className="text-xl font-bold text-highlight">
               Total: ${totalPrice.toFixed(2)}
             </h2>
           </div>
           <div className="mt-4 flex justify-between">
             <button
               onClick={() => dispatch(clearCart())}
-              className="rounded bg-blue-500 px-4 py-2 text-white transition duration-200 hover:bg-blue-600"
+              className="rounded bg-primary px-4 py-2 text-light transition duration-200 hover:bg-highlight"
             >
               Clear Cart
             </button>
             <button
-              className="rounded bg-blue-500 px-4 py-2 text-white"
+              className="rounded bg-primary px-4 py-2 text-light hover:bg-highlight"
               onClick={openModal}
             >
               Checkout

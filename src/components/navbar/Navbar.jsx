@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <>
       <nav className="absolute left-0 right-0 top-0 z-30 mt-3 flex h-[10vh] w-full items-center justify-between bg-transparent text-white px-5 md:px-12">
-        <div className="flex h-20 w-20 items-center font-pressStart text-xl text-primary">
+        <div className="flex h-20 w-20 items-center font-pressStart md:text-base lg:text-xl text-primary">
           <img src="/logo.png" />
           <p className="hidden md:block">DiNostalgia</p>
         </div>
@@ -30,7 +30,7 @@ function Navbar() {
                   //   e.preventDefault();
                   //   scrollToSection(link.href);
                   // }}
-                  className="text-secondary relative cursor-pointer px-5 py-2 text-lg transition duration-200 ease-in-out group-hover:before:scale-100"
+                  className="text-secondary relative cursor-pointer px-5 py-2 text-sm lg:text-lg transition duration-200 ease-in-out group-hover:before:scale-100"
                 >
                   {link.label}
                 </a>
@@ -43,9 +43,9 @@ function Navbar() {
             to="/shoppingCartPage"
             className="relative hidden text-4xl md:flex"
           >
-            <TfiShoppingCart className="text-secondary hover:text-highlight ml-3 transition" />
+            <TfiShoppingCart className="text-primary hover:text-highlight ml-3 transition" />
             {cart.length > 0 && (
-              <span className="absolute -top-1 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-red-500 text-base text-white">
+              <span className="absolute -top-1 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-primary text-base text-light">
                 {cart.length}
               </span>
             )}

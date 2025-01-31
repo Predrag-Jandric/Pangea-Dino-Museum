@@ -84,7 +84,7 @@ function Quiz() {
             {/* progress bar */}
             <div className="mb-6">
               <progress
-                className="[&::-webkit-progress-value]:bg-highlight w-full [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-slate-300 [&::-webkit-progress-value]:rounded-lg"
+                className="[&::-webkit-progress-value]:bg-highlight w-full [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:bg-dark [&::-webkit-progress-bar]:outline [&::-webkit-progress-bar]:outline-secondary [&::-webkit-progress-value]:rounded-lg"
                 max={numQuestions}
                 value={index + Number(answer !== null)}
               />

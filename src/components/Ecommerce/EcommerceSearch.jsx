@@ -177,16 +177,16 @@ function EcommerceSearch({ dinos, setFiltered }) {
 
       {isFilterApplied && (
         <button
-          className="rounded bg-primary px-4 py-2 text-white hover:bg-primaryHover"
+          className="rounded bg-primary px-4 py-2 text-white hover:bg-highlight"
           onClick={handleResetFilters}
         >
           Reset filters
         </button>
       )}
       <Link to="/shoppingCartPage" className="relative ml-auto text-4xl">
-        <TfiShoppingCart className="text-primary transition hover:text-primaryHover" />
+        <TfiShoppingCart className="text-primary transition hover:text-highlight" />
         {cart.length > 0 && (
-          <span className="absolute -top-1 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-red-500 text-base text-white">
+          <span className="absolute -top-1 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-primary text-base text-light">
             {cart.length}
           </span>
         )}
