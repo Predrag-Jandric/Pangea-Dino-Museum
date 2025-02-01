@@ -3,7 +3,7 @@ import { TfiShoppingCart } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-function EcommerceSearch({ dinos, setFiltered }) {
+function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   // needed for the shopping cart number display
   const cart = useSelector((state) => state.shopping.inCart);
 
@@ -40,11 +40,11 @@ function EcommerceSearch({ dinos, setFiltered }) {
     let filteredDinos = [];
 
     switch (category) {
-      case "name":
-        filteredDinos = dinos.filter((dino) =>
-          dino.name.toLowerCase().startsWith(query.toLowerCase()),
-        );
+      case "name": {
+        const regex = new RegExp(query.split("").join(".*"), "i");
+        filteredDinos = dinos.filter((dino) => regex.test(dino.name));
         break;
+      }
       case "diet":
         filteredDinos = dinos.filter((dino) => dino.diet === query);
         break;
@@ -69,6 +69,7 @@ function EcommerceSearch({ dinos, setFiltered }) {
 
     setFiltered(filteredDinos); // Update the filtered state
     setIsFilterApplied(true); // Set filter applied state to true
+    setCurrentPage(1); // Reset to the first page
   };
 
   const handleResetFilters = () => {
@@ -76,6 +77,7 @@ function EcommerceSearch({ dinos, setFiltered }) {
     setFiltered(dinos);
     setIsFilterApplied(false); // Reset filter applied state
     setInputValue("");
+    setCurrentPage(1); // Reset to the first page
   };
 
   return (

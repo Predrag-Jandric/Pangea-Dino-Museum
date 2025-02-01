@@ -69,7 +69,7 @@ function EcommerceDisplay() {
 
       <section className="bg-bgColor flex w-full flex-col items-center gap-6 rounded-lg bg-gray-100 p-4 md:max-w-[50rem]">
         {/* search and filters */}
-        <EcommerceSearch dinos={dinos} setFiltered={setFiltered} />
+        <EcommerceSearch dinos={dinos} setFiltered={setFiltered} setCurrentPage={setCurrentPage} />
 
         {/* responsive grid */}
         {loading ? (
