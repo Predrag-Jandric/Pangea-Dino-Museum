@@ -10,7 +10,7 @@ export default function DinoCard({ dino, handleClose}) {
           className="absolute right-8 top-8 cursor-pointer text-xl"
           onClick={handleClose}
         >
-          <div className="flex h-6 w-6 justify-center items-center rounded-full bg-primary/20 leading-none transition hover:bg-primary/30">
+          <div className="flex h-6 w-6 justify-center items-center rounded-full bg-primary/20 leading-none transition hover:bg-primary/30 cursor-pointer">
             <CgClose className="text-primary"/>
           </div>
         </div>
@@ -73,8 +73,9 @@ export default function DinoCard({ dino, handleClose}) {
           <div className="mb-3 max-h-48 overflow-y-auto">
             📓 {dino.description}
           </div>
-          <div className="text-xs">Named by: {dino.namedBy}</div>
-        </div>
+         
+        </div> 
+        <div className="text-xs text-light text-left">Named by: {dino.namedBy}</div>
       </div>
     </div>
   );

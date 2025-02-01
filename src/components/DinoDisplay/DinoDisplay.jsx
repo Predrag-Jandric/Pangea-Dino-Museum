@@ -57,7 +57,7 @@ export default function DinoDisplay() {
         </>
       )}
       <div className="mx-auto max-w-[1000px]">
-        <div className="mb-20 flex flex-col items-center justify-center gap-7 bg-dark p-6 text-center">
+        <div className="flex flex-col items-center justify-center gap-7 bg-dark p-6 text-center">
           <h2 className="font-pressStart text-4xl text-primary">DinoDex</h2>
           <p className="max-w-2xl text-light">
             The Ultimate Dinosaur Database Because your inner 6-year-old still
@@ -69,7 +69,7 @@ export default function DinoDisplay() {
         
         <DinoSearch dinos={dinos} setFiltered={setFiltered} />
 
-        <div className="scrollbar-hidden absolute left-0 mt-10 flex w-full gap-5 overflow-x-scroll scroll-smooth p-20 text-highlight">
+        <div className="scrollbar-hidden absolute left-0 flex w-full gap-5 overflow-x-scroll scroll-smooth p-20 pt-5 text-highlight">
           {!filtered.length
             ? "No Dinosaurs :("
             : filtered.map((dino) => (

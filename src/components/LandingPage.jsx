@@ -47,7 +47,7 @@ function LandingPage() {
             dino-knowledge and reward yourself with all the dino merch you
             wanted when growing
           </p>
-          <button className="hover:bg-secondary rounded-md bg-primary px-8 py-3 font-semibold transition">
+          <button className="hover:bg-secondary rounded-md bg-primary px-8 py-3 font-semibold transition" onClick={() => document.getElementById('dinodex')?.scrollIntoView({ behavior: 'smooth' })}>
             Explore
           </button>
         </div>
