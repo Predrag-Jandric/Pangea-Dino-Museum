@@ -30,7 +30,7 @@ function EcommerceDisplay() {
       } catch (error) {
         console.error("Error fetching dinos", error);
       } finally {
-        setLoading(false); // Set loading to false after fetching data
+        setLoading(false);
       }
     }
     getDinos();
@@ -39,22 +39,22 @@ function EcommerceDisplay() {
   const handleAddToCart = (item) => {
     dispatch(
       addToCart({
-        id: item._id, // Use _id from API data
+        id: item._id, 
         name: item.name,
         price: item.price,
         inStock: item.inStock,
         quantity: 1,
-        imageSrc: item.imageSrc, // Include imageSrc here
+        imageSrc: item.imageSrc,
       }),
     );
   };
 
-  // Calculate the dinos to be displayed based on the current page
+  // calculate the dinos to be displayed based on the current page
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filtered.slice(indexOfFirstItem, indexOfLastItem);
 
-  // Calculate total pages
+  // calculate total pages
   const totalPages = Math.ceil(filtered.length / itemsPerPage);
 
   return (
@@ -68,7 +68,7 @@ function EcommerceDisplay() {
       </div>
 
       <section className="bg-bgColor flex w-full flex-col items-center gap-6 rounded-lg bg-gray-100 p-4 md:max-w-[50rem]">
-        {/* search and filters */}
+        {/* search and filters  */}
         <EcommerceSearch dinos={dinos} setFiltered={setFiltered} setCurrentPage={setCurrentPage} />
 
         {/* responsive grid */}
@@ -91,7 +91,7 @@ function EcommerceDisplay() {
                 />
               ))}
             </div>
-            {/* Pagination controls */}
+            {/* pagination */}
             <div className="flex justify-center mt-4">
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}

@@ -14,7 +14,7 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   // place selected search category in state
   const handleSelect = (e) => {
     setSearch(e.target.value);
-    setIsFilterApplied(false); // Reset filter applied state when changing category
+    setIsFilterApplied(false);
     if (
       e.target.value !== "diet" &&
       e.target.value !== "stock" &&
@@ -22,7 +22,8 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
       e.target.value !== "country" &&
       e.target.value !== "name"
     ) {
-      handleSearch(e.target.value, ""); // Reset the search results when changing category
+      // reset the search results when changing category
+      handleSearch(e.target.value, "");
     }
   };
 
@@ -39,6 +40,7 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   const handleSearch = (category, query) => {
     let filteredDinos = [];
 
+    // filters
     switch (category) {
       case "name": {
         const regex = new RegExp(query.split("").join(".*"), "i");
@@ -67,22 +69,22 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
         filteredDinos = dinos;
     }
 
-    setFiltered(filteredDinos); // Update the filtered state
-    setIsFilterApplied(true); // Set filter applied state to true
-    setCurrentPage(1); // Reset to the first page
+    setFiltered(filteredDinos); 
+    setIsFilterApplied(true);
+    setCurrentPage(1); 
   };
 
   const handleResetFilters = () => {
     setSearch("name");
     setFiltered(dinos);
-    setIsFilterApplied(false); // Reset filter applied state
+    setIsFilterApplied(false); 
     setInputValue("");
-    setCurrentPage(1); // Reset to the first page
+    setCurrentPage(1);
   };
 
   return (
     <section className="mt-10 flex w-full gap-3">
-      {/* Category selection dropdown */}
+      {/* category selection dropdown */}
       <select
         className="rounded border border-gray-800 p-1"
         onChange={(e) => handleSelect(e)}

@@ -2,10 +2,10 @@ import { useSelector } from "react-redux";
 
 function EcommerceCard({ item, handleAddToCart }) {
   const cart = useSelector((state) => state.shopping.inCart);
-  const isInCart = cart.some((cartItem) => cartItem.id === item._id); // Use _id from API data
+  const isInCart = cart.some((cartItem) => cartItem.id === item._id); 
   return (
     <div
-      key={item._id} // Use _id from API data
+      key={item._id} 
       className="flex w-[17rem] flex-col rounded-lg border border-gray-200 bg-white p-4 shadow-md"
     >
       <img
