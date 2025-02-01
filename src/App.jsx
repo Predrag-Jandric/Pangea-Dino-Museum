@@ -13,12 +13,12 @@ function App() {
   return (
     <div className="">
       <LandingPage />
-      {/* <DinoDisplay /> */}
-      {/* <DinoMap /> */}
-      {/* <Timeline /> */}
-      {/* <Quiz /> */}
+      <DinoDisplay />
+      <DinoMap />
+      <Timeline />
+      <Quiz />
       <Ecommerce />
-      {/* <Footer /> */}
+      <Footer />
 
       <ToastContainer />
     </div>

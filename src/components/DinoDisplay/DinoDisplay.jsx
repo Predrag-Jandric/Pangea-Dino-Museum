@@ -1,44 +1,35 @@
 import { useEffect, useState } from "react";
+import DinoSearch from "./DinoSearch";
 import DinoPreview from "./DinoPreview";
 import DinoCard from "./DinoCard";
-// static data currently being used prior to creation of API
-import { dinosaurs } from "../../utils/data.js";
-import DinoSearch from "./DinoSearch";
 
-export default function DinoDisplay() {
+function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [selectedDino, setSelectedDino] = useState({});
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     async function getDinos() {
       try {
-        //! static data currently being used prior to creation of API, revert when completed
-        // const res = await fetch("https://chinguapi.onrender.com/dinosaurs");
-        // const data = await res.json();
-        setDinos(dinosaurs);
-        setFiltered(getRandomDinos(dinosaurs, 10));
+        const res = await fetch("https://api-example-wg44.onrender.com");
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        const data = await res.json();
+        setDinos(data);
+        setFiltered(data);
       } catch (error) {
         console.error("Error fetching dinos", error);
+      } finally {
+        setLoading(false);
       }
     }
     getDinos();
   }, []);
 
-  // will get a randomly generated array of {COUNT} dinos, no repeats
-  const getRandomDinos = (dinos, count) => {
-    const randomIndexes = new Set();
-    while (randomIndexes.size < count) {
-      randomIndexes.add(Math.floor(Math.random() * dinos.length));
-    }
-    return [...randomIndexes].map((ind) => dinos[ind]);
-  };
-
   return (
-    <div className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-gray-100 py-10">
-      {selectedDino.name && (
-        <div className="absolute inset-0 bg-black/70"></div>
-      )}
+    <div>
       <div className="m-auto mb-10 max-w-[1000px] pl-10">
         <h2 className="mb-3 text-4xl">DinoDex</h2>
         <div>
@@ -53,21 +44,28 @@ export default function DinoDisplay() {
         <DinoSearch dinos={dinos} setFiltered={setFiltered} />
       </div>
 
-      <div className="scrollbar-hidden flex h-full gap-5 overflow-x-scroll scroll-smooth pt-10">
-        {!filtered.length
-          ? "No Dinosaurs :("
-          : filtered.map((dino) => (
-              <DinoPreview
-                dino={dino}
-                setSelectedDino={setSelectedDino}
-                // revert to dino.id when new API is integreated
-                key={dino.name}
-              />
-            ))}
-      </div>
+      {loading ? (
+        <div className="flex h-96 w-full items-center justify-center text-2xl">
+          Fetching data...
+        </div>
+      ) : (
+        <div className="scrollbar-hidden flex h-full gap-5 overflow-x-scroll scroll-smooth p-10">
+          {!filtered.length
+            ? "No Dinosaurs :("
+            : filtered.map((dino) => (
+                <DinoPreview
+                  dino={dino}
+                  setSelectedDino={setSelectedDino}
+                  key={dino._id}
+                />
+              ))}
+        </div>
+      )}
       {selectedDino.name && (
         <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
       )}
     </div>
   );
 }
+
+export default DinoDisplay;

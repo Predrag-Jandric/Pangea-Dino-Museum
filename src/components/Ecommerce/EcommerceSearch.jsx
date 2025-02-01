@@ -3,7 +3,7 @@ import { TfiShoppingCart } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-function EcommerceSearch({ dinos, setFiltered }) {
+function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   // needed for the shopping cart number display
   const cart = useSelector((state) => state.shopping.inCart);
 
@@ -14,7 +14,7 @@ function EcommerceSearch({ dinos, setFiltered }) {
   // place selected search category in state
   const handleSelect = (e) => {
     setSearch(e.target.value);
-    setIsFilterApplied(false); // Reset filter applied state when changing category
+    setIsFilterApplied(false);
     if (
       e.target.value !== "diet" &&
       e.target.value !== "stock" &&
@@ -22,7 +22,8 @@ function EcommerceSearch({ dinos, setFiltered }) {
       e.target.value !== "country" &&
       e.target.value !== "name"
     ) {
-      handleSearch(e.target.value, ""); // Reset the search results when changing category
+      // reset the search results when changing category
+      handleSearch(e.target.value, "");
     }
   };
 
@@ -39,12 +40,13 @@ function EcommerceSearch({ dinos, setFiltered }) {
   const handleSearch = (category, query) => {
     let filteredDinos = [];
 
+    // filters
     switch (category) {
-      case "name":
-        filteredDinos = dinos.filter((dino) =>
-          dino.name.toLowerCase().startsWith(query.toLowerCase()),
-        );
+      case "name": {
+        const regex = new RegExp(query.split("").join(".*"), "i");
+        filteredDinos = dinos.filter((dino) => regex.test(dino.name));
         break;
+      }
       case "diet":
         filteredDinos = dinos.filter((dino) => dino.diet === query);
         break;
@@ -67,20 +69,22 @@ function EcommerceSearch({ dinos, setFiltered }) {
         filteredDinos = dinos;
     }
 
-    setFiltered(filteredDinos); // Update the filtered state
-    setIsFilterApplied(true); // Set filter applied state to true
+    setFiltered(filteredDinos); 
+    setIsFilterApplied(true);
+    setCurrentPage(1); 
   };
 
   const handleResetFilters = () => {
     setSearch("name");
     setFiltered(dinos);
-    setIsFilterApplied(false); // Reset filter applied state
+    setIsFilterApplied(false); 
     setInputValue("");
+    setCurrentPage(1);
   };
 
   return (
     <section className="mt-10 flex w-full gap-3">
-      {/* Category selection dropdown */}
+      {/* category selection dropdown */}
       <select
         className="rounded border border-gray-800 p-1"
         onChange={(e) => handleSelect(e)}
