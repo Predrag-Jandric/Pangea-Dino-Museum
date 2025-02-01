@@ -12,13 +12,13 @@ import { ToastContainer } from 'react-toastify';
 function App() {
   return (
     <div className="">
-      <LandingPage />
+      {/* <LandingPage /> */}
       {/* <DinoDisplay /> */}
       {/* <DinoMap /> */}
       {/* <Timeline /> */}
       {/* <Quiz /> */}
       <Ecommerce />
-      {/* <Footer /> */}
+      <Footer />
 
       <ToastContainer />
     </div>
