@@ -67,14 +67,24 @@ function ShoppingCartPage() {
               </div>
               <div className="flex space-x-2">
                 <button
+                  disabled={item.inStock === 0}
                   onClick={() => dispatch(increaseQuantity(item.id))}
-                  className="flex size-8 items-center justify-center rounded bg-primary text-white transition hover:bg-primaryHover"
+                  className={`flex h-8 w-8 items-center justify-center rounded transition ${
+                    item.inStock === 0
+                      ? "cursor-not-allowed bg-gray-400 text-gray-700"
+                      : "bg-primary text-white hover:bg-primaryHover"
+                  }`}
                 >
                   +
                 </button>
                 <button
                   onClick={() => dispatch(decreaseQuantity(item.id))}
-                  className="flex size-8 items-center justify-center rounded bg-primary text-white transition hover:bg-primaryHover"
+                  disabled={item.quantity === 1}
+                  className={`flex h-8 w-8 items-center justify-center rounded transition ${
+                    item.quantity === 1
+                      ? "cursor-not-allowed bg-gray-400 text-gray-700"
+                      : "bg-primary text-white hover:bg-primaryHover"
+                  }`}
                 >
                   -
                 </button>
