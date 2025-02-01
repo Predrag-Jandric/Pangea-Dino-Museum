@@ -15,8 +15,10 @@ export default function DinoDisplay() {
       try {
         //! static data currently being used prior to creation of API, revert when completed
         // const res = await fetch("https://chinguapi.onrender.com/dinosaurs");
-        // const data = await res.json();
-        setDinos(dinosaurs);
+        const res = await fetch("http://localhost:5001/api/dinosaurs");
+        const data = await res.json();
+        console.log(data)
+        // setDinos(dinosaurs);
         setFiltered(getRandomDinos(dinosaurs, 10));
       } catch (error) {
         console.error("Error fetching dinos", error);
