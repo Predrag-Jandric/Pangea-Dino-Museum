@@ -67,7 +67,7 @@ function EcommerceDisplay() {
         </p>
       </div>
 
-      <section className="flex w-full flex-col items-center gap-6 rounded-lg p-4 md:max-w-[50rem]">
+      <section className="flex w-full flex-col items-center gap-6 rounded-lg p-4 md:max-w-[55rem]">
         {/* search and filters  */}
         <EcommerceSearch dinos={dinos} setFiltered={setFiltered} setCurrentPage={setCurrentPage} />
 
@@ -82,7 +82,7 @@ function EcommerceDisplay() {
           </div>
         ) : (
           <>
-            <div className="grid w-full mx-auto grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+            <div className="place-items-center grid w-full grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
               {currentItems.map((dino) => (
                 <EcommerceCard
                   key={dino._id}
@@ -96,11 +96,11 @@ function EcommerceDisplay() {
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
-                className="px-4 py-2 mx-1 rounded bg-gray-300 hover:bg-gray-400 disabled:opacity-50"
+                className="text-light px-4 py-2 mx-1 rounded bg-primary hover:bg-highlight disabled:opacity-50"
               >
                 Previous
               </button>
-              <span className="px-4 py-2 mx-1">
+              <span className="px-4 py-2 mx-1 text-light">
                 Page {currentPage} of {totalPages}
               </span>
               <button
@@ -108,7 +108,7 @@ function EcommerceDisplay() {
                   setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
                 disabled={currentPage === totalPages}
-                className="px-4 py-2 mx-1 rounded bg-gray-300 hover:bg-gray-400 disabled:opacity-50"
+                className="text-light px-4 py-2 mx-1 rounded bg-primary hover:bg-highlight disabled:opacity-50"
               >
                 Next
               </button>
