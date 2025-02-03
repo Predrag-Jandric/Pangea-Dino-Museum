@@ -110,12 +110,13 @@ function ShoppingCartPage() {
             >
               Clear Cart
             </button>
-            <button
-              className="rounded bg-primary px-4 py-2 text-light hover:bg-highlight"
-              onClick={openModal}
-            >
-              Checkout
-            </button>
+            <Link to="/checkout">
+              <button
+                className="rounded bg-primary px-4 py-2 text-light hover:bg-highlight"
+              >
+                Checkout
+              </button>
+            </Link>
           </div>
         </div>
       )}
