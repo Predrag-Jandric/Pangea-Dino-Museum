@@ -83,9 +83,10 @@ export default function Checkout() {
           <p>{item.quantity} x {item.price}</p>
         </div>
       ))}
-      <div className="text-3xl font-bold text-primary text-right">
+      <div className="text-3xl font-bold text-highlight text-right">
         Total: ${cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2)}
       </div>
+      <button className="mt-3 w-full bg-primary p-3 rounded-lg text-light hover:bg-highlight">Purchase</button>
     </div>
   );
 }
