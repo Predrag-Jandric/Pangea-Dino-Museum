@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useAnimate, stagger } from "framer-motion";
 import useScrollTo from "../../utils/useScrollTo";
 import { IoCloseOutline } from "react-icons/io5";
+import {CgShoppingCart } from "react-icons/cg";
 import { motion } from "framer-motion";
 import { navLinks } from "../../utils/data";
 import { Link } from "react-router-dom";
@@ -72,7 +73,7 @@ function useMenuAnimation(isOpen) {
 }
 
 export default function MobileNavbar({ isOpen, setIsOpen }) {
-  const scrollToSection = useScrollTo(170);
+  const scrollToSection = useScrollTo();
   const [clickable, setClickable] = useState(true);
   const scope = useMenuAnimation(isOpen);
   const cart = useSelector((state) => state.shopping.inCart);
@@ -105,14 +106,14 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
 
   return (
     <div ref={scope}>
-      <nav className="fixed left-0 top-0 z-40 h-full w-full translate-x-full bg-slate-700 pt-10 text-white transition-colors">
+      <nav className="fixed left-0 top-0 z-40 h-full w-full translate-x-full bg-dark/90 pt-10 text-white transition-colors">
         <ul className="relative flex flex-col gap-y-6 px-8">
           <motion.div className="mb-4 flex w-full items-center justify-between px-5">
             <Link
               to="/shoppingCartPage"
               className="cart-icon relative mr-auto text-4xl"
             >
-              <TfiShoppingCart className="text-white transition hover:text-primaryHover" />
+              <TfiShoppingCart className="text-secondary transition hover:text-highlight" />
               {cart.length > 0 && (
                 <span className="absolute -top-1 right-2.5 flex h-5 w-5 animate-bounce items-center justify-center rounded-full bg-red-500 text-xs text-white">
                   {cart.length}
@@ -130,7 +131,7 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
               }
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <IoCloseOutline className="size-12 cursor-pointer transition-colors hover:text-primary" />
+              <IoCloseOutline className="size-12 cursor-pointer hover:text-primaryHover transition-colors" />
             </motion.div>
           </motion.div>
           {navLinks.map((link, index) => (
@@ -143,11 +144,11 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
                   scrollToSection(link.href);
                   setIsOpen(false);
                 }}
-                className="relative w-full cursor-pointer px-5 py-2 text-3xl transition duration-200 ease-in-out hover:text-primary group-hover:before:scale-100"
+                className="relative w-full cursor-pointer px-5 py-2 text-3xl transition duration-200 ease-in-out hover:text-secondary text-secondary group-hover:before:scale-100"
               >
                 {link.label}
               </a>
-              <span className="absolute left-5 top-full z-[-1] h-[3px] w-32 origin-left scale-x-0 bg-primary transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+              <span className="absolute left-5 top-full z-[-1] h-[3px] w-32 origin-left scale-x-0 bg-highlight transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
             </li>
           ))}
         </ul>

@@ -5,23 +5,30 @@ export default {
     extend: {
       colors: {
         // pure colors
-        pureWhite: "#ffffff",
-        pureBlack: "#000000",
+        // pureWhite: "#ffffff",
+        // pureBlack: "#000000",
 
         // primary colors
-        primary: "#4489C5",
-        primaryHover: "#639DCF",
+        // primary: "#4489C5",
+        // primaryHover: "#639DCF",
 
-        grayOne: "#d4d4d8",
-        greenOne: "#22c55e",
-        greenOneHover: "#19b352",
+        // grayOne: "#d4d4d8",
+        // greenOne: "#22c55e",
+        // greenOneHover: "#19b352",
+
+        primary: "rgb(255, 24, 166)",
+        secondary: "rgb(140, 51, 217)",
+        highlight: "rgb(52, 239, 200)",
+        dark: "rgb(21, 1, 79)",
+        light: "rgb(246, 254, 223)",
       },
 
       // "Comic Sans MS" for testing
       // Work Sans and Nunito not integrated into the app at this time!
       fontFamily: {
-        headings: ["Work Sans", "sans-serif"],
+        // headings: ["Work Sans", "sans-serif"],
         body: ["Nunito", "sans-serif"],
+        pressStart: ['"Press Start 2P"', "serif"]
       },
       fontSize: {
         headings: "1.5rem",

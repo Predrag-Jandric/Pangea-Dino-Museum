@@ -11,7 +11,7 @@ import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-    <div className="">
+    <div className="font-body">
       <LandingPage />
       <DinoDisplay />
       <DinoMap />

@@ -1,55 +1,60 @@
-import { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 export default function DinoSearch({ dinos, setFiltered }) {
-  const [search, setSearch] = useState("name");
-  const [inputValue, setInputValue] = useState("");
+  const [search, setSearch] = useState({ category: "name", query: "" });
 
-  // place selected search category in state
+  // place selected serach category in state
   const handleSelect = (e) => {
-    setSearch(e.target.value);
+    setSearch({ category: e.target.value, query: "" });
   };
 
-  // create a dropdown of Countries where dinos are found
-  const getCountries = () => {
+  // handle serach depding on category and query
+  const handleSearch = (e) => {
+    // format query and set in search object
+    const query = e.target.value.toLowerCase().trim();
+    setSearch((prev) => ({ ...prev, query }));
+  };
+
+  useEffect(() => {
+    const filteredDinos = dinos.filter((dino) => {
+      // extract search criteria
+      const { category, query } = search;
+      // if no query, show all dinos
+      if (!query) return true;
+
+      // filter declaration depending on category selected
+      switch (category) {
+        case "name":
+          return dino.name.toLowerCase().includes(query);
+        case "diet":
+          return dino.diet.toLowerCase() === query;
+        case "country":
+          return dino.foundIn.toLowerCase().includes(query);
+        default:
+          return true;
+      }
+    });
+
+    setFiltered(filteredDinos);
+  }, [search, dinos, setFiltered]);
+
+  // create a dropdown of Countries where dinos are found, useMemo to save list
+  const getCountries = useMemo(() => {
     const countries = new Set();
     dinos.forEach((dino) =>
       dino.foundIn.split(", ").forEach((place) => countries.add(place)),
     );
     return [...countries].sort((a, b) => (a < b ? -1 : 1));
-  };
-
-  // handle search depending on criteria
-  const handleSearch = (category, query) => {
-    let filteredDinos = [];
-
-    switch (category) {
-      case "name": {
-        const regex = new RegExp(query.split("").join(".*"), "i");
-        filteredDinos = dinos.filter((dino) => regex.test(dino.name));
-        break;
-      }
-      case "diet":
-        filteredDinos = dinos.filter((dino) => dino.diet === query);
-        break;
-      case "country":
-        filteredDinos = dinos.filter((dino) => dino.foundIn.includes(query));
-        break;
-      default:
-        filteredDinos = dinos;
-    }
-
-    setFiltered(filteredDinos); 
-  };
+  }, [dinos]);
 
   return (
     <div className="mt-10">
-      {/* category selection dropdown */}
+      {/* Category selection dropdown */}
       <select
         className="mr-3 rounded border border-gray-800 p-1"
         onChange={handleSelect}
         name="category"
         id="category"
-        value={search}
       >
         <option value="name">Name</option>
         <option value="country">Country</option>
@@ -57,10 +62,10 @@ export default function DinoSearch({ dinos, setFiltered }) {
       </select>
 
       {/* search based on diet */}
-      {search === "diet" && (
+      {search.category === "diet" && (
         <select
           className="mr-3 rounded border border-gray-800 p-1"
-          onChange={(e) => handleSearch(search, e.target.value)}
+          onChange={handleSearch}
           defaultValue=""
         >
           <option disabled value="">
@@ -76,16 +81,16 @@ export default function DinoSearch({ dinos, setFiltered }) {
       )}
 
       {/* search based on country */}
-      {search === "country" && (
+      {search.category === "country" && (
         <select
-          onChange={(e) => handleSearch(search, e.target.value)}
+          onChange={handleSearch}
           className="mr-3 rounded border border-gray-800 p-1"
           defaultValue=""
         >
           <option disabled value="">
             Choose Country
           </option>
-          {getCountries().map((country) => (
+          {getCountries.map((country) => (
             <option key={country} value={country}>
               {country}
             </option>
@@ -93,16 +98,11 @@ export default function DinoSearch({ dinos, setFiltered }) {
         </select>
       )}
       {/* display search input field */}
-      {search === "name" && (
+      {search.category === "name" && (
         <input
           type="text"
-          value={inputValue}
           placeholder="search..."
-          className="rounded border border-gray-800 p-1"
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            handleSearch(search, e.target.value);
-          }}
+          onChange={handleSearch}
         />
       )}
     </div>
