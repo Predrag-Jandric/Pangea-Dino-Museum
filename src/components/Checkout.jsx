@@ -78,12 +78,13 @@ export default function Checkout() {
         </p>
       </div>
       {cart.map((item) => (
-        <div className="m-3 rounded-lg bg-secondary/30 p-3 text-light">
-          {item.name}: {item.price}
+        <div className=" flex justify-between m-3 rounded-lg bg-secondary/30 p-3 text-light">
+          <p>{item.name}</p> 
+          <p>{item.quantity} x {item.price}</p>
         </div>
       ))}
       <div className="text-3xl font-bold text-primary text-right">
-        Total: {cart.reduce((sum, item) => sum + item.price * item.quantity, 0)}
+        Total: ${cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2)}
       </div>
     </div>
   );
