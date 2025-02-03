@@ -14,6 +14,7 @@ export default function Checkout() {
   const [session, setSession] = useState(null);
   const cart = useSelector((state) => state.shopping.inCart);
   const [email, setEmail] = useState("");
+  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -59,11 +60,11 @@ export default function Checkout() {
   console.log(cart);
 
   return (
-    <div className="h-svh bg-dark p-5">
-      <div className="flex justify-between text-light">
+    <div className="h-svh bg-dark p-5 text-light">
+      <div className="flex justify-between">
         <Link
           to="/shoppingCartPage"
-          className="ml-3 rounded-lg bg-primary p-1 hover:bg-highlight"
+          className="rounded-lg bg-primary p-1 hover:bg-highlight"
         >
           Back to Cart
         </Link>
@@ -77,16 +78,44 @@ export default function Checkout() {
           </button>
         </p>
       </div>
-      {cart.map((item) => (
-        <div className=" flex justify-between m-3 rounded-lg bg-secondary/30 p-3 text-light">
-          <p>{item.name}</p> 
-          <p>{item.quantity} x {item.price}</p>
-        </div>
-      ))}
-      <div className="text-3xl font-bold text-highlight text-right">
-        Total: ${cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2)}
-      </div>
-      <button className="mt-3 w-full bg-primary p-3 rounded-lg text-light hover:bg-highlight">Purchase</button>
+      {isComplete ? (
+        <div>Order Complete!</div>
+      ) : (
+        <>
+          {cart.map((item) => (
+            <div className="m-3 flex justify-between rounded-lg bg-secondary/30 p-3 text-light">
+              <p>{item.name}</p>
+              <p>
+                {item.quantity} x {item.price}
+              </p>
+            </div>
+          ))}
+          <div className="text-right text-3xl font-bold text-highlight">
+            Total: $
+            {cart
+              .reduce((sum, item) => sum + item.price * item.quantity, 0)
+              .toFixed(2)}
+          </div>
+          <div className="flex max-w-[400px] flex-col gap-3">
+            Name:
+            <input />
+            Street:
+            <input />
+            City:
+            <input />
+            Zip Code:
+            <input />
+            Country
+            <input />
+          </div>
+          <button
+            className="mt-3 w-full rounded-lg bg-primary p-3 text-light hover:bg-highlight"
+            onClick={() => setIsComplete(true)}
+          >
+            Purchase
+          </button>
+        </>
+      )}
     </div>
   );
 }
