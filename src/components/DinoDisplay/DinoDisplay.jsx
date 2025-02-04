@@ -18,7 +18,7 @@ function DinoDisplay() {
         //   throw new Error(`HTTP error! status: ${res.status}`);
         // }
         //! my local API
-        const res = await fetch("http://localhost:5001/api/dinosaurs");
+        const res = await fetch("https://dinostalgia-backend.vercel.app/api/dinosaurs");
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -79,7 +79,7 @@ function DinoDisplay() {
                 <DinoPreview
                   dino={dino}
                   setSelectedDino={setSelectedDino}
-                  key={dino._id}
+                  key={dino.id}
                 />
               ))}
         </div>
