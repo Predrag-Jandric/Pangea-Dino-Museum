@@ -50,7 +50,7 @@ function Footer() {
           <h3 className="mb-7 text-lg font-semibold font-pressStart">Organisation</h3>
           <a target="_blank" href="https://www.chingu.io/">
             <img
-              src="src/assets/chingu-logo.png"
+              src="/chingu-logo.png"
               className="h-16"
               alt="chingu logo"
             />

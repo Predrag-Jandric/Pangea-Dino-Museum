@@ -6,7 +6,7 @@ import DinoCard from "./DinoCard";
 function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
   const [filtered, setFiltered] = useState([]);
-  const [selectedDino, setSelectedDino] = useState({});
+  const [selectedDino, setSelectedDino] = useState(null);
   const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function DinoDisplay() {
   }, []);
 
   const handleClose = () => {
-    setSelectedDino({});
+    setSelectedDino(null);
   };
 
   return (
@@ -37,14 +37,14 @@ function DinoDisplay() {
       id="dinodex"
       className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-dark items-center text-center p-6"
     >
-      {selectedDino.name && (
+      {selectedDino && (
         <>
           <div
             className="absolute inset-0 z-[1000] flex items-center justify-center bg-black/70"
             onClick={handleClose}
           ></div>
           {selectedDino.name && (
-            <DinoCard dino={selectedDino} handleClose={handleClose} />
+            <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
           )}
         </>
       )}
@@ -80,7 +80,7 @@ function DinoDisplay() {
         
       )}
       </div>
-      {selectedDino.name && (
+      {selectedDino && (
         <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
       )}
     </div>
