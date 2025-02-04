@@ -25,11 +25,7 @@ export default function DinoSearch({ dinos, setFiltered }) {
       // filter declaration depending on category selected
       switch (category) {
         case "name":
-          return dino.name.toLowerCase().startsWith(query);
-        case "weight":
-          return dino.weight === +query;
-        case "length":
-          return dino.length === +query;
+          return dino.name.toLowerCase().includes(query);
         case "diet":
           return dino.diet.toLowerCase() === query;
         case "country":
@@ -61,8 +57,6 @@ export default function DinoSearch({ dinos, setFiltered }) {
         id="category"
       >
         <option value="name">Name</option>
-        <option value="weight">Weight (kg)</option>
-        <option value="length">Length (m)</option>
         <option value="country">Country</option>
         <option value="diet">Diet</option>
       </select>
@@ -82,9 +76,6 @@ export default function DinoSearch({ dinos, setFiltered }) {
           </option>
           <option name="herbivorous" value="herbivorous" id="herbivorous">
             Herbivorous
-          </option>
-          <option name="omnivorous" value="omnivorous" id="omnivorous">
-            Omnivorous
           </option>
         </select>
       )}
@@ -107,7 +98,7 @@ export default function DinoSearch({ dinos, setFiltered }) {
         </select>
       )}
       {/* display search input field */}
-      {search.category !== "diet" && search.category !== "country" && (
+      {search.category === "name" && (
         <input
           type="text"
           placeholder="search..."

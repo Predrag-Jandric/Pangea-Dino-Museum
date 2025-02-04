@@ -2,11 +2,11 @@ import { useSelector } from "react-redux";
 
 function EcommerceCard({ item, handleAddToCart }) {
   const cart = useSelector((state) => state.shopping.inCart);
-  const isInCart = cart.some((cartItem) => cartItem.id === item.id);
+  const isInCart = cart.some((cartItem) => cartItem.id === item._id); 
   return (
     <div
-      key={item.id}
-      className="mx-auto flex w-[17rem] flex-col rounded-lg border border-secondary/30 bg-secondary/30 p-4 shadow-md"
+      key={item._id} 
+      className="flex w-[17rem] flex-col rounded-lg border border-secondary/30 bg-secondary/30 p-4 shadow-md"
     >
       <img
         src={item.imageSrc}
@@ -42,7 +42,7 @@ function EcommerceCard({ item, handleAddToCart }) {
         {item.inStock === 0
           ? "Out of Stock"
           : isInCart
-            ? "In the Cart"
+            ? "In Cart"
             : "Add to Cart"}
       </button>
     </div>

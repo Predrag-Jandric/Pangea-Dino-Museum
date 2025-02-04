@@ -1,40 +1,38 @@
 import { useEffect, useState } from "react";
-import DinoPreview from "./DinoPreview.jsx";
-import DinoCard from "./DinoCard.jsx";
-// static data currently being used prior to creation of API
-import { dinosaurs } from "../../utils/data.js";
-import DinoSearch from "./DinoSearch.jsx";
+import DinoSearch from "./DinoSearch";
+import DinoPreview from "./DinoPreview";
+import DinoCard from "./DinoCard";
 
-export default function DinoDisplay() {
+function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [selectedDino, setSelectedDino] = useState({});
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     async function getDinos() {
       try {
-        //! static data currently being used prior to creation of API, revert when completed
-        // const res = await fetch("https://chinguapi.onrender.com/dinosaurs");
+        //! Peter's deployed API
+        // const res = await fetch("https://api-example-wg44.onrender.com");
+        // if (!res.ok) {
+        //   throw new Error(`HTTP error! status: ${res.status}`);
+        // }
+        //! my local API
         const res = await fetch("http://localhost:5001/api/dinosaurs");
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
         const data = await res.json();
-        console.log(data)
-        // setDinos(dinosaurs);
-        setFiltered(getRandomDinos(dinosaurs, 10));
+        setDinos(dinosaurs);
+        setFiltered(data);
       } catch (error) {
         console.error("Error fetching dinos", error);
+      } finally {
+        setLoading(false);
       }
     }
     getDinos();
   }, []);
-
-  // will get a randomly generated array of {COUNT} dinos, no repeats
-  const getRandomDinos = (dinos, count) => {
-    const randomIndexes = new Set();
-    while (randomIndexes.size < count) {
-      randomIndexes.add(Math.floor(Math.random() * dinos.length));
-    }
-    return [...randomIndexes].map((ind) => dinos[ind]);
-  };
 
   const handleClose = () => {
     setSelectedDino({});
@@ -69,6 +67,11 @@ export default function DinoDisplay() {
         
         <DinoSearch dinos={dinos} setFiltered={setFiltered} />
 
+      {loading ? (
+        <div className="flex h-96 w-full items-center justify-center text-2xl">
+          Fetching data...
+        </div>
+      ) : (
         <div className="scrollbar-hidden absolute left-0 flex w-full gap-5 overflow-x-scroll scroll-smooth p-20 pt-5 text-highlight">
           {!filtered.length
             ? "No Dinosaurs :("
@@ -76,12 +79,18 @@ export default function DinoDisplay() {
                 <DinoPreview
                   dino={dino}
                   setSelectedDino={setSelectedDino}
-                  // revert to dino.id when new API is integreated
-                  key={dino.name}
+                  key={dino._id}
                 />
               ))}
         </div>
+        
+      )}
       </div>
+      {selectedDino.name && (
+        <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
+      )}
     </div>
-  );
+)
 }
+
+export default DinoDisplay;
