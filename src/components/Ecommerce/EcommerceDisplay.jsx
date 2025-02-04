@@ -20,7 +20,8 @@ function EcommerceDisplay() {
   useEffect(() => {
     async function getDinos() {
       try {
-        const res = await fetch("https://api-example-wg44.onrender.com");
+        //! const res = await fetch("https://api-example-wg44.onrender.com");
+        const res = await fetch("http://localhost:5001/api/dinosaurs")
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }

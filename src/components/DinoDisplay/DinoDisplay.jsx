@@ -23,7 +23,7 @@ function DinoDisplay() {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
         const data = await res.json();
-        setDinos(dinosaurs);
+        setDinos(data);
         setFiltered(data);
       } catch (error) {
         console.error("Error fetching dinos", error);
