@@ -12,7 +12,13 @@ function DinoDisplay() {
   useEffect(() => {
     async function getDinos() {
       try {
-        const res = await fetch("https://api-example-wg44.onrender.com");
+        //! Peter's deployed API
+        // const res = await fetch("https://api-example-wg44.onrender.com");
+        // if (!res.ok) {
+        //   throw new Error(`HTTP error! status: ${res.status}`);
+        // }
+        //! my local API
+        const res = await fetch("https://dinostalgia-backend.vercel.app/api/dinosaurs");
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -73,7 +79,7 @@ function DinoDisplay() {
                 <DinoPreview
                   dino={dino}
                   setSelectedDino={setSelectedDino}
-                  key={dino._id}
+                  key={dino.id}
                 />
               ))}
         </div>

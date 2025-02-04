@@ -1,5 +1,5 @@
-import { navLinks } from "../utils/data";
-import useScrollTo from "../utils/useScrollTo";
+import { navLinks } from "../utils/data.js";
+import useScrollTo from "../utils/useScrollTo.js";
 import { teamMembers } from "../utils/data.js";
 
 function Footer() {

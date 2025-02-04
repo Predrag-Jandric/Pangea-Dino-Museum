@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { addToCart } from "../../utils/shoppingSlice";
+import { addToCart } from "../../utils/shoppingSlice.js";
 import { useDispatch } from "react-redux";
 import EcommerceSearch from "./EcommerceSearch";
 import EcommerceCard from "./EcommerceCard";
@@ -20,7 +20,8 @@ function EcommerceDisplay() {
   useEffect(() => {
     async function getDinos() {
       try {
-        const res = await fetch("https://api-example-wg44.onrender.com");
+        //! const res = await fetch("https://api-example-wg44.onrender.com");
+        const res = await fetch("https://dinostalgia-backend.vercel.app/api/dinosaurs")
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -39,7 +40,7 @@ function EcommerceDisplay() {
   const handleAddToCart = (item) => {
     dispatch(
       addToCart({
-        id: item._id, 
+        id: item.id, 
         name: item.name,
         price: item.price,
         inStock: item.inStock,
@@ -85,7 +86,7 @@ function EcommerceDisplay() {
             <div className="place-items-center grid w-full grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
               {currentItems.map((dino) => (
                 <EcommerceCard
-                  key={dino._id}
+                  key={dino.id}
                   item={dino}
                   handleAddToCart={handleAddToCart}
                 />
