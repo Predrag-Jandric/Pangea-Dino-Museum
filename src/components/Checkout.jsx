@@ -76,48 +76,19 @@ export default function Checkout() {
     ];
 
     try {
-      const orderRes = await fetch("http://localhost:5001/api/orders/", {
+      const res = await fetch("http://localhost:5001/api/orders/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newOrder), // convert note into JSON format
+        body: JSON.stringify({newOrder, cart}), // convert note into JSON format
       });
-      const orderData = await orderRes.json();
-      if(!orderRes.ok) throw new Error("Failed to create order")
-      // get orderID
-      const orderId = orderData.id;
-    
-    //create array of ordered items objects
-    const orderItems = cart.map((dino) => ({
-      order_id: orderId,
-      dino_id: dino.id,
-      name: dino.name,
-      price: dino.price,
-      quantity: dino.quantity,
-    }));
-    
-    // post to insert ordered items to DB
-    // const itemsRes = await fetch("http://localhost:5001/api/orderItems", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(orderItems),
-    // });
 
-    // if(!itemsRes.ok) throw new Error("failed to cerate order-items")
-
-      // const itemsData = await itemsRes.json();
-      // console.log("order items created", itemsData);
-          // add individual items ordered to DB with corresponding order ID
-          
-          
-          console.log(orderItems);
-    const { data, error } = await supabase
-    .from("order_items")
-    .insert(orderItems)
-    .select();
+      if(!res.ok) throw new Error("Failed to create order")
+      
+      const data = await res.json();
+      console.log("added:", data)
     } catch (error) {
       console.log(error);
     }
-
     // move to completed page
     setIsComplete(true);
   };
