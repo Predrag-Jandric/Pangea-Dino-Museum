@@ -1,26 +1,30 @@
-require("dotenv").config(); // Loads the .env file
-const express = require("express");
-const cors = require("cors");
+import 'dotenv/config'
+import express from 'express';
+import cors from 'cors';
+import dinosaursRouter from './dinosaurs/dinosaurs.router.js';
+import ordersRouter from './orders/orders.router.js';
+import errorHandler from './errors/errorHandler.js';
+
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-//routes
-const dinosaursRoutes = require('./routes/dinosaursRoutes');
-
-//middleware
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-//default route
-app.get("/api", (req, res) => {
-  res.send("Welcome to DiNostalgia API");
+// Default route
+app.get('/api', (req, res) => {
+  res.send('Welcome to DiNostalgia API');
 });
 
-//Dino route
-app.use("/api/dinosaurs", dinosaursRoutes);
-//quiz routes 
+// Dino route
+app.use('/api/dinosaurs', dinosaursRouter);
+// Orders route
+app.use('/api/orders', ordersRouter);
 
-//start server
+// handle Errrors
+app.use(errorHandler);
+// Start server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
