@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001/api";
+
 const supabase = createClient(
   import.meta.env.VITE_URL,
   import.meta.env.VITE_ANON_KEY
@@ -76,7 +78,7 @@ export default function Checkout() {
     ];
 
     try {
-      const res = await fetch("http://localhost:5001/api/orders/", {
+      const res = await fetch(`${API_BASE_URL}/orders/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({newOrder, cart}), // convert note into JSON format
