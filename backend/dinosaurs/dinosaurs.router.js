@@ -1,6 +1,6 @@
 import express from "express";
 import { getAllDinosaurs } from "./dinosaurs.controller.js";
-import methodNotAllowed from "../errors/methodNotAllowed.js";
+import { methodNotAllowed } from "../errors/index.js";
 
 const router = express.Router();
 
