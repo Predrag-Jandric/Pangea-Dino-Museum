@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const supabase = createClient(
   import.meta.env.VITE_URL,
-  import.meta.env.VITE_ANON_KEY,
+  import.meta.env.VITE_ANON_KEY
 );
 
 export default function Checkout() {
@@ -44,7 +44,7 @@ export default function Checkout() {
       if (data?.user) setEmail(data.user.email);
     }
     fetchUser();
-  }, [email]);
+  }, []);
 
   //sign out
   async function signOut() {
@@ -58,55 +58,66 @@ export default function Checkout() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     // get User ID
     const userId = session?.user?.id;
 
-    // add purhcase to database with customer information
-    const { data: purchaseData, error: purchaseError } = await supabase
-      .from("purchases")
-      .insert([
-        {
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          address: formData.address,
-          email: formData.email,
-          total: cart
-            .reduce((sum, item) => sum + item.price * item.quantity, 0)
-            .toFixed(2),
-          user_id: userId
-        },
-      ])
-      .select()
-      .single();
-    console.log(purchaseData);
-    // handle add purcahse to DB error
-    if (purchaseError) {
-      console.error("Error creating purchase:", purchaseError);
-      return;
-    }
+    //create new order object
+    const newOrder = [
+      {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        address: formData.address,
+        email: formData.email,
+        total: cart
+          .reduce((sum, item) => sum + item.price * item.quantity, 0)
+          .toFixed(2),
+        user_id: userId,
+      },
+    ];
 
+    try {
+      const orderRes = await fetch("http://localhost:5001/api/orders/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newOrder), // convert note into JSON format
+      });
+      const orderData = await orderRes.json();
+      if(!orderRes.ok) throw new Error("Failed to create order")
+      // get orderID
+      const orderId = orderData.id;
+    
     //create array of ordered items objects
     const orderItems = cart.map((dino) => ({
-      order_id: purchaseData.id,
-      dino_id: dino.id, //! currenlty using peter's dinos so cannot use foreign key
+      order_id: orderId,
+      dino_id: dino.id,
       name: dino.name,
       price: dino.price,
       quantity: dino.quantity,
-    }))
+    }));
+    
+    // post to insert ordered items to DB
+    // const itemsRes = await fetch("http://localhost:5001/api/orderItems", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(orderItems),
+    // });
 
-    // add individual items ordered to DB with corresponding order ID
-    const { data: orderData, error: orderError } = await supabase
-      .from("order_items")
-      .insert(orderItems)
-      .select();
-    console.log("OREDER DATA", orderData);
+    // if(!itemsRes.ok) throw new Error("failed to cerate order-items")
 
-    // handle any errors when writing ordered items to DB
-    if (orderError) {
-      console.error("Error inserting order items:", orderItemsError);
-      return;
+      // const itemsData = await itemsRes.json();
+      // console.log("order items created", itemsData);
+          // add individual items ordered to DB with corresponding order ID
+          
+          
+          console.log(orderItems);
+    const { data, error } = await supabase
+    .from("order_items")
+    .insert(orderItems)
+    .select();
+    } catch (error) {
+      console.log(error);
     }
+
     // move to completed page
     setIsComplete(true);
   };
@@ -149,7 +160,10 @@ export default function Checkout() {
       ) : (
         <>
           {cart.map((item) => (
-            <div key={item.name} className="m-3 flex justify-between rounded-lg bg-secondary/30 p-3 text-light">
+            <div
+              key={item.name}
+              className="m-3 flex justify-between rounded-lg bg-secondary/30 p-3 text-light"
+            >
               <p>{item.name}</p>
               <p>
                 {item.quantity} x {item.price}
