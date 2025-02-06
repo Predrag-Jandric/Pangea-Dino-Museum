@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
 
 const supabase = createClient(
   import.meta.env.VITE_URL,
@@ -26,31 +27,41 @@ export default function Checkout() {
 
   // get session info when starting page
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    const fetchSessionAndUserData = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
       setSession(session);
-    });
 
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-    });
+      if (session) {
+        const { data } = await supabase.auth.getUser();
+        if (data?.user) {
+          const userEmail = data.user.email;
+          setEmail(userEmail);
+          setFormData((prevData) => ({
+            ...prevData,
+            email: userEmail,
+          }));
+        }
+      }
 
-    return () => subscription.unsubscribe();
-  }, []);
+      const {
+        data: { subscription },
+      } = supabase.auth.onAuthStateChange((_event, session) => {
+        setSession(session);
+      });
+      return () => subscription.unsubscribe();
+    };
 
-  // get user Email
-  useEffect(() => {
-    async function fetchUser() {
-      const { data } = await supabase.auth.getUser();
-      if (data?.user) setEmail(data.user.email);
-    }
-    fetchUser();
+    fetchSessionAndUserData();
   }, []);
 
   //sign out
   async function signOut() {
     const { error } = await supabase.auth.signOut();
+    if (error) {
+      console.error("error signing out:", error);
+    }
   }
 
   // handle filling in form, save to formData object
@@ -64,33 +75,34 @@ export default function Checkout() {
     const userId = session?.user?.id;
 
     //create new order object
-    const newOrder = [
-      {
-        first_name: formData.firstName,
-        last_name: formData.lastName,
-        address: formData.address,
-        email: formData.email,
-        total: +cart
-          .reduce((sum, item) => sum + item.price * item.quantity, 0)
-          .toFixed(2),
-        user_id: userId,
-      },
-    ];
+    const newOrder = {
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      address: formData.address,
+      email: formData.email,
+      total: +cart
+        .reduce((sum, item) => sum + item.price * item.quantity, 0)
+        .toFixed(2),
+      user_id: userId,
+    };
     // create new order
     try {
       const res = await fetch("http://localhost:5001/api/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({newOrder, cart}), // convert note into JSON format
+        body: JSON.stringify({ newOrder, cart }), // convert note into JSON format
       });
       // handle fetch error
       if (!res.ok) {
         const errorData = await res.json();
-        throw new Error(errorData.error || "Failed to create order - original fetch");
-      }      
+        throw new Error(
+          errorData.error || "Failed to create order - original fetch"
+        );
+      }
       const data = await res.json();
     } catch (error) {
-      console.log("Error from backend:", error.message);    }
+      console.log("Error from backend:", error.message);
+    }
     // move to completed page
     setIsComplete(true);
   };
@@ -109,6 +121,11 @@ export default function Checkout() {
       </div>
     );
   }
+  // Only render the main JSX when email is available
+  if (!email) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="h-svh bg-dark p-5 text-light">
       <div className="flex justify-between">
@@ -119,7 +136,7 @@ export default function Checkout() {
           Back to Cart
         </Link>
         <p className="text-xs">
-          {email}
+          {email && email}
           <button
             onClick={signOut}
             className="ml-3 rounded-lg bg-primary p-1 hover:bg-highlight"
@@ -176,7 +193,8 @@ export default function Checkout() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-            />{" "}
+              readOnly
+            />
             <button
               type="submit"
               className="mt-3 w-full rounded-lg bg-primary p-3 text-light hover:bg-highlight"
