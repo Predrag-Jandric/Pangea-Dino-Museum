@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001/api";
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
 
 const supabase = createClient(
   import.meta.env.VITE_URL,
@@ -71,27 +70,27 @@ export default function Checkout() {
         last_name: formData.lastName,
         address: formData.address,
         email: formData.email,
-        total: cart
+        total: +cart
           .reduce((sum, item) => sum + item.price * item.quantity, 0)
           .toFixed(2),
         user_id: userId,
       },
     ];
-
     // create new order
     try {
-      const res = await fetch(`${API_BASE_URL}/orders/`, {
+      const res = await fetch("http://localhost:5001/api/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({newOrder, cart}), // convert note into JSON format
       });
-
-      if(!res.ok) throw new Error("Failed to create order")
-      
+      // handle fetch error
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.error || "Failed to create order - original fetch");
+      }      
       const data = await res.json();
     } catch (error) {
-      console.log(error);
-    }
+      console.log("Error from backend:", error.message);    }
     // move to completed page
     setIsComplete(true);
   };
