@@ -3,6 +3,8 @@ import DinoSearch from "./DinoSearch";
 import DinoPreview from "./DinoPreview";
 import DinoCard from "./DinoCard";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
+
 function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
   const [filtered, setFiltered] = useState([]);
@@ -18,7 +20,7 @@ function DinoDisplay() {
         //   throw new Error(`HTTP error! status: ${res.status}`);
         // }
         //! my local API
-        const res = await fetch("https://dinostalgia-backend.vercel.app/api/dinosaurs");
+        const res = await fetch(`${API_BASE_URL}/api/dinosaurs`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }

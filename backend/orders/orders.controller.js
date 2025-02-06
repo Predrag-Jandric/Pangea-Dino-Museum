@@ -2,6 +2,7 @@ import {addOrder, addOrderItems} from './orders.service.js';
 
 export const createOrder = async (req, res, next) => {
   const {newOrder, cart } = req.body;
+
   const {first_name, last_name, email, address, total, user_id} = newOrder;
 
   if (!first_name || !last_name || !email || !address || !total || !user_id) {

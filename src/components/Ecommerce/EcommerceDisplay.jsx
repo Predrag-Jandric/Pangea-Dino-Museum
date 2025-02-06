@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import EcommerceSearch from "./EcommerceSearch";
 import EcommerceCard from "./EcommerceCard";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001"
+
 function EcommerceDisplay() {
   const dispatch = useDispatch();
   const [dinos, setDinos] = useState([]);
@@ -21,7 +23,7 @@ function EcommerceDisplay() {
     async function getDinos() {
       try {
         //! const res = await fetch("https://api-example-wg44.onrender.com");
-        const res = await fetch("https://dinostalgia-backend.vercel.app/api/dinosaurs")
+        const res = await fetch(`${API_BASE_URL}/api/dinosaurs`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }

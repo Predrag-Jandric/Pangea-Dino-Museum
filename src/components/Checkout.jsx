@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001/api";
 
+
 const supabase = createClient(
   import.meta.env.VITE_URL,
   import.meta.env.VITE_ANON_KEY
@@ -77,6 +78,7 @@ export default function Checkout() {
       },
     ];
 
+    // create new order
     try {
       const res = await fetch(`${API_BASE_URL}/orders/`, {
         method: "POST",
@@ -87,7 +89,6 @@ export default function Checkout() {
       if(!res.ok) throw new Error("Failed to create order")
       
       const data = await res.json();
-      console.log("added:", data)
     } catch (error) {
       console.log(error);
     }
