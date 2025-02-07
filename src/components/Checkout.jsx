@@ -108,21 +108,29 @@ export default function Checkout() {
   };
 
   // if user is not logged in. propt to login/create account
-  if (!email) {
-    return (
-      <div className="flex h-screen items-center justify-center bg-dark">
-        <div className="w-96 rounded-lg bg-white p-6 shadow-lg">
-          <Auth
-            supabaseClient={supabase}
-            appearance={{ theme: ThemeSupa }}
-            providers={["google", "github"]}
-          />
-        </div>
-      </div>
-    );
-  }
+  // if (!email) {
+  //   return (
+  //     <div className="flex h-screen items-center justify-center bg-dark">
+  //       <div className="w-96 rounded-lg bg-white p-6 shadow-lg">
+  //         <Auth
+  //           supabaseClient={supabase}
+  //           appearance={{ theme: ThemeSupa }}
+  //           providers={["google", "github"]}
+  //         />
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
-  return (
+  return !email ? (<div className="flex h-screen items-center justify-center bg-dark">
+    <div className="w-96 rounded-lg bg-white p-6 shadow-lg">
+      <Auth
+        supabaseClient={supabase}
+        appearance={{ theme: ThemeSupa }}
+        providers={["google", "github"]}
+      />
+    </div>
+  </div>) : (
     <div className="h-svh bg-dark p-5 text-light">
       <div className="flex justify-between">
         <Link
