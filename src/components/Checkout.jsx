@@ -28,35 +28,39 @@ export default function Checkout() {
   // get session info when starting page
   useEffect(() => {
     const fetchSessionAndUserData = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      setSession(session);
 
-      const {data: {session}} = await supabase.auth.getSession();
-      setSession(session)
-
-      if(session){
-        const {data} = await supabase.auth.getUser();
-        if(data?.user){
-          const userEmail = data.user.email
+      if (session) {
+        const { data } = await supabase.auth.getUser();
+        if (data?.user) {
+          const userEmail = data.user.email;
           setEmail(userEmail);
-          setFormData(prevData => ({
-            ...prevData, email: userEmail,
+          setFormData((prevData) => ({
+            ...prevData,
+            email: userEmail,
           }));
         }
       }
 
-      const {data: {subscription} } = supabase.auth.onAuthStateChange((_event, session) => {
+      const {
+        data: { subscription },
+      } = supabase.auth.onAuthStateChange((_event, session) => {
         setSession(session);
-      })
+      });
       return () => subscription.unsubscribe();
     };
-    
+
     fetchSessionAndUserData();
   }, [session]);
 
   //sign out
   async function signOut() {
     const { error } = await supabase.auth.signOut();
-    if(error){
-      console.error("error signing out:", error)
+    if (error) {
+      console.error("error signing out:", error);
     }
   }
 
@@ -104,7 +108,7 @@ export default function Checkout() {
   };
 
   // if user is not logged in. propt to login/create account
-  if (!session) {
+  if (!email) {
     return (
       <div className="flex h-screen items-center justify-center bg-dark">
         <div className="w-96 rounded-lg bg-white p-6 shadow-lg">
@@ -118,7 +122,7 @@ export default function Checkout() {
     );
   }
 
-  return  (
+  return (
     <div className="h-svh bg-dark p-5 text-light">
       <div className="flex justify-between">
         <Link
@@ -196,5 +200,5 @@ export default function Checkout() {
         </>
       )}
     </div>
-  )
+  );
 }
