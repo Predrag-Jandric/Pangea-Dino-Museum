@@ -20,7 +20,6 @@ function ShoppingCartPage() {
     return total + item.price * item.quantity;
   }, 0);
 
-  console.log(cart);
   return (
     <section className="bg-dark min-h-screen p-4">
       <div className="mb-5">

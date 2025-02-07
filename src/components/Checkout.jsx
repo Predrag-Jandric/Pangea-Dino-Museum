@@ -44,17 +44,19 @@ export default function Checkout() {
           }));
         }
       }
-
-      const {
-        data: { subscription },
-      } = supabase.auth.onAuthStateChange((_event, session) => {
-        setSession(session);
-      });
-      return () => subscription.unsubscribe();
     };
-
     fetchSessionAndUserData();
-  }, [session]);
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+      fetchSessionAndUserData();
+    });
+    return () => subscription.unsubscribe();
+
+    
+  }, []);
 
   //sign out
   async function signOut() {
@@ -108,29 +110,21 @@ export default function Checkout() {
   };
 
   // if user is not logged in. propt to login/create account
-  // if (!email) {
-  //   return (
-  //     <div className="flex h-screen items-center justify-center bg-dark">
-  //       <div className="w-96 rounded-lg bg-white p-6 shadow-lg">
-  //         <Auth
-  //           supabaseClient={supabase}
-  //           appearance={{ theme: ThemeSupa }}
-  //           providers={["google", "github"]}
-  //         />
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  if (!session) {
+    return (
+      <div className="flex h-screen items-center justify-center bg-dark">
+        <div className="w-96 rounded-lg bg-white p-6 shadow-lg">
+          <Auth
+            supabaseClient={supabase}
+            appearance={{ theme: ThemeSupa }}
+            providers={["google", "github"]}
+          />
+        </div>
+      </div>
+    );
+  }
 
-  return !email ? (<div className="flex h-screen items-center justify-center bg-dark">
-    <div className="w-96 rounded-lg bg-white p-6 shadow-lg">
-      <Auth
-        supabaseClient={supabase}
-        appearance={{ theme: ThemeSupa }}
-        providers={["google", "github"]}
-      />
-    </div>
-  </div>) : (
+  return (
     <div className="h-svh bg-dark p-5 text-light">
       <div className="flex justify-between">
         <Link
@@ -197,7 +191,7 @@ export default function Checkout() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-            />{" "}
+            />
             <button
               type="submit"
               className="mt-3 w-full rounded-lg bg-primary p-3 text-light hover:bg-highlight"
