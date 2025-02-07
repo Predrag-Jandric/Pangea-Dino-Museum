@@ -54,8 +54,6 @@ export default function Checkout() {
       fetchSessionAndUserData();
     });
     return () => subscription.unsubscribe();
-
-    
   }, []);
 
   //sign out
