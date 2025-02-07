@@ -106,7 +106,7 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
 
   return (
     <div ref={scope}>
-      <nav className="fixed left-0 top-0 z-40 h-full w-full translate-x-full bg-dark/90 pt-10 text-white transition-colors">
+      <nav className="fixed left-0 top-0 z-40 h-full w-full translate-x-full bg-dark/80 pt-10 text-white transition-colors">
         <ul className="relative flex flex-col gap-y-6 px-8">
           <motion.div className="mb-4 flex w-full items-center justify-between px-5">
             <Link
