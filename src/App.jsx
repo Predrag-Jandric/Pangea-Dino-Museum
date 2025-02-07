@@ -8,7 +8,6 @@ import DinoMap from "./components/DinoMap";
 import Ecommerce from "./components/Ecommerce/EcommerceDisplay";
 import { ToastContainer } from 'react-toastify';
 
-
 function App() {
   return (
     <div className="font-body">

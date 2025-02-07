@@ -20,7 +20,6 @@ function ShoppingCartPage() {
     return total + item.price * item.quantity;
   }, 0);
 
-  console.log(cart);
   return (
     <section className="bg-dark min-h-screen p-4">
       <div className="mb-5">
@@ -110,12 +109,13 @@ function ShoppingCartPage() {
             >
               Clear Cart
             </button>
-            <button
-              className="rounded bg-primary px-4 py-2 text-light hover:bg-highlight"
-              onClick={openModal}
-            >
-              Checkout
-            </button>
+            <Link to="/checkout">
+              <button
+                className="rounded bg-primary px-4 py-2 text-light hover:bg-highlight"
+              >
+                Checkout
+              </button>
+            </Link>
           </div>
         </div>
       )}
