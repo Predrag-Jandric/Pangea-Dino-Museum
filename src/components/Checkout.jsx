@@ -4,6 +4,7 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { em } from "framer-motion/client";
 
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
@@ -23,6 +24,7 @@ export default function Checkout() {
     address: "",
     email: "",
   });
+  const [error, setError] = useState(false)
   const [isComplete, setIsComplete] = useState(false);
 
   // get session info when starting page
@@ -71,6 +73,14 @@ export default function Checkout() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(false);
+
+    // validate form 
+    const {firstName, lastName,address,email} = formData;
+    if(!firstName || !lastName || !address || !email) {
+      setError(true)
+      return;
+    }
     // get User ID
     const userId = session?.user?.id;
 
@@ -166,36 +176,50 @@ export default function Checkout() {
             onSubmit={handleSubmit}
             className="flex max-w-[400px] flex-col gap-3"
           >
-            First Name:
-            <input
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-            />
-            Last Name:
-            <input
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-            />
-            Address:
-            <input
-              name="address"
-              value={formData.address}
-              onChange={handleChange}
-            />
-            Email:
-            <input
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
+            <div className="flex flex-col gap-2 relative">
+              <label htmlFor="firstName">First Name</label>
+              <input
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+              />
+              {error && !formData.firstName && <span className="absolute right-0 text-xs top-2 text-highlight">required field</span>}
+            </div>
+            
+            <div className="flex flex-col gap-2 relative">
+              <label htmlFor="firstName">Last Name</label>
+              <input
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+              />
+              {error && !formData.lastName && <span className="absolute right-0 text-xs top-2 text-highlight">required field</span>}
+            </div>
+            <div className="flex flex-col gap-2 relative">
+              <label htmlFor="address">Address</label>
+              <input
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+              />
+              {error && !formData.address && <span className="absolute right-0 text-xs top-2 text-highlight">required field</span>}
+            </div>
+            <div className="flex flex-col gap-2 relative">
+              <label htmlFor="address">Email</label>
+              <input
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              {error && !formData.email && <span className="absolute right-0 text-xs top-2 text-highlight">required field</span>}
+            </div>
             <button
               type="submit"
               className="mt-3 w-full rounded-lg bg-primary p-3 text-light hover:bg-highlight"
             >
               Purchase
             </button>
+            {error && <div className="font-bold text-highlight">{error}</div>}
           </form>
         </>
       )}
