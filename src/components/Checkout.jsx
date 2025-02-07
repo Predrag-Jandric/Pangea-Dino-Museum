@@ -16,7 +16,7 @@ const supabase = createClient(
 export default function Checkout() {
   const [session, setSession] = useState(null);
   const cart = useSelector((state) => state.shopping.inCart);
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -28,39 +28,35 @@ export default function Checkout() {
   // get session info when starting page
   useEffect(() => {
     const fetchSessionAndUserData = async () => {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
-      setSession(session);
 
-      if (session) {
-        const { data } = await supabase.auth.getUser();
-        if (data?.user) {
-          const userEmail = data.user.email;
+      const {data: {session}} = await supabase.auth.getSession();
+      setSession(session)
+
+      if(session){
+        const {data} = await supabase.auth.getUser();
+        if(data?.user){
+          const userEmail = data.user.email
           setEmail(userEmail);
-          setFormData((prevData) => ({
-            ...prevData,
-            email: userEmail,
+          setFormData(prevData => ({
+            ...prevData, email: userEmail,
           }));
         }
       }
 
-      const {
-        data: { subscription },
-      } = supabase.auth.onAuthStateChange((_event, session) => {
+      const {data: {subscription} } = supabase.auth.onAuthStateChange((_event, session) => {
         setSession(session);
-      });
+      })
       return () => subscription.unsubscribe();
     };
-
+    
     fetchSessionAndUserData();
-  }, []);
+  }, [session]);
 
   //sign out
   async function signOut() {
     const { error } = await supabase.auth.signOut();
-    if (error) {
-      console.error("error signing out:", error);
+    if(error){
+      console.error("error signing out:", error)
     }
   }
 
@@ -121,12 +117,8 @@ export default function Checkout() {
       </div>
     );
   }
-  // Only render the main JSX when email is available
-  if (!email) {
-    return <div>Loading...</div>;
-  }
 
-  return (
+  return  (
     <div className="h-svh bg-dark p-5 text-light">
       <div className="flex justify-between">
         <Link
@@ -193,8 +185,7 @@ export default function Checkout() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              readOnly
-            />
+            />{" "}
             <button
               type="submit"
               className="mt-3 w-full rounded-lg bg-primary p-3 text-light hover:bg-highlight"
@@ -205,5 +196,5 @@ export default function Checkout() {
         </>
       )}
     </div>
-  );
+  )
 }
