@@ -26,10 +26,10 @@ function Navbar() {
                 <a
                   rel="noopener noreferrer"
                   href={`#${link.href}`}
-                  // onClick={(e) => {
-                  //   e.preventDefault();
-                  //   scrollToSection(link.href);
-                  // }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(link.href);
+                  }}
                   className="text-secondary relative cursor-pointer px-5 py-2 text-sm lg:text-lg transition duration-200 ease-in-out group-hover:before:scale-100"
                 >
                   {link.label}
