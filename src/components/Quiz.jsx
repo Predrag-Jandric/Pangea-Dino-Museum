@@ -110,7 +110,7 @@ function Quiz() {
                 </div>
               </div>
               {/* current question */}
-              <div className="mb-6 lg:mb-0">
+              <div className="mb-6 lg:mb-1">
                 <h4 className="text-highlight text-2xl font-semibold lg:text-sm">
                   {currentQuestion.question}
                 </h4>
@@ -150,7 +150,7 @@ function Quiz() {
                 ))}
               </div>
               {/* next/finish button */}
-              {answer !== null && (
+       
                 <button
                   onClick={() =>
                     dispatch({
@@ -158,11 +158,11 @@ function Quiz() {
                         index < numQuestions - 1 ? "nextQuestion" : "finish",
                     })
                   }
-                  className="text-light hover:bg-highlight mt-6 lg:mt-3 w-full rounded-lg bg-primary py-3"
+                  className={`text-light hover:bg-highlight mt-6 lg:mt-3 w-full rounded-lg bg-primary py-2 ${answer === null && "disable bg-secondary/50" }`}
                 >
                   {index < numQuestions - 1 ? "Next" : "Finish"}
                 </button>
-              )}
+           
             </section>
           )}
           {/* finished State */}
