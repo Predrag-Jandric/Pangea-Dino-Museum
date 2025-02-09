@@ -3,16 +3,24 @@ import DinoSearch from "./DinoSearch";
 import DinoPreview from "./DinoPreview";
 import DinoCard from "./DinoCard";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
+
 function DinoDisplay() {
   const [dinos, setDinos] = useState([]);
   const [filtered, setFiltered] = useState([]);
-  const [selectedDino, setSelectedDino] = useState({});
+  const [selectedDino, setSelectedDino] = useState(null);
   const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     async function getDinos() {
       try {
-        const res = await fetch("https://api-example-wg44.onrender.com");
+        //! Peter's deployed API
+        // const res = await fetch("https://api-example-wg44.onrender.com");
+        // if (!res.ok) {
+        //   throw new Error(`HTTP error! status: ${res.status}`);
+        // }
+        //! my local API
+        const res = await fetch(`${API_BASE_URL}/api/dinosaurs`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -29,7 +37,7 @@ function DinoDisplay() {
   }, []);
 
   const handleClose = () => {
-    setSelectedDino({});
+    setSelectedDino(null);
   };
 
   return (
@@ -37,14 +45,14 @@ function DinoDisplay() {
       id="dinodex"
       className="relative flex h-dvh flex-col gap-5 overflow-x-hidden bg-dark items-center text-center p-6"
     >
-      {selectedDino.name && (
+      {selectedDino && (
         <>
           <div
             className="absolute inset-0 z-[1000] flex items-center justify-center bg-black/70"
             onClick={handleClose}
           ></div>
           {selectedDino.name && (
-            <DinoCard dino={selectedDino} handleClose={handleClose} />
+            <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
           )}
         </>
       )}
@@ -73,14 +81,14 @@ function DinoDisplay() {
                 <DinoPreview
                   dino={dino}
                   setSelectedDino={setSelectedDino}
-                  key={dino._id}
+                  key={dino.id}
                 />
               ))}
         </div>
         
       )}
       </div>
-      {selectedDino.name && (
+      {selectedDino && (
         <DinoCard dino={selectedDino} setSelectedDino={setSelectedDino} />
       )}
     </div>

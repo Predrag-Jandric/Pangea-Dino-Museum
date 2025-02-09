@@ -1,14 +1,14 @@
 import React from "react";
 import { CgClose } from "react-icons/cg";
 
-export default function DinoCard({ dino, handleClose}) {
+export default function DinoCard({ dino, setSelectedDino}) {
 
   return (
     <div className="absolute md:left-1/2 md:-translate-x-1/2 p-5 z-[1001] font-pressStart text-xs">
       <div className="flex flex-col gap-3 bg-dark p-5 shadow-xl md:max-w-[500px] rounded-lg">
         <div
           className="absolute right-8 top-8 cursor-pointer text-xl"
-          onClick={handleClose}
+          onClick={() => setSelectedDino(null)}
         >
           <div className="flex h-6 w-6 justify-center items-center rounded-full bg-primary/20 leading-none transition hover:bg-primary/30 cursor-pointer">
             <CgClose className="text-primary"/>

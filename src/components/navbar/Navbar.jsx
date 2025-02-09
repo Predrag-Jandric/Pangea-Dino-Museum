@@ -14,7 +14,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="absolute left-0 right-0 top-0 z-30 mt-3 flex h-[10vh] w-full items-center justify-between bg-transparent text-white px-5 md:px-12">
+      <nav className="fixed md:absolute left-0 right-0 top-0 z-10 flex h-[10vh] w-full items-center justify-between bg-dark text-white pt-3 p-5 md:p-12">
         <div className="flex h-20 w-20 items-center font-pressStart md:text-base lg:text-xl text-primary">
           <img src="/logo.png" />
           <p className="hidden md:block">DiNostalgia</p>

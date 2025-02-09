@@ -23,8 +23,10 @@ function Timeline() {
     >
       <div className="mb-20 p-6 flex gap-7 flex-col items-center justify-center text-center bg-dark">
         <h2 className="font-pressStart text-4xl text-primary">
-          Timeline <h3 className="text-base md:text-xl">A Trip Through Prehistory</h3>
+          Timeline 
+          <p className="text-base md:text-xl">A Trip Through Prehistory</p>
         </h2>
+        
         <p className="max-w-2xl text-light">
           Because the Jurassic period was just one stop in this 180-million-year
           road trip.
