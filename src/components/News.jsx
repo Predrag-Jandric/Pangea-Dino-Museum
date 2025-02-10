@@ -9,7 +9,9 @@ export default function News() {
   useEffect(() => {
     async function getNews() {
       try {
-        const res = await fetch(`${NEWS_API_URL}/everything?q=tesla&from=2025-01-10&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`);
+        const res = await fetch(
+          `${NEWS_API_URL}/everything?q=dinosaurs&from=2025-01-10&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`
+        );
         const data = await res.json();
 
         if (data.articles) setNews(getRandomArticle(data.articles, 3));
@@ -23,7 +25,7 @@ export default function News() {
 
   // get a random selection of articles, based on count passed
   function getRandomArticle(articles, count) {
-    const randomized = [...articles].sort(() => .5 - Math.random());
+    const randomized = [...articles].sort(() => 0.5 - Math.random());
     return randomized.slice(0, count);
   }
 
@@ -33,7 +35,53 @@ export default function News() {
       <p className="max-w-2xl text-light mb-5">
         What have the newspapers dug up lately about our age old friends?
       </p>
-      <div className="flex gap-5 flex-wrap justify-center"></div>
+      <div className="flex gap-5 flex-wrap justify-center">
+        {news.map((article, i) => {
+          const {
+            source,
+            author,
+            title,
+            description,
+            urlToImage,
+            url,
+            publishedAt,
+            content,
+          } = article;
+
+          return (
+            <a href={url} target="_blank" rel="noopener noreferrer"> 
+              <div
+                key={i}
+                className="text-left bg-secondary/40 text-light w-[300px] p-3 rounded-lg cursor-pointer hover:scale-105 transition-all"
+              >
+                <div className="flex items-center justify-between text-xs mb-3">
+                  <div>{source.name}</div>
+                  <div>{publishedAt.slice(0, 10)}</div>
+                </div>
+                <div className="mb-3">
+                  <h4 className="text-lg font-bold text-highlight">{title}</h4>
+                  <p className="text-xs">By: {author}</p>
+                </div>
+                <div>
+                  {urlToImage ? (
+                    <img src={urlToImage} alt={title} />
+                  ) : (
+                    <div>NO IMAGE</div>
+                  )}
+                </div>
+                <div>
+                  <p className="text-xs mt-3">
+                    {description}{" "}
+                    <span className="hover:text-highlight rounded-md text-primary transition">
+                      Read more
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
     </div>
   );
 }

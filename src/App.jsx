@@ -13,8 +13,8 @@ function App() {
     <div className="font-body">
       <LandingPage />
       <DinoDisplay />
-      <News />
       <Timeline />
+      <News />
       <Quiz />
       <Ecommerce />
       <Footer />
