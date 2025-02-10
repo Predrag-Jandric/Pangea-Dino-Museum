@@ -2,8 +2,9 @@ import { createClient } from "@supabase/supabase-js";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { clearCart } from "../utils/shoppingSlice";
 
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
@@ -25,6 +26,7 @@ export default function Checkout() {
   });
   const [error, setError] = useState(false)
   const [isComplete, setIsComplete] = useState(false);
+  const dispatch = useDispatch();
 
   // get session info when starting page
   useEffect(() => {
@@ -112,6 +114,8 @@ export default function Checkout() {
     } catch (error) {
       console.log("Error from backend:", error.message);
     }
+    // clear cart
+    dispatch(clearCart())
     // move to completed page
     setIsComplete(true);
   };
