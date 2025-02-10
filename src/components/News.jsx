@@ -49,22 +49,21 @@ export default function News() {
           } = article;
 
           return (
-            <a href={url} target="_blank" rel="noopener noreferrer"> 
+            <a href={url} target="_blank" rel="noopener noreferrer" key={i}> 
               <div
-                key={i}
-                className="text-left bg-secondary/40 text-light w-[300px] p-3 rounded-lg cursor-pointer hover:scale-105 transition-all"
+                className="text-left bg-secondary/40 text-light w-[300px] p-3 rounded-lg cursor-pointer hover:scale-105 transition-all h-full"
               >
                 <div className="flex items-center justify-between text-xs mb-3">
                   <div>{source.name}</div>
                   <div>{publishedAt.slice(0, 10)}</div>
                 </div>
                 <div className="mb-3">
-                  <h4 className="text-lg font-bold text-highlight">{title}</h4>
+                  <h4 className="text-xs font-bold text-highlight font-pressStart">{title}</h4>
                   <p className="text-xs">By: {author}</p>
                 </div>
-                <div>
+                <div className="flex items-center justify-center">
                   {urlToImage ? (
-                    <img src={urlToImage} alt={title} />
+                    <img src={urlToImage} alt={title} className="max-h-[200px]"/>
                   ) : (
                     <div>NO IMAGE</div>
                   )}
