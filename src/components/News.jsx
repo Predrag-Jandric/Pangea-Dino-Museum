@@ -50,7 +50,16 @@ export default function News() {
 
           return (
             <a href={url} target="_blank" rel="noopener noreferrer" key={i}>
-              <div className="text-left bg-secondary/40 text-light w-[300px] p-3 rounded-lg cursor-pointer hover:scale-105 transition-all h-full relative">
+              <div className="relative w-[300px] group overflow-hidden cursor-pointer">
+                <img
+                  src={urlToImage}
+                  className="h-[200px] w-[300px] object-cover group-hover:scale-110 transition"
+                />
+                <div className="p-3 absolute text-left text-light w-full flex items-end h-full bottom-0 bg-gradient-to-t from-black/100 to-black/0 hover:text-highlight">
+                  {title}
+                </div>
+              </div>
+              {/* <div className="text-left bg-secondary/40 text-light w-[300px] p-3 rounded-lg cursor-pointer hover:scale-105 transition-all h-full relative">
                 <div className="flex items-center justify-between text-xs mb-3">
                   <div>{source.name}</div>
                   <div>{publishedAt.slice(0, 10)}</div>
@@ -78,7 +87,7 @@ export default function News() {
                     Read more
                   </p>
                 </div>
-              </div>
+              </div> */}
             </a>
           );
         })}
