@@ -30,7 +30,10 @@ export default function News() {
   }
 
   return (
-    <div id="news" className="h-dvh p-6 flex gap-3 flex-col items-center justify-center text-center bg-dark">
+    <div
+      id="news"
+      className="h-dvh p-6 flex gap-3 flex-col items-center justify-center text-center bg-dark"
+    >
       <h2 className="text-4xl text-primary font-pressStart">Dino news</h2>
       <p className="max-w-2xl text-light mb-5">
         What have the newspapers dug up lately about our age old friends?
@@ -50,12 +53,12 @@ export default function News() {
 
           return (
             <a href={url} target="_blank" rel="noopener noreferrer" key={i}>
-              <div className="relative w-[300px] group overflow-hidden cursor-pointer">
+              <div className="relative w-[400px] group overflow-hidden cursor-pointer">
                 <img
                   src={urlToImage}
-                  className="h-[200px] w-[300px] object-cover group-hover:scale-110 transition"
+                  className="h-[300px] w-[400px] object-cover group-hover:scale-110 transition"
                 />
-                <div className="font-pressStart text-xs p-3 absolute text-left text-light w-full flex items-end h-full bottom-0 bg-gradient-to-t from-black/100 to-black/0 hover:text-highlight">
+                <div className="font-pressStart text-xs p-5 absolute text-left text-light w-full flex items-end h-full bottom-0 bg-gradient-to-t from-black/100 to-black/0 hover:text-highlight">
                   {title}
                 </div>
               </div>
