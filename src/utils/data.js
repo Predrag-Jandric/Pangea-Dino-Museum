@@ -1,7 +1,7 @@
 export const navLinks = [
   { href: "dinodex", label: "DinoDex" },
-  { href: "map", label: "Map" },
   { href: "timeline", label: "Timeline" },
+  { href: "news", label: "News" },
   { href: "quiz", label: "Quiz" },
   { href: "shop", label: "Shop" },
 ];

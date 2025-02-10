@@ -30,7 +30,7 @@ export default function News() {
   }
 
   return (
-    <div className="h-dvh p-6 flex gap-3 flex-col items-center justify-center text-center bg-dark">
+    <div id="news" className="h-dvh p-6 flex gap-3 flex-col items-center justify-center text-center bg-dark">
       <h2 className="text-4xl text-primary font-pressStart">Dino news</h2>
       <p className="max-w-2xl text-light mb-5">
         What have the newspapers dug up lately about our age old friends?
@@ -55,11 +55,11 @@ export default function News() {
                   src={urlToImage}
                   className="h-[200px] w-[300px] object-cover group-hover:scale-110 transition"
                 />
-                <div className="p-3 absolute text-left text-light w-full flex items-end h-full bottom-0 bg-gradient-to-t from-black/100 to-black/0 hover:text-highlight">
+                <div className="font-pressStart text-xs p-3 absolute text-left text-light w-full flex items-end h-full bottom-0 bg-gradient-to-t from-black/100 to-black/0 hover:text-highlight">
                   {title}
                 </div>
               </div>
-              {/* <div className="text-left bg-secondary/40 text-light w-[300px] p-3 rounded-lg cursor-pointer hover:scale-105 transition-all h-full relative">
+              <div className="text-left bg-secondary/40 text-light w-[300px] p-3 rounded-lg cursor-pointer hover:scale-105 transition-all h-full relative">
                 <div className="flex items-center justify-between text-xs mb-3">
                   <div>{source.name}</div>
                   <div>{publishedAt.slice(0, 10)}</div>
@@ -87,7 +87,7 @@ export default function News() {
                     Read more
                   </p>
                 </div>
-              </div> */}
+              </div>
             </a>
           );
         })}
