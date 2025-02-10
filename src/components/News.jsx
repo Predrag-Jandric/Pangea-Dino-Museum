@@ -49,31 +49,33 @@ export default function News() {
           } = article;
 
           return (
-            <a href={url} target="_blank" rel="noopener noreferrer" key={i}> 
-              <div
-                className="text-left bg-secondary/40 text-light w-[300px] p-3 rounded-lg cursor-pointer hover:scale-105 transition-all h-full"
-              >
+            <a href={url} target="_blank" rel="noopener noreferrer" key={i}>
+              <div className="text-left bg-secondary/40 text-light w-[300px] p-3 rounded-lg cursor-pointer hover:scale-105 transition-all h-full relative">
                 <div className="flex items-center justify-between text-xs mb-3">
                   <div>{source.name}</div>
                   <div>{publishedAt.slice(0, 10)}</div>
                 </div>
                 <div className="mb-3">
-                  <h4 className="text-xs font-bold text-highlight font-pressStart">{title}</h4>
+                  <h4 className="text-xs font-bold text-highlight font-pressStart">
+                    {title}
+                  </h4>
                   <p className="text-xs">By: {author}</p>
                 </div>
                 <div className="flex items-center justify-center">
                   {urlToImage ? (
-                    <img src={urlToImage} alt={title} className="max-h-[200px]"/>
+                    <img
+                      src={urlToImage}
+                      alt={title}
+                      className="max-h-[200px]"
+                    />
                   ) : (
                     <div>NO IMAGE</div>
                   )}
                 </div>
                 <div>
-                  <p className="text-xs mt-3">
-                    {description}{" "}
-                    <span className="hover:text-highlight rounded-md text-primary transition">
-                      Read more
-                    </span>
+                  <p className="text-xs my-3">{description} </p>
+                  <p className="hover:text-highlight text-xs rounded-md text-primary transition absolute bottom-2 right-2">
+                    Read more
                   </p>
                 </div>
               </div>
