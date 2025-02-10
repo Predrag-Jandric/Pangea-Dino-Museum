@@ -1,4 +1,4 @@
-import { addOrder, addOrderItems } from "./orders.service.js";
+import { addOrder, addOrderItems, updateInStock } from "./orders.service.js";
 
 export const createOrder = async (req, res, next) => {
   const { newOrder, cart } = req.body;
@@ -14,11 +14,14 @@ export const createOrder = async (req, res, next) => {
   }
 
   try {
-    // create order
+    // // create order
     const orderData = await addOrder(newOrder);
-    // insert ordered items to DB with ID
+    // // insert ordered items to DB with ID
     const orderItems = await addOrderItems(orderData.id, cart);
-    res.status(201).json({ orderData: orderData, orderItems: orderItems });
+    // // update inStock information
+    const inStockData = await updateInStock(cart);
+
+    res.status(201).json({inStockData: inStockData });
   } catch (error) {
     console.error('Error in creating order:', error);
     res

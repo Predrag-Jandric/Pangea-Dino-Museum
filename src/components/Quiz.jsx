@@ -82,8 +82,8 @@ function Quiz() {
       <p className="text-light max-w-2xl my-3">
         Enter your mind palace and see if you still remember all those dino
         facts you learned!
-        <p>* enter full screen for a treat!</p>
       </p>
+        <p>* enter full screen for a treat!</p>
 
       <img src="/gameboy/top.png" className=" w-[796px] ml-1 hidden lg:block" />
 

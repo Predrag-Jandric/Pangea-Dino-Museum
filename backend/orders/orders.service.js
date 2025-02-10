@@ -48,3 +48,25 @@ export const addOrderItems = async (orderId, cart) => {
     throw new Error("Failed to add order items to database");
   }
 };
+
+export const updateInStock = async (cart) => {
+// create array that includes objects of dino id and new inStock ie {id: 1, inStock: 8}
+  const updatedDinoStock = cart.map((dino) => ({
+    id: dino.id, 
+    inStock: dino.inStock,
+  }));
+
+  // use upsert with array of rows to update, based on Id
+  try {
+    const { data, error } = await supabase
+      .from("dinosaurs")
+      .upsert(updatedDinoStock, { onConflict: ["id"] })
+      .select();
+
+    if (error) throw error;
+    return data;
+  } catch (error) {
+    console.error("Error updating stock in DB:", error);
+    throw new Error("Failed to udpate stock in DB");
+  }
+};
