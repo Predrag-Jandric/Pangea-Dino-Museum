@@ -97,7 +97,7 @@ export default function Checkout() {
     };
     // create new order
     try {
-      const res = await fetch("http://localhost:5001/api/orders", {
+      const res = await fetch(`${API_BASE_URL}/api/orders`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ newOrder, cart }), // convert note into JSON format
