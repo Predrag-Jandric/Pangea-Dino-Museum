@@ -12,13 +12,24 @@ export const createOrder = async (req, res, next) => {
   if (isNaN(total)) {
     return res.status(400).json({ error: "Total must be a valid number" });
   }
+ 
+  let error = null;
+  cart.forEach(item => {
+    if(item.quantity > item.inStock) {
+      error = { error: "Quantity cannot be larger than inStock" };
+    }
+  })
+  
+  if(error) {
+    return res.status(400).json(error);
+  }
 
   try {
-    // // create order
+    // create order
     const orderData = await addOrder(newOrder);
-    // // insert ordered items to DB with ID
+    // insert ordered items to DB with ID
     const orderItems = await addOrderItems(orderData.id, cart);
-    // // update inStock information
+    // update inStock information
     const inStockData = await updateInStock(cart);
 
     res.status(201).json({inStockData: inStockData });

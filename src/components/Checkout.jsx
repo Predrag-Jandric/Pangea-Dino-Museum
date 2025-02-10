@@ -4,7 +4,7 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { clearCart } from "../utils/shoppingSlice";
+import { clearCart, setCart } from "../utils/shoppingSlice";
 
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
@@ -24,9 +24,15 @@ export default function Checkout() {
     address: "",
     email: "",
   });
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
   const dispatch = useDispatch();
+
+  // if cart in local storage, set state to saved cart
+  useEffect(() => {
+    const dinoCart = localStorage.getItem("dinoCart");
+    if(dinoCart)  dispatch(setCart(JSON.parse(dinoCart)))
+  }, []);
 
   // get session info when starting page
   useEffect(() => {
@@ -76,10 +82,10 @@ export default function Checkout() {
     e.preventDefault();
     setError(false);
 
-    // validate form 
-    const {firstName, lastName,address,email} = formData;
-    if(!firstName || !lastName || !address || !email) {
-      setError(true)
+    // validate form
+    const { firstName, lastName, address, email } = formData;
+    if (!firstName || !lastName || !address || !email) {
+      setError(true);
       return;
     }
     // get User ID
@@ -115,7 +121,9 @@ export default function Checkout() {
       console.log("Error from backend:", error.message);
     }
     // clear cart
-    dispatch(clearCart())
+    dispatch(clearCart());
+    // remove local storage
+    localStorage.removeItem("dinoCart");
     // move to completed page
     setIsComplete(true);
   };
@@ -128,8 +136,9 @@ export default function Checkout() {
           <Auth
             supabaseClient={supabase}
             appearance={{ theme: ThemeSupa }}
-            providers={["google", "github"]}
-          />
+            providers={[]}
+            redirectTo={`${window.location.origin}/checkout`}
+            />
         </div>
       </div>
     );
@@ -186,9 +195,13 @@ export default function Checkout() {
                 value={formData.firstName}
                 onChange={handleChange}
               />
-              {error && !formData.firstName && <span className="absolute right-0 text-xs top-2 text-highlight">required field</span>}
+              {error && !formData.firstName && (
+                <span className="absolute right-0 text-xs top-2 text-highlight">
+                  required field
+                </span>
+              )}
             </div>
-            
+
             <div className="flex flex-col gap-2 relative">
               <label htmlFor="firstName">Last Name</label>
               <input
@@ -196,7 +209,11 @@ export default function Checkout() {
                 value={formData.lastName}
                 onChange={handleChange}
               />
-              {error && !formData.lastName && <span className="absolute right-0 text-xs top-2 text-highlight">required field</span>}
+              {error && !formData.lastName && (
+                <span className="absolute right-0 text-xs top-2 text-highlight">
+                  required field
+                </span>
+              )}
             </div>
             <div className="flex flex-col gap-2 relative">
               <label htmlFor="address">Address</label>
@@ -205,7 +222,11 @@ export default function Checkout() {
                 value={formData.address}
                 onChange={handleChange}
               />
-              {error && !formData.address && <span className="absolute right-0 text-xs top-2 text-highlight">required field</span>}
+              {error && !formData.address && (
+                <span className="absolute right-0 text-xs top-2 text-highlight">
+                  required field
+                </span>
+              )}
             </div>
             <div className="flex flex-col gap-2 relative">
               <label htmlFor="address">Email</label>
@@ -213,8 +234,14 @@ export default function Checkout() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                disabled
+                className="text-light/50"
               />
-              {error && !formData.email && <span className="absolute right-0 text-xs top-2 text-highlight">required field</span>}
+              {error && !formData.email && (
+                <span className="absolute right-0 text-xs top-2 text-highlight">
+                  required field
+                </span>
+              )}
             </div>
             <button
               type="submit"
