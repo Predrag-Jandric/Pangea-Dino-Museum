@@ -4,21 +4,42 @@ import {
   increaseQuantity,
   decreaseQuantity,
   clearCart,
+  setCart,
 } from "../utils/shoppingSlice";
 import { ToastContainer } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Modal from "../utils/Modal.jsx";
 import useModal from "../utils/useModal.jsx";
+import { useEffect } from "react";
 
 function ShoppingCartPage() {
   const cart = useSelector((state) => state.shopping.inCart);
   const dispatch = useDispatch();
-
   const { isOpen, openModal, closeModal, handleClickOutside } = useModal();
+  const navigate = useNavigate();
+
+  // when loading component, if cart in state, save to localStorage
+  // if no cart state (i.e. navigate directly to page), load stored cart as state
+  useEffect(() => {
+    if (cart.length) localStorage.setItem("dinoCart", JSON.stringify(cart));
+    else {
+      const dinoCart = localStorage.getItem("dinoCart");
+      if (dinoCart) dispatch(setCart(JSON.parse(dinoCart)));
+    }
+  }, [cart]);
 
   const totalPrice = cart.reduce((total, item) => {
     return total + item.price * item.quantity;
   }, 0);
+
+  const handleCheckout = () => {
+    navigate("/checkout");
+  };
+
+  const handleClearCart = () => {
+    localStorage.removeItem("dinoCart");
+    dispatch(clearCart());
+  };
 
   return (
     <section className="bg-dark min-h-screen p-4">
@@ -59,32 +80,41 @@ function ShoppingCartPage() {
                     {item.name}
                   </h2>
                   <p className="text-light">
-                    Price: <span className="text-highlight">${(item.price * item.quantity).toFixed(2)}</span>
+                    Price:{" "}
+                    <span className="text-highlight">
+                      ${(item.price * item.quantity).toFixed(2)}
+                    </span>
                   </p>
-                  <p className="text-light">Quantity: <span className="text-highlight">{item.quantity}</span></p>
-                  <p className="text-light">In Stock: <span className="text-highlight">{item.inStock}</span></p>
+                  <p className="text-light">
+                    Quantity:{" "}
+                    <span className="text-highlight">{item.quantity}</span>
+                  </p>
+                  <p className="text-light">
+                    In Stock:{" "}
+                    <span className="text-highlight">{item.inStock}</span>
+                  </p>
                 </div>
                 <div className="flex space-x-2">
                   <button
                     disabled={item.inStock === 0}
-                  onClick={() => dispatch(increaseQuantity(item.id))}
+                    onClick={() => dispatch(increaseQuantity(item.id))}
                     className={`flex h-8 w-8 items-center justify-center rounded transition ${
-                    item.inStock === 0
-                      ? "cursor-not-allowed bg-gray-400 text-gray-700"
-                      : "bg-secondary text-light hover:bg-highlight"
+                      item.inStock === 0
+                        ? "cursor-not-allowed bg-gray-400 text-gray-700"
+                        : "bg-secondary text-light hover:bg-highlight"
                     }`}
-                >
+                  >
                     +
                   </button>
                   <button
                     onClick={() => dispatch(decreaseQuantity(item.id))}
                     disabled={item.quantity === 1}
-                  className={`flex h-8 w-8 items-center justify-center rounded transition ${
-                    item.quantity === 1
-                      ? "cursor-not-allowed bg-gray-400 text-gray-700"
-                      : "bg-secondary text-light hover:bg-highlight"
+                    className={`flex h-8 w-8 items-center justify-center rounded transition ${
+                      item.quantity === 1
+                        ? "cursor-not-allowed bg-gray-400 text-gray-700"
+                        : "bg-secondary text-light hover:bg-highlight"
                     }`}
-                >
+                  >
                     -
                   </button>
                   <button
@@ -104,18 +134,17 @@ function ShoppingCartPage() {
           </div>
           <div className="mt-4 flex justify-between">
             <button
-              onClick={() => dispatch(clearCart())}
+              onClick={handleClearCart}
               className="rounded bg-primary px-4 py-2 text-light transition duration-200 hover:bg-highlight"
             >
               Clear Cart
             </button>
-            <Link to="/checkout">
-              <button
-                className="rounded bg-primary px-4 py-2 text-light hover:bg-highlight"
-              >
-                Checkout
-              </button>
-            </Link>
+            <button
+              className="rounded bg-primary px-4 py-2 text-light hover:bg-highlight"
+              onClick={handleCheckout}
+            >
+              Checkout
+            </button>
           </div>
         </div>
       )}
