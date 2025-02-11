@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import dinosaursRouter from "./dinosaurs/dinosaurs.router.js";
 import ordersRouter from "./orders/orders.router.js";
+import newsRouter from "./news/news.router.js";
 import { notFound, errorHandler } from "./errors/index.js";
 
 const app = express();
@@ -21,6 +22,8 @@ app.get("/api", (req, res) => {
 app.use("/api/dinosaurs", dinosaursRouter);
 // Orders route
 app.use("/api/orders", ordersRouter);
+// News route
+app.use("/api/news", newsRouter);
 
 // handle Errrors
 app.use(notFound);
