@@ -8,12 +8,10 @@ export default function News() {
   useEffect(() => {
     async function getNews() {
       try {
-        const res = await fetch(
-          `${NEWS_API_URL}/everything?q=dinosaurs&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`
-        );
+        const res = await fetch("http://localhost:5001/api/news");
         const data = await res.json();
 
-        if (data.articles) setNews(getRandomArticle(data.articles, 3));
+        if (data) setNews(getRandomArticle(data, 3));
         else console.error("error fetching news: ");
       } catch (error) {
         console.error("Failed to fetch news:");
@@ -53,10 +51,10 @@ export default function News() {
           return (
             <a href={url} target="_blank" rel="noopener noreferrer" key={i}>
               <div className="relative h-[200px] w-[300px] md:h-[300px] md:w-[400px] group overflow-hidden cursor-pointer hover:outline outline-highlight transition-all">
-                  <img
-                    src={urlToImage}
-                    className="md:h-[300px] md:w-[400px] object-cover group-hover:scale-110 transition"
-                  />
+                <img
+                  src={urlToImage}
+                  className="md:h-[300px] md:w-[400px] object-cover group-hover:scale-110 transition"
+                />
                 <div className="font-pressStart text-xs p-5 absolute text-left text-light w-full flex flex-col justify-end h-full bottom-0 bg-gradient-to-t from-black/100 to-black/0 hover:text-highlight">
                   <div className="text-[10px] font-sans italic group-hover:text-primary">
                     {source.name}
