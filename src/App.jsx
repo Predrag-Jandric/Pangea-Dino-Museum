@@ -4,7 +4,7 @@ import DinoDisplay from "./components/DinoDisplay/DinoDisplay";
 import Quiz from "./components/Quiz";
 import Timeline from "./components/Timeline";
 import Footer from "./components/Footer";
-import DinoMap from "./components/DinoMap";
+import News from "./components/News";
 import Ecommerce from "./components/Ecommerce/EcommerceDisplay";
 import { ToastContainer } from 'react-toastify';
 
@@ -13,8 +13,8 @@ function App() {
     <div className="font-body">
       <LandingPage />
       <DinoDisplay />
-      <DinoMap />
       <Timeline />
+      <News />
       <Quiz />
       <Ecommerce />
       <Footer />
