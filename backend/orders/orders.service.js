@@ -33,7 +33,7 @@ export const addOrderItems = async (orderId, cart) => {
       dino_id: dino.id,
       name: dino.name,
       price: dino.price,
-      quantity: dino.quantity - 1, // remove one since state removes one when saved
+      quantity: dino.quantity // remove one since state removes one when saved
     }));
 
     const { data, error } = await supabase

@@ -13,16 +13,17 @@ export const createOrder = async (req, res, next) => {
     return res.status(400).json({ error: "Total must be a valid number" });
   }
  
-  let error = null;
-  cart.forEach(item => {
-    if(item.quantity > item.inStock) {
-      error = { error: "Quantity cannot be larger than inStock" };
-    }
-  })
+  //not applicable because math isn't perfored, these entries are being replace, math/validation on frontend
+  // let error = null;
+  // cart.forEach(item => {
+  //   if(item.quantity > item.inStock) {
+  //     error = { error: "Quantity cannot be larger than inStock" };
+  //   }
+  // })
   
-  if(error) {
-    return res.status(400).json(error);
-  }
+  // if(error) {
+  //   return res.status(400).json(error);
+  // }
 
   try {
     // create order
