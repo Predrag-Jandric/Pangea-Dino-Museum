@@ -1,4 +1,4 @@
-import { addOrder, addOrderItems } from "./orders.service.js";
+import { addOrder, addOrderItems, updateInStock } from "./orders.service.js";
 
 export const createOrder = async (req, res, next) => {
   const { newOrder, cart } = req.body;
@@ -12,13 +12,27 @@ export const createOrder = async (req, res, next) => {
   if (isNaN(total)) {
     return res.status(400).json({ error: "Total must be a valid number" });
   }
+ 
+  let error = null;
+  cart.forEach(item => {
+    if(item.quantity > item.inStock) {
+      error = { error: "Quantity cannot be larger than inStock" };
+    }
+  })
+  
+  if(error) {
+    return res.status(400).json(error);
+  }
 
   try {
     // create order
     const orderData = await addOrder(newOrder);
     // insert ordered items to DB with ID
     const orderItems = await addOrderItems(orderData.id, cart);
-    res.status(201).json({ orderData: orderData, orderItems: orderItems });
+    // update inStock information
+    const inStockData = await updateInStock(cart);
+
+    res.status(201).json({inStockData: inStockData });
   } catch (error) {
     console.error('Error in creating order:', error);
     res
