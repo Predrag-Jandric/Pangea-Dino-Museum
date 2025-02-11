@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
+
 export default function News() {
   const [news, setNews] = useState([]);
-  const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
-  const NEWS_API_URL = import.meta.env.VITE_NEWS_API_URL;
   // get news from API
   useEffect(() => {
     async function getNews() {
       try {
-        const res = await fetch("http://localhost:5001/api/news");
+        const res = await fetch(`${API_BASE_URL}/api/news`);
         const data = await res.json();
 
         if (data) setNews(getRandomArticle(data, 3));
