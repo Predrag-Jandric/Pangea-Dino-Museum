@@ -4,20 +4,19 @@ export default function News() {
   const [news, setNews] = useState([]);
   const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
   const NEWS_API_URL = import.meta.env.VITE_NEWS_API_URL;
-
   // get news from API
   useEffect(() => {
     async function getNews() {
       try {
         const res = await fetch(
-          `${NEWS_API_URL}/everything?q=dinosaurs&from=2025-01-10&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`
+          `${NEWS_API_URL}/everything?q=dinosaurs&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`
         );
         const data = await res.json();
 
         if (data.articles) setNews(getRandomArticle(data.articles, 3));
-        else console.error("error fetching news: ", error);
+        else console.error("error fetching news: ");
       } catch (error) {
-        console.error("Failed to fetch news:", error);
+        console.error("Failed to fetch news:");
       }
     }
     getNews();
