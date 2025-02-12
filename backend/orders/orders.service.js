@@ -33,7 +33,7 @@ export const addOrderItems = async (orderId, cart) => {
       dino_id: dino.id,
       name: dino.name,
       price: dino.price,
-      quantity: dino.quantity // remove one since state removes one when saved
+      quantity: dino.quantity, // remove one since state removes one when saved
     }));
 
     const { data, error } = await supabase
@@ -50,9 +50,9 @@ export const addOrderItems = async (orderId, cart) => {
 };
 
 export const updateInStock = async (cart) => {
-// create array that includes objects of dino id and new inStock ie {id: 1, inStock: 8}
+  // create array that includes objects of dino id and new inStock ie {id: 1, inStock: 8}
   const updatedDinoStock = cart.map((dino) => ({
-    id: dino.id, 
+    id: dino.id,
     inStock: dino.inStock,
   }));
 
