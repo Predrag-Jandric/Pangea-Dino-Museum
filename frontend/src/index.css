@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .scrollbar-hidden::-webkit-scrollbar {
+      display: none;
+    }
+}
+
+input, select {
+  border-radius: 4px;
+  padding: 4px;
+  background-color: rgb(21, 1, 79);
+  color: rgb(246, 254, 223);
+  outline: 2px solid rgb(140, 51, 217) ;
+}
+input:focus, select:focus {
+  outline: 2px solid rgb(52, 239, 200) ;
+}
