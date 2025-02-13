@@ -15,7 +15,7 @@ function EcommerceCard({ item, handleAddToCart }) {
       />
 
       {/* product info */}
-      <h2 className="mb-2 text-highlight font-semibold font-pressStart">{item.name}</h2>
+      <h2 className={`mb-2 text-highlight font-semibold font-pressStart ${item.name.length > 15 && "text-xs"}`}>{item.name}</h2>
       <p className="mb-1 text-light">
         Price: <span className="font-bold text-highlight">${item.price}</span>
       </p>
