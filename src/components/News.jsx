@@ -51,8 +51,9 @@ export default function News() {
           return (
             <a href={url} target="_blank" rel="noopener noreferrer" key={i}>
               <div className="relative h-[200px] w-[300px] md:h-[300px] md:w-[400px] group overflow-hidden cursor-pointer hover:outline outline-highlight transition-all">
-                <img
-                  src={urlToImage}
+              <img
+                  src={urlToImage ? urlToImage : "/logo.png"}
+                  alt={title}
                   className="md:h-[300px] md:w-[400px] object-cover group-hover:scale-110 transition"
                 />
                 <div className="font-pressStart text-xs p-5 absolute text-left text-light w-full flex flex-col justify-end h-full bottom-0 bg-gradient-to-t from-black/100 to-black/0 hover:text-highlight">
