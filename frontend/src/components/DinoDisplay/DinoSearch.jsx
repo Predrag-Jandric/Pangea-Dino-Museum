@@ -25,7 +25,7 @@ export default function DinoSearch({ dinos, setFiltered }) {
       // filter declaration depending on category selected
       switch (category) {
         case "name":
-          return dino.name.toLowerCase().includes(query);
+          return dino.name.toLowerCase().startsWith(query);
         case "diet":
           return dino.diet.toLowerCase() === query;
         case "country":
