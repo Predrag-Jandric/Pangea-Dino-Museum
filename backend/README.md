@@ -82,21 +82,19 @@ This is the backend of DiNostalgia, a web app about dinosaurs for the inner-chil
 
 ```
 {
-"status": "ok",
-"totalResults": 6589,
--"articles": [
--{
--"source": {
-"id": null,
-"name": "Forbes"
-},
-"author": "Ty Roush",
-"title": "title of article",
-"description": "description of article",
-"urlToImage": "url of an image",
-"publishedAt": "published date",
-"content": "a snippit of the content of the article"
-},
+  "status": "ok",
+  "totalResults": 6589,
+  "articles": [{
+      "source": {
+          "id": null,
+          "name": "Forbes"},
+      "author": "Ty Roush",
+      "title": "title of article",
+      "description": "description of article",
+      "urlToImage": "url of an image",
+      "publishedAt": "published date",
+      "content": "a snippit of the content of the article"
+  }]
 ```
 # Project Structure
 ```dino-api/
