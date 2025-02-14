@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 import EcommerceSearch from "./EcommerceSearch.jsx";
 import EcommerceCard from "./EcommerceCard.jsx";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001"
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
 
 function EcommerceDisplay() {
   const dispatch = useDispatch();
@@ -22,7 +23,6 @@ function EcommerceDisplay() {
   useEffect(() => {
     async function getDinos() {
       try {
-        //! const res = await fetch("https://api-example-wg44.onrender.com");
         const res = await fetch(`${API_BASE_URL}/api/dinosaurs`);
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
@@ -42,13 +42,13 @@ function EcommerceDisplay() {
   const handleAddToCart = (item) => {
     dispatch(
       addToCart({
-        id: item.id, 
+        id: item.id,
         name: item.name,
         price: item.price,
         inStock: item.inStock,
         quantity: 1,
         imageSrc: item.imageSrc,
-      }),
+      })
     );
   };
 
@@ -63,16 +63,22 @@ function EcommerceDisplay() {
   return (
     <div id="shop" className="bg-dark flex flex-col items-center gap-6 pb-10">
       <div className="w-full p-4 text-center md:max-w-[50rem]">
-        <h1 className="mb-3 text-4xl text-primary font-pressStart">Dino online shop</h1>
+        <h1 className="mb-3 text-4xl text-primary font-pressStart">
+          Dino Decals Shop
+        </h1>
         <p className="max-w-2xl text-light">
-          Buy your favorite dinosaur toys, figures, and merchandise for yourself
-          and your children from our wide selection of products.
+          Because adulthood means you can buy all the dino decals you want, for
+          your t-shirts, cars, coffee mugs and your fellow diNostalgic friends.
         </p>
       </div>
 
       <section className="flex w-full flex-col items-center gap-6 rounded-lg p-4 md:max-w-[55rem]">
         {/* search and filters  */}
-        <EcommerceSearch dinos={dinos} setFiltered={setFiltered} setCurrentPage={setCurrentPage} />
+        <EcommerceSearch
+          dinos={dinos}
+          setFiltered={setFiltered}
+          setCurrentPage={setCurrentPage}
+        />
 
         {/* responsive grid */}
         {loading ? (
