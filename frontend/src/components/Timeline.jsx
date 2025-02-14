@@ -24,7 +24,7 @@ function Timeline() {
       <div className="mb-20 p-6 flex gap-7 flex-col items-center justify-center text-center bg-dark">
         <h2 className="font-pressStart text-4xl text-primary">
           Timeline 
-          <p className="text-base md:text-xl">A Trip Through Prehistory</p>
+          <p className="text-base md:text-xl">A Trip Through Prehistoric Times</p>
         </h2>
         
         <p className="max-w-2xl text-light">
