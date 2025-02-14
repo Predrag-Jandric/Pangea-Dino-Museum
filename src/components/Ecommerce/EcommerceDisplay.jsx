@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { addToCart } from "../../utils/shoppingSlice.js";
 import { useDispatch } from "react-redux";
-import EcommerceSearch from "./EcommerceSearch";
-import EcommerceCard from "./EcommerceCard";
+import EcommerceSearch from "./EcommerceSearch.jsx";
+import EcommerceCard from "./EcommerceCard.jsx";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001"
 

@@ -1,6 +1,6 @@
 # Backend for DiNostalgia
 
-This is the backend of DiNostalgia, a web app about dinosaurs for the innerchild within every adult.  The backend is live at:
+This is the backend of DiNostalgia, a web app about dinosaurs for the inner-child of every adult.  The backend is live at:
 
 [DiNostalgia Backend](http://dinostalgia-backend.vercel.app/api): http://dinostalgia-backend.vercel.app 
 
@@ -17,7 +17,7 @@ This is the backend of DiNostalgia, a web app about dinosaurs for the innerchild
 ## Dinosaurs
 
 - Endpoint: GET /api/dinosaurs
-- Description: Fetches a list of all dinosaurs in the database.
+- Description: Fetches a list of all dinosaurs from the database.
 - Response:
 ```
 [
@@ -43,7 +43,7 @@ This is the backend of DiNostalgia, a web app about dinosaurs for the innerchild
 ## Orders
 
 - Endpoint: POST /api/orders
-- Description: Creates an order to the DB - editing three tables: orders, orderItems, and dinosaurs
+- Description: Creates an order in the DB - editing three tables: orders, orderItems, and dinosaurs
 
 - Request body includes an object containing a newOrder object and Cart array.
 ```
@@ -131,9 +131,9 @@ This is the backend of DiNostalgia, a web app about dinosaurs for the innerchild
 - cd into directory
 
 ## Install dependencies
-npm install
+- npm install
 
-## Create a .env file and add the following variables:
+## Create an .env file and add the following variables:
 - SUPABASE_URL=
 - SUPABASE_ANON_KEY=
 - SUPABASE_NEWS_API_KEY=
