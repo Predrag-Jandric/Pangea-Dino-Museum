@@ -31,7 +31,7 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   const getCountries = () => {
     const countries = new Set();
     dinos.forEach((dino) =>
-      dino.foundIn.split(", ").forEach((place) => countries.add(place)),
+      dino.foundIn.split(", ").forEach((place) => countries.add(place))
     );
     return [...countries].sort((a, b) => (a < b ? -1 : 1));
   };
@@ -43,8 +43,9 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
     // filters
     switch (category) {
       case "name": {
-        const regex = new RegExp(query.split("").join(".*"), "i");
-        filteredDinos = dinos.filter((dino) => regex.test(dino.name));
+        filteredDinos = dinos.filter((dino) =>
+          dino.name.toLowerCase().startsWith(query)
+        );
         break;
       }
       case "diet":
@@ -69,15 +70,15 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
         filteredDinos = dinos;
     }
 
-    setFiltered(filteredDinos); 
+    setFiltered(filteredDinos);
     setIsFilterApplied(true);
-    setCurrentPage(1); 
+    setCurrentPage(1);
   };
 
   const handleResetFilters = () => {
     setSearch("name");
     setFiltered(dinos);
-    setIsFilterApplied(false); 
+    setIsFilterApplied(false);
     setInputValue("");
     setCurrentPage(1);
   };
