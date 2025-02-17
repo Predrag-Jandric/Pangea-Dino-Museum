@@ -163,7 +163,7 @@ export default function Checkout() {
           </button>
         </p>
       </div>
-      {!isComplete ? (
+      {isComplete ? (
         <div className="absolute inset-0 grid place-items-center">
           <div className="flex w-[17rem] h-[20rem] flex-col rounded-lg items-center border border-primary/30 bg-secondary/30 p-4 shadow-md">
             <img src="/logo.png" className="rounded-full w-28"/>
