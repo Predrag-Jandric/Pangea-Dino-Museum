@@ -31,7 +31,7 @@ export default function Checkout() {
   // if cart in local storage, set state to saved cart
   useEffect(() => {
     const dinoCart = localStorage.getItem("dinoCart");
-    if(dinoCart)  dispatch(setCart(JSON.parse(dinoCart)))
+    if (dinoCart) dispatch(setCart(JSON.parse(dinoCart)));
   }, []);
 
   // get session info when starting page
@@ -138,7 +138,7 @@ export default function Checkout() {
             appearance={{ theme: ThemeSupa }}
             providers={[]}
             redirectTo={`${window.location.origin}/checkout`}
-            />
+          />
         </div>
       </div>
     );
@@ -163,8 +163,19 @@ export default function Checkout() {
           </button>
         </p>
       </div>
-      {isComplete ? (
-        <div>Order Complete!</div>
+      {!isComplete ? (
+        <div className="absolute inset-0 grid place-items-center">
+          <div className="flex w-[17rem] h-[20rem] flex-col rounded-lg items-center border border-primary/30 bg-secondary/30 p-4 shadow-md">
+            <img src="/logo.png" className="rounded-full w-28"/>
+            <div className="text-center font-pressStart text-highlight mt-5">Thankyou!</div>
+            <Link
+            to="/"
+            className="rounded-lg bg-primary px-3 py-1 hover:bg-highlight mt-20"
+          >
+            Home
+          </Link>
+          </div>
+        </div>
       ) : (
         <>
           {cart.map((item) => (
