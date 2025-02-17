@@ -1,17 +1,9 @@
 # DiNostalgia
 
-<!-- MAKE AND PLACE LINK -->
+# 🔗 [Live preview](https://dinostalgia.vercel.app/)
+# ▶️ [Video walkthrough by dev](https://rumble.com/v6lxbbj-dinostalgia-app-walkthrough-voyage-53-team-33.html)
+![Design preview](./frontend/src/assets/dinoPrev.png)
 
-# 🔗 [Live preview]()
-
-<!-- MAKE AND PLACE VIDEO -->
-
-# ▶️ [Video walkthrough by dev]()
-
-<!-- MAKE AND PLACE IMAGES -->
-
-![Design preview]()
-![Design preview]()
 
 ---
 
@@ -30,6 +22,10 @@
 ---
 
 ## About Project
+
+Dinostalgia is a platform that educates and entertains adults who love dinosaurs. This app will combine educational content, interactive features, and e-commerce functionality to provide a comprehensive and engaging experience for dinosaur enthusiasts. 
+
+It is a full stack applications, using React as primary frontend language, and NodeJS/Express as primary backend language. Supabase is used for database. To learn more, visit *Technologies & Dependencies used* section further down or refer to readme file inside **backend**.
 
 ---
 
@@ -149,6 +145,8 @@ Ensure you have the following installed on your system:
 ---
 
 ## Clone & Run locally
+
+Notice: For running this app locally, you will need .env keys to connect to the APIs which only the dev team of this project has 
 
 1. **Clone the Repository:**
 

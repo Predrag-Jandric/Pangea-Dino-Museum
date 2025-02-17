@@ -97,12 +97,12 @@ export const quizQuestions = [
 ];
 
 export const timelineEvents = [
-  {
-    title: "Age of Dinosaurs",
-    description:
-      "The Age of Dinosaurs, spanning from approximately 230 to 66 million years ago, was a remarkable period in Earth's history when dinosaurs dominated the planet. During this time, dinosaurs evolved into a variety of species, from the massive long-necked sauropods to the fearsome theropods like Tyrannosaurus rex. This era saw dinosaurs adapting to diverse environments, from lush forests to arid deserts, and their presence spread across every continent. It was a time of great evolutionary significance, with the development of complex ecosystems and the rise of other ancient life forms alongside the dinosaurs.",
-    time: "Around 230 million years ago",
-  },
+  // {
+  //   title: "Age of Dinosaurs",
+  //   description:
+  //     "The Age of Dinosaurs, spanning from approximately 230 to 66 million years ago, was a remarkable period in Earth's history when dinosaurs dominated the planet. During this time, dinosaurs evolved into a variety of species, from the massive long-necked sauropods to the fearsome theropods like Tyrannosaurus rex. This era saw dinosaurs adapting to diverse environments, from lush forests to arid deserts, and their presence spread across every continent. It was a time of great evolutionary significance, with the development of complex ecosystems and the rise of other ancient life forms alongside the dinosaurs.",
+  //   time: "Around 230 million years ago",
+  // },
   {
     title: "Triassic Period",
     description:
@@ -333,5 +333,5 @@ export const teamMembers = [
     name: "Greg Minezzi",
     role: "Developer",
     link: "https://www.linkedin.com/in/gregminezzi",
-  }
+  },
 ];
