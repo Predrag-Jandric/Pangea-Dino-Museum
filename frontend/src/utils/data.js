@@ -28,70 +28,70 @@ export const quizQuestions = [
     correctOption: 2,
     points: 10,
   },
-  {
-    question: "Which dinosaur had three horns on its head?",
-    options: ["Triceratops", "Diplodocus", "Spinosaurus", "Ankylosaurus"],
-    correctOption: 0,
-    points: 10,
-  },
-  {
-    question: "Which dinosaur was known for the large plates along its back?",
-    options: ["Allosaurus", "Stegosaurus", "Pachycephalosaurus", "Gallimimus"],
-    correctOption: 1,
-    points: 10,
-  },
-  {
-    question:
-      "Which dinosaur was one of the fastest, reaching speeds up to 40 mph?",
-    options: [
-      "Tyrannosaurus Rex",
-      "Velociraptor",
-      "Hadrosaurus",
-      "Compsognathus",
-    ],
-    correctOption: 3,
-    points: 10,
-  },
-  {
-    question: "What is the term for a scientist who studies fossils?",
-    options: ["Archaeologist", "Paleontologist", "Geologist", "Biologist"],
-    correctOption: 1,
-    points: 10,
-  },
-  {
-    question: "Which dinosaur had a long tail that could be used as a whip?",
-    options: ["Apatosaurus", "Stegosaurus", "Brachiosaurus", "Iguanodon"],
-    correctOption: 0,
-    points: 10,
-  },
-  {
-    question: "Which dinosaur is known for having a large sail on its back?",
-    options: ["Spinosaurus", "Ankylosaurus", "Parasaurolophus", "Oviraptor"],
-    correctOption: 0,
-    points: 10,
-  },
-  {
-    question: "When did dinosaurs go extinct?",
-    options: [
-      "65 million years ago",
-      "100 million years ago",
-      "50 million years ago",
-      "25 million years ago",
-    ],
-    correctOption: 0,
-    points: 10,
-  },
-  {
-    question: "What is believed to have caused the extinction of dinosaurs?",
-    options: [
-      "Volcanic eruptions",
-      "A meteor impact",
-      "Climate change",
-      "A massive flood",
-    ],
-    correctOption: 1,
-    points: 10,
-  },
+  // {
+  //   question: "Which dinosaur had three horns on its head?",
+  //   options: ["Triceratops", "Diplodocus", "Spinosaurus", "Ankylosaurus"],
+  //   correctOption: 0,
+  //   points: 10,
+  // },
+  // {
+  //   question: "Which dinosaur was known for the large plates along its back?",
+  //   options: ["Allosaurus", "Stegosaurus", "Pachycephalosaurus", "Gallimimus"],
+  //   correctOption: 1,
+  //   points: 10,
+  // },
+  // {
+  //   question:
+  //     "Which dinosaur was one of the fastest, reaching speeds up to 40 mph?",
+  //   options: [
+  //     "Tyrannosaurus Rex",
+  //     "Velociraptor",
+  //     "Hadrosaurus",
+  //     "Compsognathus",
+  //   ],
+  //   correctOption: 3,
+  //   points: 10,
+  // },
+  // {
+  //   question: "What is the term for a scientist who studies fossils?",
+  //   options: ["Archaeologist", "Paleontologist", "Geologist", "Biologist"],
+  //   correctOption: 1,
+  //   points: 10,
+  // },
+  // {
+  //   question: "Which dinosaur had a long tail that could be used as a whip?",
+  //   options: ["Apatosaurus", "Stegosaurus", "Brachiosaurus", "Iguanodon"],
+  //   correctOption: 0,
+  //   points: 10,
+  // },
+  // {
+  //   question: "Which dinosaur is known for having a large sail on its back?",
+  //   options: ["Spinosaurus", "Ankylosaurus", "Parasaurolophus", "Oviraptor"],
+  //   correctOption: 0,
+  //   points: 10,
+  // },
+  // {
+  //   question: "When did dinosaurs go extinct?",
+  //   options: [
+  //     "65 million years ago",
+  //     "100 million years ago",
+  //     "50 million years ago",
+  //     "25 million years ago",
+  //   ],
+  //   correctOption: 0,
+  //   points: 10,
+  // },
+  // {
+  //   question: "What is believed to have caused the extinction of dinosaurs?",
+  //   options: [
+  //     "Volcanic eruptions",
+  //     "A meteor impact",
+  //     "Climate change",
+  //     "A massive flood",
+  //   ],
+  //   correctOption: 1,
+  //   points: 10,
+  // },
 ];
 
 export const timelineEvents = [

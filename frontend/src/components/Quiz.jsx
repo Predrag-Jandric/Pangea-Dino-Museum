@@ -1,5 +1,7 @@
 import { useReducer } from "react";
 import { quizQuestions } from "../utils/data";
+import "../index.css"; // Import the stylesheet
+import Button from "../utils/Button";
 
 const shuffledQuestions = quizQuestions.sort(() => Math.random() - 0.5);
 
@@ -76,19 +78,26 @@ function Quiz() {
   return (
     <div
       id="quiz"
-      className="min-h-screen bg-bgcolor flex items-center justify-center p-6"
+      className="min-h-screen text-textsize bg-bgcolor flex flex-col items-center justify-center p-6"
+      
     >
-      <div className="w-full max-w-2xl h-fit bg-white p-8 rounded-custom shadow-lg">
+       <h1 className="text-4xl font-titles mb-4">Dino Quiz</h1>
+        <p className="text-center">
+          Test your dino-knowledge and see how much you know about these
+          prehistoric creatures!
+        </p>
+      <div className="w-full text-dark shadow-custom max-w-2xl h-fit bg-white p-8 rounded-custom ">
+        
         {status === "active" && (
           <section>
             {/* progress bar */}
             <div className="mb-6">
               <progress
-                className="progress-bar w-full h-3 rounded-custom bg-grayOne"
+                className="progress-bar w-full h-3 rounded-custom bg-grayOne/50"
                 max={numQuestions}
                 value={index + Number(answer !== null)}
               />
-              <div className="mt-2 flex justify-between text-lg font-medium">
+              <div className="mt-1 text-dark/70 text-sm flex justify-between">
                 <p>
                   Question <span>{index + 1}</span> / {numQuestions}
                 </p>
@@ -100,7 +109,7 @@ function Quiz() {
 
             {/* current question */}
             <div className="mb-6">
-              <h4 className="text-2xl font-titles font-semibold text-gray-800">
+              <h4 className="font-titles text-2xl">
                 {currentQuestion.question}
               </h4>
             </div>
@@ -113,7 +122,7 @@ function Quiz() {
                   onClick={() =>
                     dispatch({ type: "newAnswer", payload: optionIndex })
                   }
-                  className={`w-full py-3 px-4 rounded-custom text-left border-2 font-medium ${
+                  className={`w-full py-3 px-4 rounded-custom text-left border-2 ${
                     // highlight selected answer
                     optionIndex === answer
                       ? optionIndex === currentQuestion.correctOption
@@ -142,16 +151,16 @@ function Quiz() {
 
             {/* next/finish button */}
             {answer !== null && (
-              <button
+              <Button
+                className="mt-6 w-full"
                 onClick={() =>
                   dispatch({
                     type: index < numQuestions - 1 ? "nextQuestion" : "finish",
                   })
                 }
-                className="mt-6 w-full py-3 bg-greenOne text-white rounded-custom hover:bg-greenOneHover"
               >
                 {index < numQuestions - 1 ? "Next" : "Finish"}
-              </button>
+              </Button>
             )}
           </section>
         )}
@@ -159,19 +168,16 @@ function Quiz() {
         {/* finished State */}
         {status === "finished" && (
           <div className="text-center">
-            <p className="text-3xl font-bold mb-4">
+            <p className="mb-4">
               <span>{emoji}</span> You scored <span>{points}</span> out of{" "}
               {maxPossiblePoints} ({Math.ceil(percentage)}%)
             </p>
 
-            <p className="text-lg mb-6">Highscore: {highscore} points</p>
+            <p className="mb-6">Highscore: {highscore} points</p>
 
-            <button
-              onClick={() => dispatch({ type: "restart" })}
-              className="py-3 px-6 transition-all bg-greenOne text-white rounded-custom hover:bg-greenOneHover"
-            >
+            <Button onClick={() => dispatch({ type: "restart" })} className="">
               Restart Quiz
-            </button>
+            </Button>
           </div>
         )}
       </div>

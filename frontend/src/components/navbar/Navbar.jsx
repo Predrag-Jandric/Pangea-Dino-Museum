@@ -14,7 +14,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="fixed md:absolute left-0 right-0 top-0 z-10 flex h-[10vh] w-full items-center justify-between bg-dark text-white pt-3 p-5 md:p-12">
+      <nav className="fixed md:absolute left-0 right-0 top-0 z-30 flex h-[10vh] w-full items-center justify-between  text-white pt-3 p-5 md:p-12">
         <div className="flex h-20 w-20 items-center font-pressStart md:text-base lg:text-xl text-primary">
           <img src="/logo.png" />
           <p className="hidden md:block">DiNostalgia</p>
@@ -30,7 +30,7 @@ function Navbar() {
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="text-secondary relative cursor-pointer px-5 py-2 text-sm lg:text-lg transition duration-200 ease-in-out group-hover:before:scale-100"
+                  className="text-secondary relative cursor-pointer px-5 py-2 lg:text-lg transition duration-200 ease-in-out group-hover:before:scale-100"
                 >
                   {link.label}
                 </a>

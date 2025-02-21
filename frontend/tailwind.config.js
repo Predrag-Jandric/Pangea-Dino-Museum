@@ -19,11 +19,11 @@ export default {
         greenOneHover: "#19b352",
 
         // primary: "rgb(255, 24, 166)",
-        secondary: "rgb(140, 51, 217)",
-        highlight: "rgb(52, 239, 200)",
-        dark: "#2A2828",
+        // secondary: "rgb(140, 51, 217)",
+        // highlight: "rgb(52, 239, 200)",
+        dark: "#3E3C3C",
         // dark: "#D93737",
-        light: "rgb(246, 254, 223)",
+        // light: "rgb(246, 254, 223)",
       },
 
       // "Comic Sans MS" for testing
@@ -41,6 +41,9 @@ export default {
       },
       borderRadius: {
         custom: "0px",
+      },
+      boxShadow: {
+        "custom": "0 4px 6px -1px rgb(0, 0, 0, 1)"
       },
       screens: {
         xs: "480px",

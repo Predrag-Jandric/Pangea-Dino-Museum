@@ -6,22 +6,24 @@ function Timeline() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleNext = () => {
-    setSelectedIndex((prevIndex) =>
-      prevIndex === timelineEvents.length - 1 ? 0 : prevIndex + 1
-    );
+    if (selectedIndex < timelineEvents.length - 1) {
+      setSelectedIndex((prevIndex) => prevIndex + 1);
+    }
   };
 
   const handlePrev = () => {
-    setSelectedIndex((prevIndex) =>
-      prevIndex === 0 ? timelineEvents.length - 1 : prevIndex - 1
-    );
+    if (selectedIndex > 0) {
+      setSelectedIndex((prevIndex) => prevIndex - 1);
+    }
   };
+
   return (
     <div className="flex flex-col items-center py-32 p-8 bg-bgcolor">
       <div className="flex items-center justify-between w-full max-w-4xl">
         <button
           onClick={handlePrev}
-          className="p-3 rounded-custom border-2 border-grayOne text-lg  hover:border-primary transition-all hover:text-primary"
+          disabled={selectedIndex === 0}
+          className="p-3 rounded-custom border-2 border-grayOne text-lg hover:border-primary transition-all hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-grayOne disabled:hover:text-dark"
         >
           <IoIosArrowBack />
         </button>
@@ -46,7 +48,7 @@ function Timeline() {
                 className="relative py-1 cursor-pointer flex flex-col items-center"
               >
                 <span
-                  className={`absolute -top-14 p-2 text-center w-23 text-sm  ${
+                  className={`absolute -top-16 p-2 text-center w-23 text-sm  ${
                     index === selectedIndex ? "text-primary" : "text-dark"
                   }`}
                 >
@@ -67,14 +69,15 @@ function Timeline() {
 
         <button
           onClick={handleNext}
-          className="p-3 rounded-custom border-2 border-grayOne text-lg  hover:border-primary transition-all hover:text-primary"
+          disabled={selectedIndex === timelineEvents.length - 1}
+          className="p-3 rounded-custom border-2 border-grayOne text-lg hover:border-primary transition-all hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-grayOne disabled:hover:text-dark"
         >
           <IoIosArrowForward />
         </button>
       </div>
 
       <div className="mt-10 p-6 text-dark flex flex-col gap-4 w-full max-w-4xl">
-        <h2 className="text-6xl font-titles">
+        <h2 className="text-5xl font-titles">
           {timelineEvents[selectedIndex].title}
         </h2>
         <p className="italic text-dark/50 textsize">

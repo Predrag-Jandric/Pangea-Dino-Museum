@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./navbar/Navbar";
 import { landingPageBGimageSlider } from "../utils/data";
+import Button from "../utils/Button";
 
 function LandingPage() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -8,7 +9,7 @@ function LandingPage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(
-        (prevIndex) => (prevIndex + 1) % landingPageBGimageSlider.length,
+        (prevIndex) => (prevIndex + 1) % landingPageBGimageSlider.length
       );
     }, 4000);
 
@@ -20,7 +21,7 @@ function LandingPage() {
       <Navbar />
 
       {/* image slider  */}
-       <div className="absolute left-0 top-0 h-full w-full ">
+      <section className="absolute left-0 top-0 h-full w-full z-0">
         {landingPageBGimageSlider.map((image, index) => (
           <div
             key={index}
@@ -29,28 +30,34 @@ function LandingPage() {
             }`}
             style={{ backgroundImage: `url(${image})` }}
           ></div>
-        ))} 
-
+        ))}
         {/* dark tint overlay */}
         <div className="absolute left-0 top-0 h-full w-full bg-black bg-opacity-50"></div>
+      </section>
 
-        {/* centered text & btn */}
-        <div className=" bg-red-100 w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center ">
-          <h1 className="font-titles mb-4 mx-3 text-xl md:text-4xl font-bold  ">
-            When you grow up, people dont ask you what your favorite dinosaur
-            is. <div>We do.</div>
-          </h1>
-          <p className="mb-6 mx-5 md:mx-20 text-textsize">
-            At DiNostalgia, we care about your inner-dino-loving child! Explore
-            our site to remember your favorite herbivores, where and when they
-            roamed the earth before smart phones took over. Test your
-            dino-knowledge and reward yourself with all the dino merch you
-            wanted when growing
-          </p>
-          <button className="" onClick={() => document.getElementById('dinodex')?.scrollIntoView({ behavior: 'smooth' })}>
-            Explore
-          </button>
-        </div>
+      {/* centered text & btn */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-bgcolor">
+        <h1 className="font-titles mb-4 mx-3 text-xl md:text-4xl font-bold text-center">
+          When you grow up, people dont ask you what your favorite dinosaur is.
+          <div>We do.</div>
+        </h1>
+        <p className="mb-6 mx-5 md:mx-20 text-textsize text-center">
+          At DiNostalgia, we care about your inner-dino-loving child! Explore
+          our site to remember your favorite herbivores, where and when they
+          roamed the earth before smartphones took over. Test your
+          dino-knowledge and reward yourself with all the dino merch you wanted
+          when growing up.
+        </p>
+        <Button
+          className="bg-primary hover:bg-primaryHover text-white font-bold py-2 px-4 rounded-custom"
+          onClick={() =>
+            document
+              .getElementById("quiz")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          Explore
+        </Button>
       </div>
     </div>
   );

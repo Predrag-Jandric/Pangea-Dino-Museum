@@ -66,12 +66,10 @@ function EcommerceDisplay() {
       className="bg-bgcolor text-black flex flex-col items-center gap-6 pb-10"
     >
       <div className="w-full p-4 text-center md:max-w-[50rem]">
-        <h1 className="mb-3 font-titles text-4xl text-primary ">
-          Dino Decals Shop
-        </h1>
-        <p className="max-w-2xl ">
-          Because adulthood means you can buy all the dino decals you want, for
-          your t-shirts, cars, coffee mugs and your fellow diNostalgic friends.
+      <h1 className="text-4xl font-titles mb-4">Dino Shop</h1>
+        <p className="text-center">
+          Test your dino-knowledge and see how much you know about these
+          prehistoric creatures!
         </p>
       </div>
 
