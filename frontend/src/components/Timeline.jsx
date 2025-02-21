@@ -17,33 +17,19 @@ function Timeline() {
     );
   };
   return (
-    <div
-      id="timeline"
-      className="flex flex-col items-center bg-dark p-8 h-vh"
-    >
-      <div className="mb-20 p-6 flex gap-7 flex-col items-center justify-center text-center bg-dark">
-        <h2 className="font-pressStart text-4xl text-primary">
-          Timeline 
-          <p className="text-base md:text-xl">A Trip Through Prehistoric Times</p>
-        </h2>
-        
-        <p className="max-w-2xl text-light">
-          Because the Jurassic period was just one stop in this 180-million-year
-          road trip.
-        </p>
-      </div>
-      <div className="flex w-full max-w-4xl items-center justify-between">
+    <div className="flex flex-col items-center py-32 p-8 bg-[#F7F7F7]">
+      <div className="flex items-center justify-between w-full max-w-4xl">
         <button
           onClick={handlePrev}
-          className="rounded-full border-2 border-secondary text-secondary p-3 text-lg transition-all hover:border-highlight hover:text-highlight"
+          className="p-3 rounded-full border-2 border-grayOne text-lg  hover:border-primary transition-all hover:text-primary"
         >
           <IoIosArrowBack />
         </button>
 
-        <div className="relative mx-4 flex-1">
-          <div className="absolute left-0 right-0 top-1/2 h-1 -translate-y-1/2 transform bg-secondary">
+        <div className="relative flex-1 mx-4">
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-grayOne transform -translate-y-1/2">
             <div
-              className="h-1 bg-highlight transition-all duration-500"
+              className="h-1 bg-primary transition-all duration-500"
               style={{
                 width: `${
                   (selectedIndex / (timelineEvents.length - 1)) * 100
@@ -52,27 +38,27 @@ function Timeline() {
             ></div>
           </div>
 
-          <div className="relative z-10 flex items-center justify-between">
+          <div className="flex justify-between items-center relative z-10">
             {timelineEvents.map((event, index) => (
               <div
                 key={index}
                 onClick={() => setSelectedIndex(index)}
-                className="relative flex cursor-pointer flex-col items-center py-1"
+                className="relative  py-1 cursor-pointer flex flex-col items-center"
               >
                 <span
-                  className={`w-23 absolute -top-14 p-2 text-center text-xs md:text-sm font-semibold ${
-                    index === selectedIndex ? "text-highlight" : "text-secondary"
+                  className={`absolute -top-14 p-2 text-center w-23 text-sm font-semibold  ${
+                    index === selectedIndex ? "text-primary" : "text-gray-500"
                   }`}
                 >
                   {event.title}
                 </span>
 
                 <div
-                  className={`h-5 w-5 rounded-full ${
+                  className={`w-5 h-5 rounded-full ${
                     index <= selectedIndex
-                      ? "border-highlight bg-highlight delay-300"
-                      : "border-secondary bg-light delay-0 hover:bg-primary"
-                  } -translate-y-0 transform border-2 transition-colors`}
+                      ? "bg-primary delay-300 border-primary"
+                      : "bg-[#F7F7F7] delay-0 border-grayOne hover:bg-primary"
+                  } border-2 transform -translate-y-0 transition-colors`}
                 ></div>
               </div>
             ))}
@@ -81,18 +67,18 @@ function Timeline() {
 
         <button
           onClick={handleNext}
-          className="rounded-full border-2 border-secondary text-secondary p-3 text-lg transition-all hover:border-highlight hover:text-highlight"
+          className="p-3 rounded-full border-2 border-grayOne text-lg  hover:border-primary transition-all hover:text-primary"
         >
           <IoIosArrowForward />
         </button>
       </div>
 
-      <div className="mt-10 flex w-full max-w-4xl flex-col gap-2 p-6">
-        <h2 className="text-lg md:text-4xl text-highlight font-pressStart">
+      <div className="mt-10 p-6 flex flex-col gap-4 w-full max-w-4xl">
+        <h2 className="text-6xl text-gray-800">
           {timelineEvents[selectedIndex].title}
         </h2>
-        <p className="italic text-secondary">- {timelineEvents[selectedIndex].time}</p>
-        <p className="mt-4 md:text-lg text-light">
+        <p className="italic">- {timelineEvents[selectedIndex].time}</p>
+        <p className="mt-4 text-lg text-gray-600">
           {timelineEvents[selectedIndex].description}
         </p>
       </div>
