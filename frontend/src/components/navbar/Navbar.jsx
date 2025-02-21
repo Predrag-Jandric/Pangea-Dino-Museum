@@ -1,7 +1,7 @@
 import MobileNavbar from "./MobileNavbar";
 import useScrollTo from "../../utils/useScrollTo";
 import { useState } from "react";
-import { CgMenu, CgShoppingCart } from "react-icons/cg";
+import { CgMenu } from "react-icons/cg";
 import { navLinks } from "../../utils/data";
 import { Link } from "react-router-dom";
 import { TfiShoppingCart } from "react-icons/tfi";

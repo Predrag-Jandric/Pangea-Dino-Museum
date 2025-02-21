@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useAnimate, stagger } from "framer-motion";
 import useScrollTo from "../../utils/useScrollTo";
 import { IoCloseOutline } from "react-icons/io5";
-import {CgShoppingCart } from "react-icons/cg";
 import { motion } from "framer-motion";
 import { navLinks } from "../../utils/data";
 import { Link } from "react-router-dom";
