@@ -1,34 +1,42 @@
-import "dotenv/config";
-import express from "express";
-import cors from "cors";
-import dinosaursRouter from "./dinosaurs/dinosaurs.router.js";
-import ordersRouter from "./orders/orders.router.js";
-import newsRouter from "./news/news.router.js";
-import { notFound, errorHandler } from "./errors/index.js";
+// filepath: server.js
+const express = require("express");
+const { MongoClient } = require("mongodb");
+const dotenv = require("dotenv");
+const cors = require("cors");
+
+dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5001;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Default route
-app.get("/api", (req, res) => {
-  res.send("Welcome to DiNostalgia API");
-});
+const uri = process.env.MONGODB_URI;
+const client = new MongoClient(uri);
 
-// Dino route
-app.use("/api/dinosaurs", dinosaursRouter);
-// Orders route
-app.use("/api/orders", ordersRouter);
-// News route
-app.use("/api/news", newsRouter);
+let db;
 
-// handle Errrors
-app.use(notFound);
-app.use(errorHandler);
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+client
+  .connect()
+  .then(() => {
+    db = client.db("dinosaurdb");
+    console.log("Connected to MongoDB!");
+
+    app.listen(process.env.PORT || 3000, () => {
+      console.log("Server is running on port 3000");
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+app.get("/", async (req, res) => {
+  try {
+    const collection = db.collection("dinos");
+    const dinos = await collection.find().toArray();
+    res.status(200).json(dinos);
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ message: error.message });
+  }
 });

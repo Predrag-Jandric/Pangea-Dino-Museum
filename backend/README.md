@@ -1,141 +1,79 @@
-# Backend for DiNostalgia
+# Secondary Dinosaur API (not being used)
 
-This is the backend of DiNostalgia, a web app about dinosaurs for the inner-child of every adult.  The backend is live at:
+This is a simple Node.js API that connects to a MongoDB database and fetches data. The API is built using Express and MongoDB, and it supports CORS for cross-origin requests.
 
-[DiNostalgia Backend](http://dinostalgia-backend.vercel.app/api): http://dinostalgia-backend.vercel.app 
+## Note ⚠️
 
-# Technologies Used
+- **This API was being used for this project initially but then, a different one was made by another team member (Greg) and it is in this repo being used as primary backend, while this one is NOT being used but it has been put here for the sake of being here and maybe needed in the future who knows. In that other backend which is primary, there are also more features not just fetch data from mongoDB. The other backend also has authentication and is using Supabase instead of mongoDB. We basically have 2 backends developed by two different team members but only one is being used, which is not this one.**
 
-- Express.js – Web framework
-- Supabase – Database & authentication
-- dotenv – Environment variables
-- cors – Security middleware
+- **In here you will also find v5dinos.json which is just the copy of the data from the database. It is here in case original data gets lost or something. This same data is also used in the other, primary backend database.**
 
+## Installation
 
-# API Endpoints
+git clone it locally, install packages with `npm i` then run using scripts found in package.json. You will need to create a local .env file where you will store your mongoDB connection string found in mongo Atlas website. Dont forget to add this .env to your .gitignore file
 
-## Dinosaurs
+## Prerequisites
 
-- Endpoint: GET /api/dinosaurs
-- Description: Fetches a list of all dinosaurs from the database.
-- Response:
-```
-[
-  {
-    "id": 1,
-    "name": "Tyrannosaurus Rex",
-    "imageSrc": "https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/aardonyx.jpg"
-    "length": 2,
-    "weight": 100,
-    "typeOfDino": "sauropod",
-    "diet": "herbivorous",
-    "whenLived": "Early Jurassic",
-    "foundIn": "South Africa",
-    "namedBy": "Gilmore (1922)",
-    "description": "description of dinosaur",
-    "price": 19.99,
-    "inStock": 10,
-    "created_at": "2025-02-07 10:50:14.751454+00",
-    "mapLink": "https://www.openstreetmap.org/export/embed.html?bbox=17.92651880532503%2C-33.41861045201499%2C33.74683130532503%2C-22.376498680023815&amp;layer=hot"
-  }
-]
-```
-## Orders
+- Node.js
+- npm (Node Package Manager)
+- MongoDB Atlas account
 
-- Endpoint: POST /api/orders
-- Description: Creates an order in the DB - editing three tables: orders, orderItems, and dinosaurs
+## API Endpoints
 
-- Request body includes an object containing a newOrder object and Cart array.
-```
-{
-	“newOrder”: {
-		“first_name“: “Adam”,
-      	“last_name“: “Smith”,
-      	“address“: “123 Main Street”,
-      	“email“: “email@email.com”,
-      	“total“: 47.58,
-      	“user_id“: “jdas94hq093q50”
-	}
-	“cart”: [{
-        “id“: 1,
-        “name“: “t-rex”,
-        “price“: 20.34,
-        “inStock“: 8,
-        “quantity“: 1
-	},
-	{
-        “id“: 2,
-        “name“: “brontosaurus”,
-        “price“: 12.75,
-        “inStock“: 6,
-        “quantity“: 2
-	}]
-}
-```
-## News
+- GET /: Fetch all documents from the dinos collection in the MongoDB database.
 
-- Endpoint: GET /api/news
-- Description: Fetches a list of recent news articles that are related to dinosaurs.
-- *Note: Data is coming from NewsAPI.org. Our site fetches information from our backend, which in turn makes an API call to their website.
+## Project Structure
 
-- Response:
+- `server.js`: The main server file that sets up the Express app, connects to MongoDB, and defines the API routes.
+- `package.json`: Contains the project metadata and dependencies.
 
-```
-{
-  "status": "ok",
-  "totalResults": 6589,
-  "articles": [{
-      "source": {
-          "id": null,
-          "name": "Forbes"},
-      "author": "Ty Roush",
-      "title": "title of article",
-      "description": "description of article",
-      "urlToImage": "url of an image",
-      "publishedAt": "published date",
-      "content": "a snippit of the content of the article"
-  }]
-```
-# Project Structure
-```dino-api/
+- `.env`: Contains environment variables, including the MongoDB connection string.
+- `.gitignore`: Specifies files and directories to be ignored by Git.
+- `route.rest`: Contains example HTTP requests for testing the API.
 
-├── dinosaurs/
-│   ├── dinosaurs.controller.js
-│   ├── dinosaurs.router.js
-│   ├── dinosaurs.service.js
-├── errors/
-│   ├── errorHandler.js
-│   ├── index.js
-│   ├── methodNotAllowed.js
-│   ├── notFound.js
-├── news/
-│   ├── news.controller.js
-│   ├── news.router.js
-├── node_moduels/
-├── order/
-│   ├── orders.controller.js
-│   ├── orders.router.js
-│   ├── orders.service.js
-├── server.js
-│.env
-│.gitignore
-│ package.json
-│ package-lock.json
-│ README.md
-```
-# Setup & Installation
-## Clone the repository
-- git clone 
-- cd into directory
+## Dependencies
 
-## Install dependencies
-- npm install
+- express: Fast, unopinionated, minimalist web framework for Node.js.
+- mongodb: The official MongoDB driver for Node.js.
+- dotenv: Loads environment variables from a .env file into process.env.
 
-## Create an .env file and add the following variables:
-- SUPABASE_URL=
-- SUPABASE_ANON_KEY=
-- SUPABASE_NEWS_API_KEY=
-- SUPABASE_NEWS_API_URL=
+- cors: Middleware to enable CORS (Cross-Origin Resource Sharing).
+- nodemon: A tool that helps develop Node.js applications by automatically restarting the node application when file changes in the directory are detected (development dependency).
 
-## Start the server
-npm run start
+## Environment Variables
+
+TO ADMIN: the connection string in your .env file should look something like this and you can get it from mongo atlas
+
+MONGODB_URI=mongodb+srv://username:password@cluster-name.mongodb.net/database-name
+
+## Deployment
+
+to deploy to render here are the steps, altho, I AM NOT SURE, IT MAY EVEN WORK WITHOUT render.yaml. There is a way on render to just put a link of the github repo.
+
+1. Create a render.yaml file in the root of your project, it should contain:
+
+#filepath: render.yaml
+
+services:
+
+- type: web
+  name: dino-api
+  env: node
+  plan: free
+  buildCommand: npm install
+  startCommand: npm start
+
+2. Push your code to a Git repository
+
+3. Create a new Web Service on Render:
+
+- Go to Render.
+- Click on "New" and select "Web Service".
+- Connect your GitHub repository.
+- Render will automatically detect the render.yaml file and configure the service.
+- Set the environment variable MONGODB_URI with your MongoDB connection string in the Render dashboard.
+
+4. Deploy the service:
+
+- Render will build and deploy your service.
+- Once deployed, your API will be accessible via the URL provided by Render.
