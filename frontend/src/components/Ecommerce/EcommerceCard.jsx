@@ -1,12 +1,13 @@
 import { useSelector } from "react-redux";
+import Button from "../../utils/Button";
 
 function EcommerceCard({ item, handleAddToCart }) {
   const cart = useSelector((state) => state.shopping.inCart);
-  const isInCart = cart.some((cartItem) => cartItem.id === item.id); 
+  const isInCart = cart.some((cartItem) => cartItem.id === item._id);
   return (
     <div
-      key={item.id} 
-      className="flex w-[17rem] flex-col rounded-lg border border-secondary/30 bg-secondary/30 p-4 shadow-md"
+      key={item._id}
+      className="flex w-[17rem] flex-col bg-white rounded-lg border border-primary/30 p-4 shadow-md"
     >
       <img
         src={item.imageSrc}
@@ -15,28 +16,30 @@ function EcommerceCard({ item, handleAddToCart }) {
       />
 
       {/* product info */}
-      <h2 className={`mb-2 text-highlight font-semibold font-pressStart ${item.name.length > 15 && "text-xs"}`}>{item.name}</h2>
-      <p className="mb-1 text-light">
-        Price: <span className="font-bold text-highlight">${item.price}</span>
+      <h2
+        className={`mb-2 font-semibold font-titles ${item.name.length > 15 && "text-xs"}`}
+      >
+        {item.name}
+      </h2>
+      <p className="mb-1 ">
+        Price: <span className="font-bold ">${item.price}</span>
       </p>
-      <p className="mb-3 text-light">
+      <p className="mb-3 ">
         In Stock:{" "}
         <span
           className={`font-bold ${
-            item.inStock === 0 ? "font-bold text-primary" : "text-highlight"
+            item.inStock === 0 ? "font-bold text-primary" : ""
           }`}
         >
           {item.inStock}
         </span>
       </p>
 
-      <button
+      <Button
         onClick={() => handleAddToCart(item)}
         disabled={item.inStock === 0 || isInCart}
-        className={`w-full rounded-lg px-4 py-2 text-light transition duration-200 ${
-          item.inStock === 0 || isInCart
-            ? "cursor-not-allowed bg-secondary"
-            : "bg-primary hover:bg-highlight"
+        className={`w-full px-4 py-2 transition duration-200 ${
+          item.inStock === 0 || isInCart ? "cursor-not-allowed " : ""
         }`}
       >
         {item.inStock === 0
@@ -44,7 +47,7 @@ function EcommerceCard({ item, handleAddToCart }) {
           : isInCart
             ? "In Cart"
             : "Add to Cart"}
-      </button>
+      </Button>
     </div>
   );
 }

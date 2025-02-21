@@ -35,19 +35,19 @@ function LandingPage() {
         <div className="absolute left-0 top-0 h-full w-full bg-black bg-opacity-50"></div>
 
         {/* centered text & btn */}
-        <div className="w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center text-white">
-          <h1 className="mb-4 mx-3 text-xl md:text-4xl font-bold font-pressStart leading-relaxed text-highlight">
+        <div className=" bg-red-100 w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center ">
+          <h1 className="font-titles mb-4 mx-3 text-xl md:text-4xl font-bold  ">
             When you grow up, people dont ask you what your favorite dinosaur
             is. <div>We do.</div>
           </h1>
-          <p className="mb-6 mx-5 md:mx-20 text-sm md:text-lg text-light">
+          <p className="mb-6 mx-5 md:mx-20 text-textsize">
             At DiNostalgia, we care about your inner-dino-loving child! Explore
             our site to remember your favorite herbivores, where and when they
             roamed the earth before smart phones took over. Test your
             dino-knowledge and reward yourself with all the dino merch you
             wanted when growing
           </p>
-          <button className="hover:bg-secondary rounded-md bg-primary px-8 py-3 font-semibold transition" onClick={() => document.getElementById('dinodex')?.scrollIntoView({ behavior: 'smooth' })}>
+          <button className="" onClick={() => document.getElementById('dinodex')?.scrollIntoView({ behavior: 'smooth' })}>
             Explore
           </button>
         </div>

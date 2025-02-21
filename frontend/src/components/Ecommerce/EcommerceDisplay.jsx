@@ -4,8 +4,8 @@ import { useDispatch } from "react-redux";
 import EcommerceSearch from "./EcommerceSearch.jsx";
 import EcommerceCard from "./EcommerceCard.jsx";
 
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
+// const API_BASE_URL =
+//   import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
 
 function EcommerceDisplay() {
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ function EcommerceDisplay() {
   useEffect(() => {
     async function getDinos() {
       try {
-        const res = await fetch(`${API_BASE_URL}/api/dinosaurs`);
+        const res = await fetch("https://api-example-wg44.onrender.com");
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -42,7 +42,7 @@ function EcommerceDisplay() {
   const handleAddToCart = (item) => {
     dispatch(
       addToCart({
-        id: item.id,
+        id: item._id,
         name: item.name,
         price: item.price,
         inStock: item.inStock,
@@ -61,12 +61,15 @@ function EcommerceDisplay() {
   const totalPages = Math.ceil(filtered.length / itemsPerPage);
 
   return (
-    <div id="shop" className="bg-dark flex flex-col items-center gap-6 pb-10">
+    <div
+      id="shop"
+      className="bg-bgcolor text-black flex flex-col items-center gap-6 pb-10"
+    >
       <div className="w-full p-4 text-center md:max-w-[50rem]">
-        <h1 className="mb-3 text-4xl text-primary font-pressStart">
+        <h1 className="mb-3 font-titles text-4xl text-primary ">
           Dino Decals Shop
         </h1>
-        <p className="max-w-2xl text-light">
+        <p className="max-w-2xl ">
           Because adulthood means you can buy all the dino decals you want, for
           your t-shirts, cars, coffee mugs and your fellow diNostalgic friends.
         </p>
@@ -94,7 +97,7 @@ function EcommerceDisplay() {
             <div className="place-items-center grid w-full grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
               {currentItems.map((dino) => (
                 <EcommerceCard
-                  key={dino.id}
+                  key={dino._id}
                   item={dino}
                   handleAddToCart={handleAddToCart}
                 />
@@ -105,11 +108,11 @@ function EcommerceDisplay() {
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
-                className="text-light px-4 py-2 mx-1 rounded bg-primary hover:bg-highlight disabled:opacity-50"
+                className=" px-4 py-2 mx-1 rounded bg-primary hover:bg-highlight disabled:opacity-50"
               >
                 Previous
               </button>
-              <span className="px-4 py-2 mx-1 text-light">
+              <span className="px-4 py-2 mx-1 ">
                 Page {currentPage} of {totalPages}
               </span>
               <button
@@ -117,7 +120,7 @@ function EcommerceDisplay() {
                   setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
                 disabled={currentPage === totalPages}
-                className="text-light px-4 py-2 mx-1 rounded bg-primary hover:bg-highlight disabled:opacity-50"
+                className="px-4 py-2 mx-1 rounded bg-primary hover:bg-highlight disabled:opacity-50"
               >
                 Next
               </button>

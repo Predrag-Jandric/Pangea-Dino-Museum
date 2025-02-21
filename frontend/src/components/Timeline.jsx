@@ -7,21 +7,21 @@ function Timeline() {
 
   const handleNext = () => {
     setSelectedIndex((prevIndex) =>
-      prevIndex === timelineEvents.length - 1 ? 0 : prevIndex + 1,
+      prevIndex === timelineEvents.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const handlePrev = () => {
     setSelectedIndex((prevIndex) =>
-      prevIndex === 0 ? timelineEvents.length - 1 : prevIndex - 1,
+      prevIndex === 0 ? timelineEvents.length - 1 : prevIndex - 1
     );
   };
   return (
-    <div className="flex flex-col items-center py-32 p-8 bg-[#F7F7F7]">
+    <div className="flex flex-col items-center py-32 p-8 bg-bgcolor">
       <div className="flex items-center justify-between w-full max-w-4xl">
         <button
           onClick={handlePrev}
-          className="p-3 rounded-full border-2 border-grayOne text-lg  hover:border-primary transition-all hover:text-primary"
+          className="p-3 rounded-custom border-2 border-grayOne text-lg  hover:border-primary transition-all hover:text-primary"
         >
           <IoIosArrowBack />
         </button>
@@ -43,11 +43,11 @@ function Timeline() {
               <div
                 key={index}
                 onClick={() => setSelectedIndex(index)}
-                className="relative  py-1 cursor-pointer flex flex-col items-center"
+                className="relative py-1 cursor-pointer flex flex-col items-center"
               >
                 <span
-                  className={`absolute -top-14 p-2 text-center w-23 text-sm font-semibold  ${
-                    index === selectedIndex ? "text-primary" : "text-gray-500"
+                  className={`absolute -top-14 p-2 text-center w-23 text-sm  ${
+                    index === selectedIndex ? "text-primary" : "text-dark"
                   }`}
                 >
                   {event.title}
@@ -57,7 +57,7 @@ function Timeline() {
                   className={`w-5 h-5 rounded-full ${
                     index <= selectedIndex
                       ? "bg-primary delay-300 border-primary"
-                      : "bg-[#F7F7F7] delay-0 border-grayOne hover:bg-primary"
+                      : "bg-bgcolor delay-0 border-grayOne hover:bg-primary"
                   } border-2 transform -translate-y-0 transition-colors`}
                 ></div>
               </div>
@@ -67,18 +67,20 @@ function Timeline() {
 
         <button
           onClick={handleNext}
-          className="p-3 rounded-full border-2 border-grayOne text-lg  hover:border-primary transition-all hover:text-primary"
+          className="p-3 rounded-custom border-2 border-grayOne text-lg  hover:border-primary transition-all hover:text-primary"
         >
           <IoIosArrowForward />
         </button>
       </div>
 
-      <div className="mt-10 p-6 flex flex-col gap-4 w-full max-w-4xl">
-        <h2 className="text-6xl text-gray-800">
+      <div className="mt-10 p-6 text-dark flex flex-col gap-4 w-full max-w-4xl">
+        <h2 className="text-6xl font-titles">
           {timelineEvents[selectedIndex].title}
         </h2>
-        <p className="italic">- {timelineEvents[selectedIndex].time}</p>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="italic text-dark/50 textsize">
+          - {timelineEvents[selectedIndex].time}
+        </p>
+        <p className="mt-4 text-textsize text-lg">
           {timelineEvents[selectedIndex].description}
         </p>
       </div>

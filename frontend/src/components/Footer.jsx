@@ -9,7 +9,7 @@ function Footer() {
       <section className="container mx-auto flex flex-col justify-between gap-12 p-8 py-20 md:flex-row">
         {/* navigation  */}
         <article className="flex-1">
-          <h3 className="mb-7 text-lg font-semibold font-pressStart">Navigation</h3>
+          <h3 className="mb-7 text-lg font-semibold font-titles">Navigation</h3>
           <div className="flex list-none flex-col gap-2">
             {navLinks.map((link) => (
               <li key={link.label}>
@@ -30,7 +30,7 @@ function Footer() {
 
         {/* team */}
         <article className="flex-1">
-          <h3 className="mb-7 text-lg font-semibold font-pressStart">Team</h3>
+          <h3 className="mb-7 text-lg font-semibold font-titles">Team</h3>
           <div className="flex flex-col gap-2">
             {teamMembers.map((member, index) => (
               <a
@@ -47,7 +47,7 @@ function Footer() {
 
         {/* chingu */}
         <article className="flex flex-1 flex-col gap-2">
-          <h3 className="mb-7 text-lg font-semibold font-pressStart">Organisation</h3>
+          <h3 className="mb-7 text-lg font-semibold font-titles">Organisation</h3>
           <a target="_blank" href="https://www.chingu.io/">
             <img
               src="/chingu-logo.png"
