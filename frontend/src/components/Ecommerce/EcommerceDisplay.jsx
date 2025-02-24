@@ -13,7 +13,7 @@ function EcommerceDisplay() {
   const [filtered, setFiltered] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 2;
 
   const getRandomDinos = (dinos, count) => {
     const shuffled = [...dinos].sort(() => 0.5 - Math.random());
@@ -63,18 +63,18 @@ function EcommerceDisplay() {
   return (
     <div
       id="shop"
-      className="bg-bgcolor text-black flex flex-col items-center gap-6 pb-10"
+      className="container mx-auto bg-bgcolor flex flex-col items-center justify-center text-dark gap-6 pb-10"
     >
-      <div className="w-full p-4 text-center md:max-w-[50rem]">
-      <h1 className="text-4xl font-titles mb-4">Dino Shop</h1>
+      <div className="p-4 text-center">
+        <h1 className="text-4xl font-titles mb-4">Dino Shop</h1>
         <p className="text-center">
           Test your dino-knowledge and see how much you know about these
           prehistoric creatures!
         </p>
       </div>
 
-      <section className="flex w-full flex-col items-center gap-6 rounded-lg p-4 md:max-w-[55rem]">
-        {/* search and filters  */}
+      <section className=" flex w-full flex-col items-center gap-6 rounded-lg p-4 md:max-w-[65rem]">
+        {/* search and filters */}
         <EcommerceSearch
           dinos={dinos}
           setFiltered={setFiltered}
@@ -92,7 +92,13 @@ function EcommerceDisplay() {
           </div>
         ) : (
           <>
-            <div className="place-items-center grid w-full grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+            {/* Grid for displaying products dynamically */}
+            <div
+              className="grid w-full gap-6"
+              style={{
+                gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              }}
+            >
               {currentItems.map((dino) => (
                 <EcommerceCard
                   key={dino._id}
@@ -101,12 +107,13 @@ function EcommerceDisplay() {
                 />
               ))}
             </div>
+
             {/* pagination */}
-            <div className="flex justify-center mt-4">
+            {/* <div className="flex justify-center mt-4">
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
-                className=" px-4 py-2 mx-1 rounded bg-primary hover:bg-highlight disabled:opacity-50"
+                className="px-4 py-2 mx-1 rounded bg-primary hover:bg-highlight disabled:opacity-50"
               >
                 Previous
               </button>
@@ -122,7 +129,7 @@ function EcommerceDisplay() {
               >
                 Next
               </button>
-            </div>
+            </div> */}
           </>
         )}
       </section>

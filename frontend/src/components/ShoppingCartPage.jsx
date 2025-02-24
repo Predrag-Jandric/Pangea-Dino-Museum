@@ -7,7 +7,7 @@ import {
   setCart,
 } from "../utils/shoppingSlice";
 import { ToastContainer } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Modal from "../utils/Modal.jsx";
 import useModal from "../utils/useModal.jsx";
 import { useEffect } from "react";
@@ -16,7 +16,6 @@ function ShoppingCartPage() {
   const cart = useSelector((state) => state.shopping.inCart);
   const dispatch = useDispatch();
   const { isOpen, openModal, closeModal, handleClickOutside } = useModal();
-  const navigate = useNavigate();
 
   // when loading component, if cart in state, save to localStorage
   // if no cart state (i.e. navigate directly to page), load stored cart as state
@@ -33,7 +32,7 @@ function ShoppingCartPage() {
   }, 0);
 
   const handleCheckout = () => {
-    navigate("/checkout");
+   alert("coming soon")
   };
 
   const handleClearCart = () => {

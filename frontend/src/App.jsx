@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <div className="font-body">
+    <main className="font-body bg-bgcolor">
       <LandingPage />
       <Timeline />
       <Quiz />
@@ -18,7 +18,7 @@ function App() {
       <Footer />
 
       <ToastContainer />
-    </div>
+    </main>
   );
 }
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { TfiShoppingCart } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Button from "../../utils/Button";
 
 function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   // needed for the shopping cart number display
@@ -84,10 +85,10 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   };
 
   return (
-    <section className="mt-10 flex w-full gap-3">
+    <section className="mt-10 font-sans flex w-full gap-3 flex-wrap items-center">
       {/* category selection dropdown */}
       <select
-        className="rounded border border-gray-800 p-1"
+        className="input"
         onChange={(e) => handleSelect(e)}
         name="category"
         id="category"
@@ -103,26 +104,22 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
       {/* search based on diet */}
       {search === "diet" && (
         <select
-          className="rounded border border-gray-800 p-1"
+          className="input"
           onChange={(e) => handleSearch(search, e.target.value)}
           defaultValue=""
         >
           <option disabled value="">
             Choose Diet Type
           </option>
-          <option name="carnivorous" value="carnivorous" id="carnivorous">
-            Carnivorous
-          </option>
-          <option name="herbivorous" value="herbivorous" id="herbivorous">
-            Herbivorous
-          </option>
+          <option value="carnivorous">Carnivorous</option>
+          <option value="herbivorous">Herbivorous</option>
         </select>
       )}
 
       {/* search based on stock */}
       {search === "stock" && (
         <select
-          className="rounded border border-gray-800 p-1"
+          className="input"
           onChange={(e) => handleSearch(e.target.value, "")}
           defaultValue=""
         >
@@ -137,7 +134,7 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
       {/* search based on price */}
       {search === "price" && (
         <select
-          className="rounded border border-gray-800 p-1"
+          className="input"
           onChange={(e) => handleSearch(e.target.value, "")}
           defaultValue=""
         >
@@ -153,7 +150,7 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
       {search === "country" && (
         <select
           onChange={(e) => handleSearch(search, e.target.value)}
-          className="rounded border border-gray-800 p-1"
+          className="input"
           defaultValue=""
         >
           <option disabled value="">
@@ -166,13 +163,14 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
           ))}
         </select>
       )}
+
       {/* display search input field */}
       {search === "name" && (
         <input
           type="text"
           value={inputValue}
-          placeholder="search..."
-          className="rounded border border-gray-800 p-1"
+          placeholder="Search..."
+          className="input"
           onChange={(e) => {
             setInputValue(e.target.value);
             handleSearch(search, e.target.value);
@@ -181,13 +179,14 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
       )}
 
       {isFilterApplied && (
-        <button
-          className="rounded bg-primary px-4 py-2 text-white hover:bg-highlight"
+        <Button
+          className=""
           onClick={handleResetFilters}
         >
-          Reset filters
-        </button>
+          Reset Filters
+        </Button>
       )}
+
       <Link to="/shoppingCartPage" className="relative ml-auto text-4xl">
         <TfiShoppingCart className="text-primary transition hover:text-highlight" />
         {cart.length > 0 && (

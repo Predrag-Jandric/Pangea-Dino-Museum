@@ -7,39 +7,41 @@ function EcommerceCard({ item, handleAddToCart }) {
   return (
     <div
       key={item._id}
-      className="flex w-[17rem] flex-col bg-white rounded-lg border border-primary/30 p-4 shadow-md"
+      className="flex flex-col bg-white rounded-custom border border-gray-200 p-5 shadow-custom hover:shadow-xl transition"
     >
+      {/* Product Image */}
       <img
         src={item.imageSrc}
         alt={item.name}
-        className="mb-4 h-48 w-full object-contain rounded-xl bg-white"
+        className="mb-4 h-52 w-full object-contain"
       />
 
-      {/* product info */}
-      <h2
-        className={`mb-2 font-semibold font-titles ${item.name.length > 15 && "text-xs"}`}
-      >
+      {/* Product Info */}
+      <h2 className={`mb-3 text-xl  ${item.name.length > 15 && "text-sm"}`}>
         {item.name}
       </h2>
-      <p className="mb-1 ">
-        Price: <span className="font-bold ">${item.price}</span>
+      <p className="mb-1">
+        Price: <span className="text-primary font-semibold">${item.price}</span>
       </p>
-      <p className="mb-3 ">
+      <p className="mb-3">
         In Stock:{" "}
         <span
-          className={`font-bold ${
-            item.inStock === 0 ? "font-bold text-primary" : ""
+          className={`font-semibold ${
+            item.inStock === 0 ? "text-red-500" : "text-primary"
           }`}
         >
           {item.inStock}
         </span>
       </p>
 
+      {/* Add to Cart Button */}
       <Button
         onClick={() => handleAddToCart(item)}
         disabled={item.inStock === 0 || isInCart}
-        className={`w-full px-4 py-2 transition duration-200 ${
-          item.inStock === 0 || isInCart ? "cursor-not-allowed " : ""
+        className={`w-full rounded-md px-4 py-2 transition ${
+          item.inStock === 0 || isInCart
+            ? "cursor-not-allowed bg-gray-300 hover:bg-gray-300"
+            : "bg-primary hover:bg-primaryHover"
         }`}
       >
         {item.inStock === 0
