@@ -18,7 +18,7 @@ function Timeline() {
   };
 
   return (
-    <div className="flex flex-col items-center py-32 p-8 bg-bgcolor">
+    <div className="!bg-red-100 py-16 px-4 flex flex-col items-center bg-bgcolor">
       <div className="flex items-center justify-between w-full max-w-4xl">
         <button
           onClick={handlePrev}
@@ -76,7 +76,7 @@ function Timeline() {
         </button>
       </div>
 
-      <div className="mt-10 p-6 text-dark flex flex-col gap-4 w-full max-w-4xl">
+      <div className=" text-dark flex pt-10 flex-col gap-4 w-full max-w-4xl">
         <h2 className="text-5xl font-titles">
           {timelineEvents[selectedIndex].title}
         </h2>

@@ -13,10 +13,9 @@ function App() {
     <main className="font-body bg-bgcolor">
       <LandingPage />
       <Timeline />
-      <Quiz />
       <Ecommerce />
+      <Quiz />
       <Footer />
-
       <ToastContainer />
     </main>
   );

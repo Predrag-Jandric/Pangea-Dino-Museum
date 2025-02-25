@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import { quizQuestions } from "../utils/data";
 import "../index.css"; // Import the stylesheet
 import Button from "../utils/Button";
+import Title from "./Title";
 
 const shuffledQuestions = quizQuestions.sort(() => Math.random() - 0.5);
 
@@ -78,16 +79,15 @@ function Quiz() {
   return (
     <div
       id="quiz"
-      className="min-h-screen text-textsize bg-bgcolor flex flex-col items-center justify-center p-6"
-      
+      className="text-textsize py-16 bg-bgcolor flex flex-col items-center justify-center px-4 !bg-red-300"
     >
-       <h1 className="text-4xl font-titles mb-4">Dino Quiz</h1>
-        <p className="text-center">
-          Test your dino-knowledge and see how much you know about these
-          prehistoric creatures!
-        </p>
+      <Title
+        title="Dino Quiz"
+        description="Test your dino-knowledge and see how much you know about these
+          prehistoric creatures!"
+      />
+
       <div className="w-full text-dark shadow-custom max-w-2xl h-fit bg-white p-8 rounded-custom ">
-        
         {status === "active" && (
           <section>
             {/* progress bar */}

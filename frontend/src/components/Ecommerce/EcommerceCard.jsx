@@ -38,10 +38,10 @@ function EcommerceCard({ item, handleAddToCart }) {
       <Button
         onClick={() => handleAddToCart(item)}
         disabled={item.inStock === 0 || isInCart}
-        className={`w-full rounded-md px-4 py-2 transition ${
+        className={` ${
           item.inStock === 0 || isInCart
-            ? "cursor-not-allowed bg-gray-300 hover:bg-gray-300"
-            : "bg-primary hover:bg-primaryHover"
+            ? "cursor-not-allowed !bg-gray-300 hover:bg-gray-300"
+            : "bg-transparent hover:bg-primaryHover"
         }`}
       >
         {item.inStock === 0

@@ -85,7 +85,7 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   };
 
   return (
-    <section className="mt-10 font-sans flex w-full gap-3 flex-wrap items-center">
+    <section className="font-sans flex w-full gap-3 flex-wrap ">
       {/* category selection dropdown */}
       <select
         className="input"
