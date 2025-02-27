@@ -148,9 +148,9 @@ function Quiz() {
             </div>
 
             {/* next/finish button */}
-            {answer !== null && (
               <Button
-                className="mt-6 w-full"
+                className="mt-6 py-2.5 w-full disabled:cursor-not-allowed disabled:!bg-gray-300 disabled:hover:bg-gray-300"
+                disabled={answer === null}
                 onClick={() =>
                   dispatch({
                     type: index < numQuestions - 1 ? "nextQuestion" : "finish",
@@ -159,21 +159,21 @@ function Quiz() {
               >
                 {index < numQuestions - 1 ? "Next" : "Finish"}
               </Button>
-            )}
+          
           </section>
         )}
 
         {/* finished State */}
         {status === "finished" && (
-          <div className="text-center">
-            <p className="mb-4">
-              <span>{emoji}</span> You scored <span>{points}</span> out of{" "}
+          <div className="text-center py-20">
+            <p className="mb-4 text-xl">
+              <span>{emoji}</span> You scored <span>{points} points</span> out of{" "}
               {maxPossiblePoints} ({Math.ceil(percentage)}%)
             </p>
 
-            <p className="mb-6">Highscore: {highscore} points</p>
+            <p className="mb-6 text-xl">Highscore: {highscore} points</p>
 
-            <Button onClick={() => dispatch({ type: "restart" })} className="">
+            <Button onClick={() => dispatch({ type: "restart" })} className="w-48">
               Restart Quiz
             </Button>
           </div>

@@ -123,16 +123,6 @@ export const timelineEvents = [
 
 export const teamMembers = [
   {
-    name: "Estelle Wraight",
-    role: "Product Owner",
-    link: "https://www.linkedin.com/in/estelle-couture-41422b47/",
-  },
-  {
-    name: "Promise Akabudu",
-    role: "Product Owner",
-    link: "https://www.linkedin.com/in/promise-akabudu/",
-  },
-  {
     name: "Afrah Ali",
     role: "Scrum Master",
     link: "https://www.linkedin.com/in/afrah-ali-251264269/",
@@ -146,5 +136,15 @@ export const teamMembers = [
     name: "Greg Minezzi",
     role: "Developer",
     link: "https://www.linkedin.com/in/gregminezzi",
+  },
+  {
+    name: "Estelle Wraight",
+    role: "Product Owner",
+    link: "https://www.linkedin.com/in/estelle-couture-41422b47/",
+  },
+  {
+    name: "Promise Akabudu",
+    role: "Product Owner",
+    link: "https://www.linkedin.com/in/promise-akabudu/",
   },
 ];

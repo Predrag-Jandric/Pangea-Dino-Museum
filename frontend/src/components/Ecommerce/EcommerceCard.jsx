@@ -40,7 +40,7 @@ function EcommerceCard({ item, handleAddToCart }) {
       <Button
         onClick={() => handleAddToCart(item)}
         disabled={item.inStock === 0 || isInCart}
-        className={` ${
+        className={`mt-auto ${
           item.inStock === 0 || isInCart
             ? "cursor-not-allowed !bg-gray-300 hover:bg-gray-300"
             : "hover:bg-primaryHover"

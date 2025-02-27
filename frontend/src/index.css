@@ -10,7 +10,7 @@
 
 @layer components {
   .input {
-    @apply rounded-custom border border-gray-300 bg-white px-4 py-2 shadow-custom transition hover:border-gray-400 focus:border-primary focus:outline-none;
+    @apply rounded-custom h-10 w-full sm:w-auto border border-gray-300 bg-white px-4 py-2 shadow-custom transition hover:border-gray-400 focus:border-primary focus:outline-none;
   }
 }
 

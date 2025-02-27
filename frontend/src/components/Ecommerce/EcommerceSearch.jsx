@@ -85,109 +85,118 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   };
 
   return (
-    <section className="font-sans flex w-full gap-3 flex-wrap ">
+    <section className="font-sans flex w-full flex-wrap gap-3 sm:flex-row flex-col items-center">
       {/* category selection dropdown */}
-      <select
-        className="input"
-        onChange={(e) => handleSelect(e)}
-        name="category"
-        id="category"
-        value={search}
-      >
-        <option value="name">Name</option>
-        <option value="country">Country</option>
-        <option value="diet">Diet</option>
-        <option value="stock">Stock</option>
-        <option value="price">Price</option>
-      </select>
+      <div className="w-full sm:w-auto">
+        <select
+          className="input"
+          onChange={(e) => handleSelect(e)}
+          name="category"
+          id="category"
+          value={search}
+        >
+          <option value="name">Name</option>
+          <option value="country">Country</option>
+          <option value="diet">Diet</option>
+          <option value="stock">Stock</option>
+          <option value="price">Price</option>
+        </select>
+      </div>
 
       {/* search based on diet */}
       {search === "diet" && (
-        <select
-          className="input"
-          onChange={(e) => handleSearch(search, e.target.value)}
-          defaultValue=""
-        >
-          <option disabled value="">
-            Choose Diet Type
-          </option>
-          <option value="carnivorous">Carnivorous</option>
-          <option value="herbivorous">Herbivorous</option>
-        </select>
+        <div className="w-full sm:w-auto">
+          <select
+            className="input"
+            onChange={(e) => handleSearch(search, e.target.value)}
+            defaultValue=""
+          >
+            <option disabled value="">
+              Choose Diet Type
+            </option>
+            <option value="carnivorous">Carnivorous</option>
+            <option value="herbivorous">Herbivorous</option>
+          </select>
+        </div>
       )}
 
       {/* search based on stock */}
       {search === "stock" && (
-        <select
-          className="input"
-          onChange={(e) => handleSearch(e.target.value, "")}
-          defaultValue=""
-        >
-          <option disabled value="">
-            Choose Stock Order
-          </option>
-          <option value="inStockAsc">Low to High</option>
-          <option value="inStockDesc">High to Low</option>
-        </select>
+        <div className="w-full sm:w-auto">
+          <select
+            className="input"
+            onChange={(e) => handleSearch(e.target.value, "")}
+            defaultValue=""
+          >
+            <option disabled value="">
+              Choose Stock Order
+            </option>
+            <option value="inStockAsc">Low to High</option>
+            <option value="inStockDesc">High to Low</option>
+          </select>
+        </div>
       )}
 
       {/* search based on price */}
       {search === "price" && (
-        <select
-          className="input"
-          onChange={(e) => handleSearch(e.target.value, "")}
-          defaultValue=""
-        >
-          <option disabled value="">
-            Choose Price Order
-          </option>
-          <option value="priceAsc">Low to High</option>
-          <option value="priceDesc">High to Low</option>
-        </select>
+        <div className="w-full sm:w-auto">
+          <select
+            className="input"
+            onChange={(e) => handleSearch(e.target.value, "")}
+            defaultValue=""
+          >
+            <option disabled value="">
+              Choose Price Order
+            </option>
+            <option value="priceAsc">Low to High</option>
+            <option value="priceDesc">High to Low</option>
+          </select>
+        </div>
       )}
 
       {/* search based on country */}
       {search === "country" && (
-        <select
-          onChange={(e) => handleSearch(search, e.target.value)}
-          className="input"
-          defaultValue=""
-        >
-          <option disabled value="">
-            Choose Country
-          </option>
-          {getCountries().map((country) => (
-            <option key={country} value={country}>
-              {country}
+        <div className="w-full sm:w-auto">
+          <select
+            onChange={(e) => handleSearch(search, e.target.value)}
+            className="input"
+            defaultValue=""
+          >
+            <option disabled value="">
+              Choose Country
             </option>
-          ))}
-        </select>
+            {getCountries().map((country) => (
+              <option key={country} value={country}>
+                {country}
+              </option>
+            ))}
+          </select>
+        </div>
       )}
 
       {/* display search input field */}
       {search === "name" && (
-        <input
-          type="text"
-          value={inputValue}
-          placeholder="Search..."
-          className="input"
-          onChange={(e) => {
-            setInputValue(e.target.value);
-            handleSearch(search, e.target.value);
-          }}
-        />
+        <div className="w-full sm:w-auto">
+          <input
+            type="text"
+            value={inputValue}
+            placeholder="Search..."
+            className="input"
+            onChange={(e) => {
+              setInputValue(e.target.value);
+              handleSearch(search, e.target.value);
+            }}
+          />
+        </div>
       )}
 
       {isFilterApplied && (
-        <Button
-          className=""
-          onClick={handleResetFilters}
-        >
+        <Button className="w-full sm:w-auto" onClick={handleResetFilters}>
           Reset Filters
         </Button>
       )}
 
-      <Link to="/shoppingCartPage" className="relative ml-auto text-4xl">
+      <Link to="/shoppingCartPage" className="mt-6 sm:mt-0 relative ml-auto text-4xl">
         <TfiShoppingCart className="text-primary transition hover:text-highlight" />
         {cart.length > 0 && (
           <span className="absolute -top-3 right-2.5 flex size-5 animate-bounce items-center justify-center font-bold text-base rounded-full bg-red-400 ">
