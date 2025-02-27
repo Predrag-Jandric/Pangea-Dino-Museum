@@ -18,14 +18,14 @@ function Timeline() {
   };
 
   return (
-    <div className="!bg-red-100 py-16 px-4 flex flex-col items-center bg-bgcolor">
+    <div id="timeline" className="py-16 pt-24 px-4 flex flex-col items-center bg-bgcolor">
       <div className="flex items-center justify-between w-full max-w-4xl">
         <button
           onClick={handlePrev}
           disabled={selectedIndex === 0}
-          className="p-3 rounded-custom border-2 border-grayOne text-lg hover:border-primary transition-all hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-grayOne disabled:hover:text-dark"
-        >
-          <IoIosArrowBack />
+          className="p-3 rounded-custom hover:bg-primary/5 text-primary border-primary/60 border-2 text-lg transition-all disabled:border-grayOne disabled:hover:bg-transparent disabled:cursor-not-allowed disabled:text-grayOne"
+          >
+            <IoIosArrowBack className="size-5 font-extrabold" />
         </button>
 
         <div className="relative flex-1 mx-4">
@@ -70,14 +70,14 @@ function Timeline() {
         <button
           onClick={handleNext}
           disabled={selectedIndex === timelineEvents.length - 1}
-          className="p-3 rounded-custom border-2 border-grayOne text-lg hover:border-primary transition-all hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:border-grayOne disabled:hover:text-dark"
+          className="p-3 rounded-custom hover:bg-primary/5 text-primary border-primary/60 border-2 text-lg transition-all disabled:border-grayOne disabled:hover:bg-transparent disabled:cursor-not-allowed disabled:text-grayOne"
         >
-          <IoIosArrowForward />
+          <IoIosArrowForward className="size-5 font-extrabold" />
         </button>
       </div>
 
       <div className=" text-dark flex pt-10 flex-col gap-4 w-full max-w-4xl">
-        <h2 className="text-5xl font-titles">
+        <h2 className="text-5xl text-dark/85 font-thin tracking-wide font-titles">
           {timelineEvents[selectedIndex].title}
         </h2>
         <p className="italic text-dark/50 textsize">

@@ -49,7 +49,7 @@ function LandingPage() {
           when growing up.
         </p>
         <Button
-          className="bg-primary hover:bg-primaryHover text-white font-bold py-2 px-4 rounded-custom"
+          className=""
           onClick={() =>
             document
               .getElementById("quiz")

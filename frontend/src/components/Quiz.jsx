@@ -79,15 +79,13 @@ function Quiz() {
   return (
     <div
       id="quiz"
-      className="text-textsize py-16 bg-bgcolor flex flex-col items-center justify-center px-4 !bg-red-300"
+      className="text-textsize py-16 bg-bgcolor flex flex-col items-center justify-center px-4"
     >
       <Title
-        title="Dino Quiz"
-        description="Test your dino-knowledge and see how much you know about these
-          prehistoric creatures!"
+        title="Smart Quiz"
       />
 
-      <div className="w-full text-dark shadow-custom max-w-2xl h-fit bg-white p-8 rounded-custom ">
+      <div className="w-full hover:shadow-xl transition text-dark shadow-custom max-w-2xl h-fit bg-white p-8 rounded-custom ">
         {status === "active" && (
           <section>
             {/* progress bar */}
@@ -109,7 +107,7 @@ function Quiz() {
 
             {/* current question */}
             <div className="mb-6">
-              <h4 className="font-titles text-2xl">
+              <h4 className="font-titles tracking-wide font-thin text-2xl">
                 {currentQuestion.question}
               </h4>
             </div>

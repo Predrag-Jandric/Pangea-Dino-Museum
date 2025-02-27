@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <main className="font-body bg-bgcolor">
+    <main className="font-body bg-bgcolortwo">
       <LandingPage />
       <Timeline />
       <Ecommerce />

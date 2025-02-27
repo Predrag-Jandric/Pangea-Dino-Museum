@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { addToCart } from "../../utils/shoppingSlice.js";
 import { useDispatch } from "react-redux";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import EcommerceSearch from "./EcommerceSearch.jsx";
 import EcommerceCard from "./EcommerceCard.jsx";
-import Button from "../../utils/Button.jsx";
 import Title from "../Title.jsx";
 
 // const API_BASE_URL =
@@ -65,12 +65,11 @@ function EcommerceDisplay() {
   return (
     <div
       id="shop"
-      className="container py-16 mx-auto !bg-red-200 bg-bgcolor flex flex-col items-center justify-center text-dark"
+      className="container py-16 mx-auto bg-bgcolortwo flex flex-col items-center justify-center text-dark"
     >
       <Title
-        title="Dino Quiz"
-        description="Test your dino-knowledge and see how much you know about these
-          prehistoric creatures!"
+        title="Online Shop"
+        // description="Browse our dinosaur collection "
       />
 
       <section className="flex w-full flex-col items-center gap-6 px-4 md:max-w-[65rem]">
@@ -110,25 +109,25 @@ function EcommerceDisplay() {
 
             {/* pagination */}
             <div className="flex justify-center">
-              <Button
+              <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
-                className="disabled:opacity-50"
+                className="p-3 rounded-custom hover:bg-primary/5 text-primary border-primary/60 border-2 text-lg transition-all  disabled:hover:bg-transparent disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50"
               >
-                Previous
-              </Button>
+                <IoIosArrowBack className="size-5 font-extrabold" />
+              </button>
               <span className="px-4 py-2 mx-1 ">
                 Page {currentPage} of {totalPages}
               </span>
-              <Button
+              <button
                 onClick={() =>
                   setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
                 disabled={currentPage === totalPages}
-                className="disabled:opacity-50"
+                className="p-3 rounded-custom hover:bg-primary/5 text-primary border-primary/60 border-2 text-lg transition-all disabled:hover:bg-transparent disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50"
               >
-                Next
-              </Button>
+                <IoIosArrowForward className="size-5 font-extrabold" />
+              </button>
             </div>
           </>
         )}

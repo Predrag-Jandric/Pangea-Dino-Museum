@@ -13,27 +13,20 @@ export default {
         primaryHover: "#639DCF",
 
         bgcolor: "#F7F7F7",
+        bgcolortwo: "#EFEFEF",
 
         grayOne: "#d4d4d8", // good
         greenOne: "#22c55e",
-        greenOneHover: "#19b352",
 
-        // primary: "rgb(255, 24, 166)",
-        // secondary: "rgb(140, 51, 217)",
-        // highlight: "rgb(52, 239, 200)",
         dark: "#3E3C3C",
-        // dark: "#D93737",
-        // light: "rgb(246, 254, 223)",
       },
 
-      // "Comic Sans MS" for testing
-      // Work Sans and Nunito not integrated into the app at this time!
+      // Comic Sans MS and Papyrus for testing
       fontFamily: {
-        titles: ["Playfair Display", "serif"],
-        body: ["Proza Libre", "serif"],
+        titles: ["Londrina Solid", "serif"],
+        body: ["Poppins", "serif"],
         // titles: ["Comic Sans MS", "serif"],
         // body: ["Papyrus", "serif"],
-
       },
       fontSize: {
         titlessize: "2rem",
@@ -43,7 +36,7 @@ export default {
         custom: "0px",
       },
       boxShadow: {
-        "custom": "0 7px 10px -2px rgb(0, 0, 0, 0.1)"
+        custom: "0 7px 10px -2px rgb(0, 0, 0, 0.1)",
       },
       screens: {
         xs: "480px",

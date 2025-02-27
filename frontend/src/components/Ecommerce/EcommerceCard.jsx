@@ -17,7 +17,9 @@ function EcommerceCard({ item, handleAddToCart }) {
       />
 
       {/* Product Info */}
-      <h2 className={`mb-3 text-xl  ${item.name.length > 15 && "text-sm"}`}>
+      <h2
+        className={`mb-3 text-2xl text-dark/85 font-titles font-light tracking-wider ${item.name.length > 15 && "text-xl"}`}
+      >
         {item.name}
       </h2>
       <p className="mb-1">
@@ -41,7 +43,7 @@ function EcommerceCard({ item, handleAddToCart }) {
         className={` ${
           item.inStock === 0 || isInCart
             ? "cursor-not-allowed !bg-gray-300 hover:bg-gray-300"
-            : "bg-transparent hover:bg-primaryHover"
+            : "hover:bg-primaryHover"
         }`}
       >
         {item.inStock === 0
