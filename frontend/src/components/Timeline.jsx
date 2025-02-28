@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { timelineEvents } from "../utils/data";
+import Title from "./Title";
 
 function Timeline() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -18,14 +19,18 @@ function Timeline() {
   };
 
   return (
-    <div id="timeline" className="py-16 pt-24 px-4 flex flex-col items-center bg-bgcolor">
+    <div
+      id="timeline"
+      className="py-16 px-4 flex flex-col items-center bg-bgcolor"
+    >
+      <Title title="Ancient Timeline" className="mb-12" />
       <div className="flex items-center justify-between w-full max-w-4xl">
         <button
           onClick={handlePrev}
           disabled={selectedIndex === 0}
           className="p-3 rounded-custom hover:bg-primary/5 text-primary border-primary/60 border-2 text-lg transition-all disabled:border-grayOne disabled:hover:bg-transparent disabled:cursor-not-allowed disabled:text-grayOne"
-          >
-            <IoIosArrowBack className="size-5 font-extrabold" />
+        >
+          <IoIosArrowBack className="size-5 font-extrabold" />
         </button>
 
         <div className="relative flex-1 mx-4">
@@ -77,7 +82,7 @@ function Timeline() {
       </div>
 
       <div className=" text-dark flex pt-10 flex-col gap-4 w-full max-w-4xl">
-        <h2 className="text-5xl text-dark/85 font-thin tracking-wide font-titles">
+        <h2 className="text-4xl text-dark/85 font-thin tracking-wide font-titles">
           {timelineEvents[selectedIndex].title}
         </h2>
         <p className="italic text-dark/50 textsize">

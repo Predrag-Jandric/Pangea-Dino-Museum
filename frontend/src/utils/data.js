@@ -1,13 +1,21 @@
+import image1 from "../assets/image1.jpg";
+import image2 from "../assets/image2.jpg";
+import image3 from "../assets/image3.jpg";
+import image4 from "../assets/image4.jpg";
+import image6 from "../assets/image6.jpg";
+
 export const navLinks = [
   { href: "timeline", label: "Timeline" },
-  { href: "quiz", label: "Quiz" },
   { href: "shop", label: "Shop" },
+  { href: "quiz", label: "Quiz" },
 ];
 
 export const landingPageBGimageSlider = [
-  "https://img.freepik.com/premium-photo/two-cute-dinosaurs-desert_107062-22633.jpg",
-  "https://img.freepik.com/premium-photo/three-adorable-dinosaurs-by-river_107062-22159.jpg",
-  "https://img.freepik.com/premium-photo/two-friendly-triceratops-enjoying-day_107062-22168.jpg",
+  image1,
+  image6,
+  image3,
+  image2,
+  image4,
 ];
 
 export const quizQuestions = [

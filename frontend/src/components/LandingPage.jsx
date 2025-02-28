@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Navbar from "./navbar/Navbar";
 import { landingPageBGimageSlider } from "../utils/data";
-import Button from "../utils/Button";
+import { SlArrowDown } from "react-icons/sl";
+import useScrollTo from "../utils/useScrollTo";
 
 function LandingPage() {
+  const scrollToSection = useScrollTo(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -11,7 +13,7 @@ function LandingPage() {
       setActiveIndex(
         (prevIndex) => (prevIndex + 1) % landingPageBGimageSlider.length
       );
-    }, 4000);
+    }, 5500);
 
     return () => clearInterval(interval);
   }, []);
@@ -36,28 +38,25 @@ function LandingPage() {
       </section>
 
       {/* centered text & btn */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-bgcolor">
-        <h1 className="font-titles mb-4 mx-3 text-xl md:text-4xl font-bold text-center">
-          When you grow up, people dont ask you what your favorite dinosaur is.
-          <div>We do.</div>
+      <div className="relative md:w-[80%] w-full mx-auto z-10 flex flex-col items-center justify-center h-full text-bgcolor">
+        <h1 className="xl:text-6xl font-titles tracking-wide text-4xl leading-[3rem] md:leading-[4rem] mx-6 xl:leading-[5rem] [word-spacing:8px] md:text-5xl text-center">
+          Step Into Pangea, Prehistoric World Where Dinosaurs Roam Again!
         </h1>
-        <p className="mb-6 mx-5 md:mx-20 text-textsize text-center">
-          At DiNostalgia, we care about your inner-dino-loving child! Explore
-          our site to remember your favorite herbivores, where and when they
-          roamed the earth before smartphones took over. Test your
-          dino-knowledge and reward yourself with all the dino merch you wanted
-          when growing up.
+        <p className="text-lg my-8 text-center mx-6">
+          Discover the ancient giants, challenge your knowledge, and bring the
+          Jurassic era to life with exclusive collectibles!
         </p>
-        <Button
-          className=""
-          onClick={() =>
-            document
-              .getElementById("quiz")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
+        <a
+          href="#timeline"
+          rel="noopener noreferrer"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("timeline");
+          }}
+          className="scroll-smooth"
         >
-          Explore
-        </Button>
+          <SlArrowDown className="size-10 animate-bounce" />
+        </a>
       </div>
     </div>
   );
