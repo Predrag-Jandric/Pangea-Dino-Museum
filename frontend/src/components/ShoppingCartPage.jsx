@@ -32,7 +32,7 @@ function ShoppingCartPage() {
   }, 0);
 
   const handleCheckout = () => {
-   alert("coming soon")
+    openModal()
   };
 
   const handleClearCart = () => {

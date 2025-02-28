@@ -1,11 +1,12 @@
 import { navLinks } from "../utils/data.js";
 import useScrollTo from "../utils/useScrollTo.js";
 import { teamMembers } from "../utils/data.js";
+import chinguLogo from "../assets/chingu-logo.png";
 
 function Footer() {
   const scrollToSection = useScrollTo();
   return (
-    <footer className="bg-primary text-bgcolor">
+    <footer className="bg-primary text-white">
       <section className="container mx-auto flex flex-col justify-between gap-12 px-4 xl:px-8 py-20 md:flex-row">
         {/* navigation  */}
         <article className="flex-1">
@@ -58,7 +59,7 @@ function Footer() {
             target="_blank"
             href="https://www.chingu.io/"
           >
-            <img src="/chingu-logo.png" className="h-16" alt="chingu logo" />
+            <img src={chinguLogo} className="h-16" alt="chingu logo" />
           </a>
 
           <p className="mt-4">

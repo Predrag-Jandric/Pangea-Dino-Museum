@@ -124,15 +124,15 @@ function Quiz() {
                     // highlight selected answer
                     optionIndex === answer
                       ? optionIndex === currentQuestion.correctOption
-                        ? "bg-green-200 border-greenOne" // correct selected answer
-                        : "bg-red-200 border-red-500" // incorrect selected answer
+                        ? "bg-primary/10 border-primary/50" // correct selected answer
+                        : "bg-alert/10 border-alert/30" // incorrect selected answer
                       : "bg-gray-50 border-grayOne"
                   } ${
                     // highlight correct answer when an incorrect answer is selected
                     answer !== null &&
                     optionIndex === currentQuestion.correctOption &&
                     optionIndex !== answer
-                      ? "bg-green-200 border-greenOne"
+                      ? "bg-primary/15 border-primary/80"
                       : ""
                   } ${
                     // dim non-selected options after answering

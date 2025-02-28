@@ -108,13 +108,10 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
       <nav className="fixed left-0 top-0 z-40 h-full w-full translate-x-full bg-dark/80 pt-10 text-white transition-colors">
         <ul className="relative flex flex-col gap-y-6 px-8">
           <motion.div className="mb-4 flex w-full items-center justify-between px-5">
-            <Link
-              to="/shoppingCartPage"
-              className="cart-icon relative mr-auto text-4xl"
-            >
+            <Link to="/shoppingCartPage" className="cart-icon text-4xl">
               <TfiShoppingCart className="text-secondary transition hover:text-highlight" />
               {cart.length > 0 && (
-                <span className="absolute -top-1 right-2.5 flex h-5 w-5 animate-bounce items-center justify-center rounded-full bg-red-500 text-xs text-white">
+                <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce text-dark items-center justify-center font-bold text-sm rounded-full bg-alert">
                   {cart.length}
                 </span>
               )}

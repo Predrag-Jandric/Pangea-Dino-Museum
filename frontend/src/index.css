@@ -15,13 +15,13 @@
 }
 
 .progress-bar::-webkit-progress-value {
-  background-color: #4489c5; /* Use the primary color value */
+  background-color: #3EA361;
 }
 
 .progress-bar::-moz-progress-bar {
-  background-color: #4489c5; /* Use the primary color value */
+  background-color: #3EA361;
 }
 
 .progress-bar::-ms-fill {
-  background-color: #4489c5; /* Use the primary color value */
+  background-color: #3EA361;
 }

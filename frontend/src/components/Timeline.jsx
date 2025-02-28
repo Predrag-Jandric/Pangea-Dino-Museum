@@ -53,7 +53,7 @@ function Timeline() {
                 className="relative py-1 cursor-pointer flex flex-col items-center"
               >
                 <span
-                  className={`absolute -top-16 p-2 text-center w-23 text-sm  ${
+                  className={`absolute hover:-top-[4.2rem] transition-all -top-16 p-2 text-center w-23 text-sm  ${
                     index === selectedIndex ? "text-primary" : "text-dark"
                   }`}
                 >

@@ -9,14 +9,17 @@ export default {
         pureBlack: "#000000",
 
         // primary colors
-        primary: "#4489C5",
-        primaryHover: "#639DCF",
+        // primary: "#40A045",
+        // primaryHover: "#388E3D",
+
+        primary: "#3EA361",
+        primaryHover: "#479A67",
 
         bgcolor: "#F7F7F7",
         bgcolortwo: "#EFEFEF",
 
-        grayOne: "#d4d4d8", // good
-        greenOne: "#22c55e",
+        grayOne: "#d4d4d8",
+        alert: "#FF0000",
 
         dark: "#3E3C3C",
       },

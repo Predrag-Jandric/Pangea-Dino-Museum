@@ -55,7 +55,7 @@ function LandingPage() {
           }}
           className="scroll-smooth"
         >
-          <SlArrowDown className="size-10 animate-bounce" />
+          <SlArrowDown className="transition hover:text-primary size-10 animate-bounce" />
         </a>
       </div>
     </div>
