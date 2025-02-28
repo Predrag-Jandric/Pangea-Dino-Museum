@@ -7,7 +7,7 @@ function EcommerceCard({ item, handleAddToCart }) {
   return (
     <div
       key={item._id}
-      className="flex flex-col bg-white rounded-custom border border-gray-200 p-5 shadow-custom hover:shadow-xl transition"
+      className="flex flex-col bg-white rounded-custom border border-grayOne/70 p-5 shadow-custom hover:shadow-xl transition-all"
     >
       {/* Product Image */}
       <img
