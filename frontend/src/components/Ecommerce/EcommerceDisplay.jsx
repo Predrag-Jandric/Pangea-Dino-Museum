@@ -82,11 +82,11 @@ function EcommerceDisplay() {
 
         {/* responsive grid */}
         {loading ? (
-          <div className="flex h-96 w-[40rem] items-center justify-center text-2xl">
-            Fetching data...
+          <div className="flex h-96 items-center justify-center text-2xl">
+            Dinosaur data coming ...
           </div>
         ) : currentItems.length === 0 ? (
-          <div className="flex h-96 w-[40rem] items-center justify-center text-2xl">
+          <div className="flex h-96 items-center justify-center text-2xl">
             No dinosaurs found.
           </div>
         ) : (

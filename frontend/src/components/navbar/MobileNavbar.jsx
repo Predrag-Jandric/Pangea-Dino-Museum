@@ -63,7 +63,7 @@ function useMenuAnimation(isOpen) {
       ],
     ];
 
-    // Animate the button and menu separately
+    // animate the button and menu separately
     animate([...buttonAnimations]);
     animate([...menuAnimations]);
   }, [animate, isOpen]);
@@ -105,11 +105,14 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
 
   return (
     <div ref={scope}>
-      <nav className="fixed left-0 top-0 z-40 h-full w-full translate-x-full bg-dark/80 pt-10 text-white transition-colors">
-        <ul className="relative flex flex-col gap-y-6 px-8">
-          <motion.div className="mb-4 flex w-full items-center justify-between px-5">
+      <nav
+        className="bg-gradient-to-br from-primary to-primaryHover
+      fixed left-0 top-0 z-40 h-full w-full translate-x-full pt-10 text-white transition-colors"
+      >
+        <div className="relative flex flex-col gap-y-6 px-8">
+          <motion.div className="mb-4 flex w-full items-center justify-between ">
             <Link to="/shoppingCartPage" className="cart-icon text-4xl">
-              <TfiShoppingCart className="text-secondary transition hover:text-highlight" />
+              <TfiShoppingCart />
               {cart.length > 0 && (
                 <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce text-dark items-center justify-center font-bold text-sm rounded-full bg-alert">
                   {cart.length}
@@ -127,12 +130,13 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
               }
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <IoCloseOutline className="size-12 cursor-pointer hover:text-primaryHover transition-colors" />
+              <IoCloseOutline className="size-12 cursor-pointer hover:rotate-45 transition-all" />
             </motion.div>
           </motion.div>
           {navLinks.map((link, index) => (
             <li key={index} className="group relative z-10 flex w-full">
               <a
+                key={index}
                 rel="noopener noreferrer"
                 href={`#${link.href}`}
                 onClick={(e) => {
@@ -140,14 +144,13 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
                   scrollToSection(link.href);
                   setIsOpen(false);
                 }}
-                className="relative w-full cursor-pointer px-5 py-2 text-3xl transition duration-200 ease-in-out hover:text-secondary text-secondary group-hover:before:scale-100"
+                className="group relative w-full cursor-pointer py-2 text-3xl hover:pl-4 transition-all duration-200 ease-in-out"
               >
                 {link.label}
               </a>
-              <span className="absolute left-5 top-full z-[-1] h-[3px] w-32 origin-left scale-x-0 bg-highlight transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
             </li>
           ))}
-        </ul>
+        </div>
       </nav>
     </div>
   );
