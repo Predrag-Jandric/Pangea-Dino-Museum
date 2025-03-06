@@ -43,14 +43,14 @@ export const quizQuestions = [
     points: 5,
   },
   {
-    question: "Which dinosaur was known for the large plates along its back?",
+    question: "Which dinosaur was known for large plates on its back?",
     options: ["Allosaurus", "Stegosaurus", "Pachycephalosaurus", "Gallimimus"],
     correctOption: 1,
     points: 20,
   },
   {
     question:
-      "Which dinosaur was one of the fastest, reaching speeds up to 40 mph?",
+      "Which dinosaur could reach speeds up to 65 kmh?",
     options: [
       "Tyrannosaurus Rex",
       "Velociraptor",

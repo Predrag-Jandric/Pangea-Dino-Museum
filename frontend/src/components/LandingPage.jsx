@@ -38,7 +38,7 @@ function LandingPage() {
       </section>
 
       {/* centered text & btn */}
-      <div className="relative md:w-[80%] w-full mx-auto z-10 flex flex-col items-center justify-center h-full text-bgcolor">
+      <div className="relative md:w-[80%] w-full mx-auto z-10 flex flex-col items-center mt-36 justify-start h-full text-bgcolor">
         <h1 className="xl:text-6xl font-titles tracking-wide text-4xl leading-[3rem] md:leading-[4rem] mx-6 xl:leading-[5rem] [word-spacing:8px] md:text-5xl text-center">
           Step Into Pangea, Prehistoric World Where Dinosaurs Roam Again!
         </h1>
