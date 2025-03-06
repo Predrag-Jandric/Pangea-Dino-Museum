@@ -183,8 +183,11 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
             placeholder="Search..."
             className="input"
             onChange={(e) => {
-              setInputValue(e.target.value);
-              handleSearch(search, e.target.value);
+              let value = e.target.value;
+              let capitalizedValue =
+                value.charAt(0).toUpperCase() + value.slice(1);
+              setInputValue(capitalizedValue);
+              handleSearch(search, capitalizedValue);
             }}
           />
         </div>
@@ -196,7 +199,10 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
         </Button>
       )}
 
-      <Link to="/shoppingCartPage" className="mt-6 sm:mt-0 relative ml-auto text-4xl">
+      <Link
+        to="/shoppingCartPage"
+        className="mt-6 sm:mt-0 relative ml-auto text-4xl"
+      >
         <TfiShoppingCart className=" transition hover:text-highlight" />
         {cart.length > 0 && (
           <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce text-dark items-center justify-center font-bold text-sm rounded-full bg-alert">

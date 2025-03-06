@@ -7,7 +7,7 @@ function Footer() {
   const scrollToSection = useScrollTo();
   return (
     <footer className="bg-primary text-white">
-      <section className="container mx-auto flex flex-col justify-between gap-12 px-4 xl:px-8 py-20 md:flex-row">
+      <section className="container mx-auto flex flex-col justify-between gap-12 px-6 xl:px-8 py-20 md:flex-row">
         {/* navigation  */}
         <article className="flex-1">
           <h3 className="mb-7 text-xl tracking-widest font-normal font-titles">

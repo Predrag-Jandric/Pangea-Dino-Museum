@@ -70,7 +70,7 @@ function EcommerceDisplay() {
         // description="Browse our dinosaur collection "
       />
 
-      <section className="flex w-full flex-col items-center gap-6 px-4 md:max-w-[65rem]">
+      <section className="flex w-full flex-col items-center gap-6 px-6 md:max-w-[65rem]">
         {/* search and filters */}
         <EcommerceSearch
           dinos={dinos}

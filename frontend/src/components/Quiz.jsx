@@ -79,13 +79,13 @@ function Quiz() {
   return (
     <div
       id="quiz"
-      className="text-textsize py-16 bg-bgcolor flex flex-col items-center justify-center px-4"
+      className="text-textsize py-16 bg-bgcolor flex flex-col items-center justify-center px-6"
     >
       <Title
         title="Smart Quiz"
       />
 
-      <div className="w-full hover:shadow-xl transition text-dark shadow-custom max-w-2xl h-fit bg-white p-8 rounded-custom ">
+      <div className="w-full hover:shadow-xl transition text-dark shadow-custom max-w-2xl h-fit bg-white p-5 sm:p-8 rounded-custom ">
         {status === "active" && (
           <section>
             {/* progress bar */}

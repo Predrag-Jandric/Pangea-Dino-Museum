@@ -21,7 +21,7 @@ function Timeline() {
   return (
     <div
       id="timeline"
-      className="py-16 px-4 flex flex-col items-center bg-bgcolor"
+      className="py-16 px-6 flex flex-col items-center bg-bgcolor"
     >
       <Title title="Ancient Timeline" className="mb-12" />
       <div className="flex items-center justify-between w-full max-w-4xl">
@@ -53,7 +53,7 @@ function Timeline() {
                 className="relative py-1 cursor-pointer flex flex-col items-center"
               >
                 <span
-                  className={`absolute hover:-top-[4.2rem] transition-all -top-16 p-2 text-center w-23 text-sm  ${
+                  className={`absolute hover:-top-[4.2rem] transition-all -top-16 p-2 text-center w-23 sm:text-sm text-[0.65rem] ${
                     index === selectedIndex ? "text-primary" : "text-dark"
                   }`}
                 >

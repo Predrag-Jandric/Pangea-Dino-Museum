@@ -106,7 +106,8 @@ function ShoppingCartPage() {
                           alt="dino"
                           className="size-28 object-contain"
                         />
-                        <span>{item.name}</span>
+                        <span className="break-words min-w-[16rem]">{item.name}</span>
+
                       </td>
 
                       {/* Price */}
@@ -161,23 +162,30 @@ function ShoppingCartPage() {
             <div className="flex justify-between">
               <button
                 onClick={handleClearCart}
-                className="text-primaryHover bg-transparent border border-primary hover:bg-primary hover:text-white shadow-custom transition
+                className="hidden sm:block text-primaryHover bg-transparent border border-primary hover:bg-primary hover:text-white shadow-custom transition
               font-medium py-2 px-4 rounded-custom"
               >
                 Clear Cart
               </button>
-              <h2 className="text-2xl">
-                Total: <span className="ml-20">${totalPrice.toFixed(2)}</span>
+              <h2 className="text-2xl ml-auto">
+                Total: <span className="ml-4 sm:ml-20">${totalPrice.toFixed(2)}</span>
               </h2>
             </div>
 
-            <hr className="border border-dark/15 w-56 ml-auto" />
+            <hr className="border border-dark/15 w-56 sm:w-80 ml-auto" />
 
             {/* Action Buttons */}
-            <div className="w-full flex justify-end">
-              <Button onClick={handleCheckout} className="w-56">
+            <div className="w-full sm:flex sm:flex-row sm:justify-end flex flex-col gap-3">
+              <Button onClick={handleCheckout} className="w-full sm:w-56">
                 Checkout
               </Button>
+              <button
+                onClick={handleClearCart}
+                className="sm:hidden text-primaryHover bg-transparent border border-primary hover:bg-primary hover:text-white shadow-custom transition
+              font-medium py-2 px-4 rounded-custom"
+              >
+                Clear Cart
+              </button>
             </div>
           </div>
         </>
