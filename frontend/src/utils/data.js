@@ -12,10 +12,10 @@ export const navLinks = [
 
 export const landingPageBGimageSlider = [
   image1,
+  image4,
   image6,
   image3,
   image2,
-  image4,
 ];
 
 export const quizQuestions = [

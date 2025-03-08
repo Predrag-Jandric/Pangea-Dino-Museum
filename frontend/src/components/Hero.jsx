@@ -3,8 +3,10 @@ import Navbar from "./navbar/Navbar";
 import { landingPageBGimageSlider } from "../utils/data";
 import { SlArrowDown } from "react-icons/sl";
 import useScrollTo from "../utils/useScrollTo";
+import { motion } from "framer-motion";
+import { heroAnimation } from "../utils/animations";
 
-function LandingPage() {
+function Hero() {
   const scrollToSection = useScrollTo(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -38,7 +40,13 @@ function LandingPage() {
       </section>
 
       {/* centered text & btn */}
-      <div className="relative md:w-[80%] w-full mx-auto z-10 flex flex-col items-center mt-36 justify-start h-full text-bgcolor">
+      <motion.div
+        variants={heroAnimation}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="relative md:w-[80%] w-full mx-auto z-10 flex flex-col items-center mt-36 justify-start h-full text-bgcolor"
+      >
         <h1 className="xl:text-6xl font-titles tracking-wide text-4xl leading-[3rem] md:leading-[4rem] mx-6 xl:leading-[5rem] [word-spacing:8px] md:text-5xl text-center">
           Step Into Pangea, Prehistoric World Where Dinosaurs Roam Again!
         </h1>
@@ -57,9 +65,9 @@ function LandingPage() {
         >
           <SlArrowDown className="transition hover:text-primary size-10 animate-bounce" />
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 }
 
-export default LandingPage;
+export default Hero;

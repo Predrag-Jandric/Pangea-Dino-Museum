@@ -6,6 +6,8 @@ import EcommerceSearch from "./EcommerceSearch.jsx";
 import EcommerceCard from "./EcommerceCard.jsx";
 import Title from "../Title.jsx";
 import tempdata from "../../utils/tempdata.json"
+import { motion } from "framer-motion";
+import { defaultAnimation } from "../../utils/animations.js";
 
 function EcommerceDisplay() {
   const dispatch = useDispatch();
@@ -61,7 +63,11 @@ function EcommerceDisplay() {
   const totalPages = Math.ceil(filtered.length / itemsPerPage);
 
   return (
-    <div
+    <motion.div
+    variants={defaultAnimation}
+    initial="initial"
+    whileInView="animate"
+    viewport={{ once: true }}
       id="shop"
       className="container py-16 mx-auto bg-bgcolortwo flex flex-col items-center justify-center text-dark"
     >
@@ -130,7 +136,7 @@ function EcommerceDisplay() {
           </>
        
       </section>
-    </div>
+    </motion.div>
   );
 }
 

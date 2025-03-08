@@ -3,6 +3,8 @@ import { quizQuestions } from "../utils/data";
 import "../index.css"; // Import the stylesheet
 import Button from "../utils/Button";
 import Title from "./Title";
+import { motion } from "framer-motion";
+import { defaultAnimation } from "../utils/animations.js";
 
 const shuffledQuestions = quizQuestions.sort(() => Math.random() - 0.5);
 
@@ -77,13 +79,15 @@ function Quiz() {
   if (percentage === 0) emoji = "😭";
 
   return (
-    <div
+    <motion.div
+      variants={defaultAnimation}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
       id="quiz"
       className="text-textsize py-16 bg-bgcolor flex flex-col items-center justify-center px-6"
     >
-      <Title
-        title="Smart Quiz"
-      />
+      <Title title="Smart Quiz" />
 
       <div className="w-full hover:shadow-xl transition text-dark shadow-custom max-w-2xl h-fit bg-white p-5 sm:p-8 rounded-custom ">
         {status === "active" && (
@@ -148,18 +152,17 @@ function Quiz() {
             </div>
 
             {/* next/finish button */}
-              <Button
-                className="mt-6 py-2.5 w-full disabled:cursor-not-allowed disabled:!bg-gray-300 disabled:hover:bg-gray-300"
-                disabled={answer === null}
-                onClick={() =>
-                  dispatch({
-                    type: index < numQuestions - 1 ? "nextQuestion" : "finish",
-                  })
-                }
-              >
-                {index < numQuestions - 1 ? "Next" : "Finish"}
-              </Button>
-          
+            <Button
+              className="mt-6 py-2.5 w-full disabled:cursor-not-allowed disabled:!bg-gray-300 disabled:hover:bg-gray-300"
+              disabled={answer === null}
+              onClick={() =>
+                dispatch({
+                  type: index < numQuestions - 1 ? "nextQuestion" : "finish",
+                })
+              }
+            >
+              {index < numQuestions - 1 ? "Next" : "Finish"}
+            </Button>
           </section>
         )}
 
@@ -167,19 +170,22 @@ function Quiz() {
         {status === "finished" && (
           <div className="text-center py-20">
             <p className="mb-4 text-xl">
-              <span>{emoji}</span> You scored <span>{points} points</span> out of{" "}
-              {maxPossiblePoints} ({Math.ceil(percentage)}%)
+              <span>{emoji}</span> You scored <span>{points} points</span> out
+              of {maxPossiblePoints} ({Math.ceil(percentage)}%)
             </p>
 
             <p className="mb-6 text-xl">Highscore: {highscore} points</p>
 
-            <Button onClick={() => dispatch({ type: "restart" })} className="w-48">
+            <Button
+              onClick={() => dispatch({ type: "restart" })}
+              className="w-48"
+            >
               Restart Quiz
             </Button>
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

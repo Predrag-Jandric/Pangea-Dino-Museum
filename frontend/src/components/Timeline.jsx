@@ -2,6 +2,8 @@ import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { timelineEvents } from "../utils/data";
 import Title from "./Title";
+import { motion } from "framer-motion";
+import { defaultAnimation } from "../utils/animations";
 
 function Timeline() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -19,7 +21,11 @@ function Timeline() {
   };
 
   return (
-    <div
+    <motion.div
+      variants={defaultAnimation}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
       id="timeline"
       className="py-16 px-6 flex flex-col items-center bg-bgcolor"
     >
@@ -53,7 +59,7 @@ function Timeline() {
                 className="relative py-1 cursor-pointer flex flex-col items-center"
               >
                 <span
-                  className={`absolute hover:-top-[4.2rem] transition-all -top-16 p-2 text-center w-23 sm:text-sm text-[0.65rem] ${
+                  className={`absolute hover:-top-[4.2rem] transition-all -top-16 p-2 text-center w-23 sm:text-sm text-[0.75rem] ${
                     index === selectedIndex ? "text-primary" : "text-dark"
                   }`}
                 >
@@ -92,7 +98,7 @@ function Timeline() {
           {timelineEvents[selectedIndex].description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

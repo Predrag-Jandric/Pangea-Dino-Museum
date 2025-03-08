@@ -1,4 +1,4 @@
-import LandingPage from "./components/LandingPage";
+import Hero from "./components/Hero";
 import Quiz from "./components/Quiz";
 import Timeline from "./components/Timeline";
 import Footer from "./components/Footer";
@@ -9,7 +9,7 @@ import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <main className="font-body bg-bgcolortwo">
-      <LandingPage />
+      <Hero />
       <Timeline />
       <Ecommerce />
       <Quiz />

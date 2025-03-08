@@ -10,5 +10,6 @@ TASKS:
 
 - add animations
 - on page refresh, the cart does not load local storage
+- shopping cart page when increasing Quantity, the total number will be jittery
 
 DONE
