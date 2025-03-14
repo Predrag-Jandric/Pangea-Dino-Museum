@@ -3,7 +3,7 @@ function Button({ children, onClick, className, disabled }) {
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`bg-primary font-body shadow-custom transition hover:bg-primaryHover text-white font-medium py-2 px-4 rounded-custom ${className}`}
+      className={`rounded-custom bg-primary px-4 py-2 font-body font-medium text-white shadow-custom transition hover:bg-primaryHover ${className}`}
     >
       {children}
     </button>

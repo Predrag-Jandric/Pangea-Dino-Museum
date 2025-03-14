@@ -49,7 +49,7 @@ function EcommerceDisplay() {
         inStock: item.inStock,
         quantity: 1,
         imageSrc: item.imageSrc,
-      })
+      }),
     );
   };
 
@@ -68,12 +68,9 @@ function EcommerceDisplay() {
       whileInView="animate"
       viewport={{ once: true }}
       id="shop"
-      className="container py-16 mx-auto bg-bgcolortwo flex flex-col items-center justify-center text-dark"
+      className="container mx-auto flex flex-col items-center justify-center bg-bgcolortwo py-16 text-dark"
     >
-      <Title
-        title="Online Shop"
-        // description="Browse our dinosaur collection "
-      />
+      <Title title="Online Shop" />
 
       <section className="flex w-full flex-col items-center gap-6 px-6 md:max-w-[65rem]">
         {/* search and filters */}
@@ -94,7 +91,7 @@ function EcommerceDisplay() {
           </div>
         ) : (
           <>
-            {/* Grid for displaying products dynamically */}
+            {/* grid for displaying products dynamically */}
             <div
               className="grid w-full gap-6"
               style={{
@@ -115,11 +112,11 @@ function EcommerceDisplay() {
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
-                className="p-3 rounded-custom hover:bg-primary/5 text-primary border-primary/60 border-2 text-lg transition-all  disabled:hover:bg-transparent disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50"
+                className="rounded-custom border-2 border-primary/60 p-3 text-lg text-primary transition-all hover:bg-primary/5 disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50 disabled:hover:bg-transparent"
               >
                 <IoIosArrowBack className="size-5 font-extrabold" />
               </button>
-              <span className="px-4 py-2 mx-1 ">
+              <span className="mx-1 px-4 py-2">
                 Page {currentPage} of {totalPages}
               </span>
               <button
@@ -127,7 +124,7 @@ function EcommerceDisplay() {
                   setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
                 disabled={currentPage === totalPages}
-                className="p-3 rounded-custom hover:bg-primary/5 text-primary border-primary/60 border-2 text-lg transition-all disabled:hover:bg-transparent disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50"
+                className="rounded-custom border-2 border-primary/60 p-3 text-lg text-primary transition-all hover:bg-primary/5 disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50 disabled:hover:bg-transparent"
               >
                 <IoIosArrowForward className="size-5 font-extrabold" />
               </button>

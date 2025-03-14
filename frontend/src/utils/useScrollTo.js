@@ -12,7 +12,7 @@ function useScrollTo(offset = 0) {
         });
       }
     },
-    [offset]
+    [offset],
   );
 
   return scrollToSection;

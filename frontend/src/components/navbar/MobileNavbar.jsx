@@ -44,7 +44,7 @@ function useMenuAnimation(isOpen) {
           ],
         ];
 
-    // Button animations are independent
+    // independent button animations
     const buttonAnimations = [
       [
         "path.top",
@@ -105,16 +105,13 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
 
   return (
     <div ref={scope}>
-      <nav
-        className="bg-gradient-to-br from-primary to-primaryHover
-      fixed left-0 top-0 z-40 h-full w-full translate-x-full pt-10 text-white transition-colors"
-      >
+      <nav className="fixed left-0 top-0 z-40 h-full w-full translate-x-full bg-gradient-to-br from-primary to-primaryHover pt-10 text-white transition-colors">
         <div className="relative flex flex-col gap-y-6 px-8">
-          <motion.div className="mb-4 flex w-full items-center justify-between ">
+          <motion.div className="mb-4 flex w-full items-center justify-between">
             <Link to="/shoppingCartPage" className="cart-icon text-4xl">
               <TfiShoppingCart />
               {cart.length > 0 && (
-                <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce text-dark items-center justify-center font-bold text-sm rounded-full bg-alert">
+                <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-alert text-sm font-bold text-dark">
                   {cart.length}
                 </span>
               )}
@@ -130,7 +127,7 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
               }
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              <IoCloseOutline className="size-12 cursor-pointer hover:rotate-45 transition-all" />
+              <IoCloseOutline className="size-12 cursor-pointer transition-all hover:rotate-45" />
             </motion.div>
           </motion.div>
           {navLinks.map((link, index) => (
@@ -144,7 +141,7 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
                   scrollToSection(link.href);
                   setIsOpen(false);
                 }}
-                className="group relative w-full cursor-pointer py-2 text-3xl hover:pl-4 transition-all duration-200 ease-in-out"
+                className="group relative w-full cursor-pointer py-2 text-3xl transition-all duration-200 ease-in-out hover:pl-4"
               >
                 {link.label}
               </a>

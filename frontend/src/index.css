@@ -10,18 +10,18 @@
 
 @layer components {
   .input {
-    @apply rounded-custom h-10 w-full sm:w-auto border border-gray-300 bg-white px-4 py-2 shadow-custom transition hover:border-gray-400 focus:border-primary focus:outline-none;
+    @apply h-10 w-full rounded-custom border border-gray-300 bg-white px-4 py-2 shadow-custom transition hover:border-gray-400 focus:border-primary focus:outline-none sm:w-auto;
   }
 }
 
 .progress-bar::-webkit-progress-value {
-  background-color: #3EA361;
+  background-color: #3ea361;
 }
 
 .progress-bar::-moz-progress-bar {
-  background-color: #3EA361;
+  background-color: #3ea361;
 }
 
 .progress-bar::-ms-fill {
-  background-color: #3EA361;
+  background-color: #3ea361;
 }

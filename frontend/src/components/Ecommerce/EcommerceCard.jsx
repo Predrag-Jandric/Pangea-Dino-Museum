@@ -1,29 +1,27 @@
 import { useSelector } from "react-redux";
 import Button from "../../utils/Button";
 
+// this component is each individual card in the ecommerce page that displays the dinosaur info
 function EcommerceCard({ item, handleAddToCart }) {
   const cart = useSelector((state) => state.shopping.inCart);
   const isInCart = cart.some((cartItem) => cartItem.id === item._id);
   return (
     <div
       key={item._id}
-      className="flex flex-col bg-white rounded-custom border border-grayOne/70 p-5 shadow-custom hover:shadow-xl transition-all"
+      className="flex flex-col rounded-custom border border-grayOne/70 bg-white p-5 shadow-custom transition-all hover:shadow-xl"
     >
-      {/* Product Image */}
       <img
         src={item.imageSrc}
         alt={item.name}
         className="mb-4 h-52 w-full object-contain"
       />
-
-      {/* Product Info */}
       <h2
-        className={`mb-3 text-2xl text-dark/85 font-titles font-light tracking-wider ${item.name.length > 15 && "text-xl"}`}
+        className={`mb-3 font-titles text-2xl font-light tracking-wider text-dark/85 ${item.name.length > 15 && "text-xl"}`}
       >
         {item.name}
       </h2>
       <p className="mb-1">
-        Price: <span className="text-primary font-semibold">${item.price}</span>
+        Price: <span className="font-semibold text-primary">${item.price}</span>
       </p>
       <p className="mb-3">
         In Stock:{" "}
@@ -35,8 +33,6 @@ function EcommerceCard({ item, handleAddToCart }) {
           {item.inStock}
         </span>
       </p>
-
-      {/* Add to Cart Button */}
       <Button
         onClick={() => handleAddToCart(item)}
         disabled={item.inStock === 0 || isInCart}

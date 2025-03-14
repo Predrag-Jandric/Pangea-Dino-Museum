@@ -49,8 +49,7 @@ export const quizQuestions = [
     points: 20,
   },
   {
-    question:
-      "Which dinosaur could reach speeds up to 65 kmh?",
+    question: "Which dinosaur could reach speeds up to 65 kmh?",
     options: [
       "Tyrannosaurus Rex",
       "Velociraptor",

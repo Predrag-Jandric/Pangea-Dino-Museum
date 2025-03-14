@@ -4,13 +4,11 @@ import {
   increaseQuantity,
   decreaseQuantity,
   clearCart,
-  setCart,
 } from "../utils/shoppingSlice";
 import { ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
 import Modal from "../utils/Modal.jsx";
 import useModal from "../utils/useModal.jsx";
-import { useEffect } from "react";
 import Title from "./Title.jsx";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
@@ -20,16 +18,6 @@ function ShoppingCartPage() {
   const cart = useSelector((state) => state.shopping.inCart);
   const dispatch = useDispatch();
   const { isOpen, openModal, closeModal, handleClickOutside } = useModal();
-
-  // when loading component, if cart in state, save to localStorage
-  // if no cart state (i.e. navigate directly to page), load stored cart as state
-  useEffect(() => {
-    if (cart.length) localStorage.setItem("dinoCart", JSON.stringify(cart));
-    else {
-      const dinoCart = localStorage.getItem("dinoCart");
-      if (dinoCart) dispatch(setCart(JSON.parse(dinoCart)));
-    }
-  }, [cart]);
 
   const totalPrice = cart.reduce((total, item) => {
     return total + item.price * item.quantity;
@@ -45,16 +33,16 @@ function ShoppingCartPage() {
   };
 
   return (
-    <section className="bg-bgcolor pt-16 text-dark font-body min-h-screen p-6 flex flex-col items-center">
+    <section className="flex min-h-screen flex-col items-center bg-bgcolor p-6 pt-16 font-body text-dark">
       <ToastContainer />
 
       {cart.length === 0 ? (
-        <div className="text-center flex flex-col items-center">
+        <div className="flex flex-col items-center text-center">
           <Title className="" title="Shopping cart is empty" />
 
           <Link
             to="/"
-            className="flex w-fit flex-row items-center gap-3 p-3 rounded-custom hover:bg-primary/5 text-primary border-primary/60 border-2 text-lg transition-all disabled:hover:bg-transparent disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50"
+            className="flex w-fit flex-row items-center gap-3 rounded-custom border-2 border-primary/60 p-3 text-lg text-primary transition-all hover:bg-primary/5 disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50 disabled:hover:bg-transparent"
           >
             <IoIosArrowBack className="size-5 font-extrabold" />
             <span>Back to Homepage</span>
@@ -62,67 +50,67 @@ function ShoppingCartPage() {
         </div>
       ) : (
         <>
-          <article className="w-full max-w-5xl flex mb-10 items-center justify-start">
+          <article className="mb-10 flex w-full max-w-5xl items-center justify-start">
             <div className="flex items-center justify-center gap-3">
               <Link
                 to="/"
-                className="p-3 rounded-custom hover:bg-primary/5 text-primary border-primary/60 border-2 text-lg transition-all disabled:hover:bg-transparent disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50"
+                className="rounded-custom border-2 border-primary/60 p-3 text-lg text-primary transition-all hover:bg-primary/5 disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50 disabled:hover:bg-transparent"
               >
                 <IoIosArrowBack className="size-5 font-extrabold" />
               </Link>
               {/* <span>Back</span> */}
             </div>
 
-            <Title className="!pb-0 mx-auto " title="Your Shopping Cart" />
+            <Title className="mx-auto !pb-0" title="Your Shopping Cart" />
           </article>
           <div className="w-full max-w-5xl space-y-6">
-            {/* Table Layout */}
-            <div className="overflow-x-auto rounded-custom border border-grayOne/50 shadow-custom hover:shadow-xl transition">
-              <table className="w-full bg-white shadow-custom rounded-custom overflow-hidden">
+            {/* table Layout */}
+            <div className="overflow-x-auto rounded-custom border border-grayOne/50 shadow-custom transition hover:shadow-xl">
+              <table className="w-full overflow-hidden rounded-custom bg-white shadow-custom">
                 <thead className="bg-bgcolortwo">
                   <tr>
-                    <th className="p-3 text-[1.05rem] text-left font-semibold">
+                    <th className="p-3 text-left text-[1.05rem] font-semibold">
                       Product
                     </th>
-                    <th className="p-3 text-[1.05rem] text-center font-semibold">
+                    <th className="p-3 text-center text-[1.05rem] font-semibold">
                       Price
                     </th>
-                    <th className="p-3 text-[1.05rem] text-center font-semibold">
+                    <th className="p-3 text-center text-[1.05rem] font-semibold">
                       Quantity
                     </th>
-                    <th className="p-3 text-[1.05rem] text-center font-semibold">
+                    <th className="p-3 text-center text-[1.05rem] font-semibold">
                       Total
                     </th>
-                    <th className="p-3 text-[1.05rem] text-center font-semibold"></th>
+                    <th className="p-3 text-center text-[1.05rem] font-semibold"></th>
                   </tr>
                 </thead>
                 <tbody>
                   {cart.map((item) => (
                     <tr key={item.id} className="">
-                      {/* Product (Image + Name) */}
-                      <td className="p-3 flex items-center gap-3">
+                      {/* product */}
+                      <td className="flex items-center gap-3 p-3">
                         <img
                           src={item.imageSrc}
                           alt="dino"
                           className="size-28 object-contain"
                         />
-                        <span className="break-words min-w-[16rem]">{item.name}</span>
-
+                        <span className="min-w-[16rem] break-words">
+                          {item.name}
+                        </span>
                       </td>
 
-                      {/* Price */}
+                      {/* orice */}
                       <td className="p-3 text-center">
                         ${item.price.toFixed(2)}
                       </td>
 
-                      {/* Quantity Controls */}
+                      {/* quantity btns */}
                       <td className="p-3 text-center">
-                        <div className="flex border mx-auto border-grayOne w-fit items-center justify-center ">
+                        <div className="mx-auto flex w-fit items-center justify-center border border-grayOne">
                           <button
                             onClick={() => dispatch(decreaseQuantity(item.id))}
                             disabled={item.quantity === 1}
-                            className={`h-8 w-8 border-r font-extrabold border-grayOne flex items-center justify-center transition 
-                          ${item.quantity === 1 && "cursor-not-allowed bg-gray-200"}`}
+                            className={`flex h-8 w-8 items-center justify-center border-r border-grayOne font-extrabold transition ${item.quantity === 1 && "cursor-not-allowed text-dark/30 bg-gray-200"}`}
                           >
                             −
                           </button>
@@ -131,25 +119,24 @@ function ShoppingCartPage() {
                           <button
                             disabled={item.inStock === 0}
                             onClick={() => dispatch(increaseQuantity(item.id))}
-                            className={`h-8 w-8 border-l font-extrabold border-grayOne flex items-center justify-center transition 
-                            ${item.inStock === 0 && "cursor-not-allowed bg-gray-200"}`}
+                            className={`flex h-8 w-8 items-center justify-center border-l border-grayOne font-extrabold transition ${item.inStock === 0 && "cursor-not-allowed text-dark/30 bg-gray-200"}`}
                           >
                             +
                           </button>
                         </div>
                       </td>
 
-                      {/* Total Price */}
+                      {/* total Price */}
                       <td className="p-3 text-center">
                         ${(item.price * item.quantity).toFixed(2)}
                       </td>
 
-                      {/* Remove Button */}
+                      {/* x btn to remove individual cart item */}
                       <td className="p-3 text-center">
                         <button
                           onClick={() => dispatch(removeFromCart(item.id))}
                         >
-                          <IoCloseOutline className="text-dark/60 size-10 p-1" />
+                          <IoCloseOutline className="size-10 p-1 text-dark/60" />
                         </button>
                       </td>
                     </tr>
@@ -158,31 +145,30 @@ function ShoppingCartPage() {
               </table>
             </div>
 
-            {/* Cart Summary */}
+            {/* cart Summary */}
             <div className="flex justify-between">
               <button
                 onClick={handleClearCart}
-                className="hidden sm:block text-primaryHover bg-transparent border border-primary hover:bg-primary hover:text-white shadow-custom transition
-              font-medium py-2 px-4 rounded-custom"
+                className="hidden rounded-custom border border-primary bg-transparent px-4 py-2 font-medium text-primaryHover shadow-custom transition hover:bg-primary hover:text-white sm:block"
               >
                 Clear Cart
               </button>
-              <h2 className="text-2xl ml-auto">
-                Total: <span className="ml-4 sm:ml-20">${totalPrice.toFixed(2)}</span>
+              <h2 className="ml-auto text-2xl">
+                Total:{" "}
+                <span className="ml-4 sm:ml-20">${totalPrice.toFixed(2)}</span>
               </h2>
             </div>
 
-            <hr className="border border-dark/15 w-56 sm:w-80 ml-auto" />
+            <hr className="ml-auto w-56 border border-dark/15 sm:w-80" />
 
-            {/* Action Buttons */}
-            <div className="w-full sm:flex sm:flex-row sm:justify-end flex flex-col gap-3">
+            {/* checkout and clear cart btns */}
+            <div className="flex w-full flex-col gap-3 sm:flex sm:flex-row sm:justify-end">
               <Button onClick={handleCheckout} className="w-full sm:w-56">
                 Checkout
               </Button>
               <button
                 onClick={handleClearCart}
-                className="sm:hidden text-primaryHover bg-transparent border border-primary hover:bg-primary hover:text-white shadow-custom transition
-              font-medium py-2 px-4 rounded-custom"
+                className="rounded-custom border border-primary bg-transparent px-4 py-2 font-medium text-primaryHover shadow-custom transition hover:bg-primary hover:text-white sm:hidden"
               >
                 Clear Cart
               </button>
@@ -191,12 +177,12 @@ function ShoppingCartPage() {
         </>
       )}
 
-      {/* Modal */}
+      {/* modal */}
       {isOpen && (
         <Modal
           content={
-            <div className="flex flex-col gap-10 text-center">
-              <h1 className="text-xl">You cannot really buy these items.</h1>
+            <div className="mt-5 flex flex-col gap-10 text-center">
+              <h1 className="text-xl">Checkout feature is not implemented.</h1>
               <button
                 onClick={closeModal}
                 className="mt-4 rounded bg-primary px-4 py-2 text-white transition duration-200 hover:bg-primaryHover"

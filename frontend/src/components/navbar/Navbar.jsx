@@ -15,10 +15,10 @@ function Navbar() {
 
   return (
     <>
-      <nav className="relative z-30 flex h-[10vh] w-full text-lg items-center justify-between text-white px-6 py-14">
-        <div className="flex gap-4 h-20 w-20 items-center">
+      <nav className="relative z-30 flex h-[10vh] w-full items-center justify-between px-6 py-14 text-lg text-white">
+        <div className="flex h-20 w-20 items-center gap-4">
           <img src={logo} alt="logo" />
-          <p className="text-2xl tracking-widest font-thin font-titles">
+          <p className="font-titles text-2xl font-thin tracking-widest">
             Pangea
           </p>
         </div>
@@ -33,11 +33,7 @@ function Navbar() {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="relative flex items-center justify-center min-w-[7rem] px-5 py-2 cursor-pointer 
-      transition-all duration-200 ease-in-out 
-      before:absolute before:left-0 before:top-0 before:h-full before:w-full before:origin-left before:scale-x-0 
-      before:bg-primaryHover before:transition-transform before:duration-300 before:ease-in-out 
-      hover:before:scale-x-100 before:z-[-1]"
+                className="relative flex min-w-[7rem] cursor-pointer items-center justify-center px-5 py-2 transition-all duration-200 ease-in-out before:absolute before:left-0 before:top-0 before:z-[-1] before:h-full before:w-full before:origin-left before:scale-x-0 before:bg-primaryHover before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100"
               >
                 {link.label}
               </a>
@@ -46,17 +42,17 @@ function Navbar() {
 
           <Link
             to="/shoppingCartPage"
-            className="relative right-0 transition-all hover:right-1.5 ml-4 hidden text-4xl md:flex"
+            className="relative right-0 ml-4 hidden text-4xl transition-all hover:right-1.5 md:flex"
           >
             <TfiShoppingCart />
             {cart.length > 0 && (
-              <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce items-center justify-center font-bold text-sm text-dark rounded-full bg-alert">
+              <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-alert text-sm font-bold text-dark">
                 {cart.length}
               </span>
             )}
           </Link>
           <CgMenu
-            className="hover:mr-1.5 transition-all size-10 cursor-pointer md:hidden"
+            className="size-10 cursor-pointer transition-all hover:mr-1.5 md:hidden"
             onClick={() => setIsOpen(true)}
           />
         </div>

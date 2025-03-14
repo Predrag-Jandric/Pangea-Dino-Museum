@@ -66,7 +66,7 @@ function Quiz() {
 
   const maxPossiblePoints = questions.reduce(
     (prev, cur) => prev + cur.points,
-    0
+    0,
   );
 
   const percentage = (points / maxPossiblePoints) * 100;
@@ -85,21 +85,21 @@ function Quiz() {
       whileInView="animate"
       viewport={{ once: true }}
       id="quiz"
-      className="text-textsize py-16 bg-bgcolor flex flex-col items-center justify-center px-6"
+      className="flex flex-col items-center justify-center bg-bgcolor px-6 py-16 text-textsize"
     >
       <Title title="Smart Quiz" />
 
-      <div className="w-full hover:shadow-xl transition text-dark shadow-custom max-w-2xl h-fit bg-white p-5 sm:p-8 rounded-custom ">
+      <div className="h-fit w-full max-w-2xl rounded-custom bg-white p-5 text-dark shadow-custom transition hover:shadow-xl sm:p-8">
         {status === "active" && (
           <section>
             {/* progress bar */}
             <div className="mb-6">
               <progress
-                className="progress-bar w-full h-3 rounded-custom bg-grayOne/50"
+                className="progress-bar h-3 w-full rounded-custom bg-grayOne/50"
                 max={numQuestions}
                 value={index + Number(answer !== null)}
               />
-              <div className="mt-1 text-dark/70 text-sm flex justify-between">
+              <div className="mt-1 flex justify-between text-sm text-dark/70">
                 <p>
                   Question <span>{index + 1}</span> / {numQuestions}
                 </p>
@@ -111,7 +111,7 @@ function Quiz() {
 
             {/* current question */}
             <div className="mb-6">
-              <h4 className="font-titles tracking-wide font-thin text-2xl">
+              <h4 className="font-titles text-2xl font-thin tracking-wide">
                 {currentQuestion.question}
               </h4>
             </div>
@@ -124,19 +124,19 @@ function Quiz() {
                   onClick={() =>
                     dispatch({ type: "newAnswer", payload: optionIndex })
                   }
-                  className={`w-full py-3 px-4 rounded-custom text-left border-2 ${
+                  className={`w-full rounded-custom border-2 px-4 py-3 text-left ${
                     // highlight selected answer
                     optionIndex === answer
                       ? optionIndex === currentQuestion.correctOption
-                        ? "bg-primary/10 border-primary/50" // correct selected answer
-                        : "bg-alert/10 border-alert/30" // incorrect selected answer
-                      : "bg-gray-50 border-grayOne"
+                        ? "border-primary/50 bg-primary/10" // correct selected answer
+                        : "border-alert/30 bg-alert/10" // incorrect selected answer
+                      : "border-grayOne bg-gray-50"
                   } ${
                     // highlight correct answer when an incorrect answer is selected
                     answer !== null &&
                     optionIndex === currentQuestion.correctOption &&
                     optionIndex !== answer
-                      ? "bg-primary/15 border-primary/80"
+                      ? "border-primary/80 bg-primary/15"
                       : ""
                   } ${
                     // dim non-selected options after answering
@@ -153,7 +153,7 @@ function Quiz() {
 
             {/* next/finish button */}
             <Button
-              className="mt-6 py-2.5 w-full disabled:cursor-not-allowed disabled:!bg-gray-300 disabled:hover:bg-gray-300"
+              className="mt-6 w-full py-2.5 disabled:cursor-not-allowed disabled:!bg-gray-300 disabled:hover:bg-gray-300"
               disabled={answer === null}
               onClick={() =>
                 dispatch({
@@ -168,7 +168,7 @@ function Quiz() {
 
         {/* finished State */}
         {status === "finished" && (
-          <div className="text-center py-20">
+          <div className="py-20 text-center">
             <p className="mb-4 text-xl">
               <span>{emoji}</span> You scored <span>{points} points</span> out
               of {maxPossiblePoints} ({Math.ceil(percentage)}%)

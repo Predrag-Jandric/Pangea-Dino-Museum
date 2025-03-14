@@ -32,7 +32,7 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   const getCountries = () => {
     const countries = new Set();
     dinos.forEach((dino) =>
-      dino.foundIn.split(", ").forEach((place) => countries.add(place))
+      dino.foundIn.split(", ").forEach((place) => countries.add(place)),
     );
     return [...countries].sort((a, b) => (a < b ? -1 : 1));
   };
@@ -45,7 +45,7 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
     switch (category) {
       case "name": {
         filteredDinos = dinos.filter((dino) =>
-          dino.name.toLowerCase().startsWith(query)
+          dino.name.toLowerCase().startsWith(query),
         );
         break;
       }
@@ -85,7 +85,7 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
   };
 
   return (
-    <section className="font-sans flex w-full flex-wrap gap-3 sm:flex-row flex-col items-center">
+    <section className="flex w-full flex-col flex-wrap items-center gap-3 font-sans sm:flex-row">
       {/* category selection dropdown */}
       <div className="w-full sm:w-auto">
         <select
@@ -201,11 +201,11 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
 
       <Link
         to="/shoppingCartPage"
-        className="mt-6 sm:mt-0 relative ml-auto text-4xl"
+        className="relative ml-auto mt-6 text-4xl sm:mt-0"
       >
-        <TfiShoppingCart className=" transition hover:text-highlight" />
+        <TfiShoppingCart className="hover:text-highlight transition" />
         {cart.length > 0 && (
-          <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce text-dark items-center justify-center font-bold text-sm rounded-full bg-alert">
+          <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-alert text-sm font-bold text-dark">
             {cart.length}
           </span>
         )}

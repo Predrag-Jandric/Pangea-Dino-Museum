@@ -73,9 +73,6 @@ const shoppingSlice = createSlice({
         autoClose: 2000,
       });
     },
-    setCart(state, action) {
-      state.inCart = action.payload;
-    }
   },
 });
 
@@ -85,6 +82,5 @@ export const {
   increaseQuantity,
   decreaseQuantity,
   clearCart,
-  setCart
 } = shoppingSlice.actions;
 export default shoppingSlice.reducer;

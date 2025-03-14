@@ -13,7 +13,7 @@ function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(
-        (prevIndex) => (prevIndex + 1) % landingPageBGimageSlider.length
+        (prevIndex) => (prevIndex + 1) % landingPageBGimageSlider.length,
       );
     }, 5500);
 
@@ -25,7 +25,7 @@ function Hero() {
       <Navbar />
 
       {/* image slider  */}
-      <section className="absolute left-0 top-0 h-full w-full z-0">
+      <section className="absolute left-0 top-0 z-0 h-full w-full">
         {landingPageBGimageSlider.map((image, index) => (
           <div
             key={index}
@@ -45,12 +45,12 @@ function Hero() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="relative md:w-[80%] w-full mx-auto z-10 flex flex-col items-center mt-36 justify-start h-full text-bgcolor"
+        className="relative z-10 mx-auto mt-36 flex h-full w-full flex-col items-center justify-start text-bgcolor md:w-[80%]"
       >
-        <h1 className="xl:text-6xl font-titles tracking-wide text-4xl leading-[3rem] md:leading-[4rem] mx-6 xl:leading-[5rem] [word-spacing:8px] md:text-5xl text-center">
+        <h1 className="mx-6 text-center font-titles text-4xl leading-[3rem] tracking-wide [word-spacing:8px] md:text-5xl md:leading-[4rem] xl:text-6xl xl:leading-[5rem]">
           Step Into Pangea, Prehistoric World Where Dinosaurs Roam Again!
         </h1>
-        <p className="text-lg my-8 text-center mx-6">
+        <p className="mx-6 my-8 text-center text-lg">
           Discover the ancient giants, challenge your knowledge, and bring the
           Jurassic era to life with exclusive collectibles!
         </p>
@@ -63,7 +63,7 @@ function Hero() {
           }}
           className="scroll-smooth"
         >
-          <SlArrowDown className="transition hover:text-primary size-10 animate-bounce" />
+          <SlArrowDown className="size-10 animate-bounce transition hover:text-primary" />
         </a>
       </motion.div>
     </div>
