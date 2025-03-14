@@ -5,14 +5,13 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import EcommerceSearch from "./EcommerceSearch.jsx";
 import EcommerceCard from "./EcommerceCard.jsx";
 import Title from "../Title.jsx";
-import tempdata from "../../utils/tempdata.json"
 import { motion } from "framer-motion";
 import { defaultAnimation } from "../../utils/animations.js";
 
 function EcommerceDisplay() {
   const dispatch = useDispatch();
-  const [dinos, setDinos] = useState(tempdata);
-  const [filtered, setFiltered] = useState(tempdata);
+  const [dinos, setDinos] = useState([]);
+  const [filtered, setFiltered] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
@@ -22,24 +21,24 @@ function EcommerceDisplay() {
     return shuffled.slice(0, count);
   };
 
-  // useEffect(() => {
-  //   async function getDinos() {
-  //     try {
-  //       const res = await fetch("https://api-example-wg44.onrender.com");
-  //       if (!res.ok) {
-  //         throw new Error(`HTTP error! status: ${res.status}`);
-  //       }
-  //       const data = await res.json();
-  //       setDinos(data);
-  //       setFiltered(getRandomDinos(data));
-  //     } catch (error) {
-  //       console.error("Error fetching dinos", error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   }
-  //   getDinos();
-  // }, []);
+  useEffect(() => {
+    async function getDinos() {
+      try {
+        const res = await fetch("https://v53-tier3-team-33.onrender.com");
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        const data = await res.json();
+        setDinos(data);
+        setFiltered(getRandomDinos(data));
+      } catch (error) {
+        console.error("Error fetching dinos", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    getDinos();
+  }, []);
 
   const handleAddToCart = (item) => {
     dispatch(
@@ -64,10 +63,10 @@ function EcommerceDisplay() {
 
   return (
     <motion.div
-    variants={defaultAnimation}
-    initial="initial"
-    whileInView="animate"
-    viewport={{ once: true }}
+      variants={defaultAnimation}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
       id="shop"
       className="container py-16 mx-auto bg-bgcolortwo flex flex-col items-center justify-center text-dark"
     >
@@ -85,7 +84,7 @@ function EcommerceDisplay() {
         />
 
         {/* responsive grid */}
-        {/* {loading ? (
+        {loading ? (
           <div className="flex h-96 items-center justify-center text-2xl">
             Dinosaur data coming ...
           </div>
@@ -93,7 +92,7 @@ function EcommerceDisplay() {
           <div className="flex h-96 items-center justify-center text-2xl">
             No dinosaurs found.
           </div>
-        ) : ( */}
+        ) : (
           <>
             {/* Grid for displaying products dynamically */}
             <div
@@ -134,7 +133,7 @@ function EcommerceDisplay() {
               </button>
             </div>
           </>
-       
+        )}
       </section>
     </motion.div>
   );

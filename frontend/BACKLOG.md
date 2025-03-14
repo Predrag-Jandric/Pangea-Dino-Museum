@@ -1,15 +1,7 @@
 TASKS:
 
-- edit database to have:
-
-  - less dinosaurs
-  - no dinosaurs with long names (to avoir some bugs)
-  - less dinosaurs that are not available
-
-- make sure all the dinosaurs from the quiz are present in the online store
-
-- add animations
 - on page refresh, the cart does not load local storage
+- search dinosaur by name doesnt throw any results no matter the query
 - shopping cart page when increasing Quantity, the total number will be jittery
 
 DONE

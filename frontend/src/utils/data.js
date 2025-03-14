@@ -38,13 +38,13 @@ export const quizQuestions = [
   },
   {
     question: "Which dinosaur had three horns on its head?",
-    options: ["Triceratops", "Diplodocus", "Spinosaurus", "Ankylosaurus"],
+    options: ["Triceratops", "Diplodocus", "Spinosaurus", "Indosuchus"],
     correctOption: 0,
     points: 5,
   },
   {
     question: "Which dinosaur was known for large plates on its back?",
-    options: ["Allosaurus", "Stegosaurus", "Pachycephalosaurus", "Gallimimus"],
+    options: ["Allosaurus", "Stegosaurus", "Stygimoloch", "Gallimimus"],
     correctOption: 1,
     points: 20,
   },
@@ -55,7 +55,7 @@ export const quizQuestions = [
       "Tyrannosaurus Rex",
       "Velociraptor",
       "Hadrosaurus",
-      "Compsognathus",
+      "Giganotosaurus",
     ],
     correctOption: 3,
     points: 20,
@@ -74,7 +74,7 @@ export const quizQuestions = [
   },
   {
     question: "Which dinosaur is known for having a large sail on its back?",
-    options: ["Spinosaurus", "Ankylosaurus", "Parasaurolophus", "Oviraptor"],
+    options: ["Spinosaurus", "Rhoetosaurus", "Tsintaosaurus", "Oviraptor"],
     correctOption: 0,
     points: 15,
   },
