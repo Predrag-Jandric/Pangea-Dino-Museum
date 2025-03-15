@@ -183,11 +183,8 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
             placeholder="Search..."
             className="input"
             onChange={(e) => {
-              let value = e.target.value;
-              let capitalizedValue =
-                value.charAt(0).toUpperCase() + value.slice(1);
-              setInputValue(capitalizedValue);
-              handleSearch(search, capitalizedValue);
+              setInputValue(e.target.value);
+              handleSearch(search, e.target.value);
             }}
           />
         </div>

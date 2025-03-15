@@ -1,0 +1,1105 @@
+[{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0396b"
+  },
+  "name": "Homalocephale",
+  "imageSrc": "https://images.dinosaurpictures.org/homalocephale1_3062.jpg",
+  "typeOfDinosaur": "pachycephalosaur",
+  "length": 1.5,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 72-68 million years ago",
+  "foundIn": "Mongolia",
+  "namedBy": "MaryaÅ ska and OsmÃ³lska (1974)",
+  "description": "Homalocephale is known from a complete skull and a nearly complete postcranium.",
+  "price": 73.11,
+  "inStock": 7
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0396e"
+  },
+  "name": "Iguanodon",
+  "imageSrc": "https://images.dinosaurpictures.org/iguanodon-1_e1e9.jpg",
+  "typeOfDinosaur": "large ornithopod",
+  "length": 10,
+  "weight": 4000,
+  "diet": "herbivorous",
+  "whenLived": "Early Cretaceous, 140-110 million years ago",
+  "foundIn": "Belgium, England, United Kingdom",
+  "namedBy": "Boulenger and van Beneden (1881)",
+  "description": "Iguanodon could probably walk on all fours or on two legs. It had a large thumb spike on the end of its hand, probably to fend-off predators, and the structure of the muscles inside its head suggest it had a very long tongue.",
+  "price": 22.38,
+  "inStock": 8
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03988"
+  },
+  "name": "Protoceratops",
+  "imageSrc": "https://images.dinosaurpictures.org/Protoceratops012_a774.jpg",
+  "typeOfDinosaur": "ceratopsian",
+  "length": 1.8,
+  "weight": 400,
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 74-70 million years ago",
+  "foundIn": "China, Mongolia",
+  "namedBy": "Granger and Gregory (1923)",
+  "description": "One Protoceratops specimen was fossilised while being attacked by Velociraptor.",
+  "price": 34.85,
+  "inStock": 6
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03941"
+  },
+  "name": "Alamosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/dinosaurios-a-alamosaurus_0001_8dca.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 21,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 70-66 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Gilmore (1922)",
+  "description": "This is the only Late Cretaceous sauropod that has been found in North America.",
+  "price": 58.02,
+  "inStock": 11
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0394a"
+  },
+  "name": "Archaeopteryx",
+  "imageSrc": "https://images.dinosaurpictures.org/dhd_archaeopteryx_by_scatha_the_worm_cfa1.jpg",
+  "typeOfDinosaur": "small theropod",
+  "length": 0.5,
+  "weight": "N/A",
+  "diet": "carnivorous",
+  "whenLived": "Late Jurassic, 149-145 million years ago",
+  "foundIn": "Germany",
+  "namedBy": "Mayer (1861)",
+  "description": "Archaeopteryx was a small, bird-like dinosaur. It lived during the Late Jurassic Period in what is now Europe.The discovery of the first Archaeopteryx fossil in Germany in 1861 caused a lot of confusion. No birds were known from so far back. Some people even thought it might be an angel.Since then, multiple fossils of Archaeopteryx have been discovered. Many show clear evidence of long feathers. But we don't know whether Archaeopteryx was fully able to fly or if it could only glide.Archaeopteryx also has a common name - Urvogel, a German name meaning 'primeval bird'.Strictly speaking, all birds are dinosaurs. But not all dinosaurs are birds. Scientists sometimes use the term 'non-avian dinosaurs' when talking about prehistoric dinosaurs that aren't birds.The line between bird and non-avian dinosaur can be vague, and many experts have discussed which way to class Archaeopteryx. For many years, scientists spoke about it as an ancient bird. These days, many people believe it should be called a dinosaur.Ultimately, categories like bird and non-avian dinosaur are invented by humans. The natural world doesn't always fit neatly into them. Animals such as Archaeopteryx that could sit across two or more categories are sometimes called transitional fossils.While Archaeopteryx is sometimes called the first bird or the earliest bird, scientists now think that there could be even older bird ancestors. Dinosaurs such as Anchiornis and Aurornis might sit even further back on the bird branch of the dinosaur family tree. If so, they're even earlier relatives of true birds. It's very difficult to say for sure.Archaeopteryx had some features in common with the birds of today. It had broad feathered wings and a small body, roughly the size of a magpie.After comparing its eyes to those of modern birds and reptiles, experts concluded that Archaeopteryx was probably diurnal. This means that it would have been active during the day and slept at night, like many of today's birds.We don't know whether Archaeopteryx mostly lived on the ground or in trees. Some scientists think it might have been equally comfortable with either, like a crow.Unlike modern birds, however, Archaeopteryx had sharp teeth and a long, bony tail.Many specimens of Archaeopteryx have been recovered over the years. All are from the limestone quarries near Solnhofen in Germany.In the Jurassic Period, this area was a lagoon surrounded by sub-tropical islands. Other small creatures such as insects and lizards - which Archaeopteryx may have preyed on - have been unearthed there too. So have some pterosaurs - flying reptiles - and the small dinosaur Compsognathus.The first Archaeopteryx fossil ever found was a single feather.Later, full skeletons were discovered showing feather impressions. We bought the first of these in 1862. It is now known as 'the London specimen' and is on display in our Cadogan gallery.There has since been debate over whether the first feather discovered really belongs to Archaeopteryx.Two years before the discovery of Archaeopteryx, Charles Darwin had just written On the Origin of Species. The book was the first to lay out the theory of evolution.Many people back then - scientists included - strongly disagreed with Darwin's concept and claimed that it wasn't possible for animals to evolve over time. But the discovery of the Archaeopteryx fossils, clearly showing a feathered and bird-like dinosaur, seemed to prove that dinosaurs had evolved into birds.Even 100 years later, there were still those who didn't accept it. Some people published articles claiming that the feathers must be fake. The controversy didn't last long, however, as our scientists were able to show that the fossils were real.The discovery of Archaeopteryx was a landmark moment for dinosaur scientists, and it is still considered to be one of the most important finds in history.It's usually almost impossible for scientists to know what colour a dinosaur would have been in life.But thanks to modern scanning technology, experts have been able to find out the colour of one Archaeopteryx wing feather - which seems to have been jet-black.We don't know whether Archaeopteryx was black all over or only on its wings.",
+  "price": 58.57,
+  "inStock": 7
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03959"
+  },
+  "name": "Conchoraptor",
+  "imageSrc": "https://images.dinosaurpictures.org/conchoraptor_211a.jpg",
+  "typeOfDinosaur": "small theropod",
+  "length": 1.5,
+  "weight": "N/A",
+  "diet": "carnivorous",
+  "whenLived": "Late Cretaceous, 81-76 million years ago",
+  "foundIn": "Mongolia",
+  "namedBy": "Barsbold (1986)",
+  "description": "Remains of this dinosaur have been found with feathers preserved. Sexual differences can be seen in the plumage.",
+  "price": 63.04,
+  "inStock": 7
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03965"
+  },
+  "name": "Euhelopus",
+  "imageSrc": "https://images.dinosaurpictures.org/Euhelopus-wikimedia_b49f.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 10,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Jurassic, 154-142 million years ago",
+  "foundIn": "China",
+  "namedBy": "Wiman (1929)",
+  "description": "Euhelopus is known from a skull and partial postcranial skeletons.",
+  "price": 84.83,
+  "inStock": 4
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0396d"
+  },
+  "name": "Hypacrosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Hypacrosaurus-v2_bc23.jpg",
+  "typeOfDinosaur": "large ornithopod",
+  "length": 9,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 70 million years ago",
+  "foundIn": "Canada, USA",
+  "namedBy": "Brown (1913)",
+  "description": "Complete Hypacrosaurus skeletons have been found, from embryos to adults.",
+  "price": 49.49,
+  "inStock": 11
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03979"
+  },
+  "name": "Microceratus",
+  "imageSrc": "https://image-service.zaonce.net/eyJidWNrZXQiOiJmcm9udGllci1jbXMiLCJrZXkiOiIyMDI0LTA1L21pY3JvY2VyYXR1cy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjMwMH19fQ==",
+  "typeOfDinosaur": "ceratopsian",
+  "length": 0.5,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 86-66 million years ago",
+  "foundIn": "China, Mongolia",
+  "namedBy": "Bohlin (1953)",
+  "description": "This dinosaur was originally named Microceratops but, 50 years later, scientists realised that the name had already been taken by a species of beetle. So, in 2008, the name was changed to Microceratus.We don't know how large this dinosaur would've grown to be, because the only fossils we know of come from a juvenile dinosaur. But scientists think that it was rather small and agile, and able to evade predators simply by running away.",
+  "price": 79.42,
+  "inStock": 3
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0397a"
+  },
+  "name": "Minmi",
+  "imageSrc": "https://images.dinosaurpictures.org/minmi-paravertebra-a-prehistoric-era-sergey-krasovskiy_07e1.jpg",
+  "typeOfDinosaur": "armoured dinosaur",
+  "length": 3,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Early Cretaceous, 121-112 million years ago",
+  "foundIn": "Australia",
+  "namedBy": "Molnar (1980)",
+  "description": "This dinosaur is known from an almost complete skeleton with armour in place.",
+  "price": 43.63,
+  "inStock": 6
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0394c"
+  },
+  "name": "Arrhinoceratops",
+  "imageSrc": "https://images.dinosaurpictures.org/Arrhinoceratops_5842.jpg",
+  "typeOfDinosaur": "ceratopsian",
+  "length": 6,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 72-67 million years ago",
+  "foundIn": "Canada",
+  "namedBy": "Parks (1925)",
+  "description": "The only undisputed specimen of Arrhinoceratops is a skull.",
+  "price": 49.9,
+  "inStock": 4
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03952"
+  },
+  "name": "Carnotaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Carnotaurus-sastrei-a-prehistoric-era-sergey-krasovskiy_(1)_79e9.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 8,
+  "weight": "N/A",
+  "diet": "carnivorous",
+  "whenLived": "Late Cretaceous, 69-71 million years ago",
+  "foundIn": "Argentina",
+  "namedBy": "Bonaparte (1985)",
+  "description": "Carnotaurus was a meat-eating dinosaur with two horns on the top of its head and very small arms.It had an unusually short snout and its head was very narrow when viewed from the front.Scientists have found lots of skin impressions for this dinosaur, so we know that it had scales over much of its body. It's unlikely that Carnotaurus or its relatives had feathers - no evidence of them has ever been found.We also don't have a complete skeleton. So far, nobody has ever found the tail or lower legs of Carnotaurus. This means we must use some guesswork based on the remains of this dinosaur's close relatives to do a full-body reconstruction.Nobody is quite sure what Carnotaurus' horns were for. Some experts think the dinosaur might have used them to fight rivals or attack prey.Another idea is that the horns might have helped to attract a mate or identify other Carnotaurus.Experts believe that Carnotaurus' ancestors would have had longer arms. Over time the arms got smaller and less useful.Carnotaurus probably didn't use its arms for much. They were a leftover trait from the dinosaur's earlier ancestors.Scientists call this a vestigial feature. It comes from the word 'vestige', meaning 'a small trace of something that existed a long time ago'.Many animals have vestigial features, including humans. For example, you still have a tailbone in your skeleton, even though you don't have a tail!In his novel The Lost World - the sequel to Jurassic Park - Michael Crichton described Carnotaurus as able to disguise itself with changing skin colours, like a chameleon.We don't have evidence that any dinosaur ever had this ability. If they did, we wouldn't be able to tell from fossil remains.It's always possible that any given dinosaur might have had an unusual or surprising feature that isn't shown in fossils. Fiction is a great place to explore interesting ideas.Although Carnotaurus looked unusual with its tiny arms and short snout, it wasn't the only dinosaur like this.Carnotaurus was part of the abelisaur group. These closely related dinosaurs shared similar characteristics. But Carnotaurus is the only one known to have two horns on its head.Other abelisaurs include Abelisaurus itself, Majungasaurus and the Indian predator Rajasaurus.Carnotaurus and Tyrannosaurus weren't very closely related.The two dinosaurs do share some similarities - both are meat-eating dinosaurs that walked on two legs. But they are also quite different.Tyrannosaurs had more powerful jaws and teeth than abelisaurs, as well as longer arms with two-fingered hands. Abelisaurs had four fingers on each hand. Tyrannosaurs could also grow much larger.Carnotaurus and Tyrannosaurus belong to two different dinosaur groups - ceratosaurs and coelurosaurs. These groups might have been evolving apart for more than 100 million years, since the Late Triassic Period.Carnotaurus fossils have only been found in Argentina. They occur in Late Cretaceous rocks that may have formed from the deposits of estuaries or tidal flats.We know Carnotaurus shared its environment with other dinosaurs. Researchers have found partial remains of as-yet unnamed ankylosaurs and hadrosaurs in the same area, but we don't know exactly what these dinosaurs were like.Although it was clearly a meat-eater, nobody knows for sure what types of animals Carnotaurus hunted.Many experts think it probably preyed on large sauropod dinosaurs. Teeth belonging to related abelisaurs have been found with sauropod remains, so it seems likely.Carnotaurus had a more flexible lower jaw than most other carnivorous dinosaurs. It may have been able to open its jaw wide, like a snake, to swallow big chunks of meat.Originally, researchers thought that the flexible jaw meant Carnotaurus didn't have a very strong bite. But more recent studies contradict this. Some experts think Carnotaurus may even have had a stronger bite force than an American alligator, the most powerful biting creature alive today.When you're talking about more than one dinosaur of a particular kind, you don't need to put an 's' on the end.You can think of it the same way as you would say 'two sheep'.This applies to all dinosaur names - so you can say 'two Carnotaurus' or 'five Velociraptor'.",
+  "price": 48.23,
+  "inStock": 4
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03955"
+  },
+  "name": "Chasmosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Chasmosaurus_BW_6e90.jpg",
+  "typeOfDinosaur": "ceratopsian",
+  "length": 5,
+  "weight": 2500,
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 76-74 million years ago",
+  "foundIn": "Canada",
+  "namedBy": "N/A",
+  "description": "Chasmosaurus had a small nose horn, blunt brow horns and a long neck frill with holes.",
+  "price": 41.55,
+  "inStock": 2
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0397d"
+  },
+  "name": "Noasaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Noasaurus-sketch3_4e93.jpg",
+  "typeOfDinosaur": "small theropod",
+  "length": 1,
+  "weight": "N/A",
+  "diet": "carnivorous",
+  "whenLived": "Late Cretaceous, 84-66 million years ago",
+  "foundIn": "Argentina",
+  "namedBy": "Bonaparte and Powell (1980)",
+  "description": "A skull and some postcranial remains of Noasaurus have been found.",
+  "price": 99.84,
+  "inStock": 8
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03946"
+  },
+  "name": "Ammosaurus",
+  "imageSrc": "https://img.freepik.com/free-psd/realistic-dinosaurs-isolated_23-2151885276.jpg",
+  "typeOfDinosaur": "prosauropod",
+  "length": 5,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Early Jurassic, 195-180 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Marsh (1891)",
+  "description": "This dinosaur was very similar to Anchisaurus.",
+  "price": 13.95,
+  "inStock": 13
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03947"
+  },
+  "name": "Amygdalodon",
+  "imageSrc": "https://images.dinosaurpictures.org/Amygdalodon_e238.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 15,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Mid Jurassic, 177-169 million years ago",
+  "foundIn": "Argentina",
+  "namedBy": "Cabrera (1947)",
+  "description": "Amygdalodon is known from a single partial skeleton.",
+  "price": 19.54,
+  "inStock": 0
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0395b"
+  },
+  "name": "Dacentrurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Dacentrurus-bunt_3031.jpg",
+  "typeOfDinosaur": "armoured dinosaur",
+  "length": 6,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Jurassic, 154-150 million years ago",
+  "foundIn": "England, France, Portugal, United Kingdom",
+  "namedBy": "Lucas (1902)",
+  "description": "Dacentrurus was the first stegosaur ever discovered.",
+  "price": 21.03,
+  "inStock": 5
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03967"
+  },
+  "name": "Giganotosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/giganotosaurus_by_Gonzalezaurus_d03d.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 12.5,
+  "weight": 8000,
+  "diet": "carnivorous",
+  "whenLived": "Early Cretaceous, 112-90 million years ago",
+  "foundIn": "Argentina",
+  "namedBy": "Coria and Salgado (1995)",
+  "description": "Giganotosaurus is known from very fragmentary remains.Taller and longer but slimmer than Tyrannosaurus rex, Giganotosaurus lived millions of years earlier and in South America not North America.Giganotosaurus had 3 fingers on its hands, not 2 like T.rex. It may have hunted Argentinosaurus.",
+  "price": 26.55,
+  "inStock": 9
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03989"
+  },
+  "name": "Puertasaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Puertasaurus-interet-general.info__d814.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 30,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 76-70 million years ago",
+  "foundIn": "Argentina",
+  "namedBy": "Novas, Salgado, Calvo and Agnolin (2005)",
+  "description": "Puertasaurus was a giant sauropod dinosaur in the titanosaur group. It lived towards the end of the Cretaceous Period.Very few fossils of this dinosaur have been found - only four bones belonging to a single individual. These include one neck bone, one backbone and two tail bones that were all unearthed in Argentina in 2001.Like all sauropods, Puertasaurus was a plant-eating dinosaur. The researchers who discovered its remains also found fossilised tree trunks nearby. This suggests that it may have lived in a forest habitat.The dinosaur's full name - Puertasaurus reuili - refers to two fossil hunters who discovered and worked on the remains: Pablo Puerta and Santiago Reuil.With so few Puertasaurus fossils to study, it's not possible to say once and for all how big this dinosaur would have been when it was alive.However, the existing remains are so enormous that scientists believe that Puertasaurus may have been among the very largest dinosaurs. Current estimates are that it was about 30 metres long and weighed about 50 tonnes.Many experts think it is likely that Puertasaurus would have rivalled other titanosaurs like Argentinosaurus and Patagotitan in size, but nobody can say for sure which was the largest.",
+  "price": 97.65,
+  "inStock": 7
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03996"
+  },
+  "name": "Struthiomimus",
+  "imageSrc": "https://images.dinosaurpictures.org/struthiomimus_altus_by_themorlock-d50rodv_921f.jpg",
+  "typeOfDinosaur": "small theropod",
+  "length": 4,
+  "weight": 150,
+  "diet": "omnivorous",
+  "whenLived": "Late Cretaceous, 76-74 million years ago",
+  "foundIn": "Canada",
+  "namedBy": "Osborn (1917)",
+  "description": "Struthiomimus looked a bit like a featherless ostrich with a long tail.",
+  "price": 70.47,
+  "inStock": 6
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03942"
+  },
+  "name": "Albertosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/albertosaurus_76d6.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 9,
+  "weight": 1500,
+  "diet": "carnivorous",
+  "whenLived": "Late Cretaceous, 76-74 million years ago",
+  "foundIn": "Canada",
+  "namedBy": "Lamb (1914)",
+  "description": "Albertosaurus was a close relative of Tyrannosaurus, but smaller and not as heavily built.",
+  "price": 78.02,
+  "inStock": 5
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0398a"
+  },
+  "name": "Pyroraptor",
+  "imageSrc": "https://images.dinosaurpictures.org/Pyroraptor-bunt-500_e80d.jpg",
+  "typeOfDinosaur": "small theropod",
+  "length": "N/A",
+  "weight": "N/A",
+  "diet": "carnivorous",
+  "whenLived": "Late Cretaceous, 84-71 million years ago",
+  "foundIn": "France, Spain",
+  "namedBy": "Allain and Taquet (2000)",
+  "description": "Pyroraptor was a small, meat-eating dinosaur that lived in what is now France and Spain. It got its name, which means 'fire thief', because its remains were first found after a destructive forest fire in Provence, France.This dinosaur is known from very few fossils. Only a handful of small bones and teeth have been unearthed. So full-body reconstructions of Pyroraptor are largely guesswork.Scientists think Pyroraptor was probably a dromaeosaur, and that it may have been similar to Velociraptor. But with so few fossils it's hard to tell how closely they were related.Dromaeosaurs are rare in Europe. Another, called Variraptor, was found in the same place in France as Pyroraptor. Some experts think it might be the same dinosaur. The film Jurassic World: Dominion shows Pyroraptor diving underwater to attack the main characters.It's very hard to say if any dinosaur could swim in real life, as swimming isn't usually an activity that shows in fossil evidence.Most modern animals can swim, with some exceptions such as tortoises. So most experts assume that dinosaurs - especially small- to medium-sized ones like Pyroraptor - could at least doggy paddle. But nobody knows if Pyroraptor could really dive under the surface and swim for long periods.Pyroraptor fossils were discovered in rocks from the Campanian and Maastrichtian stages of the Late Cretaceous Period. That means it must have been alive 84 to 71 million years ago.Scientists aren't sure exactly when Pyroraptor went extinct, but it probably wasn't around by the time of the meteorite impact that played a major role in wiping out the dinosaurs 66 million years ago.It's very difficult to work out how large the whole dinosaur would have been because so few Pyroraptor fossils have been found.It might have been around the same size as Velociraptor, or smaller. We might get a better idea in the future if more remains are discovered. For now, we know that both dinosaurs had a similar-sized curved toe claw, measuring almost seven centimetres along the outer edge.",
+  "price": 51.9,
+  "inStock": 4
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0398d"
+  },
+  "name": "Rhoetosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Rhoetosaurus_big_4764.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 15,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Mid Jurassic, 177-169 million years ago",
+  "foundIn": "Australia",
+  "namedBy": "Longman (1926)",
+  "description": "Only a partial skeleton of Rhoetosaurus has been found.",
+  "price": 92.29,
+  "inStock": 7
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03998"
+  },
+  "name": "Stygimoloch",
+  "imageSrc": "https://images.dinosaurpictures.org/stygimoloch_by_durbed-d3eixg7_aff2.jpg",
+  "typeOfDinosaur": "pachycephalosaur",
+  "length": 3,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 67-66 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Galton and Sues (1983)",
+  "description": "Most scientists now think that Stygimoloch was a younger form of Pachycephalosaurus rather than a separate species.",
+  "price": 60.23,
+  "inStock": 3
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0394f"
+  },
+  "name": "Brachiosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/papo_brachiosaurus_2012_cf3f.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 30,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Jurassic, 155-140 million years ago",
+  "foundIn": "Algeria, Portugal, Tanzania, USA",
+  "namedBy": "Riggs (1903)",
+  "description": "Brachiosaurus held its head very high. It is likely to have eaten the leaves on tall tree-like plants.",
+  "price": 82.19,
+  "inStock": 5
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03953"
+  },
+  "name": "Centrosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/centrosaurus_l_f391.jpg",
+  "typeOfDinosaur": "ceratopsian",
+  "length": 6,
+  "weight": 1000,
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 76-74 million years ago",
+  "foundIn": "Canada",
+  "namedBy": "N/A",
+  "description": "Centrosaurus had one horn on its snout and spines around the back of its neck frill.",
+  "price": 60.4,
+  "inStock": 5
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0395f"
+  },
+  "name": "Diplodocus",
+  "imageSrc": "https://images.dinosaurpictures.org/diplodocus-michael-vigliotti_b410.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 26,
+  "weight": 15000,
+  "diet": "herbivorous",
+  "whenLived": "Late Jurassic, 152-145 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Marsh (1878)",
+  "description": "Diplodocus had a long neck that it would have used to reach high and low vegetation, and to drink water. There has been some debate over how such a long neck would have been held.Scientists now think that ligaments running from the hip to the back of the neck would have allowed Diplodocus to hold its neck in a horizontal position without using muscles. The vertebrae (back bones) are split down the middle and this space could have held ligaments like these.Diplodocus may have had narrow, pointed bony spines lining its back.In 1905 a cast of a Diplodocus skeleton was donated to the Museum by the wealthy businessman Andrew Carnegie, based on the original specimen in the Carnegie Museum in the USA.King Edward VII had requested a copy of the newly discovered dinosaur after seeing a picture of it in Carnegie's Scottish castle. From 1979 to early 2017 the cast - known affectionately as Dippy - was on display in the Museum's Hintze Hall.In 1993, Dippy's tail was lifted from the ground after research revealed that Diplodocus tails would have been raised high to balance the neck.Every two years or so, our experts used specialist equipment to clean the 292 bones that make up Dippy. It took two staff two days to clean and maintain the cast for future generations to enjoy.In January 2017, Dippy left the Museum to prepare for a natural history adventure across the UK. After returning in 2022, the famous cast is now on display at the Herbert Art Gallery & Museum in Coventry, on long-term loan from the Museum.",
+  "price": 42.6,
+  "inStock": 8
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03971"
+  },
+  "name": "Kotasaurus",
+  "imageSrc": "https://dinosaurencyclopedia.org/wp-content/uploads/2023/02/Kotasaurus.webp",
+  "typeOfDinosaur": "sauropod",
+  "length": 9,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Early Jurassic, 205-180 million years ago",
+  "foundIn": "India",
+  "namedBy": "Yadagiri (1988)",
+  "description": "Kotasaurus is known from a nearly complete skeleton that lacks the skull, so the reconstruction uses guesswork based on similar dinosaurs.",
+  "price": 38.35,
+  "inStock": 0
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0397f"
+  },
+  "name": "Othnielia",
+  "imageSrc": "https://images.dinosaurpictures.org/Othnielia-nhm.ac.uk__ccef.jpg",
+  "typeOfDinosaur": "small ornithischian",
+  "length": 1.4,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Jurassic, 154-142 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Marsh (1877)",
+  "description": "Only partial skeletons of Othnielia have been found.",
+  "price": 64.76,
+  "inStock": 6
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0399e"
+  },
+  "name": "Torosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/l.torosaurus-tododinosaurios_1323674810_90b2.jpg",
+  "typeOfDinosaur": "ceratopsian",
+  "length": 7.5,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 70-66 million years ago",
+  "foundIn": "Canada, USA",
+  "namedBy": "Marsh (1891)",
+  "description": "This dinosaur may have lived in social groups. It has the largest display crest of any ceratopsian and, like all the others, had a 'beak' for grazing.",
+  "price": 55.17,
+  "inStock": 11
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03954"
+  },
+  "name": "Ceratosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/ceratosaurus_d3b2.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 6,
+  "weight": 970,
+  "diet": "carnivorous",
+  "whenLived": "Late Jurassic, 153-148 million years ago",
+  "foundIn": "Portugal, USA",
+  "namedBy": "Marsh (1884)",
+  "description": "Ceratosaurus means 'horned lizard'. The dinosaur was given this name because it had a row of sharp horns on its head and a row of small, bony pieces of armour running along its back. It is not known what this body armour was for, but it could have been for protection from attack by other Ceratosaurus or larger theropods such as Allosaurus and Torvosaurus.Scientists have estimated that Ceratosaurus was about six to seven metres long. It seems to have been quite a rare animal - remains of it are much rarer than those of the Allosaurus that lived alongside it.Ceratosaurus was one of the biggest hunters in the Jurassic Period. Its prey probably included plant-eating dinosaurs, but some scientists have suggested that it may have fed upon aquatic animals such as fish, turtles and crocodiles.Ceratosaurus is remarkable for the very long, slender teeth in its upper jaw. These teeth could be over nine centimetres long, nearly as long as the lower jaw was deep, so they would almost stick out beyond it when the mouth was closed. Nobody really knows why the teeth were so long, but they may have helped it inflict deep, slashing wounds in prey.",
+  "price": 62.26,
+  "inStock": 8
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03983"
+  },
+  "name": "Pentaceratops",
+  "imageSrc": "https://images.dinosaurpictures.org/Pentaceratops_BW_826e.jpg",
+  "typeOfDinosaur": "ceratopsian",
+  "length": 6.8,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 76-74 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Osborn (1923)",
+  "description": "This dinosaur had a very large skull, almost 3m long.",
+  "price": 67.06,
+  "inStock": 5
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03990"
+  },
+  "name": "Sarcosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Sarcosaurus-nhm.ac.uk__c2f7.jpg",
+  "typeOfDinosaur": "small theropod",
+  "length": 3,
+  "weight": "N/A",
+  "diet": "carnivorous",
+  "whenLived": "Early Jurassic, 202-195 million years ago",
+  "foundIn": "England, United Kingdom",
+  "namedBy": "Andrews (1921)",
+  "description": "A partial pelvis (hip), femur and vertebrae (backbone) belonging to Sarcosaurus have been found.",
+  "price": 96.17,
+  "inStock": 2
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0399a"
+  },
+  "name": "Talarurus",
+  "imageSrc": "https://images.dinosaurpictures.org/talarurus-dibujo_a073.jpg",
+  "typeOfDinosaur": "armoured dinosaur",
+  "length": 6,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 99-89 million years ago",
+  "foundIn": "Mongolia",
+  "namedBy": "Maleev (1952)",
+  "description": "Talarurus is known from fairly complete skeletons.",
+  "price": 94.67,
+  "inStock": 6
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0395e"
+  },
+  "name": "Dilophosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/dilophosaurus_l_5c33.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 6,
+  "weight": 300,
+  "diet": "carnivorous",
+  "whenLived": "Early Jurassic, 190 million years ago",
+  "foundIn": "USA",
+  "namedBy": "N/A",
+  "description": "Dilophosaurus was a fast-moving meat-eating dinosaur.  A kink in its upper jaw may mean that it ate a certain kind of food, or attacked by gripping and holding on to prey - modern crocodiles have a similar kink.The pair of thin bony crests on its head may have been for display.",
+  "price": 22.38,
+  "inStock": 3
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03969"
+  },
+  "name": "Hadrosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/hadrosaurus-michael-vigliotti_4a93.jpg",
+  "typeOfDinosaur": "large ornithopod",
+  "length": 9,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 78-74 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Leidy (1858)",
+  "description": "Hadrosaurus was a large, two-legged herbivore from the hadrosaur group of dinosaurs. It would have cropped vegetation with its beak.It was called Hadrosaurus, which means 'bulky lizard', because it was so large and so heavy. It was the first hadrosaur ever named.Hadrosaurus may have been hunted by large tyrannosaurs but giant crocodiles would have also been a danger in Cretaceous North America.",
+  "price": 40.1,
+  "inStock": 6
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0398c"
+  },
+  "name": "Rajasaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Rajasaurus-Todd-Marshall_185d.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 6.6,
+  "weight": "N/A",
+  "diet": "carnivorous",
+  "whenLived": "Late Cretaceous, 72-66 million years ago",
+  "foundIn": "India",
+  "namedBy": "Wilson and colleagues (2003)",
+  "description": "Rajasaurus was a large meat-eating dinosaur that lived towards the end of the Cretaceous Period in what is now India. It was a kind of abelisaur, a group that also contains the well-known dinosaur Carnotaurus.Rajasaurus sported a single short horn on the top of its head. No one knows for sure what it used this horn for, but experts think it might have been for display or for head-butting other Rajasaurus.Only parts of the skeleton of Rajasaurus have been found. But scientists have a good idea of what the whole animal may have looked like as they have more complete fossils of some of its relatives, such as Majungasaurus.Many abelisaurs had very short, stubby arms. It's likely that Rajasaurus did too, although we don't know for sure.At 6.6 metres long, Rajasaurus was one of the larger members of the abelisaurid group. But this isn't massive by Late Cretaceous theropod standards. Dinosaurs such as Tyrannosaurus, Giganotosaurus and Carcharodontosaurus could get much bigger.Rajasaurus was likely an ambush predator able to bring down large animals with its strong neck and jaw muscles. It may also have scavenged for food. Unfortunately, scientists know little about the types of dinosaurs Rajasaurus preyed on.Rajasaurus was discovered in the Lameta Formation, a sequence of rocks formed during the Late Cretaceous, when India was an island.Sitting on top of these rocks are many layers of basalt, a type of rock formed from lava. These layers are called the Deccan Traps. They were created by some of the largest volcanic eruptions ever.Dinosaurs in India may have gone extinct around 350,000 years before the mass extinction event that wiped out most dinosaurs at the end of the Cretaceous Period. This might have been due to volcanic eruptions.",
+  "price": 49.81,
+  "inStock": 3
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d039a2"
+  },
+  "name": "T Rex",
+  "imageSrc": "https://images.dinosaurpictures.org/Tyrannosaurus_BW_8164.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 12,
+  "weight": 7000,
+  "diet": "carnivorous",
+  "whenLived": "Late Cretaceous, 68-66 million years ago",
+  "foundIn": "Canada, USA",
+  "namedBy": "Osborn (1905)",
+  "description": "Tyrannosaurus lives up to its reputation as one of the most fearsome animals of all time. Its powerful jaws had 60 teeth, each one up to 20cm (8 inches) long and its bite was around 3 times as powerful than that of a lion.Bite marks found on Triceratops and Edmontosaurus fossil bones show that Tyrannosaurus could crunch through bone. Analysis of fossilised Tyrannosaurus dung show that it contained the bones of its prey. The Tyrannosaurus skull was over 1.5m (5 feet) long and the cavity that housed the part of the brain responsible for smell was relatively large.Tyrannosaurus would have used its good sense of smell to hunt live prey and locate dead bodies to scavenge. It would have been able to scare off any other scavengers, so it didn't have to share.Some Tyrannosaurus fossils show bite marks from other tyrannosaurs, so it's clear that they fought each other, whether over food or mates.We know that close relatives of Tyrannosaurus sometimes lived together because there are fossils of groups who were buried together, but we don't know for sure if they hunted alone, or in packs like lions and wolves do today. So far, no groups of Tyrannosaurus skeletons have been found.",
+  "price": 97.36,
+  "inStock": 4
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0394e"
+  },
+  "name": "Barapasaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/barapasaurus_308a.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 14,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Early Jurassic, 185-170 million years ago",
+  "foundIn": "India",
+  "namedBy": "Jain, Kutty, Roy-Chowdhury and Chatterjee (1975)",
+  "description": "Barapasaurus was a primitive but very large sauropod.",
+  "price": 82.12,
+  "inStock": 6
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0396c"
+  },
+  "name": "Hylaeosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/pcab177_hylaeosaurus_b140.jpg",
+  "typeOfDinosaur": "armoured dinosaur",
+  "length": 5,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Early Cretaceous, 150-135 million years ago",
+  "foundIn": "England, United Kingdom",
+  "namedBy": "Mantell (1833)",
+  "description": "A specimen of Hylaeosaurus was one of the 3 fossils first identified as dinosaurs by Richard Owen in 1841.",
+  "price": 17.45,
+  "inStock": 6
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0396f"
+  },
+  "name": "Indosuchus",
+  "imageSrc": "https://images.dinosaurpictures.org/Indosuchus_7076.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 7,
+  "weight": "N/A",
+  "diet": "carnivorous",
+  "whenLived": "Late Cretaceous, 71-66 million years ago",
+  "foundIn": "India",
+  "namedBy": "Huene and Matley (1933)",
+  "description": "An almost complete skeleton of Indosuchus has been found.",
+  "price": 86.82,
+  "inStock": 8
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03991"
+  },
+  "name": "Sauropelta",
+  "imageSrc": "https://images.dinosaurpictures.org/pcab023_sauropelta_0196.jpg",
+  "typeOfDinosaur": "armoured dinosaur",
+  "length": 6.5,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Early Cretaceous, 121-94 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Ostrom (1970)",
+  "description": "Sauropelta had large shoulder spines.",
+  "price": 13.89,
+  "inStock": 0
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0399f"
+  },
+  "name": "Triceratops",
+  "imageSrc": "https://images.dinosaurpictures.org/Triceratops_d6c1.jpg",
+  "typeOfDinosaur": "ceratopsian",
+  "length": 9,
+  "weight": 5500,
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 68-66 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Marsh (1889)",
+  "description": "With its 3 horns, a parrot-like beak and a large frill that could reach nearly 1 metre (3 feet) across, the Triceratops skull is one of the largest and most striking of any land animal.The horns could have been used to fend off attacks from Tyrannosaurus. A partial Triceratops fossil collected in 1997 has a horn that was bitten off, with bite marks that match Tyrannosaurus. The fossil shows that the horn healed after being bitten, so at least some Triceratops survived these encounters.Puncture marks on fossil frills show that male Triceratops also used their horns to fight each other, probably to impress females.Many other horned dinosaurs are known to have lived in herds because of a fossil find of many different individuals at the same location.By moving in herds, prey animals can warn each other of danger and lessen their chances of being singled out by a predator.However, Triceratops was unusual in this respect, as their remains are usually found individually, suggesting they may have spent much of their lives alone.The Triceratops frill might have helped to protect its neck, but some specimens show Tyrannosaurus bite marks puncturing the frill, so it wasn't always enough.The frills could also have been used to attract mates, as a way for members of the same species to recognise each other.",
+  "price": 50.35,
+  "inStock": 4
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03940"
+  },
+  "name": "Aardonyx",
+  "imageSrc": "https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/aardonyx.jpg",
+  "typeOfDinosaur": "prosauropod",
+  "length": 8,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Early Jurassic, 199-189 million years ago",
+  "foundIn": "South Africa",
+  "namedBy": "Yates, Bonnan, Neveling, Chinsamy and Blackbeard 2010 (2009)",
+  "description": "Aardonyx is known from 2 immature individuals. Adults would have been much larger, probably over 10m.Aardonyx would have been largely bipedal (walking on 2 legs) but also capable of walking on all 4 legs. This and its way of feeding are transitional features between those of basal sauropodomorphs and the more derived sauropods (large dinosaurs that walked on all fours) that came later.",
+  "price": 93.85,
+  "inStock": 8
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03995"
+  },
+  "name": "Stenopelix",
+  "imageSrc": "https://images.dinosaurpictures.org/Stenopelix_5276_76c7.jpg",
+  "typeOfDinosaur": "ceratopsian",
+  "length": 1.5,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Early Cretaceous, 127-121 million years ago",
+  "foundIn": "Germany",
+  "namedBy": "Meyer (1857)",
+  "description": "Stenopelix is only known from a fragmentary specimen.",
+  "price": 38.56,
+  "inStock": 2
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d039a3"
+  },
+  "name": "Velociraptor",
+  "imageSrc": "https://images.dinosaurpictures.org/Velociraptor-dinosaurs-23564955-817-734_5c51.jpg",
+  "typeOfDinosaur": "small theropod",
+  "length": 1.8,
+  "weight": 7,
+  "diet": "carnivorous",
+  "whenLived": "Late Cretaceous, 74-70 million years ago",
+  "foundIn": "Mongolia",
+  "namedBy": "Osborn (1924)",
+  "description": "As portrayed in the Jurassic Park movies, Velociraptor was recreated at twice its actual size and closely modelled on Deinonychus. Though this was seen as unscientific at the time, soon after the first film was released, a dinosaur of the same type, Utahraptor, was discovered, even larger than the virtual Velociraptors.Velociraptor is now thought to have had a fine feather-like covering.",
+  "price": 87.29,
+  "inStock": 6
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03949"
+  },
+  "name": "Apatosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/image_Apatosaurus_large_2f89.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 21,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Jurassic, 152-145 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Marsh (1877)",
+  "description": "Apatosaurus was a large sauropod dinosaur. It lived around 150 million years ago in the Late Jurassic Period, in an area that is now North America.Like all sauropods, Apatosaurus ate plants.Young Apatosaurus individuals grew up quickly. They took around 10 years to reach full adult size.Apatosaurus lived alongside Stegosaurus, Diplodocus and Allosaurus.Their fossils were found in the Morrison Formation, a sequence of rocks that covers a huge area spanning several US states, including Wyoming, Colorado and Montana. Many dinosaurs have been discovered there.During the Late Jurassic the environment was semi-arid, with forests, rivers and floodplains. There were distinct wet and dry seasons.Apatosaurus had a long, narrow tail that it might have used as a whip.The animal's huge size would also have helped to protect it from smaller predators, which may have found Apatosaurus too big to take on. Living in herds gave extra protection.The name Apatosaurus comes from Greek words meaning 'deceptive lizard'. The scientist who named this dinosaur, Othniel Charles Marsh, felt that some of the fossil bones were confusing to identify. They seemed to resemble the bones of a sea reptile.For more than 100 years, most scientists stopped using the well-known dinosaur name Brontosaurus. They thought that Brontosaurus and Apatosaurus fossils were the same thing.But based on a study done in 2015, experts now think that the two dinosaurs are separate after all, although they are closely related.Apatosaurus went extinct 145 million years ago, at the end of the Jurassic Period.",
+  "price": 23.22,
+  "inStock": 11
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0395a"
+  },
+  "name": "Cryolophosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Cryolophosaurus_by_Ahrkeath_719b.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 8,
+  "weight": 500,
+  "diet": "carnivorous",
+  "whenLived": "Early Jurassic, 170 million years ago",
+  "foundIn": "Antarctica",
+  "namedBy": "Hammer and Hickerson (1994)",
+  "description": "Cryolophosaurus is one of the earliest meat-eating dinosaurs found so far. It lived in what is now Antarctica and had a small curved crest on the top of its head.",
+  "price": 27.56,
+  "inStock": 3
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0395c"
+  },
+  "name": "Deinocheirus",
+  "imageSrc": "https://images.dinosaurpictures.org/Hypothetical_Deinocheirus_094b.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 10,
+  "weight": "N/A",
+  "diet": "omnivorous",
+  "whenLived": "Late Cretaceous, 70-66 million years ago",
+  "foundIn": "Mongolia",
+  "namedBy": "OsmÃ³lska and Roniewicz (1970)",
+  "description": "Originally, scientists only had a pair of arm bones with big, long claws to learn about Deinocheirus. But in 2014, new material revealed that it had a unique, large hump on its back, supported by its back bones. Now we know that it was a truly bizarre-looking creature, with huge, clawed hands, a beaked head like a duck and a hump like a camel.",
+  "price": 38.35,
+  "inStock": 8
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03960"
+  },
+  "name": "Dreadnoughtus",
+  "imageSrc": "https://images.dinosaurpictures.org/_a922.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 26,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 76-70 million years ago",
+  "foundIn": "Argentina",
+  "namedBy": "Lacovara and colleagues (2014)",
+  "description": "Dreadnoughtus was a giant sauropod, a member of the group called titanosaurs. It lived in South America during the Cretaceous Period.Many titanosaurs are known from only a few bones, but scientists have found around half of the skeleton of Dreadnoughtus. This means it is better understood than some of the other giant sauropods of the time. The skull has never been found though. Thanks to having a good amount of fossil material to study, experts have been able to estimate the weight of this enormous dinosaur. A calculation published in 2020 puts the animal's weight at around 48 metric tons. That's about the same as eight African elephants! However, depending on the method used, estimates have ranged from 22 tonnes to 59 tonnes. The remains of only two Dreadnoughtus specimens have ever been uncovered. Scientists found that the largest one wasn't even fully grown. This means that nobody knows for sure how big this dinosaur could really get. The name Dreadnoughtus means 'fears nothing', because its enormous size would have made it difficult for predators to attack. It is also a reference to the dreadnoughts - huge battleships that fought in wars of the early twentieth century.Dreadnoughtus was so huge that it would have had to eat nearly constantly and spend as little energy as possible in order to survive. The dinosaur's long neck meant that it would have been able to reach a large variety of plant food sources without moving its body too much. This way, it would have been able to eat vast amounts without burning too many calories.The biggest Dreadnoughtus specimen ever found was not fully grown when it died, so scientists can't say for sure how large this dinosaur could grow in adulthood.As far as anyone can tell, some other huge titanosaurs, such as Patagotitan and Argentinosaurus, may have been bigger than Dreadnoughtus.Dreadnoughtus features in the Apple TV+ documentary, Prehistoric Planet. In this show, the dinosaur can be seen with inflatable air sacs on its neck. While there is no fossil evidence to show that Dreadnoughtus really had visible air sacs, all sauropod dinosaurs had internal air sacs.  These made the enormous animals lighter than they would otherwise have been. There is no doubt that many dinosaurs would have had surprising external soft tissue features. These features rarely get preserved as fossils - so for now, we can only guess at the unusual features that Dreadnoughtus might have had.",
+  "price": 14.01,
+  "inStock": 0
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d039a0"
+  },
+  "name": "Tsintaosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Tsintaosaurus_fc5e.jpg",
+  "typeOfDinosaur": "large ornithopod",
+  "length": 12,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 84-71 million years ago",
+  "foundIn": "China",
+  "namedBy": "Young (1958)",
+  "description": "Tsintaosaurus is known from skulls and a partial skeleton.",
+  "price": 37.47,
+  "inStock": 0
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03964"
+  },
+  "name": "Eolambia",
+  "imageSrc": "https://images.dinosaurpictures.org/eolambiaWC_c441.jpg",
+  "typeOfDinosaur": "large ornithopod",
+  "length": "N/A",
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 99-94 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Kirkland (1998)",
+  "description": "Eolambia is known from the skulls and postcrania of several individuals, both juveniles and adults.",
+  "price": 18.33,
+  "inStock": 10
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03980"
+  },
+  "name": "Oviraptor",
+  "imageSrc": "https://images.dinosaurpictures.org/Oviraptor-Mongoliensis-dinosaurs-22232749-668-413_e1b7.jpg",
+  "typeOfDinosaur": "small theropod",
+  "length": 2,
+  "weight": 20,
+  "diet": "omnivorous",
+  "whenLived": "Late Cretaceous, 85-75 million years ago",
+  "foundIn": "Mongolia",
+  "namedBy": "Osborn (1924)",
+  "description": "The curved upper and lower jaws of Oviraptor would have been able to crush even hard objects. This dinosaur may have eaten eggs, or fed on fish and shellfish.",
+  "price": 56.44,
+  "inStock": 3
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03984"
+  },
+  "name": "Pinacosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/pinacosaurus_813e.jpg",
+  "typeOfDinosaur": "armoured dinosaur",
+  "length": 5,
+  "weight": 1000,
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 81-75 million years ago",
+  "foundIn": "China, Mongolia",
+  "namedBy": "Gilmore (1933)",
+  "description": "Groups of young Pinacosaurus dinosaurs have been found fossilised together.",
+  "price": 58.04,
+  "inStock": 3
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03992"
+  },
+  "name": "Secernosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Secernosaurus_koerneri_by_maniraptora_db3d.jpg",
+  "typeOfDinosaur": "large ornithopod",
+  "length": 3,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 71-66 million years ago",
+  "foundIn": "Argentina",
+  "namedBy": "Brett-Surman (1979)",
+  "description": "Secernosaurus was the first hadrosaurid to be found in South America.",
+  "price": 81.45,
+  "inStock": 11
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03999"
+  },
+  "name": "Supersaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Supersaurus-unlobogris_28af.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 35,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Early Cretaceous, 154-142 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Jansen (1985)",
+  "description": "Known only from certain bones, including vertebrae (backbones).",
+  "price": 35.46,
+  "inStock": 7
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0398f"
+  },
+  "name": "Saltasaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Saltasaurus_dinosaur_2a20.jpg",
+  "typeOfDinosaur": "sauropod",
+  "length": 12,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 70-66 million years ago",
+  "foundIn": "Argentina",
+  "namedBy": "Bonaparte and Powell (1980)",
+  "description": "Fossils have been found showing that Saltasaurus had small bony nodules embedded in its skin, finally confirming that one a least one group of sauropods, called titanosaurs, had armour plates.Saltasaurus is one of the last sauropods, living just before the group's extinction.",
+  "price": 63.26,
+  "inStock": 0
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d0399b"
+  },
+  "name": "Tarchia",
+  "imageSrc": "https://images.dinosaurpictures.org/pcab028_tarchia_af14.jpg",
+  "typeOfDinosaur": "armoured dinosaur",
+  "length": 5.5,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 75-70 million years ago",
+  "foundIn": "Mongolia",
+  "namedBy": "Maryanska (1977)",
+  "description": "Tarchia was an ankylosaur, a heavily armoured type of dinosaur.Like many ankylosaurs, Tarchia sported a hard, bony club on the end of its tail. Experts have debated whether the club was used for defending against predators, for fighting other Tarchia or both.In 2021, a new Tarchia specimen was discovered with impact damage to the tail and hips. This suggests that it may have been hit by the tail club of another ankylosaur.The name Tarchia comes from the Mongolian word 'tarkhi', meaning 'brain'.Teresa Maryanska, a Polish scientist who specialised in Mongolian dinosaurs, chose this name because the dinosaur had a larger braincase than its close relative Saichania.Tarchia and Saichania - plus a third ankylosaur called Zaraapelta - all lived together in what is now the Gobi Desert. Although the Mongolian desert today is mostly rocks, in the Cretaceous Period it was a sandy expanse with dunes and oases.Tarchia's mouth shape suggests that it was probably quite selective about the types of ground-level plants it ate. Earlier ankylosaurs tended to eat many different types of plants in bulk.Tarchia also lived alongside Tarbosaurus, a meat-eating dinosaur closely related to Tyrannosaurus.Tarbosaurus tooth marks have been found on a Tarchia skull, showing that the ankylosaur was hunted by the giant predator.",
+  "price": 30.54,
+  "inStock": 4
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03976"
+  },
+  "name": "Megalosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/megalosaurus_02_dad3.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 6,
+  "weight": "N/A",
+  "diet": "carnivorous",
+  "whenLived": "Mid Jurassic, 166 million years ago",
+  "foundIn": "England, United Kingdom",
+  "namedBy": "Mantell (1827)",
+  "description": "Megalosaurus was a large, meat-eating dinosaur. It was one of the first dinosaurs ever found and the first named.When Megalosaurus fossils were first discovered during the seventeenth and eighteenth centuries, nobody knew what a dinosaur was.From time to time, somebody would find something unusual and not know what to make of it. Items such as a single tooth, part of a leg bone and then a piece of the lower jaw were found, puzzled over and speculated about. All these specimens were discovered around Oxfordshire, England.People found even more mysterious bones in the early 1800s, but it wasn't until around 1818 that William Buckland - a professor from the University of Oxford - began to study the remains in detail.With the help of other scientists including the famous French expert Georges Cuvier, Buckland came to think that the extinct animal might have been a huge lizard that walked on four legs, almost like an oversized iguana. Yet even 200 years ago, he was quick to work out that the animal walked on straight legs, rather than with its legs sprawled out like a lizard.Many years later the first fossils of bipedal dinosaurs were discovered, making it clear that Megalosaurus walked on two legs. A complete Megalosaurus skeleton has yet to be found.In 1824, Megalosaurus was the first dinosaur in history given a name. In fact, it was named before the word 'dinosaur' had even been invented. That didn't happen until 1842, almost twenty years later.Because it was one of the first dinosaurs ever found, many new fossil discoveries over the years have been said to belong to Megalosaurus. At one point, scientists thought there were lots of species of Megalosaurus - more than any other dinosaur.But science has advanced. We can now be much surer about which fossils are Megalosaurus.These days, we think there was only one species - Megalosaurus bucklandii. All the other misnamed fossil specimens have been reassigned to other dinosaurs.Over the years, researchers have given many different size estimates for Megalosaurus.In Victorian times, when nobody knew what the dinosaur really looked like, people thought it might have been 20 metres long. That's huge - almost as long as a tennis court!As more discoveries were made, scientists started to get a better idea of Megalosaurus' true size. Our founder Richard Owen gave a smaller estimate of nine metres long in 1842.Today, experts think it was more likely to have been around six metres long.So even though the name Megalosaurus means 'big lizard', this dinosaur wasn't huge by Jurassic theropod standards.Allosaurus was probably bigger, at around nine metres long. Saurophaganax - which some researchers think might have been the same dinosaur as Allosaurus - could have reached 10.5 metres in length.Megalosaurus lived during the Bathonian Age - a stretch of time midway through the Middle Jurassic Period, around 168-165 million years ago.No Megalosaurus fossils have been found in rocks from any other geological age. As far as we can tell, the dinosaur may have been extinct by the end of the Bathonian.Historically, artists have often portrayed Megalosaurus together with Iguanodon, as the two dinosaurs were among the earliest discovered. But they didn't live at the same time. Megalosaurus would have been extinct by the time Iguanodon appeared in the Early Cretaceous.We don't know for sure if Megalosaurus had feathers.Evidence of feathers has been found in a potentially related dinosaur called Sciurumimus, which may mean that Megalosaurus had some too.Some experts now think that the two dinosaurs weren't as closely related as we first thought. It's very hard to say.Megalosaurus has captured the public imagination over the years. It has featured in many unusual places.Charles Dickens mentioned the dinosaur in the very first paragraph of his 1852-1853 novel Bleak House. Dickens described a fanciful image of a gigantic, slow Megalosaurus plodding along a London street.The Victorian sculptor Benjamin Waterhouse Hawkins created several huge statues of prehistoric animals, including Megalosaurus, for the Crystal Palace gardens in 1854.The Crystal Palace statues now look very outdated as they show Megalosaurus and other extinct creatures as bulky, lumbering beasts. Even so, they are important historic structures. They can still be seen in the gardens.Megalosaurus has continued to feature in various places in more recent times.In 2013, the carnivore appeared on limited edition Royal Mail stamps. Then in 2020, we collaborated with the Royal Mint and dinosaur artist Bob Nicholls to feature Megalosaurus in a special set of fifty pence coins.",
+  "price": 53.32,
+  "inStock": 2
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d03993"
+  },
+  "name": "Silvisaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/silvisaurus_fc87.jpg",
+  "typeOfDinosaur": "armoured dinosaur",
+  "length": 4,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Early Cretaceous, 121-112 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Eaton (1960)",
+  "description": "Silvisaurus is known from a skull and fragmentary postcrania, so reconstructions are mostly guesswork based on similar dinosaurs.",
+  "price": 69.1,
+  "inStock": 9
+},
+{
+  "_id": {
+    "$oid": "67a53f0c1a865bdcf3d039a1"
+  },
+  "name": "Tylocephale",
+  "imageSrc": "https://images.dinosaurpictures.org/pcab205_tylocephale_4371.jpg",
+  "typeOfDinosaur": "pachycephalosaur",
+  "length": 1.4,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Cretaceous, 75-72 million years ago",
+  "foundIn": "Mongolia",
+  "namedBy": "MaryaÅ ska and OsmÃ³lska (1974)",
+  "description": "Tylocephale is known from a partial skull, including the mandible (jawbone).",
+  "price": 17.1,
+  "inStock": 5
+},
+{
+  "_id": {
+    "$oid": "67d4aca3a1fb4b19256544c6"
+  },
+  "name": "Stegosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/phpThumb_f3ab.jpg",
+  "typeOfDinosaur": "armoured dinosaur",
+  "length": 9,
+  "weight": "N/A",
+  "diet": "herbivorous",
+  "whenLived": "Late Jurassic, 152-145 million years ago",
+  "foundIn": "USA",
+  "namedBy": "Marsh (1877)",
+  "description": "A large, slow moving plant-eater, Stegosaurus would have defended itself from predators like Allosaurus and Ceratosaurus with its powerful spiked tail.The bony plates along its back were embedded in the skin of the animal, not attached to its skeleton, which is why in most fossil finds the plates are separated from the body.When O C Marsh described the first fossil of a Stegosaurus, he concluded that the plates would have lain flat on its back. After finding a specimen that had been covered with mud, which had held the plates in place, Marsh realised that they stood vertically, alternately on either side of the spine.Scientists are not exactly sure what the plates were used for.",
+  "price": 12.17,
+  "inStock": 7
+},
+{
+  "_id": {
+    "$oid": "67d4aca3a1fb4b19256544c7"
+  },
+  "name": "Spinosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/spinosaurus_aegyptiacus_by_wretchedspawn2012-d62if7v_978b.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 14,
+  "weight": 7400,
+  "diet": "carnivorous",
+  "whenLived": "Late Cretaceous, 99-94 million years ago",
+  "foundIn": "Egypt, Morocco",
+  "namedBy": "Stromer (1915)",
+  "description": "Spinosaurus was a large meat-eating dinosaur from Africa. Scientists think it may have lived a semi-aquatic lifestyle.Our understanding of Spinosaurus has changed in recent years. For over 100 years we only had very incomplete remains of this dinosaur. Plus, the few bones from the first discovery in 1912 were accidentally destroyed during the Second World War.For most of the last century scientists reconstructed Spinosaurus as a completely land-based animal with long hind legs, like Tyrannosaurus and Allosaurus.We now know that Spinosaurus had quite short legs and may have spent a lot of its time living in and around water. It also had a wide, paddle-like tail.It isn't clear whether this dinosaur swam a lot, or mostly lived on the shoreline.We know from the shape of the dinosaur's jaws that it fed on fish, although it may have eaten other dinosaurs too.Like other members of the spinosaur group, Spinosaurus had a narrow snout and a distinctive notch near the front of its jaws. This would have been very effective at trapping fish.There are several theories about the impressive 1.5-metre-high sail on Spinosaurus' back.",
+  "price": 14.5,
+  "inStock": 3
+},
+{
+  "_id": {
+    "$oid": "67d4aca3a1fb4b19256544c8"
+  },
+  "name": "Allosaurus",
+  "imageSrc": "https://images.dinosaurpictures.org/Allosaurus0003_091b.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 12,
+  "weight": 2000,
+  "diet": "carnivorous",
+  "whenLived": "Late Jurassic, 152-145 million years ago",
+  "foundIn": "Portugal, USA",
+  "namedBy": "Marsh (1877)",
+  "description": "The teeth of Allosaurus  were 5-10cm long and curved backwards to prevent prey from escaping.",
+  "price": 12.7,
+  "inStock": 8
+},
+{
+  "_id": {
+    "$oid": "67d4aca3a1fb4b19256544c9"
+  },
+  "name": "Gallimimus",
+  "imageSrc": "https://images.dinosaurpictures.org/Gallimimus_81da.jpg",
+  "typeOfDinosaur": "large theropod",
+  "length": 6,
+  "weight": 200,
+  "diet": "omnivorous",
+  "whenLived": "Late Cretaceous, 74-70 million years ago",
+  "foundIn": "Mongolia",
+  "namedBy": "OsmÃ³lska, Roniewicz and Barsbold (1972)",
+  "description": "N/A",
+  "price": 8.7,
+  "inStock": 4
+}]

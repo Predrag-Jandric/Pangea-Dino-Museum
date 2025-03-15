@@ -7,6 +7,7 @@ import EcommerceCard from "./EcommerceCard.jsx";
 import Title from "../Title.jsx";
 import { motion } from "framer-motion";
 import { defaultAnimation } from "../../utils/animations.js";
+import dinoloading from "../../assets/dinoloading.gif";
 
 function EcommerceDisplay() {
   const dispatch = useDispatch();
@@ -82,8 +83,10 @@ function EcommerceDisplay() {
 
         {/* responsive grid */}
         {loading ? (
-          <div className="flex h-96 items-center justify-center text-2xl">
-            Dinosaur data coming ...
+          <div className="flex text-center flex-col gap-4 h-96 items-center justify-center text-2xl">
+            <img src={dinoloading} className="w-40" alt="loading" />
+            Loading dinosaurs...
+            <span className="text-sm">Try refreshing the page if it takes more than 5 seconds.</span>
           </div>
         ) : currentItems.length === 0 ? (
           <div className="flex h-96 items-center justify-center text-2xl">
@@ -95,7 +98,7 @@ function EcommerceDisplay() {
             <div
               className="grid w-full gap-6"
               style={{
-                gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
               }}
             >
               {currentItems.map((dino) => (

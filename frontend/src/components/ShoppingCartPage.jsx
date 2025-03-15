@@ -33,7 +33,7 @@ function ShoppingCartPage() {
   };
 
   return (
-    <section className="flex min-h-screen flex-col items-center bg-bgcolor p-6 pt-16 font-body text-dark">
+    <section className="flex min-h-screen h-full flex-col items-center bg-bgcolor p-6 pt-16 font-body text-dark">
       <ToastContainer />
 
       {cart.length === 0 ? (
@@ -63,7 +63,7 @@ function ShoppingCartPage() {
 
             <Title className="mx-auto !pb-0" title="Your Shopping Cart" />
           </article>
-          <div className="w-full max-w-5xl space-y-6">
+          <div className="w-full max-w-5xl space-y-6 mb-16">
             {/* table Layout */}
             <div className="overflow-x-auto rounded-custom border border-grayOne/50 shadow-custom transition hover:shadow-xl">
               <table className="w-full overflow-hidden rounded-custom bg-white shadow-custom">
@@ -110,7 +110,7 @@ function ShoppingCartPage() {
                           <button
                             onClick={() => dispatch(decreaseQuantity(item.id))}
                             disabled={item.quantity === 1}
-                            className={`flex h-8 w-8 items-center justify-center border-r border-grayOne font-extrabold transition ${item.quantity === 1 && "cursor-not-allowed text-dark/30 bg-gray-200"}`}
+                            className={`flex h-8 w-8 items-center justify-center border-r border-grayOne font-extrabold transition ${item.quantity === 1 && "cursor-not-allowed bg-gray-200 text-dark/30"}`}
                           >
                             −
                           </button>
@@ -119,7 +119,7 @@ function ShoppingCartPage() {
                           <button
                             disabled={item.inStock === 0}
                             onClick={() => dispatch(increaseQuantity(item.id))}
-                            className={`flex h-8 w-8 items-center justify-center border-l border-grayOne font-extrabold transition ${item.inStock === 0 && "cursor-not-allowed text-dark/30 bg-gray-200"}`}
+                            className={`flex h-8 w-8 items-center justify-center border-l border-grayOne font-extrabold transition ${item.inStock === 0 && "cursor-not-allowed bg-gray-200 text-dark/30"}`}
                           >
                             +
                           </button>
@@ -127,7 +127,7 @@ function ShoppingCartPage() {
                       </td>
 
                       {/* total Price */}
-                      <td className="p-3 text-center">
+                      <td className="min-w-20 p-3 px-1.5 text-center">
                         ${(item.price * item.quantity).toFixed(2)}
                       </td>
 
@@ -153,9 +153,11 @@ function ShoppingCartPage() {
               >
                 Clear Cart
               </button>
-              <h2 className="ml-auto text-2xl">
+              <h2 className="ml-auto flex items-center justify-end text-right text-2xl">
                 Total:{" "}
-                <span className="ml-4 sm:ml-20">${totalPrice.toFixed(2)}</span>
+                <span className="min-w-44 text-right">
+                  {totalPrice.toFixed(2)} $
+                </span>
               </h2>
             </div>
 
