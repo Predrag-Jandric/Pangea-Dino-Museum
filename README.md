@@ -1,9 +1,15 @@
-# DiNostalgia
+# Pangea
 
-# 🔗 [Live preview](https://dinostalgia.vercel.app/)
-# ▶️ [Video walkthrough by dev](https://rumble.com/v6lxbbj-dinostalgia-app-walkthrough-voyage-53-team-33.html)
-![Design preview](./frontend/src/assets/dinoPrev.png)
+# 🔗 [Live preview](https://pangea-dino-museum.netlify.app/)
 
+# ▶️ [Video walkthrough by dev](https://youtu.be/FCIJ71fVwIc?feature=shared)
+
+![Design preview](./frontend/src/assets/readmePreviews/prev1.png)
+![Design preview](./frontend/src/assets/readmePreviews/prev2.png)
+![Design preview](./frontend/src/assets/readmePreviews/prev3.png)
+![Design preview](./frontend/src/assets/readmePreviews/prev4.png)
+![Design preview](./frontend/src/assets/readmePreviews/prev5.png)
+![Design preview](./frontend/src/assets/readmePreviews/prev6.gif)
 
 ---
 
@@ -23,63 +29,44 @@
 
 ## About Project
 
-Dinostalgia is a platform that educates and entertains adults who love dinosaurs. This app will combine educational content, interactive features, and e-commerce functionality to provide a comprehensive and engaging experience for dinosaur enthusiasts. 
+Pangea is a platform that educates and entertains adults who love dinosaurs. This app combines educational content, interactive features, and e-commerce functionality to provide a comprehensive and engaging experience for dinosaur enthusiasts.
 
-It is a full stack applications, using React as primary frontend language, and NodeJS/Express as primary backend language. Supabase is used for database. To learn more, visit *Technologies & Dependencies used* section further down or refer to readme file inside **backend**.
+It is a full stack applications, using React as primary frontend language, and NodeJS/Express as primary backend language. MongoDB is used for database. To learn more, visit _Technologies & Dependencies used_ section further down or refer to readme file inside **backend**.
 
 ---
 
 ## Features
 
-- **DinoDex:** A detailed database of various dinosaurs, complete with images, descriptions, and other relevant information. Users can search and filter dinosaurs by name, diet, and country of discovery.
-
 - **Timeline:** An interactive timeline that provides a historical overview of the different periods when dinosaurs roamed the Earth, including the Triassic, Jurassic, and Cretaceous periods.
 
-- **News:** A section dedicated to the latest news articles about dinosaurs, fetched from an external API, ensuring users stay updated with recent discoveries and research.
+- **Ecommerce:** Small scale online shop where users can browse dinosaur-themed merchandise. The shop features a search options, filter options, and a shopping cart for managing purchases.
 
 - **Quiz:** A fun and educational quiz that tests users' knowledge about dinosaurs, with questions ranging from dinosaur names to their characteristics and historical facts.
 
-- **Ecommerce:** Small scale online shop where users can browse dinosaur-themed merchandise. The shop features a search options, filter options, and a shopping cart for managing purchases. <br />
-  **Note:** users cannot actually **pay money** and purchase the items.
-
-- **Shopping Cart and Checkout:** Shopping Cart that allows users to add, remove, and update the quantity of items. The checkout process includes user authentication and order management through Supabase.
+- **Shopping Cart and Checkout:** Shopping Cart that allows users to add, remove, and update the quantity of items.
 
 ---
 
 ## How it works
 
-The DiNostalgia app is built using React for the frontend, with Redux Toolkit for state management and Supabase for backend services. Here's a detailed explanation of how each section works:
-
-- **DinoDex:**
-
-The DinoDex component fetches dinosaur data from an API and displays it in a searchable and filterable format.
-Users can search for dinosaurs by name, diet, or country of discovery. The search functionality uses regular expressions to match any part of the dinosaur name.
-Clicking on a dinosaur opens a detailed modal view with more information, including images, descriptions, and additional details.
+The Pangea app is built using React for the frontend, with Redux Toolkit for state management. MongoDB for database needs and Express.js for backend services. Here's a detailed explanation of how each section works:
 
 - **Timeline:**
 
-The Timeline component provides an interactive timeline of dinosaur history, highlighting key periods and events.
-Users can navigate through the timeline using next and previous buttons, and click on specific events to view detailed descriptions.
-
-- **News:**
-
-The News component fetches the latest dinosaur-related news articles from an external API.
-Articles are displayed in a responsive grid layout, with each article linking to the original source for more information.
-
-- **Quiz:**
-
-The Quiz component presents a series of multiple-choice questions about dinosaurs.
-Users can answer questions, and their scores are calculated based on correct answers. The quiz includes a progress bar and displays the final score.
+The Timeline component is using map method to map over local data to present information about different time periods to the user upon left/right button click.
 
 - **Ecommerce:**
 
-The Ecommerce component displays dinosaur-themed merchandise. Users can search and filter products by name, diet, stock, and price. The search functionality ensures that products are filtered across all pages.
-Each product card includes an image, name, price, stock status, and an "Add to Cart" button.
+The Ecommerce component fetches the data from the Mongo database using an API. Both database and the backend API were custom made specifically for this project. The database is scaled down from information about around 300 dinosaurs to 65. The backup copy of the database is stored in a json file in the backend folder named _mongoDBbackup.json_.
+
+- **Quiz:**
+
+The Quiz component is mapping over local data in _utils/data.js_ to display questions. depending on whether the correct/wrong question is selected, a different styling will be applied. The quiz will keep your personal high score and award you different emojis based on points gained.
 
 - **Shopping Cart and Checkout:**
 
 The Shopping Cart component allows users to manage their selected items, including updating quantities and removing items.
-The Checkout component handles user authentication through Supabase and processes orders. The app ensures that the cart state is saved in local storage, allowing users to resume their shopping session even after closing the browser.
+Cart state is saved in local storage, allowing users to resume their shopping session even after closing the browser.
 
 ---
 
@@ -97,16 +84,13 @@ The Checkout component handles user authentication through Supabase and processe
 
 - **Tailwind:** for all styling, dark mode, custom classes...
 
-- **Supabase:** for all authentication, and dinosaurs fetching from the database needs
+- **MongoDB:** for storing JSON type information about the dinosaurs that are fetched and displayed in the UI
 
 <br>
 
 **dependencies:**
 
 - "@reduxjs/toolkit": "^2.5.0",
-- "@supabase/auth-ui-react": "^0.4.7",
-- "@supabase/auth-ui-shared": "^0.1.8",
-- "@supabase/supabase-js": "^2.48.1",
 - "framer-motion": "^11.17.0",
 - "react": "^18.3.1",
 - "react-dom": "^18.3.1",
@@ -128,8 +112,8 @@ The Checkout component handles user authentication through Supabase and processe
 - "eslint-plugin-react-refresh": "^0.4.16",
 - "globals": "^15.14.0",
 - "postcss": "^8.4.49",
-- "prettier": "^3.4.2",
-- "prettier-plugin-tailwindcss": "^0.6.10",
+- "prettier": "^3.5.3",
+- "prettier-plugin-tailwindcss": "^0.6.11",
 - "tailwindcss": "^3.4.17",
 - "vite": "^6.0.5"
 
@@ -145,8 +129,6 @@ Ensure you have the following installed on your system:
 ---
 
 ## Clone & Run locally
-
-Notice: For running this app locally, you will need .env keys to connect to the APIs which only the dev team of this project has 
 
 1. **Clone the Repository:**
 
@@ -174,7 +156,7 @@ Notice: For running this app locally, you will need .env keys to connect to the 
 
 5. **Enter the Project Directory:**
 
-   - Navigate into the cloned repository by typing: `cd /folder-name/`. Replace `/folder-name/` with the name of the cloned folder.
+   - Navigate into the cloned repository by typing: `cd /folder-name/`. Replace `/folder-name/` with the name of the cloned folder. Then `cd frontend`.
 
 6. **Install Dependencies:**
 
@@ -182,7 +164,7 @@ Notice: For running this app locally, you will need .env keys to connect to the 
 
 7. **Start the Project:**
 
-   - Run the command: `npm run dev` or `yarn dev` to start the project. You will need to manually open the browser address at [localhost:5173/](http://localhost:5173/)
+   - Run the command: `npm run dev` or `yarn dev` to start the frontend side of the project. You will need to manually open the browser address at [localhost:5173/](http://localhost:5173/)
 
 ---
 
@@ -195,8 +177,6 @@ Voyage 53 - team 33. January 2025
 - Promise Akabudu - Product Owner: [GitHub](https://github.com/Pakabudu) / [LinkedIn](https://www.linkedin.com/in/promise-akabudu/)
 
 - Afrah Ali - Scrum Master: [GitHub](https://github.com/afbaf) / [LinkedIn](https://www.linkedin.com/in/afrah-ali-251264269/)
-
-- Dayo Abdul - Developer: [GitHub](https://github.com/Dayo1900)
 
 - Predrag Jandric - Developer: [GitHub](https://github.com/Predrag-Jandric) / [LinkedIn](https://www.linkedin.com/in/predrag-jandric/)
 

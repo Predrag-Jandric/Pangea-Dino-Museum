@@ -83,10 +83,12 @@ function EcommerceDisplay() {
 
         {/* responsive grid */}
         {loading ? (
-          <div className="flex text-center flex-col gap-4 h-96 items-center justify-center text-2xl">
+          <div className="flex h-96 flex-col items-center justify-center gap-4 text-center text-2xl">
             <img src={dinoloading} className="w-40" alt="loading" />
             Loading dinosaurs...
-            <span className="text-sm">Try refreshing the page if it takes more than 5 seconds.</span>
+            <span className="text-sm">
+              Try refreshing the page if it takes more than 10 seconds.
+            </span>
           </div>
         ) : currentItems.length === 0 ? (
           <div className="flex h-96 items-center justify-center text-2xl">

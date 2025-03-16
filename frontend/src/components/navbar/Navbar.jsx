@@ -6,7 +6,7 @@ import { navLinks } from "../../utils/data";
 import { Link } from "react-router-dom";
 import { TfiShoppingCart } from "react-icons/tfi";
 import { useSelector } from "react-redux";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/hero/logo.png";
 
 function Navbar() {
   const scrollToSection = useScrollTo(0);
@@ -46,7 +46,7 @@ function Navbar() {
           >
             <TfiShoppingCart />
             {cart.length > 0 && (
-              <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-alert text-sm font-bold text-dark">
+              <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-alert text-sm font-bold text-white">
                 {cart.length}
               </span>
             )}

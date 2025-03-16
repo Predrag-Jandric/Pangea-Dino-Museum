@@ -1,16 +1,12 @@
-# Secondary Dinosaur API (not being used)
+# Dinosaur API 🦖
 
-This is a simple Node.js API that connects to a MongoDB database and fetches data. The API is built using Express and MongoDB, and it supports CORS for cross-origin requests.
+A lightweight Node.js API that connects to a MongoDB database to fetch and serve dinosaur-related data. Built with Express and MongoDB, the API also supports CORS for cross-origin requests.
 
-## Note ⚠️
+_This repository includes a mongoDBbackup.json file, which contains a backup copy of the database data. This is provided as a safeguard in case the original data is lost._
 
-- **This API was being used for this project initially but then, a different one was made by another team member (Greg) and it is in this repo being used as primary backend, while this one is NOT being used but it has been put here for the sake of being here and maybe needed in the future who knows. In that other backend which is primary, there are also more features not just fetch data from mongoDB. The other backend also has authentication and is using Supabase instead of mongoDB. We basically have 2 backends developed by two different team members but only one is being used, which is not this one.**
+## Clone & Run locally
 
-- **In here you will also find v5dinos.json which is just the copy of the data from the database. It is here in case original data gets lost or something. This same data is also used in the other, primary backend database.**
-
-## Installation
-
-git clone it locally, install packages with `npm i` then run using scripts found in package.json. You will need to create a local .env file where you will store your mongoDB connection string found in mongo Atlas website. Dont forget to add this .env to your .gitignore file
+To install locally, clone the repo, navigate and the project folder using `cd /project name/`, then run npm install to install dependencies, and start the server using the scripts in package.json. Create a .env file to store your MongoDB connection string from MongoDB Atlas, and make sure to add .env to .gitignore to keep it secure.
 
 ## Prerequisites
 
@@ -28,10 +24,9 @@ git clone it locally, install packages with `npm i` then run using scripts found
 - `package.json`: Contains the project metadata and dependencies.
 
 - `.env`: Contains environment variables, including the MongoDB connection string.
-- `.gitignore`: Specifies files and directories to be ignored by Git.
 - `route.rest`: Contains example HTTP requests for testing the API.
 
-## Dependencies
+## Technologies
 
 - express: Fast, unopinionated, minimalist web framework for Node.js.
 - mongodb: The official MongoDB driver for Node.js.
@@ -40,15 +35,26 @@ git clone it locally, install packages with `npm i` then run using scripts found
 - cors: Middleware to enable CORS (Cross-Origin Resource Sharing).
 - nodemon: A tool that helps develop Node.js applications by automatically restarting the node application when file changes in the directory are detected (development dependency).
 
+**dependencies:**
+
+- "cors": "^2.8.5",
+- "dotenv": "^16.4.7",
+- "express": "^4.21.2",
+- "mongoose": "^8.9.5"
+
+**devDependencies:**
+
+- "nodemon": "^3.1.9"
+
 ## Environment Variables
 
-TO ADMIN: the connection string in your .env file should look something like this and you can get it from mongo atlas
+the connection string in your .env file should look something like this and you can get it from mongo atlas. I am not putting my connection string publicly available
 
 MONGODB_URI=mongodb+srv://username:password@cluster-name.mongodb.net/database-name
 
-## Deployment
+---
 
-to deploy to render here are the steps, altho, I AM NOT SURE, IT MAY EVEN WORK WITHOUT render.yaml. There is a way on render to just put a link of the github repo.
+## Deployment on Render
 
 1. Create a render.yaml file in the root of your project, it should contain:
 
@@ -77,3 +83,5 @@ services:
 
 - Render will build and deploy your service.
 - Once deployed, your API will be accessible via the URL provided by Render.
+
+---

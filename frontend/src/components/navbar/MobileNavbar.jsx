@@ -111,7 +111,7 @@ export default function MobileNavbar({ isOpen, setIsOpen }) {
             <Link to="/shoppingCartPage" className="cart-icon text-4xl">
               <TfiShoppingCart />
               {cart.length > 0 && (
-                <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-alert text-sm font-bold text-dark">
+                <span className="absolute -top-2 right-2.5 flex size-5 animate-bounce items-center justify-center rounded-full bg-alert text-sm font-bold text-white">
                   {cart.length}
                 </span>
               )}
