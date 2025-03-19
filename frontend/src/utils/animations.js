@@ -13,6 +13,13 @@ export const defaultAnimation = {
   },
 };
 
+export const timelineAnimation = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { type: "tween", duration: 0.4 },
+};
+
 export const heroAnimation = {
   initial: {
     y: -40,
