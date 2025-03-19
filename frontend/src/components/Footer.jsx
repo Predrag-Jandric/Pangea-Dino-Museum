@@ -2,6 +2,7 @@ import { navLinks } from "../utils/data.js";
 import useScrollTo from "../utils/useScrollTo.js";
 import { teamMembers } from "../utils/data.js";
 import chinguLogo from "../assets/chingu-logo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const scrollToSection = useScrollTo();
@@ -27,6 +28,12 @@ function Footer() {
                 {link.label}
               </a>
             ))}
+            <Link
+              to="/shoppingCartPage"
+              className="w-fit transition-all hover:pl-2"
+            >
+              Shopping Cart
+            </Link>
           </div>
         </article>
 

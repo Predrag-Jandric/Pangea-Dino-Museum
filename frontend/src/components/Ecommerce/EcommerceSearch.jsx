@@ -198,7 +198,7 @@ function EcommerceSearch({ dinos, setFiltered, setCurrentPage }) {
 
       <Link
         to="/shoppingCartPage"
-        className="relative ml-auto mt-6 text-4xl sm:mt-0"
+        className="relative ml-auto mt-6 transform text-4xl transition-transform hover:text-primary hover:-translate-x-1.5 sm:mt-0"
       >
         <TfiShoppingCart className="hover:text-highlight transition" />
         {cart.length > 0 && (
