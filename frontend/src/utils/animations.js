@@ -13,7 +13,7 @@ export const defaultAnimation = {
   },
 };
 
-export const timelineAnimation = {
+export const disappearAnimation = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },

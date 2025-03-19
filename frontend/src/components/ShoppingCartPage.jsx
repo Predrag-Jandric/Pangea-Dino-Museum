@@ -13,6 +13,8 @@ import Title from "./Title.jsx";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import Button from "../utils/Button.jsx";
+import { AnimatePresence, motion } from "framer-motion";
+import { disappearAnimation } from "../utils/animations";
 
 function ShoppingCartPage() {
   const cart = useSelector((state) => state.shopping.inCart);
@@ -33,7 +35,7 @@ function ShoppingCartPage() {
   };
 
   return (
-    <section className="flex min-h-screen h-full flex-col items-center bg-bgcolor p-6 pt-16 font-body text-dark">
+    <section className="flex h-full min-h-screen flex-col items-center bg-bgcolor p-6 pt-16 font-body text-dark">
       <ToastContainer />
 
       {cart.length === 0 ? (
@@ -63,7 +65,7 @@ function ShoppingCartPage() {
 
             <Title className="mx-auto !pb-0" title="Your Shopping Cart" />
           </article>
-          <div className="w-full max-w-5xl space-y-6 mb-16">
+          <div className="mb-16 w-full max-w-5xl space-y-6">
             {/* table Layout */}
             <div className="overflow-x-auto rounded-custom border border-grayOne/50 shadow-custom transition hover:shadow-xl">
               <table className="w-full overflow-hidden rounded-custom bg-white shadow-custom">
@@ -85,62 +87,75 @@ function ShoppingCartPage() {
                   </tr>
                 </thead>
                 <tbody>
+                  <AnimatePresence>
                   {cart.map((item) => (
-                    <tr key={item.id} className="">
-                      {/* product */}
-                      <td className="flex items-center gap-3 p-3">
-                        <img
-                          src={item.imageSrc}
-                          alt="dino"
-                          className="size-28 object-contain"
-                        />
-                        <span className="min-w-[16rem] break-words">
-                          {item.name}
-                        </span>
-                      </td>
+                      <motion.tr
+                        key={item.id}
+                        variants={disappearAnimation}
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        transition={disappearAnimation.transition}
+                      >
+                        {/* product */}
+                        <td className="flex items-center gap-3 p-3">
+                          <img
+                            src={item.imageSrc}
+                            alt="dino"
+                            className="size-28 object-contain"
+                          />
+                          <span className="min-w-[16rem] break-words">
+                            {item.name}
+                          </span>
+                        </td>
 
-                      {/* orice */}
-                      <td className="p-3 text-center">
-                        ${item.price.toFixed(2)}
-                      </td>
+                        {/* orice */}
+                        <td className="p-3 text-center">
+                          ${item.price.toFixed(2)}
+                        </td>
 
-                      {/* quantity btns */}
-                      <td className="p-3 text-center">
-                        <div className="mx-auto flex w-fit items-center justify-center border border-grayOne">
+                        {/* quantity btns */}
+                        <td className="p-3 text-center">
+                          <div className="mx-auto flex w-fit items-center justify-center border border-grayOne">
+                            <button
+                              onClick={() =>
+                                dispatch(decreaseQuantity(item.id))
+                              }
+                              disabled={item.quantity === 1}
+                              className={`flex h-8 w-8 items-center justify-center border-r border-grayOne font-extrabold transition ${item.quantity === 1 && "cursor-not-allowed bg-gray-200 text-dark/30"}`}
+                            >
+                              −
+                            </button>
+                            <span className="w-10">{item.quantity}</span>
+
+                            <button
+                              disabled={item.inStock === 0}
+                              onClick={() =>
+                                dispatch(increaseQuantity(item.id))
+                              }
+                              className={`flex h-8 w-8 items-center justify-center border-l border-grayOne font-extrabold transition ${item.inStock === 0 && "cursor-not-allowed bg-gray-200 text-dark/30"}`}
+                            >
+                              +
+                            </button>
+                          </div>
+                        </td>
+
+                        {/* total Price */}
+                        <td className="min-w-20 p-3 px-1.5 text-center">
+                          ${(item.price * item.quantity).toFixed(2)}
+                        </td>
+
+                        {/* x btn to remove individual cart item */}
+                        <td className="p-3 text-center">
                           <button
-                            onClick={() => dispatch(decreaseQuantity(item.id))}
-                            disabled={item.quantity === 1}
-                            className={`flex h-8 w-8 items-center justify-center border-r border-grayOne font-extrabold transition ${item.quantity === 1 && "cursor-not-allowed bg-gray-200 text-dark/30"}`}
+                            onClick={() => dispatch(removeFromCart(item.id))}
                           >
-                            −
+                            <IoCloseOutline className="size-10 p-1 text-dark/60" />
                           </button>
-                          <span className="w-10">{item.quantity}</span>
-
-                          <button
-                            disabled={item.inStock === 0}
-                            onClick={() => dispatch(increaseQuantity(item.id))}
-                            className={`flex h-8 w-8 items-center justify-center border-l border-grayOne font-extrabold transition ${item.inStock === 0 && "cursor-not-allowed bg-gray-200 text-dark/30"}`}
-                          >
-                            +
-                          </button>
-                        </div>
-                      </td>
-
-                      {/* total Price */}
-                      <td className="min-w-20 p-3 px-1.5 text-center">
-                        ${(item.price * item.quantity).toFixed(2)}
-                      </td>
-
-                      {/* x btn to remove individual cart item */}
-                      <td className="p-3 text-center">
-                        <button
-                          onClick={() => dispatch(removeFromCart(item.id))}
-                        >
-                          <IoCloseOutline className="size-10 p-1 text-dark/60" />
-                        </button>
-                      </td>
-                    </tr>
+                        </td>
+                      </motion.tr>
                   ))}
+                    </AnimatePresence>
                 </tbody>
               </table>
             </div>

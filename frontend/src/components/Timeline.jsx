@@ -3,7 +3,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { timelineEvents } from "../utils/data";
 import Title from "./Title";
 import { AnimatePresence, motion } from "framer-motion";
-import { defaultAnimation, timelineAnimation } from "../utils/animations";
+import { defaultAnimation, disappearAnimation } from "../utils/animations";
 
 function Timeline() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -108,11 +108,11 @@ function Timeline() {
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedIndex}
-            variants={timelineAnimation}
+            variants={disappearAnimation}
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={timelineAnimation.transition}
+            transition={disappearAnimation.transition}
             className="w-full"
           >
             <h2 className="font-titles text-4xl font-thin tracking-wide text-dark/85">
