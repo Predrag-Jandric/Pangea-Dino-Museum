@@ -6,7 +6,7 @@ import {
   clearCart,
 } from "../utils/shoppingSlice";
 import { ToastContainer } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Modal from "../utils/Modal.jsx";
 import useModal from "../utils/useModal.jsx";
 import Title from "./Title.jsx";
@@ -19,6 +19,7 @@ import { disappearAnimation } from "../utils/animations";
 function ShoppingCartPage() {
   const cart = useSelector((state) => state.shopping.inCart);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { isOpen, openModal, closeModal, handleClickOutside } = useModal();
 
   const totalPrice = cart.reduce((total, item) => {
@@ -34,6 +35,20 @@ function ShoppingCartPage() {
     dispatch(clearCart());
   };
 
+  const handleBackClick = () => {
+    navigate("/#shop");
+    setTimeout(() => {
+      const element = document.getElementById("shop");
+      if (element) {
+        const topPosition = element.offsetTop - 80;
+        window.scrollTo({
+          top: topPosition,
+          behavior: "smooth",
+        });
+      }
+    }, 100); //delay
+  };
+
   return (
     <section className="flex h-full min-h-screen flex-col items-center bg-bgcolor p-6 pt-16 font-body text-dark">
       <ToastContainer />
@@ -43,6 +58,7 @@ function ShoppingCartPage() {
           <Title className="" title="Shopping cart is empty" />
 
           <Link
+            onClick={handleBackClick}
             to="/"
             className="flex w-fit flex-row items-center gap-3 rounded-custom border-2 border-primary/60 p-3 text-lg text-primary transition-all hover:bg-primary/5 disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50 disabled:hover:bg-transparent"
           >
@@ -56,6 +72,7 @@ function ShoppingCartPage() {
             <div className="flex items-center justify-center gap-3">
               <Link
                 to="/"
+                onClick={handleBackClick}
                 className="rounded-custom border-2 border-primary/60 p-3 text-lg text-primary transition-all hover:bg-primary/5 disabled:cursor-not-allowed disabled:border-gray-400/50 disabled:text-gray-400/50 disabled:hover:bg-transparent"
               >
                 <IoIosArrowBack className="size-5 font-extrabold" />
@@ -88,7 +105,7 @@ function ShoppingCartPage() {
                 </thead>
                 <tbody>
                   <AnimatePresence>
-                  {cart.map((item) => (
+                    {cart.map((item) => (
                       <motion.tr
                         key={item.id}
                         variants={disappearAnimation}
@@ -154,8 +171,8 @@ function ShoppingCartPage() {
                           </button>
                         </td>
                       </motion.tr>
-                  ))}
-                    </AnimatePresence>
+                    ))}
+                  </AnimatePresence>
                 </tbody>
               </table>
             </div>

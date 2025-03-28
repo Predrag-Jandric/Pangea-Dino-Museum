@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 import Navbar from "./navbar/Navbar";
 import { landingPageBGimageSlider } from "../utils/data";
 import { SlArrowDown } from "react-icons/sl";
-import useScrollTo from "../utils/useScrollTo";
 import { motion } from "framer-motion";
 import { heroAnimation } from "../utils/animations";
 
 function Hero() {
-  const scrollToSection = useScrollTo(0);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -19,6 +17,19 @@ function Hero() {
 
     return () => clearInterval(interval);
   }, []);
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const element = document.getElementById(href);
+    if (element) {
+      const topPosition = element.offsetTop - 70;
+      window.scrollTo({
+        top: topPosition,
+        behavior: "smooth",
+      });
+      window.history.pushState(null, null, `#${href}`);
+    }
+  };
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-dark">
@@ -57,10 +68,7 @@ function Hero() {
         <a
           href="#timeline"
           rel="noopener noreferrer"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection("timeline");
-          }}
+          onClick={(e) => handleNavClick(e, "timeline")}
           className="scroll-smooth"
         >
           <SlArrowDown className="size-10 animate-bounce transition hover:text-primary" />

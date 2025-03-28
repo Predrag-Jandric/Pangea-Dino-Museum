@@ -27,7 +27,7 @@ export default function ScrollToTopButton() {
     <button
       type="button"
       onClick={handleJumpToTop}
-      className={`fixed bottom-10 right-1 z-50 rounded-full border border-primary bg-white p-3.5 text-black sm:hover:mb-1 shadow-md transition-all duration-300 hover:bg-white sm:hover:text-primary ${
+      className={`fixed bottom-10 right-1 z-35 rounded-full border border-primary bg-white p-3.5 text-black sm:hover:mb-1 shadow-md transition-all duration-300 hover:bg-white sm:hover:text-primary ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
       aria-label="Scroll to top"

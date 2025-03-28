@@ -3,8 +3,8 @@ import { quizQuestions } from "../utils/data";
 import "../index.css"; // Import the stylesheet
 import Button from "../utils/Button";
 import Title from "./Title";
-import { motion } from "framer-motion";
-import { defaultAnimation } from "../utils/animations.js";
+import { AnimatePresence, motion } from "framer-motion";
+import { defaultAnimation, disappearAnimation } from "../utils/animations.js";
 
 const shuffledQuestions = quizQuestions.sort(() => Math.random() - 0.5);
 
@@ -117,39 +117,46 @@ function Quiz() {
             </div>
 
             {/* answer options */}
-            <div className="space-y-4">
-              {currentQuestion.options.map((option, optionIndex) => (
-                <button
-                  key={option}
-                  onClick={() =>
-                    dispatch({ type: "newAnswer", payload: optionIndex })
-                  }
-                  className={`w-full rounded-custom border-2 px-4 py-3 text-left ${
-                    // highlight selected answer
-                    optionIndex === answer
-                      ? optionIndex === currentQuestion.correctOption
-                        ? "border-primary/50 bg-primary/10" // correct selected answer
-                        : "border-alert/30 bg-alert/10" // incorrect selected answer
-                      : "border-grayOne bg-gray-50"
-                  } ${
-                    // highlight correct answer when an incorrect answer is selected
-                    answer !== null &&
-                    optionIndex === currentQuestion.correctOption &&
-                    optionIndex !== answer
-                      ? "border-primary/80 bg-primary/15"
-                      : ""
-                  } ${
-                    // dim non-selected options after answering
-                    answer !== null && optionIndex !== answer
-                      ? "opacity-60"
-                      : ""
-                  }`}
-                  disabled={answer !== null} // disable buttons after answering
-                >
-                  {option}
-                </button>
-              ))}
-            </div>
+            <AnimatePresence>
+              <div className="space-y-4">
+                {currentQuestion.options.map((option, optionIndex) => (
+                  <motion.button
+                    variants={disappearAnimation}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    transition={disappearAnimation.transition}
+                    key={option}
+                    onClick={() =>
+                      dispatch({ type: "newAnswer", payload: optionIndex })
+                    }
+                    className={`w-full rounded-custom border-2 px-4 py-3 text-left ${
+                      // highlight selected answer
+                      optionIndex === answer
+                        ? optionIndex === currentQuestion.correctOption
+                          ? "border-primary/50 bg-primary/10" // correct selected answer
+                          : "border-alert/30 bg-alert/10" // incorrect selected answer
+                        : "border-grayOne bg-gray-50"
+                    } ${
+                      // highlight correct answer when an incorrect answer is selected
+                      answer !== null &&
+                      optionIndex === currentQuestion.correctOption &&
+                      optionIndex !== answer
+                        ? "border-primary/80 bg-primary/15"
+                        : ""
+                    } ${
+                      // dim non-selected options after answering
+                      answer !== null && optionIndex !== answer
+                        ? "opacity-60"
+                        : ""
+                    }`}
+                    disabled={answer !== null} // disable buttons after answering
+                  >
+                    {option}
+                  </motion.button>
+                ))}
+              </div>
+            </AnimatePresence>
 
             {/* next/finish button */}
             <Button

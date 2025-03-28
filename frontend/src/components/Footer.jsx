@@ -1,11 +1,22 @@
 import { navLinks } from "../utils/data.js";
-import useScrollTo from "../utils/useScrollTo.js";
 import { teamMembers } from "../utils/data.js";
 import chinguLogo from "../assets/chingu-logo.png";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  const scrollToSection = useScrollTo();
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const element = document.getElementById(href);
+    if (element) {
+      const topPosition = element.offsetTop - 70;
+      window.scrollTo({
+        top: topPosition,
+        behavior: "smooth",
+      });
+      window.history.pushState(null, null, `#${href}`);
+    }
+  };
+
   return (
     <footer className="bg-primary text-white">
       <section className="container mx-auto flex flex-col justify-between gap-12 px-6 py-20 md:flex-row xl:px-8">
@@ -20,10 +31,7 @@ function Footer() {
                 key={link.label}
                 href={`#${link.href}`}
                 className="w-20 transition-all hover:pl-2"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(link.href);
-                }}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.label}
               </a>
