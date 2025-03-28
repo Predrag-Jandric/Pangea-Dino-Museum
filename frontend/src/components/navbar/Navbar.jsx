@@ -50,7 +50,7 @@ function Navbar() {
                 rel="noopener noreferrer"
                 href={`#${link.href}`}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="relative flex min-w-[7rem] cursor-pointer items-center justify-center px-5 py-2 transition-all duration-200 ease-in-out before:absolute before:left-0 before:top-0 before:z-[-1] before:h-full before:w-full before:origin-left before:scale-x-0 before:bg-primaryHover before:transition-transform before:duration-300 before:ease-in-out hover:before:scale-x-100"
+                className="relative flex min-w-[7rem] cursor-pointer items-center justify-center px-5 py-2 transition-all duration-300 ease-in-out hover:text-black/85"
               >
                 {link.label}
               </a>
@@ -59,7 +59,7 @@ function Navbar() {
 
           <Link
             to="/shoppingCartPage"
-            className="relative right-0 ml-4 hidden text-4xl transition-all hover:right-1.5 md:flex"
+            className="relative hover:text-black/85 right-0 ml-4 hidden text-4xl transition-all duration-300 hover:right-1.5 md:flex"
           >
             <TfiShoppingCart />
             {cart.length > 0 && (
